@@ -87,11 +87,19 @@ def setup_driver():
 # =============================
 # CRAWLER
 # =============================
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 def crawl(driver, url):
     selectors = get_selectors(url)
 
     if not selectors:
-        return ("ERROR: selector not found", "ERROR: selector not found")
+        return (
+            "ERROR: selector not found",
+            "ERROR: selector not found",
+            "ERROR: selector not found"
+        )
 
     title_selector = selectors.get("title", "")
     body_selector = selectors.get("body", "")
@@ -101,28 +109,43 @@ def crawl(driver, url):
 
     title_text = "ERROR: cannot extract title"
     body_html = "ERROR: cannot extract body"
+    body_text = "ERROR: cannot extract content"
 
-    # TITLE
+    # ================================
+    # GET TITLE
+    # ================================
     try:
         if title_selector:
             title_el = WebDriverWait(driver, 15).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, title_selector))
             )
-            title_text = title_el.text.strip() or title_el.get_attribute("innerText").strip()
+            # text hoặc innerText
+            t1 = title_el.text.strip()
+            t2 = title_el.get_attribute("innerText").strip()
+            title_text = t1 if len(t1) > 0 else t2
     except:
         pass
 
-    # BODY
+    # ================================
+    # GET BODY HTML + CONTENT
+    # ================================
     try:
         if body_selector:
             body_el = WebDriverWait(driver, 20).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, body_selector))
             )
+            # Lấy nguyên HTML
             body_html = body_el.get_attribute("outerHTML")
+
+            # Lấy nội dung text thuần
+            text1 = body_el.text.strip()
+            text2 = body_el.get_attribute("innerText").strip()
+            body_text = text1 if len(text1) > 0 else text2
     except:
         pass
 
-    return title_text, body_html
+    return title_text, body_html, body_text
+
 
 
 # =============================
@@ -147,7 +170,7 @@ if __name__ == "__main__":
     urls = load_urls()
 
     for url in urls:
-        title_text, body_html = crawl(driver, url)
+        title_text, body_html,body_text = crawl(driver, url)
 
         # Nếu crawl lỗi → đưa vào fail CSV
         if "ERROR" in title_text or "ERROR" in body_html:
@@ -158,13 +181,13 @@ if __name__ == "__main__":
         try:
             clean_prompt =  f"{PROMT_CONTENT_META_TAG}\n{body_html}"
             prompt_title = f"{PROMPT_TITLE}\n{title_text}"
-            clean_prompt_meta_tag =  f"{PROMPT_TAGS_META}\n{body_html}"
-            promt_image =  f"{PROMT_CREATE_IMAGE}\n{body_html}"
+            clean_prompt_meta_tag =  f"{PROMPT_TAGS_META}\n{body_text}"
+            promt_image =  f"{PROMT_CREATE_IMAGE}\n{body_text}"
 
             # =============================
             # CRAWL DATA HERE
             # =============================
-            dataCrawled.append ({"url": url, "title": prompt_title, "body": clean_prompt, "meta_tag":promt_image})
+            dataCrawled.append ({"url": url, "title": prompt_title, "body": clean_prompt, "meta_tag":clean_prompt_meta_tag, "image":promt_image})
 
             # =============================
             # THIS CODE BELOW USING GEMINI TO GENERATE CONTENT
@@ -229,14 +252,16 @@ if __name__ == "__main__":
     # =============================
     with open("ai_data.csv", "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.writer(csvfile, delimiter="|", quoting=csv.QUOTE_ALL)
-        writer.writerow(["link", "title", "data","meta_tag"])
+        writer.writerow(["link", "title", "data","meta_tag", "image"])
 
         for row in dataCrawled:
             writer.writerow([
                 row["url"],
                 row["title"],
                 row["body"],  # đây là clean HTML để train AI
-                row["meta_tag"]
+                row["meta_tag"],
+                row["image"]
+
             ])
 
     print("\n==============================")
