@@ -65,7 +65,7 @@ import requests
 import json
 import time
 
-API_KEY = "AIzaSyAShXN9SbSUzDlki1bl7HPv18ZXeaNYdA0"
+API_KEY = "AIzaSyApZGXhQa7olqkhcKay63mxjUY1-ZsS9Oo"
 # MODEL_ID = "gemini-2.0-flash-lite"    # <<< UPDATE TẠI ĐÂY
 MODEL_ID = "gemini-2.0-flash"    # <<< UPDATE TẠI ĐÂY
 API_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{MODEL_ID}:generateContent?key={API_KEY}"
