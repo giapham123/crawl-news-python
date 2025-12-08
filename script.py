@@ -10,7 +10,7 @@ from common_func import clean_and_parse_json, clean_and_parse_json_html
 
 from config import DOMAIN_SELECTOR_MAP
 from gemini_api import generate_text
-from prompts import PROMPT_CLEAN_HTML, PROMPT_TITLE, PROMPT_TAGS_META
+from prompts import PROMPT_CLEAN_HTML, PROMPT_TITLE, PROMPT_TAGS_META,PROMT_CONTENT_META_TAG,PROMT_CREATE_IMAGE
 
 
 # =============================
@@ -156,13 +156,15 @@ if __name__ == "__main__":
 
         # CALL GEMINI
         try:
-            clean_prompt =  f"{PROMPT_CLEAN_HTML}\n{body_html}"
+            clean_prompt =  f"{PROMT_CONTENT_META_TAG}\n{body_html}"
             prompt_title = f"{PROMPT_TITLE}\n{title_text}"
+            clean_prompt_meta_tag =  f"{PROMPT_TAGS_META}\n{body_html}"
+            promt_image =  f"{PROMT_CREATE_IMAGE}\n{body_html}"
 
             # =============================
             # CRAWL DATA HERE
             # =============================
-            dataCrawled.append({"url": url, "title": prompt_title, "body": clean_prompt})
+            dataCrawled.append ({"url": url, "title": prompt_title, "body": clean_prompt, "meta_tag":promt_image})
 
             # =============================
             # THIS CODE BELOW USING GEMINI TO GENERATE CONTENT
@@ -227,13 +229,14 @@ if __name__ == "__main__":
     # =============================
     with open("ai_data.csv", "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.writer(csvfile, delimiter="|", quoting=csv.QUOTE_ALL)
-        writer.writerow(["link", "title", "data"])
+        writer.writerow(["link", "title", "data","meta_tag"])
 
         for row in dataCrawled:
             writer.writerow([
                 row["url"],
                 row["title"],
-                row["body"]  # đây là clean HTML để train AI
+                row["body"],  # đây là clean HTML để train AI
+                row["meta_tag"]
             ])
 
     print("\n==============================")

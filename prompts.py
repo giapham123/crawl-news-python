@@ -1,4 +1,131 @@
 # prompts.py
+PROMT_CREATE_IMAGE = """Bạn là một hệ thống phân tích nội dung báo chí và tạo ảnh minh họa chất lượng cao.
+
+Hãy đọc nội dung bên dưới và tạo ra mô tả ảnh (image prompt) chi tiết, rõ ràng, phù hợp với một bài báo Việt Nam.  
+
+=========================
+YÊU CẦU TẠO HÌNH
+=========================
+
+- Phải dựa hoàn toàn vào nội dung bài viết.
+- Mô tả hình ảnh rõ ràng, giàu chi tiết.
+- Phong cách báo chí – thực tế – hiện đại.
+- Không thêm nhân vật hư cấu.
+- Không thêm thông tin không có trong bài.
+- Nếu bài viết nói về:
+  + kinh tế → tạo hình đồ họa, giá cả, xu hướng  
+  + pháp luật → hình ảnh tòa án, văn bản, cơ quan chức năng  
+  + tai nạn → hiện trường mô phỏng phù hợp  
+  + nông nghiệp → cây trồng, mùa vụ, nông dân  
+  + xã hội → đời sống, con người, tình huống thực tế  
+- Không dùng tên thật của nạn nhân hoặc thông tin riêng tư.
+- Không tạo cảnh nhạy cảm, giật gân.
+
+=========================
+ĐỊNH DẠNG TRẢ VỀ
+=========================
+
+Chỉ trả về duy nhất mô tả ảnh bằng tiếng Việt, không JSON.
+
+=========================
+NỘI DUNG GỐC:
+=========================
+
+(đặt nội dung tại đây)
+"""
+PROMT_CONTENT_META_TAG = """Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
+
+Nhiệm vụ của bạn: Xử lý nội dung bên dưới và trả về duy nhất 1 object JSON theo cấu trúc:
+
+{
+  "body": "",
+  "meta": "",
+  "tags": ""
+}
+
+=========================
+YÊU CẦU CHO body (HTML sạch)
+=========================
+
+Giữ nguyên đầy đủ nội dung bài viết.
+
+Chỉ tạo HTML phần body, không tạo <html>, <head>, <body>.
+
+Chuẩn hóa cấu trúc thẻ HTML:
+
+Sử dụng đúng: <h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>.
+
+Làm nổi bật thông tin quan trọng bằng <strong> hoặc <em>.
+
+Xóa toàn bộ ký hiệu * hoặc **.
+
+Không sử dụng <blockquote>.
+
+Giữ nguyên tất cả hình ảnh, video và iframe.
+
+Chuẩn hóa ảnh:
+
+Chuyển mọi data-src, data-original, lazyload, srcset → src chuẩn.
+
+Giữ nguyên alt, title, caption.
+
+Không thêm:
+
+<title>
+
+<meta>
+
+từ khóa SEO
+
+liên kết ngoài
+
+Không trả về markdown, không dùng ```.
+
+=========================
+YÊU CẦU CHO meta (Meta Description)
+=========================
+
+Viết đoạn mô tả 150–160 ký tự.
+
+Nội dung xúc tích, rõ ràng, mô tả chính xác bài viết.
+
+Văn phong báo chí Việt Nam.
+
+Không thêm tiêu đề, nhãn hoặc ký hiệu.
+
+=========================
+YÊU CẦU CHO tags (Tags SEO)
+=========================
+
+Tạo danh sách từ khóa SEO liên quan bài viết.
+
+Tất cả chữ thường, không viết tắt.
+
+Ngắn gọn, chỉ là từ khóa.
+
+Phân tách bằng dấu phẩy.
+
+Chỉ trả về 1 dòng duy nhất.
+
+=========================
+ĐẦU RA BẮT BUỘC
+=========================
+
+Chỉ trả về duy nhất object JSON sau:
+
+{
+  "body": "",
+  "meta": "",
+  "tags": ""
+}
+
+
+Không thêm text, không giải thích.
+
+=========================
+NỘI DUNG GỐC:
+========================="""
+
 
 PROMPT_CLEAN_HTML = """Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
 
