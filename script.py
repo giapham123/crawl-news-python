@@ -140,6 +140,7 @@ def load_urls(file_path="urls.txt"):
 if __name__ == "__main__":
     driver = setup_driver()
 
+    dataCrawled = []
     success = []
     fail = []
 
@@ -158,46 +159,43 @@ if __name__ == "__main__":
             clean_prompt =  f"{PROMPT_CLEAN_HTML}\n{body_html}"
             prompt_title = f"{PROMPT_TITLE}\n{title_text}"
 
-            result_body = generate_text(clean_prompt)
-            clean_prompt_meta_tag =  f"{PROMPT_TAGS_META}\n{result_body}"
-            result_meta_tag= generate_text(clean_prompt_meta_tag)
-            result_title = generate_text(prompt_title)
-        #
-            print(result_body)
-            print(result_meta_tag)
-            print(result_title)
-        #
-            parsed_title = clean_and_parse_json(result_title)
-            parsed_meta_tag = clean_and_parse_json(result_meta_tag)
-            # parsed_body = clean_and_parse_json_html(result_body)
+            # =============================
+            # CRAWL DATA HERE
+            # =============================
+            dataCrawled.append({"url": url, "title": prompt_title, "body": clean_prompt})
 
-            result_title_text = parsed_title.get("title", "")
-            result_slug = parsed_title.get("slug", "")
-            result_focus = parsed_title.get("focus_keyphrase", "")
-
-            # clean_html = parsed_body.get("clean_html", "")
-            result_meta = parsed_meta_tag.get("meta_description", "")
-            result_tags = parsed_meta_tag.get("tags", "")
-
-            if not result_title or not result_body:
-                fail.append({"url": url, "title": "API EMPTY", "body": "API EMPTY"})
-                continue
-            # print(result_title_text)
-            # print(result_slug)
-            # print(result_focus)
-            # print(clean_html)
-            # print(result_meta)
-            # print(result_tags)
-
-            success.append({
-                "url": url,
-                "title": result_title_text,
-                "body": result_body,
-                "slug": result_slug,
-                "meta": result_meta,
-                "focus_key": result_focus,
-                "tags": result_tags,
-            })
+            # =============================
+            # THIS CODE BELOW USING GEMINI TO GENERATE CONTENT
+            # =============================
+            # result_body = generate_text(clean_prompt)
+            # clean_prompt_meta_tag =  f"{PROMPT_TAGS_META}\n{result_body}"
+            # result_meta_tag= generate_text(clean_prompt_meta_tag)
+            # result_title = generate_text(prompt_title)
+            #
+            # parsed_title = clean_and_parse_json(result_title)
+            # parsed_meta_tag = clean_and_parse_json(result_meta_tag)
+            # # parsed_body = clean_and_parse_json_html(result_body)
+            #
+            # result_title_text = parsed_title.get("title", "")
+            # result_slug = parsed_title.get("slug", "")
+            # result_focus = parsed_title.get("focus_keyphrase", "")
+            #
+            # # clean_html = parsed_body.get("clean_html", "")
+            # result_meta = parsed_meta_tag.get("meta_description", "")
+            # result_tags = parsed_meta_tag.get("tags", "")
+            #
+            # if not result_title or not result_body:
+            #     fail.append({"url": url, "title": "API EMPTY", "body": "API EMPTY"})
+            #     continue
+            # success.append({
+            #     "url": url,
+            #     "title": result_title_text,
+            #     "body": result_body,
+            #     "slug": result_slug,
+            #     "meta": result_meta,
+            #     "focus_key": result_focus,
+            #     "tags": result_tags,
+            # })
         except Exception as e:
             fail.append({"url": url, "title": "API ERROR", "body": str(e)})
             continue
@@ -223,10 +221,27 @@ if __name__ == "__main__":
         for row in fail:
             writer.writerow([row["url"], row["title"], row["body"]])
 
+    # =============================
+    # EXPORT AI DATA FILE (NEW)
+    # Format: link | title | data
+    # =============================
+    with open("ai_data.csv", "w", newline="", encoding="utf-8") as csvfile:
+        writer = csv.writer(csvfile, delimiter="|", quoting=csv.QUOTE_ALL)
+        writer.writerow(["link", "title", "data"])
+
+        for row in dataCrawled:
+            writer.writerow([
+                row["url"],
+                row["title"],
+                row["body"]  # đây là clean HTML để train AI
+            ])
+
     print("\n==============================")
     print(f"✅ SUCCESS: {len(success)} URLs")
+    print(f"✅ SUCCESS CRAWL: {len(dataCrawled)} URLs")
     print(f"❌ FAIL: {len(fail)} URLs")
     print("📁 File xuất:")
     print("  - success_results.csv")
     print("  - fail_results.csv")
+    print("  - ai_data.csv   (NEW)")
     print("==============================")

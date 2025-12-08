@@ -1,0 +1,140 @@
+"link"|"title"|"data"
+"https://nld.com.vn/gia-ca-phe-hom-nay-8-12-dong-thai-la-cua-khoi-ngoai-196251208071317303.htm"|"Dựa trên nội dung bài viết sau, hãy thực hiện 3 nhiệm vụ **theo đúng thứ tự** và **mỗi nhiệm vụ chỉ trả về 1 giá trị**, không giải thích thêm, và trả về duy nhất **một object JSON** theo định dạng:
+
+{
+  ""title"": ""Title tối ưu SEO"",
+  ""slug"": ""Slug chuẩn SEO"",
+  ""focus_keyphrase"": ""Focus keyphrase tối ưu""
+}
+
+---
+
+🎯 **[1] TẠO TITLE TỐI ƯU SEO**
+
+Sử dụng tất cả công cụ phân tích từ khóa có thể truy cập (Google Trends, Google Keyword Planner, KeywordTool.io, Ahrefs, Semrush, Google Analytics nếu có) để chọn **title tối ưu** cho bài viết trong lĩnh vực pháp lý / luật Việt Nam, phạm vi tìm kiếm Việt Nam, 12 tháng gần nhất.
+
+Quy tắc:
+- Ưu tiên từ khóa có search volume >10.000, nếu không có thì vẫn lấy dưới 10.000.
+- Title là **câu hỏi kết thúc bằng ?**
+- KHÔNG sử dụng dấu hai chấm “:”.
+- KHÔNG viết tắt.
+- Nếu cần thay dấu hai chấm → dùng từ nối.
+
+---
+
+🎯 **[2] TẠO SLUG CHUẨN SEO**
+
+Sử dụng dữ liệu từ khóa như trên để chọn **slug chuẩn SEO** cho bài viết.
+
+Quy tắc:
+- Chữ thường.
+- Không chứa /
+- Không viết tắt.
+- Các từ nối bằng dấu ""-"".
+- Dựa vào từ khóa có search volume cao nhất phù hợp nội dung.
+
+---
+
+🎯 **[3] TẠO FOCUS KEYPHRASE**
+
+Sử dụng các công cụ phân tích từ khóa tương tự để chọn **focus keyphrase tối ưu** cho bài viết.
+
+Quy tắc:
+- Dùng cụm từ chính xác, sát nội dung nhất.
+- Không dấu chấm, không ký tự lạ.
+- Không viết tắt.
+- Ưu tiên search volume >10.000, nếu không có thì chọn từ liên quan nhất.
+
+---
+
+📌 **Cuối prompt, đặt nội dung bài viết tại đây:**
+
+Giá cà phê hôm nay 8-12: Động thái lạ của khối ngoại"|"Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
+
+Nhiệm vụ của bạn: xử lý nội dung bên dưới và trả về DUY NHẤT nội dung HTML sạch (không phải JSON).
+
+=========================
+YÊU CẦU
+=========================
+
+- Giữ nguyên đầy đủ nội dung bài viết.
+- Chỉnh sửa lại cấu trúc thẻ cho chuẩn: <h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>.
+- Làm nổi bật thông tin quan trọng bằng <strong> hoặc <em>.
+- Loại bỏ toàn bộ ký hiệu * hoặc **.
+- Không sử dụng <blockquote>.
+- Giữ nguyên tất cả hình ảnh và video.
+- Chuẩn hóa ảnh:
+    + Chuyển mọi data-src, data-original, lazyload, srcset → src thực.
+    + Giữ nguyên alt, title, caption.
+- Giữ iframe/video hợp lệ.
+- Không thêm <title>, <meta>, từ khóa SEO hoặc liên kết ngoài.
+- Chỉ tạo HTML nằm trong phần <body>.
+
+=========================
+ĐẦU RA
+=========================
+
+Chỉ trả về HTML sạch, KHÔNG JSON, KHÔNG giải thích, KHÔNG markdown, KHÔNG ```.
+
+=========================
+NỘI DUNG GỐC:
+=========================
+
+<div class=""detail-content afcbc-body  "" data-role=""content"" itemprop=""articleBody"">
+                                                                            <div data-check-position=""body_start""></div>
+                                        <div class=""detail-cover"">
+                                                                                    </div>
+                                        <p>Hôm nay 8-12, các sàn giao dịch cà phê trên thế giới như London – Anh, New York – Mỹ sẽ mở cửa vào buổi chiều (giờ Việt Nam).&nbsp;</p><h3>Đầu tuần mới, giá cà phê ở mức thấp</h3><!-- bonewsrelation --><div class=""VCSortableInPreviewMode alignRight type-4_preview"" type=""RelatedNewsBox"" data-style=""align-right"" relatednewsboxtype=""type-4""><div class=""kbwscwl-relatedbox type-4 nguoilaodong""><span class=""kbwscwlrl-title-header"">TIN LIÊN QUAN</span><ul class=""kbwscwlr-list""><li class=""kbwscwlrl"" data-date=""07/12/2025 07:08"" data-id=""196251207065228626"" data-avatar=""https://nld.mediacdn.vn/291774122806476800/2025/12/6/gia-ca-phe-hom-nay-71225-1765065018353564239337-210-459-1388-2343-crop-17650650574451572349234.jpg"" data-url=""/gia-ca-phe-hom-nay-7-12-nguoi-viet-uong-ca-phe-con-it-196251207065228626.htm"" data-title=""Giá cà phê hôm nay 7-12: Người Việt uống cà phê còn ít""><a target=""_blank"" href=""/gia-ca-phe-hom-nay-7-12-nguoi-viet-uong-ca-phe-con-it-196251207065228626.htm"" class=""kbwscwlrl-thumb-avata""><img src=""https://nld.mediacdn.vn/thumb_w/300/291774122806476800/2025/12/6/gia-ca-phe-hom-nay-71225-1765065018353564239337-210-459-1388-2343-crop-17650650574451572349234.jpg"" alt=""Giá cà phê hôm nay 8-12: Động thái lạ của khối ngoại - Ảnh 1."" title="""" loading=""lazy""></a><h4 class=""kbwscwlrl-title""><a target=""_blank"" href=""/gia-ca-phe-hom-nay-7-12-nguoi-viet-uong-ca-phe-con-it-196251207065228626.htm"" class=""title link-callout"">Giá cà phê hôm nay 7-12: Người Việt uống cà phê còn ít</a></h4></li></ul></div></div><!-- eonewsrelation --><p>Giá Robusta giao tháng 1-2026 tạm thời ở mức 4.295 USD/tấn; Arabica giao tháng 3-2026 ở mức 8.260 USD/tấn; giá nội địa 102.800 đồng/kg. </p><p>Tháng 12 hằng năm là thời điểm cà phê Việt Nam thu hoạch rộ nhất, chiếm đến hơn 50% sản lượng cả năm nên thông thường, giá sẽ ở mức thấp.</p><p>Trước đây, thời điểm này, các doanh nghiệp thường mua cà phê mạnh để dự trữ và bán quanh năm nhưng hiện tại do cần nguồn vốn lớn, đa số doanh nghiệp chọn phương án khớp giá theo lô để an toàn.</p><p>Lượng cà phê dự trữ phân tán trong kho nhỏ của nông dân.</p><figure class=""VCSortableInPreviewMode"" type=""Photo"" style=""""><div><a href=""https://nld.mediacdn.vn/291774122806476800/2025/12/8/base64-1765152647256140358271.jpeg"" data-fancybox=""img-lightbox"" title=""Giá cà phê giảm mạnh khi thu hoạch rộ"" target=""_blank"" class=""detail-img-lightbox""><img data-author="""" src=""https://nld.mediacdn.vn/thumb_w/698/291774122806476800/2025/12/8/base64-1765152647256140358271.jpeg"" id=""img_194241228011491328"" w=""2560"" h=""1441"" alt=""Giá cà phê hôm nay 8-12: Động thái lạ của khối ngoại - Ảnh 1."" title="""" rel=""lightbox"" photoid=""194241228011491328"" data-original=""https://nld.mediacdn.vn/291774122806476800/2025/12/8/base64-1765152647256140358271.jpeg"" type=""photo"" style=""max-width:100%;"" width=""2560"" height=""1441"" loading=""lazy"" class=""lightbox-content""></a></div><figcaption class=""PhotoCMS_Caption""><p data-placeholder=""Nhập chú thích ảnh"" class="""">Giá cà phê giảm mạnh khi thu hoạch rộ</p></figcaption></figure><h3>Khối ngoại ít tham gia thị trường</h3><p>Thông tin từ Hiệp hội Cà phê – Ca cao Việt Nam (VICOFA) cho thấy trong tháng 11-2025, xuất khẩu cà phê đạt khoảng 88.126 tấn, giá trị 522,1 triệu USD; tăng 45% về lượng và tăng 49% về giá trị so với cùng kỳ năm ngoái. </p><p>Riêng khối lượng Robusta xuất khẩu đạt 64.237 tấn, trị giá gần 310,4 triệu USD; đơn giá trung bình 4.832 USD/tấn.</p><zone id=""lmeadybm""></zone><p>Đáng chú ý, trong kỳ thống kê này, khối ngoại (các doanh nghiệp có vốn đầu tư nước ngoài) tham gia thị trường xuất khẩu rất yếu, chỉ chiếm 16% về khối lượng, thấp hơn nhiều so với thị phần bình quân khoảng 30% của niên vụ trước.</p><p>Trong danh sách 10 doanh nghiệp xuất khẩu cà phê nhân sống lớn nhất tháng 11-2025 chỉ có duy nhất một thương hiệu ngoại là Nestlé Việt Nam, ở vị trí thứ 9.</p><p>Dẫn đầu danh sách xuất khẩu cà phê trong tháng 11-2025 nhiều nhất là: Vĩnh Hiệp, Intimex và Simexco Đắk Lắk.</p><p>Ông Thái Như Hiệp, Chủ tịch HĐTV Vĩnh Hiệp, cho biết lượng cà phê xuất khẩu trong tháng 10 và 11 vừa qua, chủ yếu là hàng tồn kho từ vụ trước chuyển qua. </p>                 <div class=""VCSortableInPreviewMode"" data-back="""" data-border=""#ffffff"" data-text-color=""#ffffff"" style=""display: block; border-color: rgb(255, 255, 255); color: rgb(255, 255, 255); width: 60%;"" id=""ObjectBoxContent_1765152496216"" type=""content"" w=""60%"">                     <div placeholder=""Nhập nội dung..."" class=""NLPlaceholderShow"">                                                  <p><br></p><figure class=""VCSortableInPreviewMode"" type=""PhotoInContentBox""><div><img data-author="""" src=""https://nld.mediacdn.vn/thumb_w/698/291774122806476800/2025/12/6/logo-napoly-17650648808941489224206.jpg"" id=""img_194057195532857344"" w=""900"" h=""585"" alt=""Giá cà phê hôm nay 8-12: Động thái lạ của khối ngoại - Ảnh 1."" title="""" rel=""https://nld.mediacdn.vn/291774122806476800/2025/12/6/logo-napoly-17650648808941489224206.jpg"" photoid=""194057195532857344"" data-original=""https://nld.mediacdn.vn/291774122806476800/2025/12/6/logo-napoly-17650648808941489224206.jpg"" type=""photo"" width=""900"" height=""585"" loading=""lazy""></div><figcaption class=""PhotoCMS_Caption""><p data-placeholder=""Nhập chú thích ảnh"" class=""NLPlaceholderShow""></p></figcaption></figure><p> </p>                     </div>                 </div>                 <!--Mon Dec 08 2025 08:15:30 GMT+0700 (Gi&#7901; &#272;&#244;ng D&#432;&#417;ng) -- null -- Mon Dec 08 2025 08:15:30 GMT+0700 (Gi&#7901; &#272;&#244;ng D&#432;&#417;ng)-->
+                                        <script>
+    //Chèn ads giữa bài
+    (runinit = window.runinit || []).push(function () {
+        //Nếu k chạy ads thì return
+        if (typeof _chkPrLink != 'undefined' && _chkPrLink)
+            return;
+
+        var adsId = 'lmeadybm';
+        var mutexAds = '<zone id=""' + adsId + '""></zone>';
+        var content = $('[data-role=""content""]');
+        if (content.length > 0) {
+            var childNodes = content[0].childNodes;
+            for (i = 0; i < childNodes.length; i++) {
+                var childNode = childNodes[i];
+
+                var isPhotoOrVideo = false;
+                if (childNode.nodeName.toLowerCase() == 'div') {
+                    // kiem tra xem co la anh khong?
+                    var type = $(childNode).attr('class') + '';
+
+                    if (type.indexOf('VCSortableInPreviewMode') >= 0) {
+                        isPhotoOrVideo = true;
+                    }
+                }
+
+                try {
+                    if ((i >= childNodes.length / 2 - 1) && (i < childNodes.length / 2) && !isPhotoOrVideo) {
+                        if (i <= childNodes.length - 3) {
+                            childNode.after(htmlToElement(mutexAds));
+                            arfAsync.push(adsId);
+                        }
+                        break;
+                    }
+                }
+                catch (e) { }
+            }
+        }
+    });
+    function htmlToElement(html) {
+        var template = document.createElement('template');
+        template.innerHTML = html;
+        return template.content.firstChild;
+    }
+</script>
+
+
+                                        <zone id=""lw61uyys""></zone>
+        <script>
+            if (pageSettings.allow3rd) arfAsync.push(""lw61uyys"");
+        </script>
+    
+                                        <div data-check-position=""body_end"" class=""clearfix""></div>
+                                                                    </div>"
