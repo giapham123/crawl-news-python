@@ -31,7 +31,6 @@ Chỉ trả về duy nhất mô tả ảnh bằng tiếng Việt, không JSON.
 NỘI DUNG GỐC:
 =========================
 
-(đặt nội dung tại đây)
 """
 PROMT_CONTENT_META_TAG = """Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
 

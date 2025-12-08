@@ -74,5 +74,21 @@ DOMAIN_SELECTOR_MAP = {
     "baoquocte.vn" : {
         "title": ".article-detail-title.f0",
         "body": ".article-detail.fw.lt.mb.clearfix"
+    },
+    "bienphong.com.vn" : {
+        "title": ".title--big",
+        "body": "#divcontent"
+    },
+    "vietnamnet.vn" : {
+        "title": ".content-detail-title",
+        "body": ".maincontent.main-content"
+    },
+    "gocnhinphaply.nguoiduatin.vn" : {
+        "title": ".article-title.f-rsb.fs30.hdcontent",
+        "body": ".dt-news__body"
+    },
+    "www.baokhanhhoa.vn" :{
+        "title": ".head_title",
+        "body": ".td-post-content.tagdiv-type"
     }
 }
