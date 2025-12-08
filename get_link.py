@@ -44,8 +44,22 @@ def get_original_links():
             original_urls.append(original_url)
             count += 1
 
-    # Unique
+    # Unique results
     return list(set(original_urls))
+
+
+# ====================================
+# SAVE LINKS TO urls.txt
+# ====================================
+def save_to_file(urls, file_name="urls.txt"):
+    try:
+        with open(file_name, "w", encoding="utf-8") as f:
+            for url in urls:
+                f.write(url + "\n")
+        return True
+    except Exception as e:
+        print("Error writing file:", e)
+        return False
 
 
 # ====================================
@@ -53,9 +67,15 @@ def get_original_links():
 # ====================================
 if __name__ == "__main__":
     links = get_original_links()
+
     if not links:
         print("No original links found.")
     else:
-        print("Original Links:")
+        print("Found", len(links), "original links:")
         for l in links:
             print(l)
+
+        if save_to_file(links):
+            print("\n✅ Saved to urls.txt")
+        else:
+            print("\n❌ Failed to save file")
