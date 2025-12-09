@@ -1,0 +1,233 @@
+"link"|"title"|"data"|"meta_tag"|"image"
+"https://plo.vn/video/loi-ke-cua-chien-si-pccc-cuu-nu-sinh-truoc-mui-xe-container-mat-lai-post885511.html"|"Dựa trên nội dung bài viết sau, hãy thực hiện 3 nhiệm vụ **theo đúng thứ tự** và **mỗi nhiệm vụ chỉ trả về 1 giá trị**, không giải thích thêm, và trả về duy nhất **một object JSON** theo định dạng:
+
+{
+  ""title"": ""Title tối ưu SEO"",
+  ""slug"": ""Slug chuẩn SEO"",
+  ""focus_keyphrase"": ""Focus keyphrase tối ưu""
+}
+
+---
+
+🎯 **[1] TẠO TITLE TỐI ƯU SEO**
+
+Sử dụng tất cả công cụ phân tích từ khóa có thể truy cập (Google Trends, Google Keyword Planner, KeywordTool.io, Ahrefs, Semrush, Google Analytics nếu có) để chọn **title tối ưu** cho bài viết trong lĩnh vực pháp lý / luật Việt Nam, phạm vi tìm kiếm Việt Nam, 12 tháng gần nhất.
+
+Quy tắc:
+- Ưu tiên từ khóa có search volume >10.000, nếu không có thì vẫn lấy dưới 10.000.
+- Title là **câu hỏi kết thúc bằng ?**
+- KHÔNG sử dụng dấu hai chấm “:”.
+- KHÔNG viết tắt.
+- Nếu cần thay dấu hai chấm → dùng từ nối.
+
+---
+
+🎯 **[2] TẠO SLUG CHUẨN SEO**
+
+Sử dụng dữ liệu từ khóa như trên để chọn **slug chuẩn SEO** cho bài viết.
+
+Quy tắc:
+- Chữ thường.
+- Không chứa /
+- Không viết tắt.
+- Các từ nối bằng dấu ""-"".
+- Dựa vào từ khóa có search volume cao nhất phù hợp nội dung.
+
+---
+
+🎯 **[3] TẠO FOCUS KEYPHRASE**
+
+Sử dụng các công cụ phân tích từ khóa tương tự để chọn **focus keyphrase tối ưu** cho bài viết.
+
+Quy tắc:
+- Dùng cụm từ chính xác, sát nội dung nhất.
+- Không dấu chấm, không ký tự lạ.
+- Không viết tắt.
+- Ưu tiên search volume >10.000, nếu không có thì chọn từ liên quan nhất.
+
+---
+
+📌 **Cuối prompt, đặt nội dung bài viết tại đây:**
+
+Lời kể của chiến sĩ PCCC cứu nữ sinh trước mũi xe container mất lái"|"Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
+
+Nhiệm vụ của bạn: Xử lý nội dung bên dưới và trả về duy nhất 1 object JSON theo cấu trúc:
+
+{
+  ""body"": """",
+  ""meta"": """",
+  ""tags"": """"
+}
+
+=========================
+YÊU CẦU CHO body (HTML sạch)
+=========================
+
+Giữ nguyên đầy đủ nội dung bài viết.
+
+Chỉ tạo HTML phần body, không tạo <html>, <head>, <body>.
+
+Chuẩn hóa cấu trúc thẻ HTML:
+
+Sử dụng đúng: <h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>.
+
+Làm nổi bật thông tin quan trọng bằng <strong> hoặc <em>.
+
+Xóa toàn bộ ký hiệu * hoặc **.
+
+Không sử dụng <blockquote>.
+
+Giữ nguyên tất cả hình ảnh, video và iframe.
+
+Chuẩn hóa ảnh:
+
+Chuyển mọi data-src, data-original, lazyload, srcset → src chuẩn.
+
+Giữ nguyên alt, title, caption.
+
+Không thêm:
+
+<title>
+
+<meta>
+
+từ khóa SEO
+
+liên kết ngoài
+
+Không trả về markdown, không dùng ```.
+
+=========================
+YÊU CẦU CHO meta (Meta Description)
+=========================
+
+Viết đoạn mô tả 150–160 ký tự.
+
+Nội dung xúc tích, rõ ràng, mô tả chính xác bài viết.
+
+Văn phong báo chí Việt Nam.
+
+Không thêm tiêu đề, nhãn hoặc ký hiệu.
+
+=========================
+YÊU CẦU CHO tags (Tags SEO)
+=========================
+
+Tạo danh sách từ khóa SEO liên quan bài viết.
+
+Tất cả chữ thường, không viết tắt.
+
+Ngắn gọn, chỉ là từ khóa.
+
+Phân tách bằng dấu phẩy.
+
+Chỉ trả về 1 dòng duy nhất.
+
+=========================
+ĐẦU RA BẮT BUỘC
+=========================
+
+Chỉ trả về duy nhất object JSON sau:
+
+{
+  ""body"": """",
+  ""meta"": """",
+  ""tags"": """"
+}
+
+
+Không thêm text, không giải thích.
+
+=========================
+NỘI DUNG GỐC:
+=========================
+<div class=""l-content""> <div class=""article__sapo cms-desc""> <p>(PLO)- Chiến sĩ Nguyễn Mai Thi, thuộc Phòng Cảnh sát PCCC và CNCH (PC07), Công an TP.HCM, đã dũng cảm lao ra cứu nữ sinh Võ Thu Trâm khỏi mũi xe container mất lái trong lúc đơn vị đang hỗ trợ khắc phục hậu quả bão lũ tại Đắk Lắk.<br></p> </div> <div id=""adsWeb_AdsArticleAfterSapo"" class=""banner clearfix"" data-platform=""1"" data-position=""Web_AdsArticleAfterSapo"" style=""display: none;""> <script>if(typeof Web_AdsArticleAfterSapo!=""undefined""){window.CMS_BANNER.pushAds(Web_AdsArticleAfterSapo,""adsWeb_AdsArticleAfterSapo"")}else{document.getElementById(""adsWeb_AdsArticleAfterSapo"").style.display=""none""};</script> </div> <div class=""article__body zce-content-body cms-body "" itemprop=""articleBody""> <p style=""text-align: justify;"">Những ngày qua, mạng <a href=""https://plo.vn/xa-hoi/"" title=""xã hội"" class=""cms-relate"">xã hội</a> lan truyền bức thư cảm ơn xúc động của em Võ Thu Trâm (học sinh lớp 12A2 Trường THPT Nguyễn Khuyến, xã Xuân Đài, Đắk Lắk) gửi đến chiến sĩ Nguyễn Mai Thi, người đã kịp thời kéo em ra khỏi mũi <a href=""https://plo.vn/chien-si-canh-sat-pccc-cong-an-tphcm-cuu-nu-sinh-truoc-mui-xe-container-post885337.html"" class=""cms-relate"">xe container mất lái</a> đang lao tới tại dốc Quýt, xã Xuân Thọ, trưa 25-11.</p> <figure class=""video""> <div id=""player-wrapper-1""><div class=""--z--player"" data-player="""" tabindex=""1"" style=""
+                width: 100%;
+                height: 438px
+            ""><video data-html5-video="""" src=""https://streaming-cms-plo.epicdn.me/8e8bd164dd54f086005d01dfcf0a2fe1/69385590/2025_12_07/7302087545290_0.mp4"" preload=""metadata""></video><div class=""--z--zpl-settings-menu""><div class=""--z--zpl-panel""></div></div><div class=""--z--controls-wrapper --z--hide""><div class=""--z--controls""><div class=""--z--progress-bar""><span class=""--z--bar --z--bar-bg""></span><span class=""--z--bar --z--bar-fill-load"" style=""width: 7.33534%;""></span><span class=""--z--bar --z--bar-fill-recent""><span class=""--z--bullet""></span></span><span class=""--z--seek-time --z--hide"">00:00</span></div><div class=""--z--control-left""><button class=""--z--control --z--btn --z--control-play""><span class=""--z--icon pl-ic-play_arrow""></span></button><div class=""--z--control --z--control-volume --z--hide-animation""><button class=""--z--control --z--btn --z--volume-icon""><span class=""--z--icon pl-ic-volume_up""></span></button><span class=""--z--volume-bar""><span class=""--z--bar --z--bar-bg""></span><span class=""--z--bar --z--bar-fill-recent"" style=""width: 100%;""><span class=""--z--bullet""></span></span></span></div><div class=""--z--control --z--control-time""><span>00:00</span><span>/</span><span>00:22</span></div></div><div class=""--z--control-right""><div class=""--z--control --z--control-settings --z--hide""><button class=""--z--btn --z--btn-settings"" title=""Cài đặt""><span class=""--z--icon pl-ic-settings""></span><span class=""--z--badge""></span></button></div><button class=""--z--control --z--btn --z--control-full-screen"" title=""Toàn màn hình""><span class=""--z--icon pl-ic-fullscreen""></span></button></div></div></div><div class=""--z--player-poster"" style=""background-image : url(https://image.plo.vn/w850/Uploaded/2025/wohtohp/2025_12_07/z7302086663206-49d7da0759dabc304103b77b952cff42-8583-8960.jpg.webp);""><div class=""--z--poster-controls --z--play-wrapper --z--active""></div></div><button class=""--z--big-play-button"" type=""button"" title=""Phát""><span class=""--z--icon pl-ic-play_arrow""></span></button><button class=""--z--playpause-fadeout"" type=""button""><span class=""--z--icon pl-ic-play_arrow""></span></button><div class=""--z--loading-wrapper"" style=""display: none;""><div class=""--z--pie-progress-size""><div class=""--z--pie-wrapper --z--progress-1"">
+                <div class=""--z--pie"">
+                    <div class=""--z--left-side --z--half-circle""></div>
+                    <div class=""--z--right-side --z--half-circle""></div>
+                </div>
+                <div class=""--z--shadow""></div>
+                </div></div></div></div></div> <figcaption> VIDEO: Chiến sĩ Cảnh sát PCCC và CNCH (PC07), <a href=""https://plo.vn/cong-an-tphcm-tag24388.html"" title=""Công an TP.HCM"" class=""cms-relate"">Công an TP.HCM</a> cứu nữ sinh trước mũi xe container mất lái. </figcaption> </figure> <h2 id=""tocid_1""><b>Chỉ có vài giây để quyết định</b></h2> <p style=""text-align: justify;""><a href=""https://plo.vn/giao-luu-truc-tuyen/"" title=""Trao đổi"" class=""cms-relate"">Trao đổi</a> với phóng viên <i>PLO</i>, chiến sĩ Nguyễn Mai Thi (21 tuổi, ngụ TP.HCM), thuộc Đội Cảnh sát PCCC và CNCH khu vực 19 (PC07), Công an TP.HCM, bảo trong khoảnh khắc sinh tử ấy anh chỉ có vài giây để quyết định.</p> <p style=""text-align: justify;"">“Lúc phát hiện em Trâm và chiếc container đang lao xuống rất nhanh, trong đầu em chỉ kịp nghĩ phải lao tới ngay. Bản năng và trách nhiệm của một chiến sĩ khiến em phải phản xạ lập tức, kéo nạn nhân ra khỏi vùng <a href=""https://plo.vn/khu-vuc-nguy-hiem-tag238438.html"" class=""cms-relate"">nguy hiểm</a>”- chiến sĩ Thi kể lại.</p> <figure> <img src=""data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="" id=""2378989"" alt=""z7302086988618_52e48a514282e7904adad370c2ec325c.jpg"" data-width=""2040"" data-height=""1530"" data-image-id=""2378989"" class=""lazyload cms-photo"" data-src=""https://image.plo.vn/w850/Uploaded/2025/wohtohp/2025_12_07/z7302086988618-52e48a514282e7904adad370c2ec325c-3384-3764.jpg.webp"" title=""Chiến sĩ Nguyễn Mai Thi (21 tuổi, ngụ TP.HCM), thuộc Đội Cảnh sát PCCC và CNCH khu vực 19 (PC07), Công an TP.HCM.""> <figcaption> Chiến sĩ Nguyễn Mai Thi (21 tuổi, ngụ TP.HCM), thuộc Đội Cảnh sát PCCC và CNCH khu vực 19 (PC07), Công an TP.HCM. </figcaption> </figure> <p style=""text-align: justify;"">Thời điểm đó, các phương tiện chuyên dụng và cán bộ, chiến sĩ thuộc PC07 đang hỗ trợ người dân khắc phục hậu quả sau lũ gây ra.</p> <p style=""text-align: justify;"">Lúc này, chiến sĩ Thi được phân công đứng phía trước để ra tín hiệu <a href=""https://plo.vn/canh-bao-tag15493.html"" class=""cms-relate"">cảnh báo</a> các phương tiện cùng chiều nhận biết khu vực có vật cản, giúp người dân di chuyển an toàn. Tuy nhiên, <a href=""https://plo.vn/quoc-te/su-kien/"" title=""diễn biến"" class=""cms-relate"">diễn biến</a> sự cố quá nhanh khiến tình huống trở nên nguy hiểm ngoài dự đoán.</p> <div class=""ads_middle""> <div id=""adsWeb_AdsArticleMiddle"" class=""banner fyi"" data-position=""Web_AdsArticleMiddle""> <script>if(typeof Web_AdsArticleMiddle!=""undefined""){window.CMS_BANNER.pushAds(Web_AdsArticleMiddle,""adsWeb_AdsArticleMiddle"")}else{document.getElementById(""adsWeb_AdsArticleMiddle"").style.display=""none""};</script><div id=""Web_AdsArticleMiddle_1"" data-id=""2737"" data-name=""dable.io-giua-bai"" data-position=""Web_AdsArticleMiddle"" data-index=""1"" align=""center"" class=""adsitem banner_show"" style=""position: relative;"" rel=""2737"" tag=""dable.io-giua-bai"">
+<div onclick=""document.getElementById('Web_AdsArticleMiddle_1').parentNode.style.display = 'none';"" class=""ads_close"" style=""background: #fff;z-index: 50;position: absolute;bottom: 0;right: 0;padding: 0 5px;border-radius: 2px;font-size: 14px;"" title=""Đóng""><i>×</i></div></div> </div> </div> <p style=""text-align: justify;"">Sau khi kéo được nữ sinh Trâm ra khỏi đầu xe <a href=""https://plo.vn/container-tag25910.html"" class=""cms-relate"">container</a>, anh Thi lập tức chạy lại vị trí đồng đội thì nhận ra Trung tá Nguyễn Quang Minh, Phó Đội trưởng Đội PCCC và CNCH khu vực 19, đã bị chiếc container tông trúng cột điện khiến cột đèn đổ đè lên người.</p> <p style=""text-align: justify;"">“Biết em Trâm đã an toàn, em chạy đến chỗ anh Minh ngay. Khi đó mọi người cố gắng tìm phương tiện đưa anh đi cấp cứu, rồi lại quay về hỗ trợ người dân hoàn thành nhiệm vụ”- anh Thi nói.</p> <p style=""text-align: justify;"">Đội công tác đang trong <a href=""https://dentrenbien.plo.vn/hanh-trinh.html"" title=""hành trình"" class=""cms-relate"">hành trình</a> 12 ngày hỗ trợ người dân Đắk Lắk khắc phục hậu quả bão lũ, với chiến sĩ Mai Thi, khoảnh khắc ngày 25-11 là điều khó quên trong cuộc đời anh.</p> <h3 id=""tocid_2"">""Chậm phản xạ một chút, người ân hận suốt đời sẽ là em""<br></h3> <p style=""text-align: justify;"">Anh Thi chia sẻ bản thân mới vào ngành được gần hai năm, nhưng luôn tâm niệm: Làm việc gì cũng phải đặt an toàn của người dân lên trước. Đặc biệt khi thiên tai vừa xảy ra, em càng phải làm tốt hơn nhiệm vụ của mình.</p> <p style=""text-align: justify;"">“Nếu lúc đó, em chậm phản xạ một chút, người ân hận suốt đời sẽ là em. Đây là trách nhiệm, là tinh thần của người chiến sĩ công an nhân dân, nhất là khi đang khoác trên mình trang phục Cảnh sát PCCC và CNCH”- anh Thi tâm sự.</p> <figure> <img src=""data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="" id=""2378990"" alt=""z7302086989607_fe6ff67287d03e4d5d441b2cc27901d5.jpg"" data-width=""2046"" data-height=""1364"" data-image-id=""2378990"" class=""lazyload cms-photo"" data-src=""https://image.plo.vn/w850/Uploaded/2025/wohtohp/2025_12_07/z7302086989607-fe6ff67287d03e4d5d441b2cc27901d5-987-5773.jpg.webp"" title=""Hình ảnh chiến sĩ Nguyễn Mai Thi trong một lần công tác chữa cháy.""> <figcaption> <a href=""https://plo.vn/lens/"" title=""Hình ảnh"" class=""cms-relate"">Hình ảnh</a> chiến sĩ Nguyễn Mai Thi trong một lần công tác chữa cháy. </figcaption> </figure> <div class=""ads_middle""> <div id=""adsWeb_AdsArticleMiddle1"" class=""banner fyi"" data-position=""Web_AdsArticleMiddle1"" style=""display: none;""> <script>if(typeof Web_AdsArticleMiddle1!=""undefined""){window.CMS_BANNER.pushAds(Web_AdsArticleMiddle1,""adsWeb_AdsArticleMiddle1"")}else{document.getElementById(""adsWeb_AdsArticleMiddle1"").style.display=""none""};</script> </div> </div> <p style=""text-align: justify;"">Sau sự việc, khi đọc được bức tâm thư Trâm gửi về đơn vị, anh Thi cho biết rất xúc động và vui vì “đã góp được một phần nhỏ cho xã hội”.</p> <p style=""text-align: justify;"">Trong tâm thư, nữ sinh kể lại thời điểm khoảng 13 giờ 5 phút ngày 25-11, khi đang lái <a href=""https://plo.vn/xe-lai/the-gioi-xe/"" title=""xe máy"" class=""cms-relate"">xe máy</a> xuống dốc thì thấy xe chữa cháy bật tín hiệu khẩn cấp và một chiến sĩ đang điều tiết giao thông. </p> <p style=""text-align: justify;"">Khi còn cách khoảng 3 m, chiến sĩ bất ngờ lao tới kéo em ra khỏi làn xe. Ngay lập tức, chiếc container phía sau lao tới, tông vào lề đường và đâm gãy trụ đèn chiếu sáng.</p> <p style=""text-align: justify;"">Cú tông khiến Trung tá Nguyễn Quang Minh bị đa chấn thương và phải nhập viện cấp cứu. Chiếc container chỉ dừng lại sau khi tiếp tục lao thêm gần 100 m.</p> <p style=""text-align: justify;"">“Nhờ anh chiến sĩ kịp thời bế và kéo cháu ra khỏi vùng nguy hiểm mà cháu thoát nạn. Nếu không có anh, cháu không biết giờ mình còn có mặt trên cuộc đời này hay không” – Thu Trâm viết trong thư cảm ơn.</p> <p style=""text-align: justify;"">Sau sự việc, Trâm mới biết người cứu mình là chiến sĩ Nguyễn Mai Thi, thành viên đoàn công tác của Đội PCCC và CNCH khu vực 19, <a href=""https://plo.vn/cong-an-tphcm-tag24378.html"" class=""cms-relate"">Công an TP.HCM</a>, được điều động đến hỗ trợ người dân vùng lũ dọn dẹp, khắc phục hậu quả và trao quà cứu trợ tại các xã, phường phía Đông Đắk Lắk.</p> <figure> <img src=""data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="" id=""2379497"" alt=""z7306169275440_a8eb5c921b98df1af5096cfe03dbac2e.jpg"" data-width=""1922"" data-height=""2017"" data-image-id=""2379497"" class=""lazyload cms-photo"" data-src=""https://image.plo.vn/w850/Uploaded/2025/wohtohp/2025_12_08/z7306169275440-a8eb5c921b98df1af5096cfe03dbac2e-954-7047.jpg.webp"" title=""Chiến sĩ Nguyễn Mai Thi (21 tuổi, ngụ TP.HCM), thuộc Đội Cảnh sát PCCC và CNCH khu vực 19 (PC07), Công an TP.HCM. Hành động quả cảm giữa tâm điểm vùng thiên tai.""> <figcaption> Chiến sĩ Nguyễn Mai Thi (21 tuổi, ngụ TP.HCM), thuộc Đội Cảnh sát PCCC và CNCH khu vực 19 (PC07), Công an TP.HCM. Hành động quả cảm giữa tâm điểm vùng thiên tai. </figcaption> </figure> <div class=""ads_middle""> <div id=""adsWeb_AdsArticleMiddle2"" class=""banner fyi"" data-position=""Web_AdsArticleMiddle2"" style=""display: none;""> <script>if(typeof Web_AdsArticleMiddle2!=""undefined""){window.CMS_BANNER.pushAds(Web_AdsArticleMiddle2,""adsWeb_AdsArticleMiddle2"")}else{document.getElementById(""adsWeb_AdsArticleMiddle2"").style.display=""none""};</script> </div> </div> <div class=""article-relate"" data-source=""related-news"" data-tag=""PC_Detail_BoxTLQ_Inview""> <article class=""story""> <figure class=""story__thumb""> <a class=""cms-link"" href=""https://plo.vn/video-thot-tim-canh-chien-si-canh-sat-pccc-cong-an-tphcm-cuu-nu-sinh-truoc-dau-xe-container-post885357.html"" title=""Video: Thót tim cảnh chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước đầu xe container""> <img class=""lazyload "" src=""data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="" data-src=""https://image.plo.vn/200x130/Uploaded/2025/drkxraekxq/2025_12_07/canh-sat-pccc-4013-970.jpg.webp"" alt=""Video: Thót tim cảnh chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước đầu xe container""> </a> </figure> <h2 class=""story__heading"" data-tracking=""885357""> <a class=""cms-link"" href=""https://plo.vn/video-thot-tim-canh-chien-si-canh-sat-pccc-cong-an-tphcm-cuu-nu-sinh-truoc-dau-xe-container-post885357.html"" title=""Video: Thót tim cảnh chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước đầu xe container""> Video: Thót tim cảnh chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước đầu xe container<i class=""ic-type-video""></i> </a> </h2> <div class=""story__summary story__shorten""> <p>(PLO)-&nbsp;Chiến sĩ Cảnh sát PCCC Nguyễn Mai Thi, Phòng Cảnh sát PCCC và CNCH (PC07), Công an TP.HCM, người đã dũng cảm cứu nữ sinh Võ Thu Trâm trước mũi xe container lao tới khi đang hỗ trợ khắc phục hậu quả bão lũ tại Đắk Lắk.</p> </div> </article> </div> <div class=""article-relate"" data-source=""related-news"" data-tag=""PC_Detail_BoxTLQ_Inview""> <article class=""story""> <figure class=""story__thumb""> <a class=""cms-link"" href=""https://plo.vn/chien-si-canh-sat-pccc-cong-an-tphcm-cuu-nu-sinh-truoc-mui-xe-container-post885337.html"" title=""Chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước mũi xe container ""> <img class=""lazyload "" src=""data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="" data-src=""https://image.plo.vn/200x130/Uploaded/2025/znaebe/2025_12_07/chien-si-canh-sat-pccc-cong-an-tp-hcm-cuu-nu-sinh-truoc-mui-xe-container-5798-6734.jpg.webp"" alt=""Chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước mũi xe container ""> </a> </figure> <h2 class=""story__heading"" data-tracking=""885337""> <a class=""cms-link"" href=""https://plo.vn/chien-si-canh-sat-pccc-cong-an-tphcm-cuu-nu-sinh-truoc-mui-xe-container-post885337.html"" title=""Chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước mũi xe container ""> Chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước mũi xe container <i class=""ic-type-video""></i><i class=""ic-type-img""></i> </a> </h2> <div class=""story__summary story__shorten""> <p>(PLO)- Chiến sĩ Nguyễn Mai Thi, Phòng Cảnh sát PCCC và CNCH (PC07), Công an TP.HCM – người đã dũng cảm cứu nữ sinh Võ Thu Trâm trước mũi xe container lao tới khi đang hỗ trợ khắc phục hậu quả bão lũ tại Đắk Lắk.<br></p> </div> </article> </div> <div class=""article__author cms-author""> NGUYỄN TÂN - PHẠM HẢI </div> <div id=""adsWeb_AdsArticleAfterBody"" class=""banner clearfix"" data-platform=""1"" data-position=""Web_AdsArticleAfterBody""> <script>if(typeof Web_AdsArticleAfterBody!=""undefined""){window.CMS_BANNER.pushAds(Web_AdsArticleAfterBody,""adsWeb_AdsArticleAfterBody"")}else{document.getElementById(""adsWeb_AdsArticleAfterBody"").style.display=""none""};</script><div id=""Web_AdsArticleAfterBody_0"" data-id=""4612"" data-name=""DC-duoi-tac-gia "" data-position=""Web_AdsArticleAfterBody"" data-index=""0"" align=""center"" class=""adsitem banner_show"" style=""position: relative;"" rel=""4612"" tag=""DC-duoi-tac-gia "">
+<div data-type=""_mgwidget"" data-widget-id=""1344616""></div> 
+<script>(function(w,q){w[q]=w[q]||[];w[q].push([""_mgc.load""])})(window,""_mgq"");</script><div onclick=""document.getElementById('Web_AdsArticleAfterBody_0').parentNode.style.display = 'none';"" class=""ads_close"" style=""background: #fff;z-index: 50;position: absolute;bottom: 0;right: 0;padding: 0 5px;border-radius: 2px;font-size: 14px;"" title=""Đóng""><i>×</i></div></div> </div> </div> <div class=""article__footer""> <div class=""related-news""> <div class=""box-heading""><span class=""title"">Tin liên quan</span></div> <div class=""box-content"" data-source=""related-news"" data-tag=""PC_Detail_ListTLQ""> <article class=""story no-photo""> <h2 class=""story__heading"" data-tracking=""885357""> <a class=""cms-link"" href=""https://plo.vn/video-thot-tim-canh-chien-si-canh-sat-pccc-cong-an-tphcm-cuu-nu-sinh-truoc-dau-xe-container-post885357.html"" title=""Video: Thót tim cảnh chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước đầu xe container""> Video: Thót tim cảnh chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước đầu xe container<i class=""ic-type-video""></i> </a> </h2> </article> <article class=""story no-photo""> <h2 class=""story__heading"" data-tracking=""885337""> <a class=""cms-link"" href=""https://plo.vn/chien-si-canh-sat-pccc-cong-an-tphcm-cuu-nu-sinh-truoc-mui-xe-container-post885337.html"" title=""Chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước mũi xe container ""> Chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước mũi xe container <i class=""ic-type-video""></i><i class=""ic-type-img""></i> </a> </h2> </article> <article class=""story no-photo""> <h2 class=""story__heading"" data-tracking=""885342""> <a class=""cms-link"" href=""https://plo.vn/tphcm-siet-chat-pccc-xu-ly-chuong-cop-sau-nhieu-vu-chay-post885342.html"" title=""TP.HCM siết chặt PCCC, xử lý ‘chuồng cọp’ sau nhiều vụ cháy ""> TP.HCM siết chặt PCCC, xử lý ‘chuồng cọp’ sau nhiều vụ cháy </a> </h2> </article> </div> </div> <div id=""adsWeb_AdsArticleAfterRelated"" class=""banner clearfix"" data-platform=""1"" data-position=""Web_AdsArticleAfterRelated"" style=""display: none;""> <script>if(typeof Web_AdsArticleAfterRelated!=""undefined""){window.CMS_BANNER.pushAds(Web_AdsArticleAfterRelated,""adsWeb_AdsArticleAfterRelated"")}else{document.getElementById(""adsWeb_AdsArticleAfterRelated"").style.display=""none""};</script> </div> <div class=""article__tag""> <h3 class=""box-heading""> <span class=""title"">từ khóa</span> </h3> <div class=""box-content""> <a href=""https://plo.vn/chien-si-tag19366.html"" title=""chiến sĩ"">#chiến sĩ</a> <a href=""https://plo.vn/nu-sinh-tag73391.html"" title=""nữ sinh"">#nữ sinh</a> <a href=""https://plo.vn/cuu-tag27586.html"" title=""cứu"">#cứu</a> <a href=""https://plo.vn/xe-container-mat-lai-tag489266.html"" title=""xe container mất lái"">#xe container mất lái</a> <a href=""https://plo.vn/chien-si-nguyen-mai-thi-tag756015.html"" title=""chiến sĩ Nguyễn Mai Thi"">#chiến sĩ Nguyễn Mai Thi</a> <a href=""https://plo.vn/pc07-tag754139.html"" title=""PC07"">#PC07</a> </div> </div> <div id=""adsWeb_AdsArticleAfterTag"" class=""banner clearfix"" data-platform=""1"" data-position=""Web_AdsArticleAfterTag""> <script>if(typeof Web_AdsArticleAfterTag!=""undefined""){window.CMS_BANNER.pushAds(Web_AdsArticleAfterTag,""adsWeb_AdsArticleAfterTag"")}else{document.getElementById(""adsWeb_AdsArticleAfterTag"").style.display=""none""};</script><div id=""Web_AdsArticleAfterTag_0"" data-id=""4433"" data-name=""DC Duoi Tag"" data-position=""Web_AdsArticleAfterTag"" data-index=""0"" align=""center"" class=""adsitem banner_show"" style=""position: relative;"" rel=""4433"" tag=""DC Duoi Tag"">
+<div id=""M803507ScriptRootC1306417""> 
+</div> 
+<script src=""https://jsc.mgid.com/p/l/plo.vn.1306417.js"" async=""""> 
+ </script><div onclick=""document.getElementById('Web_AdsArticleAfterTag_0').parentNode.style.display = 'none';"" class=""ads_close"" style=""background: #fff;z-index: 50;position: absolute;bottom: 0;right: 0;padding: 0 5px;border-radius: 2px;font-size: 14px;"" title=""Đóng""><i>×</i></div></div> </div> <div class=""wrap-comment"" id=""comment885511"" data-id=""885511"" data-type=""20""><div id=""comment-885511"" class=""article__comment""><div class=""box-heading""><span class=""title"">Bình luận</span></div><div class=""box-content""> <div class=""input-comment input"">     <textarea rows=""3"" placeholder=""Xin vui lòng gõ tiếng Việt có dấu""></textarea>     <div class=""note-btn"">         <div class=""wrap-login"" id=""login-comment"">            <span>Đăng nhập bằng: </span>            <button class=""fb login-fb"" rel=""facebook""><i class=""ic-facebook-f""></i></button>            <button class=""google login-gg"" rel=""google""><i class=""ic-google""></i></button>            <button class=""zalo login-zl"" rel=""zalo""><i class=""ic-zalo-z""></i></button>            <button class=""mail"" id=""login-cms""><i class=""ic-mail""></i></button>            <span>hoặc</span>            <a href=""javascript:void(0);"" class=""register-link"" id=""signup-cms"">Đăng ký</a>         </div>         <a class=""logged-in hidden"" id=""cmt-user-link"" href="""">             Xin chào, <span class=""avatar"" id=""cmt-user-avatar""></span><span class=""name"" id=""cmt-user-name""></span>         </a>         <button class=""btn-submit btnSubmit"">Gửi bình luận</button>     </div> </div><div class=""filter-comment"" style=""display: none;"">     <div class=""total-comment"" id=""total-comment"">0 bình luận</div>     <div class=""wrap-select"">         <label>sắp xếp theo:</label>         <select id=""ddlOrder"">              <option value=""0"">Mới nhất</option>              <option value=""1"">Hay nhất</option>         </select>     </div></div><div class=""list-comment""></div><button data-page=""1"" style=""display:none;"" class=""show-more cms-more"">XEM THÊM BÌNH LUẬN</button></div></div></div> <div id=""adsWeb_AdsArticleAfterComment"" class=""banner clearfix"" data-platform=""1"" data-position=""Web_AdsArticleAfterComment"" style=""display: none;""> <script>if(typeof Web_AdsArticleAfterComment!=""undefined""){window.CMS_BANNER.pushAds(Web_AdsArticleAfterComment,""adsWeb_AdsArticleAfterComment"")}else{document.getElementById(""adsWeb_AdsArticleAfterComment"").style.display=""none""};</script> </div> </div> </div>"|"
+Bạn là một hệ thống tối ưu SEO cho website tin tức Việt Nam.
+
+Hãy đọc nội dung văn bản bên dưới và trả về duy nhất 1 object JSON chứa:
+- tags
+- meta_description
+
+=========================
+YÊU CẦU
+=========================
+
+2. Tags SEO:
+   - Tạo danh sách từ khóa SEO.
+   - Chỉ dùng chữ thường, không viết tắt.
+   - Không mô tả dài dòng.
+   - Các tags phân cách bằng dấu phẩy.
+   - Chỉ in đúng 1 dòng.
+
+3. Meta Description:
+   - Viết đoạn mô tả 150–160 ký tự.
+   - Ngắn gọn, xúc tích, liên quan đến pháp luật Việt Nam.
+   - Không thêm tiêu đề hoặc nhãn.
+   - Chỉ in đúng 1 dòng.
+
+=========================
+ĐỊNH DẠNG TRẢ VỀ
+=========================
+
+{
+  ""tags"": ""tag1, tag2, tag3"",
+  ""meta_description"": ""Đoạn mô tả 150–160 ký tự""
+}
+
+Không giải thích thêm, không thêm text ngoài JSON.
+
+=========================
+NỘI DUNG GỐC:
+=========================
+
+
+(PLO)- Chiến sĩ Nguyễn Mai Thi, thuộc Phòng Cảnh sát PCCC và CNCH (PC07), Công an TP.HCM, đã dũng cảm lao ra cứu nữ sinh Võ Thu Trâm khỏi mũi xe container mất lái trong lúc đơn vị đang hỗ trợ khắc phục hậu quả bão lũ tại Đắk Lắk. Những ngày qua, mạng xã hội lan truyền bức thư cảm ơn xúc động của em Võ Thu Trâm (học sinh lớp 12A2 Trường THPT Nguyễn Khuyến, xã Xuân Đài, Đắk Lắk) gửi đến chiến sĩ Nguyễn Mai Thi, người đã kịp thời kéo em ra khỏi mũi xe container mất lái đang lao tới tại dốc Quýt, xã Xuân Thọ, trưa 25-11. VIDEO: Chiến sĩ Cảnh sát PCCC và CNCH (PC07), Công an TP.HCM cứu nữ sinh trước mũi xe container mất lái. Chỉ có vài giây để quyết định Trao đổi với phóng viên PLO, chiến sĩ Nguyễn Mai Thi (21 tuổi, ngụ TP.HCM), thuộc Đội Cảnh sát PCCC và CNCH khu vực 19 (PC07), Công an TP.HCM, bảo trong khoảnh khắc sinh tử ấy anh chỉ có vài giây để quyết định. “Lúc phát hiện em Trâm và chiếc container đang lao xuống rất nhanh, trong đầu em chỉ kịp nghĩ phải lao tới ngay. Bản năng và trách nhiệm của một chiến sĩ khiến em phải phản xạ lập tức, kéo nạn nhân ra khỏi vùng nguy hiểm ”- chiến sĩ Thi kể lại. Chiến sĩ Nguyễn Mai Thi (21 tuổi, ngụ TP.HCM), thuộc Đội Cảnh sát PCCC và CNCH khu vực 19 (PC07), Công an TP.HCM. Thời điểm đó, các phương tiện chuyên dụng và cán bộ, chiến sĩ thuộc PC07 đang hỗ trợ người dân khắc phục hậu quả sau lũ gây ra. Lúc này, chiến sĩ Thi được phân công đứng phía trước để ra tín hiệu cảnh báo các phương tiện cùng chiều nhận biết khu vực có vật cản, giúp người dân di chuyển an toàn. Tuy nhiên, diễn biến sự cố quá nhanh khiến tình huống trở nên nguy hiểm ngoài dự đoán. Sau khi kéo được nữ sinh Trâm ra khỏi đầu xe container , anh Thi lập tức chạy lại vị trí đồng đội thì nhận ra Trung tá Nguyễn Quang Minh, Phó Đội trưởng Đội PCCC và CNCH khu vực 19, đã bị chiếc container tông trúng cột điện khiến cột đèn đổ đè lên người. “Biết em Trâm đã an toàn, em chạy đến chỗ anh Minh ngay. Khi đó mọi người cố gắng tìm phương tiện đưa anh đi cấp cứu, rồi lại quay về hỗ trợ người dân hoàn thành nhiệm vụ”- anh Thi nói. Đội công tác đang trong hành trình 12 ngày hỗ trợ người dân Đắk Lắk khắc phục hậu quả bão lũ, với chiến sĩ Mai Thi, khoảnh khắc ngày 25-11 là điều khó quên trong cuộc đời anh. ""Chậm phản xạ một chút, người ân hận suốt đời sẽ là em"" Anh Thi chia sẻ bản thân mới vào ngành được gần hai năm, nhưng luôn tâm niệm: Làm việc gì cũng phải đặt an toàn của người dân lên trước. Đặc biệt khi thiên tai vừa xảy ra, em càng phải làm tốt hơn nhiệm vụ của mình. “Nếu lúc đó, em chậm phản xạ một chút, người ân hận suốt đời sẽ là em. Đây là trách nhiệm, là tinh thần của người chiến sĩ công an nhân dân, nhất là khi đang khoác trên mình trang phục Cảnh sát PCCC và CNCH”- anh Thi tâm sự. Hình ảnh chiến sĩ Nguyễn Mai Thi trong một lần công tác chữa cháy. Sau sự việc, khi đọc được bức tâm thư Trâm gửi về đơn vị, anh Thi cho biết rất xúc động và vui vì “đã góp được một phần nhỏ cho xã hội”. Trong tâm thư, nữ sinh kể lại thời điểm khoảng 13 giờ 5 phút ngày 25-11, khi đang lái xe máy xuống dốc thì thấy xe chữa cháy bật tín hiệu khẩn cấp và một chiến sĩ đang điều tiết giao thông. Khi còn cách khoảng 3 m, chiến sĩ bất ngờ lao tới kéo em ra khỏi làn xe. Ngay lập tức, chiếc container phía sau lao tới, tông vào lề đường và đâm gãy trụ đèn chiếu sáng. Cú tông khiến Trung tá Nguyễn Quang Minh bị đa chấn thương và phải nhập viện cấp cứu. Chiếc container chỉ dừng lại sau khi tiếp tục lao thêm gần 100 m. “Nhờ anh chiến sĩ kịp thời bế và kéo cháu ra khỏi vùng nguy hiểm mà cháu thoát nạn. Nếu không có anh, cháu không biết giờ mình còn có mặt trên cuộc đời này hay không” – Thu Trâm viết trong thư cảm ơn. Sau sự việc, Trâm mới biết người cứu mình là chiến sĩ Nguyễn Mai Thi, thành viên đoàn công tác của Đội PCCC và CNCH khu vực 19, Công an TP.HCM , được điều động đến hỗ trợ người dân vùng lũ dọn dẹp, khắc phục hậu quả và trao quà cứu trợ tại các xã, phường phía Đông Đắk Lắk. Chiến sĩ Nguyễn Mai Thi (21 tuổi, ngụ TP.HCM), thuộc Đội Cảnh sát PCCC và CNCH khu vực 19 (PC07), Công an TP.HCM. Hành động quả cảm giữa tâm điểm vùng thiên tai. Video: Thót tim cảnh chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước đầu xe container (PLO)- Chiến sĩ Cảnh sát PCCC Nguyễn Mai Thi, Phòng Cảnh sát PCCC và CNCH (PC07), Công an TP.HCM, người đã dũng cảm cứu nữ sinh Võ Thu Trâm trước mũi xe container lao tới khi đang hỗ trợ khắc phục hậu quả bão lũ tại Đắk Lắk. Chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước mũi xe container (PLO)- Chiến sĩ Nguyễn Mai Thi, Phòng Cảnh sát PCCC và CNCH (PC07), Công an TP.HCM – người đã dũng cảm cứu nữ sinh Võ Thu Trâm trước mũi xe container lao tới khi đang hỗ trợ khắc phục hậu quả bão lũ tại Đắk Lắk. NGUYỄN TÂN - PHẠM HẢI Tin liên quan Video: Thót tim cảnh chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước đầu xe container Chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước mũi xe container TP.HCM siết chặt PCCC, xử lý ‘chuồng cọp’ sau nhiều vụ cháy TỪ KHÓA #chiến sĩ #nữ sinh #cứu #xe container mất lái #chiến sĩ Nguyễn Mai Thi #PC07 BÌNH LUẬN Đăng nhập bằng: hoặc Đăng ký Gửi bình luận"|"Bạn là một hệ thống phân tích nội dung báo chí và tạo ảnh minh họa chất lượng cao.
+
+Hãy đọc nội dung bên dưới và tạo ra mô tả ảnh (image prompt) chi tiết, rõ ràng, phù hợp với một bài báo Việt Nam.  
+
+=========================
+YÊU CẦU TẠO HÌNH
+=========================
+
+- Phải dựa hoàn toàn vào nội dung bài viết.
+- Mô tả hình ảnh rõ ràng, giàu chi tiết.
+- Phong cách báo chí – thực tế – hiện đại.
+- Không thêm nhân vật hư cấu.
+- Không thêm thông tin không có trong bài.
+- Nếu bài viết nói về:
+  + kinh tế → tạo hình đồ họa, giá cả, xu hướng  
+  + pháp luật → hình ảnh tòa án, văn bản, cơ quan chức năng  
+  + tai nạn → hiện trường mô phỏng phù hợp  
+  + nông nghiệp → cây trồng, mùa vụ, nông dân  
+  + xã hội → đời sống, con người, tình huống thực tế  
+- Không dùng tên thật của nạn nhân hoặc thông tin riêng tư.
+- Không tạo cảnh nhạy cảm, giật gân.
+
+=========================
+ĐỊNH DẠNG TRẢ VỀ
+=========================
+
+Chỉ trả về duy nhất mô tả ảnh bằng tiếng Việt, không JSON.
+
+=========================
+NỘI DUNG GỐC:
+=========================
+
+
+(PLO)- Chiến sĩ Nguyễn Mai Thi, thuộc Phòng Cảnh sát PCCC và CNCH (PC07), Công an TP.HCM, đã dũng cảm lao ra cứu nữ sinh Võ Thu Trâm khỏi mũi xe container mất lái trong lúc đơn vị đang hỗ trợ khắc phục hậu quả bão lũ tại Đắk Lắk. Những ngày qua, mạng xã hội lan truyền bức thư cảm ơn xúc động của em Võ Thu Trâm (học sinh lớp 12A2 Trường THPT Nguyễn Khuyến, xã Xuân Đài, Đắk Lắk) gửi đến chiến sĩ Nguyễn Mai Thi, người đã kịp thời kéo em ra khỏi mũi xe container mất lái đang lao tới tại dốc Quýt, xã Xuân Thọ, trưa 25-11. VIDEO: Chiến sĩ Cảnh sát PCCC và CNCH (PC07), Công an TP.HCM cứu nữ sinh trước mũi xe container mất lái. Chỉ có vài giây để quyết định Trao đổi với phóng viên PLO, chiến sĩ Nguyễn Mai Thi (21 tuổi, ngụ TP.HCM), thuộc Đội Cảnh sát PCCC và CNCH khu vực 19 (PC07), Công an TP.HCM, bảo trong khoảnh khắc sinh tử ấy anh chỉ có vài giây để quyết định. “Lúc phát hiện em Trâm và chiếc container đang lao xuống rất nhanh, trong đầu em chỉ kịp nghĩ phải lao tới ngay. Bản năng và trách nhiệm của một chiến sĩ khiến em phải phản xạ lập tức, kéo nạn nhân ra khỏi vùng nguy hiểm ”- chiến sĩ Thi kể lại. Chiến sĩ Nguyễn Mai Thi (21 tuổi, ngụ TP.HCM), thuộc Đội Cảnh sát PCCC và CNCH khu vực 19 (PC07), Công an TP.HCM. Thời điểm đó, các phương tiện chuyên dụng và cán bộ, chiến sĩ thuộc PC07 đang hỗ trợ người dân khắc phục hậu quả sau lũ gây ra. Lúc này, chiến sĩ Thi được phân công đứng phía trước để ra tín hiệu cảnh báo các phương tiện cùng chiều nhận biết khu vực có vật cản, giúp người dân di chuyển an toàn. Tuy nhiên, diễn biến sự cố quá nhanh khiến tình huống trở nên nguy hiểm ngoài dự đoán. Sau khi kéo được nữ sinh Trâm ra khỏi đầu xe container , anh Thi lập tức chạy lại vị trí đồng đội thì nhận ra Trung tá Nguyễn Quang Minh, Phó Đội trưởng Đội PCCC và CNCH khu vực 19, đã bị chiếc container tông trúng cột điện khiến cột đèn đổ đè lên người. “Biết em Trâm đã an toàn, em chạy đến chỗ anh Minh ngay. Khi đó mọi người cố gắng tìm phương tiện đưa anh đi cấp cứu, rồi lại quay về hỗ trợ người dân hoàn thành nhiệm vụ”- anh Thi nói. Đội công tác đang trong hành trình 12 ngày hỗ trợ người dân Đắk Lắk khắc phục hậu quả bão lũ, với chiến sĩ Mai Thi, khoảnh khắc ngày 25-11 là điều khó quên trong cuộc đời anh. ""Chậm phản xạ một chút, người ân hận suốt đời sẽ là em"" Anh Thi chia sẻ bản thân mới vào ngành được gần hai năm, nhưng luôn tâm niệm: Làm việc gì cũng phải đặt an toàn của người dân lên trước. Đặc biệt khi thiên tai vừa xảy ra, em càng phải làm tốt hơn nhiệm vụ của mình. “Nếu lúc đó, em chậm phản xạ một chút, người ân hận suốt đời sẽ là em. Đây là trách nhiệm, là tinh thần của người chiến sĩ công an nhân dân, nhất là khi đang khoác trên mình trang phục Cảnh sát PCCC và CNCH”- anh Thi tâm sự. Hình ảnh chiến sĩ Nguyễn Mai Thi trong một lần công tác chữa cháy. Sau sự việc, khi đọc được bức tâm thư Trâm gửi về đơn vị, anh Thi cho biết rất xúc động và vui vì “đã góp được một phần nhỏ cho xã hội”. Trong tâm thư, nữ sinh kể lại thời điểm khoảng 13 giờ 5 phút ngày 25-11, khi đang lái xe máy xuống dốc thì thấy xe chữa cháy bật tín hiệu khẩn cấp và một chiến sĩ đang điều tiết giao thông. Khi còn cách khoảng 3 m, chiến sĩ bất ngờ lao tới kéo em ra khỏi làn xe. Ngay lập tức, chiếc container phía sau lao tới, tông vào lề đường và đâm gãy trụ đèn chiếu sáng. Cú tông khiến Trung tá Nguyễn Quang Minh bị đa chấn thương và phải nhập viện cấp cứu. Chiếc container chỉ dừng lại sau khi tiếp tục lao thêm gần 100 m. “Nhờ anh chiến sĩ kịp thời bế và kéo cháu ra khỏi vùng nguy hiểm mà cháu thoát nạn. Nếu không có anh, cháu không biết giờ mình còn có mặt trên cuộc đời này hay không” – Thu Trâm viết trong thư cảm ơn. Sau sự việc, Trâm mới biết người cứu mình là chiến sĩ Nguyễn Mai Thi, thành viên đoàn công tác của Đội PCCC và CNCH khu vực 19, Công an TP.HCM , được điều động đến hỗ trợ người dân vùng lũ dọn dẹp, khắc phục hậu quả và trao quà cứu trợ tại các xã, phường phía Đông Đắk Lắk. Chiến sĩ Nguyễn Mai Thi (21 tuổi, ngụ TP.HCM), thuộc Đội Cảnh sát PCCC và CNCH khu vực 19 (PC07), Công an TP.HCM. Hành động quả cảm giữa tâm điểm vùng thiên tai. Video: Thót tim cảnh chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước đầu xe container (PLO)- Chiến sĩ Cảnh sát PCCC Nguyễn Mai Thi, Phòng Cảnh sát PCCC và CNCH (PC07), Công an TP.HCM, người đã dũng cảm cứu nữ sinh Võ Thu Trâm trước mũi xe container lao tới khi đang hỗ trợ khắc phục hậu quả bão lũ tại Đắk Lắk. Chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước mũi xe container (PLO)- Chiến sĩ Nguyễn Mai Thi, Phòng Cảnh sát PCCC và CNCH (PC07), Công an TP.HCM – người đã dũng cảm cứu nữ sinh Võ Thu Trâm trước mũi xe container lao tới khi đang hỗ trợ khắc phục hậu quả bão lũ tại Đắk Lắk. NGUYỄN TÂN - PHẠM HẢI Tin liên quan Video: Thót tim cảnh chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước đầu xe container Chiến sĩ Cảnh sát PCCC Công an TP.HCM cứu nữ sinh trước mũi xe container TP.HCM siết chặt PCCC, xử lý ‘chuồng cọp’ sau nhiều vụ cháy TỪ KHÓA #chiến sĩ #nữ sinh #cứu #xe container mất lái #chiến sĩ Nguyễn Mai Thi #PC07 BÌNH LUẬN Đăng nhập bằng: hoặc Đăng ký Gửi bình luận"
