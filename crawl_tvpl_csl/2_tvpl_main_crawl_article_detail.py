@@ -52,18 +52,15 @@ def extract_data(html):
     # 4️⃣ Merge prompts with content
     prompt_content_html = f"{PROMT_CONTENT_META_TAG}\n\n{content_html}"
     prompt_title = f"{PROMPT_TITLE}\n\n{title}"
-    prompt_image = f"{PROMT_CREATE_IMAGE}\n\n{content_html}"
-    prompt_tags_meta = f"{PROMPT_TAGS_META}\n\n{content_html}"
+    prompt_image = f"{PROMT_CREATE_IMAGE}\n\n{content_text}"
 
     return {
         "title": title,
-        "content_html": content_html,
-        "content_text": content_text,
-        "cate": cate,
         "prompt_content_html": prompt_content_html,
         "prompt_title": prompt_title,
         "prompt_image": prompt_image,
-        "prompt_tags_meta": prompt_tags_meta
+        "content_html": content_html,
+        "content_text": content_text,
     }
 
 
