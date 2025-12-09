@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
-from common_func import clean_and_parse_json, clean_and_parse_json_html
+from common_func import clean_and_parse_json, clean_and_parse_json_html, cleanSpaceEnter
 
 from config import DOMAIN_SELECTOR_MAP
 from gemini_api import generate_text
@@ -79,6 +79,12 @@ def setup_driver():
     options.add_argument(
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
     )
+
+    options.add_argument("--disable-features=NetworkService")
+    options.add_argument("--disable-features=NetworkServiceInProcess")
+    options.add_argument("--disable-backgrounding-occluded-windows")
+    options.add_argument("--disable-background-timer-throttling")
+
     driver = webdriver.Chrome(options=options)
     inject_ajax_counter(driver)
     return driver
@@ -104,43 +110,50 @@ def crawl(driver, url):
     title_selector = selectors.get("title", "")
     body_selector = selectors.get("body", "")
 
-    driver.get(url)
+    # ============================
+    # SAFE DRIVER.GET
+    # ============================
+    driver.set_page_load_timeout(30)
+
+    try:
+        driver.get(url)
+    except Exception as e:
+        print(f"[WARN] driver.get TIMEOUT → force stop(): {url}")
+        driver.execute_script("window.stop();")
+
     wait_for_page_ready(driver)
 
     title_text = "ERROR: cannot extract title"
     body_html = "ERROR: cannot extract body"
     body_text = "ERROR: cannot extract content"
 
-    # ================================
+    # ============================
     # GET TITLE
-    # ================================
+    # ============================
     try:
         if title_selector:
-            title_el = WebDriverWait(driver, 15).until(
+            title_el = WebDriverWait(driver, 10).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, title_selector))
             )
-            # text hoặc innerText
             t1 = title_el.text.strip()
             t2 = title_el.get_attribute("innerText").strip()
-            title_text = t1 if len(t1) > 0 else t2
+            title_text = t1 if t1 else t2
     except:
         pass
 
-    # ================================
-    # GET BODY HTML + CONTENT
-    # ================================
+    # ============================
+    # GET BODY
+    # ============================
     try:
         if body_selector:
-            body_el = WebDriverWait(driver, 20).until(
+            body_el = WebDriverWait(driver, 15).until(
                 EC.presence_of_element_located((By.CSS_SELECTOR, body_selector))
             )
-            # Lấy nguyên HTML
-            body_html = body_el.get_attribute("outerHTML")
+            body_html = (body_el.get_attribute("outerHTML"))
 
-            # Lấy nội dung text thuần
-            text1 = body_el.text.strip()
-            text2 = body_el.get_attribute("innerText").strip()
-            body_text = text1 if len(text1) > 0 else text2
+            txt1 = body_el.text.strip()
+            txt2 = body_el.get_attribute("innerText").strip()
+            body_text = cleanSpaceEnter(txt1 if txt1 else txt2)
     except:
         pass
 

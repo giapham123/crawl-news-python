@@ -15,7 +15,7 @@ DOMAIN_SELECTOR_MAP = {
         "title": ".sc-longform-header-title.block-sc-title",                               # selector tiêu đề chung
         "body": ".boxdetail"
     },
-    "qdnd.vn": {
+    "www.qdnd.vn": {
         "title": ".post-title",                               # selector tiêu đề chung
         "body": ".article-detail"
     },

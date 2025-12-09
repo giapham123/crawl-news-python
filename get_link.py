@@ -28,7 +28,7 @@ def get_original_links():
     count = 0
 
     for link in epi_links:
-        if count >= 10:
+        if count >= 50:
             break
 
         try:
