@@ -84,12 +84,13 @@ def crawl_file(file_path):
         results.append(data)
     return results
 
+import shutil  # <-- add this at the top with your imports
 
 def save_to_csv(data_list, csv_file):
     if not data_list:
         return
-    # Use the keys of the first item as CSV columns
     fieldnames = list(data_list[0].keys())
+    os.makedirs(os.path.dirname(csv_file), exist_ok=True)
     with open(csv_file, "w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -98,10 +99,16 @@ def save_to_csv(data_list, csv_file):
 
 
 def main():
-    # Create timestamped result folder
+    # Create timestamped result folder for JSON
     timestamp = datetime.now().strftime("%d%m%Y%H%M%S")
-    output_folder = f"result{timestamp}"
-    os.makedirs(output_folder, exist_ok=True)
+    output_json_folder = f"result{timestamp}"
+    os.makedirs(output_json_folder, exist_ok=True)
+
+    # Create folder for CSV results, delete if exists
+    output_csv_folder = "result_csv_folder"
+    if os.path.exists(output_csv_folder):
+        shutil.rmtree(output_csv_folder)
+    os.makedirs(output_csv_folder, exist_ok=True)
 
     # Scan all .txt files in INPUT_FOLDER
     txt_files = [f for f in os.listdir(INPUT_FOLDER) if f.endswith(".txt")]
@@ -113,8 +120,9 @@ def main():
     for txt_file in txt_files:
         file_path = os.path.join(INPUT_FOLDER, txt_file)
         base_name = txt_file.replace("urls-", "").replace(".txt", "")
-        json_file = os.path.join(output_folder, f"{base_name}.json")
-        csv_file = os.path.join(output_folder, f"{base_name}.csv")
+
+        json_file = os.path.join(output_json_folder, f"{base_name}.json")
+        csv_file = os.path.join(output_csv_folder, f"{base_name}.csv")
 
         print(f"\nProcessing file: {txt_file} → {base_name}.json / {base_name}.csv")
 
