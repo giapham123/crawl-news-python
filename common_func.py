@@ -52,3 +52,11 @@ def clean_and_parse_json_html(text):
     # Không replace \n hoặc \\ vì sẽ phá JSON
     # Chỉ cần parse JSON trực tiếp
     return json.loads(cleaned)
+
+def cleanSpaceEnter(text):
+    text = text.replace("\n", " ")
+    # Gom nhiều khoảng trắng thành 1
+    text = re.sub(r"\s+", " ", text)
+    # Xóa khoảng trắng đầu và cuối
+    text = text.strip()
+    return text
