@@ -28,7 +28,7 @@ def get_original_links():
     count = 0
 
     for link in epi_links:
-        if count >= 50:
+        if count >= 5:
             break
 
         try:
@@ -51,7 +51,7 @@ def get_original_links():
 # ====================================
 # SAVE LINKS TO urls.txt
 # ====================================
-def save_to_file(urls, file_name="crawl_data_news/urls.txt"):
+def save_to_file(urls, file_name="urls.txt"):
     try:
         with open(file_name, "w", encoding="utf-8") as f:
             for url in urls:

@@ -165,7 +165,7 @@ def crawl(driver, url):
 # LOAD URLS
 # =============================
 
-def load_urls(file_path="crawl_data_news/urls.txt"):
+def load_urls(file_path="urls.txt"):
     with open(file_path, "r", encoding="utf-8") as f:
         return [line.strip() for line in f.readlines() if line.strip()]
 
@@ -243,7 +243,7 @@ if __name__ == "__main__":
     # =============================
     # EXPORT SUCCESS FILE
     # =============================
-    with open("crawl_data_news/success_results.csv", "w", newline="", encoding="utf-8") as csvfile:
+    with open("success_results.csv", "w", newline="", encoding="utf-8") as csvfile:
         columns = ["title", "body", "slug", "meta", "focus_key", "tags", "url"]
         writer = csv.DictWriter(csvfile, fieldnames=columns, delimiter="|", quoting=csv.QUOTE_ALL)
         writer.writeheader()
@@ -253,7 +253,7 @@ if __name__ == "__main__":
     # =============================
     # EXPORT FAIL FILE
     # =============================
-    with open("crawl_data_news/fail_results.csv", "w", newline="", encoding="utf-8") as csvfile:
+    with open("fail_results.csv", "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.writer(csvfile, delimiter="|", quoting=csv.QUOTE_ALL)
         writer.writerow(["url", "title", "body"])
         for row in fail:
@@ -263,7 +263,7 @@ if __name__ == "__main__":
     # EXPORT AI DATA FILE (NEW)
     # Format: link | title | data
     # =============================
-    with open("crawl_data_news/ai_data.csv", "w", newline="", encoding="utf-8") as csvfile:
+    with open("ai_data.csv", "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.writer(csvfile, delimiter="|", quoting=csv.QUOTE_ALL)
         writer.writerow(["link", "title", "data","meta_tag", "image"])
 

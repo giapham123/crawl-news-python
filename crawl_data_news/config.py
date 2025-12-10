@@ -20,7 +20,7 @@ DOMAIN_SELECTOR_MAP = {
         "body": ".article-detail"
     },
     "plo.vn": {
-        "title": ".article__title.cms-title",                               # selector tiêu đề chung
+        "title": ".article__title.cms-title ",                               # selector tiêu đề chung
         "body": ".l-content"
     },
     "baohatinh.vn" : {
@@ -90,5 +90,13 @@ DOMAIN_SELECTOR_MAP = {
     "www.baokhanhhoa.vn" :{
         "title": ".head_title",
         "body": ".td-post-content.tagdiv-type"
+    },
+    "congthuong.vn" :{
+        "title": ".article-detail-title.f5",
+        "body": ".fw.clearfix.edittor-content "
+    },
+    "nhandan.vn" :{
+        "title": ".article__title.cms-title ",
+        "body": ".article__body.zce-content-body.cms-body"
     }
 }
