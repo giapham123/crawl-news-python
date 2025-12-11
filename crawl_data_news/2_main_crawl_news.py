@@ -265,16 +265,15 @@ if __name__ == "__main__":
     # =============================
     with open("ai_data.csv", "w", newline="", encoding="utf-8") as csvfile:
         writer = csv.writer(csvfile, delimiter="|", quoting=csv.QUOTE_ALL)
-        writer.writerow(["link", "title", "data","meta_tag", "image"])
+        writer.writerow(["link", "title", "data", "image","meta_tag"])
 
         for row in dataCrawled:
             writer.writerow([
                 row["url"],
                 row["title"],
                 row["body"],  # đây là clean HTML để train AI
-                row["meta_tag"],
-                row["image"]
-
+                row["image"],
+                row["meta_tag"]
             ])
 
     print("\n==============================")
