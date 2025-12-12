@@ -1,37 +1,64 @@
 # prompts.py
-PROMT_CREATE_IMAGE = """Bạn là một hệ thống phân tích nội dung báo chí và tạo ảnh minh họa chất lượng cao.
 
-Hãy đọc nội dung bên dưới và tạo ra mô tả ảnh (image prompt) chi tiết, rõ ràng, phù hợp với một bài báo Việt Nam.  
-
+PROMT_CREATE_IMAGE = """ tạo ảnh minh họa chất lượng cao.
+Hãy đọc nội dung bên dưới và tạo ra hình ảnh chi tiết, rõ ràng, phù hợp với một bài báo Việt Nam.
 =========================
 YÊU CẦU TẠO HÌNH
 =========================
-
 - Phải dựa hoàn toàn vào nội dung bài viết.
 - Mô tả hình ảnh rõ ràng, giàu chi tiết.
 - Phong cách báo chí – thực tế – hiện đại.
 - Không thêm nhân vật hư cấu.
 - Không thêm thông tin không có trong bài.
 - Nếu bài viết nói về:
-  + kinh tế → tạo hình đồ họa, giá cả, xu hướng  
-  + pháp luật → hình ảnh tòa án, văn bản, cơ quan chức năng  
-  + tai nạn → hiện trường mô phỏng phù hợp  
-  + nông nghiệp → cây trồng, mùa vụ, nông dân  
-  + xã hội → đời sống, con người, tình huống thực tế  
++ kinh tế → tạo hình đồ họa, giá cả, xu hướng
++ pháp luật → hình ảnh tòa án, văn bản, cơ quan chức năng
++ tai nạn → hiện trường mô phỏng phù hợp
++ nông nghiệp → cây trồng, mùa vụ, nông dân
++ xã hội → đời sống, con người, tình huống thực tế
 - Không dùng tên thật của nạn nhân hoặc thông tin riêng tư.
 - Không tạo cảnh nhạy cảm, giật gân.
-
 =========================
 ĐỊNH DẠNG TRẢ VỀ
-=========================
-
-Chỉ trả về duy nhất mô tả ảnh bằng tiếng Việt, không JSON.
-
+***Hình Ảnh Và Không thêm bất kỳ chữ nào hoặc đoạn text nào vào hình***
 =========================
 NỘI DUNG GỐC:
 =========================
 
 """
+# PROMT_CREATE_IMAGE = """Bạn là một hệ thống phân tích nội dung báo chí và tạo ảnh minh họa chất lượng cao.
+#
+# Hãy đọc nội dung bên dưới và tạo ra mô tả ảnh (image prompt) chi tiết, rõ ràng, phù hợp với một bài báo Việt Nam.
+#
+# =========================
+# YÊU CẦU TẠO HÌNH
+# =========================
+#
+# - Phải dựa hoàn toàn vào nội dung bài viết.
+# - Mô tả hình ảnh rõ ràng, giàu chi tiết.
+# - Phong cách báo chí – thực tế – hiện đại.
+# - Không thêm nhân vật hư cấu.
+# - Không thêm thông tin không có trong bài.
+# - Nếu bài viết nói về:
+#   + kinh tế → tạo hình đồ họa, giá cả, xu hướng
+#   + pháp luật → hình ảnh tòa án, văn bản, cơ quan chức năng
+#   + tai nạn → hiện trường mô phỏng phù hợp
+#   + nông nghiệp → cây trồng, mùa vụ, nông dân
+#   + xã hội → đời sống, con người, tình huống thực tế
+# - Không dùng tên thật của nạn nhân hoặc thông tin riêng tư.
+# - Không tạo cảnh nhạy cảm, giật gân.
+#
+# =========================
+# ĐỊNH DẠNG TRẢ VỀ
+# =========================
+#
+# Chỉ trả về duy nhất mô tả ảnh bằng tiếng Việt, không JSON.
+#
+# =========================
+# NỘI DUNG GỐC:
+# =========================
+#
+# """
 PROMT_CONTENT_META_TAG = """Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
 
 Nhiệm vụ của bạn: Xử lý nội dung bên dưới và trả về duy nhất 1 object JSON theo cấu trúc:
