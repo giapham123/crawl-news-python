@@ -1,6 +1,6 @@
 import ollama
 response = ollama.chat(
-    model="llama3",
+    model='deepseek-r1:7b',
     messages=[{"role": "user", "content": """
     Bạn là một hệ thống phân tích nội dung báo chí và tạo ảnh minh họa chất lượng cao.
 
