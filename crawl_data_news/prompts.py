@@ -202,55 +202,67 @@ NỘI DUNG GỐC:
 
 """
 
-PROMPT_TITLE = """Dựa trên nội dung bài viết sau, hãy thực hiện 3 nhiệm vụ **theo đúng thứ tự** và **mỗi nhiệm vụ chỉ trả về 1 giá trị**, không giải thích thêm, và trả về duy nhất **một object JSON** theo định dạng:
+PROMPT_TITLE = """Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
+
+Dựa trên NỘI DUNG BÀI VIẾT GỐC dưới đây, hãy thực hiện CHÍNH XÁC các nhiệm vụ sau theo đúng thứ tự.
+KHÔNG giải thích. KHÔNG bình luận. KHÔNG trả về thêm bất kỳ chữ nào ngoài kết quả yêu cầu.
+
+========================
+YÊU CẦU ĐẦU RA
+========================
+
+Chỉ trả về DUY NHẤT một object JSON theo đúng cấu trúc sau và bọc trong code block markdown ```json :
 
 {
   "title": "Title tối ưu SEO",
   "slug": "Slug chuẩn SEO",
-  "focus_keyphrase": "Focus keyphrase tối ưu"
+  "focus_keyphrase": "Focus keyphrase tối ưu",
+  "cate": "Danh mục nội dung phù hợp"
 }
 
----
+========================
+QUY TẮC CHI TIẾT
+========================
 
-🎯 **[1] TẠO TITLE TỐI ƯU SEO**
-
-Sử dụng tất cả công cụ phân tích từ khóa có thể truy cập (Google Trends, Google Keyword Planner, KeywordTool.io, Ahrefs, Semrush, Google Analytics nếu có) để chọn **title tối ưu** cho bài viết trong lĩnh vực pháp lý / luật Việt Nam, phạm vi tìm kiếm Việt Nam, 12 tháng gần nhất.
-
-Quy tắc:
-- Ưu tiên từ khóa có search volume >10.000, nếu không có thì vẫn lấy dưới 10.000.
-- Title là **câu hỏi kết thúc bằng ?**
-- KHÔNG sử dụng dấu hai chấm “:”.
-- KHÔNG viết tắt.
-- Nếu cần thay dấu hai chấm → dùng từ nối.
-
----
-
-🎯 **[2] TẠO SLUG CHUẨN SEO**
-
-Sử dụng dữ liệu từ khóa như trên để chọn **slug chuẩn SEO** cho bài viết.
-
-Quy tắc:
-- Chữ thường.
-- Không chứa /
+[1] TẠO TITLE TỐI ƯU SEO
+- Phân tích từ khóa dựa trên các công cụ phổ biến: Google Trends, Google Keyword Planner, Ahrefs, Semrush, KeywordTool.
+- Phạm vi: Việt Nam, 12 tháng gần nhất.
+- Ưu tiên từ khóa có search volume > 10.000; nếu không có, chọn từ khóa liên quan nhất và có lượng tìm kiếm cao nhất.
+- Title bắt buộc là câu hỏi và kết thúc bằng dấu ?
+- Không dùng dấu hai chấm :
 - Không viết tắt.
+- Nếu cần thay dấu hai chấm, sử dụng từ nối: và, hay, khi nào, vì sao, như thế nào, ra sao...
+- Văn phong báo chí, trung lập, dễ hiểu.
+
+[2] TẠO SLUG CHUẨN SEO
+- Viết chữ thường.
+- Không chứa /.
+- Không viết tắt.
+- Không ký tự đặc biệt, không dấu tiếng Việt.
 - Các từ nối bằng dấu "-".
-- Dựa vào từ khóa có search volume cao nhất phù hợp nội dung.
+- Dựa trên từ khóa có search volume cao nhất và sát nội dung nhất.
 
----
-
-🎯 **[3] TẠO FOCUS KEYPHRASE**
-
-Sử dụng các công cụ phân tích từ khóa tương tự để chọn **focus keyphrase tối ưu** cho bài viết.
-
-Quy tắc:
-- Dùng cụm từ chính xác, sát nội dung nhất.
+[3] TẠO FOCUS KEYPHRASE
+- Là cụm từ khóa chính, chính xác, sát nội dung.
 - Không dấu chấm, không ký tự lạ.
 - Không viết tắt.
-- Ưu tiên search volume >10.000, nếu không có thì chọn từ liên quan nhất.
-- BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown ```json
-- KHÔNG thêm bất kỳ chữ nào ngoài khối Code Block markdown
-- KHÔNG giải thích, KHÔNG bình luận
----
+- Ưu tiên search volume > 10.000; nếu không có, chọn cụm từ liên quan nhất.
 
-📌 **Cuối prompt, đặt nội dung bài viết tại đây:**
+[4] XÁC ĐỊNH CATE
+- Dựa hoàn toàn vào nội dung bài viết gốc.
+- Chọn đúng lĩnh vực tin tức phù hợp nhất.
+- Ví dụ: Thời sự, Kinh tế, Xã hội, Pháp luật, Giáo dục, Y tế, Giao thông, Công nghệ, Môi trường, Quốc tế, Thể thao, Giải trí, Đời sống, Du lịch.
+
+========================
+LƯU Ý BẮT BUỘC
+========================
+- BẮT BUỘC bọc JSON trong khối ```json
+- KHÔNG thêm bất kỳ chữ nào ngoài JSON
+- Mỗi key chỉ có 1 giá trị
+- TUÂN THỦ ĐÚNG THỨ TỰ NHIỆM VỤ
+
+========================
+NỘI DUNG BÀI VIẾT GỐC
+========================
+
 """
