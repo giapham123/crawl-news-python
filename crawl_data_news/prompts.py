@@ -105,7 +105,9 @@ Ngắn gọn, chỉ là từ khóa.
 Phân tách bằng dấu phẩy.
 
 Chỉ trả về 1 dòng duy nhất.
-
+- BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown ```json
+- KHÔNG thêm bất kỳ chữ nào ngoài khối Code Block markdown
+- KHÔNG giải thích, KHÔNG bình luận
 =========================
 ĐẦU RA BẮT BUỘC
 =========================
@@ -191,7 +193,9 @@ YÊU CẦU
 }
 
 Không giải thích thêm, không thêm text ngoài JSON.
-
+- BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown ```json
+- KHÔNG thêm bất kỳ chữ nào ngoài khối Code Block markdown
+- KHÔNG giải thích, KHÔNG bình luận
 =========================
 NỘI DUNG GỐC:
 =========================
@@ -243,7 +247,9 @@ Quy tắc:
 - Không dấu chấm, không ký tự lạ.
 - Không viết tắt.
 - Ưu tiên search volume >10.000, nếu không có thì chọn từ liên quan nhất.
-
+- BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown ```json
+- KHÔNG thêm bất kỳ chữ nào ngoài khối Code Block markdown
+- KHÔNG giải thích, KHÔNG bình luận
 ---
 
 📌 **Cuối prompt, đặt nội dung bài viết tại đây:**

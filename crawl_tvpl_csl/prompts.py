@@ -1,28 +1,53 @@
 # prompts.py
 
-PROMT_CREATE_IMAGE = """ tạo ảnh minh họa chất lượng cao.
-Hãy đọc nội dung bên dưới và tạo ra hình ảnh chi tiết, rõ ràng, phù hợp với một bài báo Việt Nam.
+PROMT_CREATE_IMAGE = """ Bạn là một hệ thống tạo hình ảnh minh họa cho báo chí Việt Nam.
+
+Hãy đọc kỹ nội dung bài viết bên dưới và tạo ra MỘT hình ảnh minh họa chất lượng cao, chân thực, phù hợp để đăng trong bài báo điện tử.
+
 =========================
 YÊU CẦU TẠO HÌNH
 =========================
-- Phải dựa hoàn toàn vào nội dung bài viết.
-- Mô tả hình ảnh rõ ràng, giàu chi tiết.
-- Phong cách báo chí – thực tế – hiện đại.
-- Không thêm nhân vật hư cấu.
-- Không thêm thông tin không có trong bài.
-- Nếu bài viết nói về:
-+ kinh tế → tạo hình đồ họa, giá cả, xu hướng
-+ pháp luật → hình ảnh tòa án, văn bản, cơ quan chức năng
-+ tai nạn → hiện trường mô phỏng phù hợp
-+ nông nghiệp → cây trồng, mùa vụ, nông dân
-+ xã hội → đời sống, con người, tình huống thực tế
-- Không dùng tên thật của nạn nhân hoặc thông tin riêng tư.
-- Không tạo cảnh nhạy cảm, giật gân.
+
+1. Hình ảnh PHẢI dựa HOÀN TOÀN vào nội dung bài viết.
+2. Không suy diễn, không thêm chi tiết không được đề cập trong bài.
+3. Không tạo nhân vật hư cấu, không đặt tên người thật, không dùng thông tin riêng tư.
+4. Phong cách:
+   - Báo chí
+   - Thực tế
+   - Hiện đại
+   - Trung tính
+5. Hình ảnh rõ nét, bố cục hợp lý, ánh sáng tự nhiên, màu sắc chân thực.
+6. Không tạo cảnh giật gân, phản cảm, nhạy cảm.
+7. Không thêm chữ, ký tự, tiêu đề, watermark hoặc văn bản vào hình ảnh.
+
 =========================
-ĐỊNH DẠNG TRẢ VỀ
-***Hình Ảnh Và Không thêm bất kỳ chữ nào hoặc đoạn text nào vào hình***
+ĐỊNH HƯỚNG THEO CHỦ ĐỀ
 =========================
-NỘI DUNG GỐC:
+
+- Nếu nội dung thuộc KINH TẾ:
+  → Biểu đồ, giá cả, hàng hóa, thị trường, giao dịch, xu hướng tăng/giảm.
+
+- Nếu nội dung thuộc PHÁP LUẬT:
+  → Trụ sở cơ quan chức năng, tòa án, văn bản pháp luật, hồ sơ, cảnh làm việc hành chính.
+
+- Nếu nội dung là TAI NẠN / SỰ CỐ:
+  → Hiện trường mô phỏng ở mức độ phù hợp, không máu me, không gây sốc.
+
+- Nếu nội dung là NÔNG NGHIỆP:
+  → Cây trồng, mùa vụ, đồng ruộng, nông dân lao động thực tế.
+
+- Nếu nội dung là XÃ HỘI:
+  → Đời sống thường ngày, con người, bối cảnh xã hội đúng thực tế Việt Nam.
+
+=========================
+ĐỊNH DẠNG BẮT BUỘC
+=========================
+
+- Chỉ tạo HÌNH ẢNH
+- KHÔNG chèn bất kỳ chữ hoặc đoạn text nào vào hình
+
+=========================
+NỘI DUNG BÀI VIẾT
 =========================
 
 """
@@ -61,96 +86,59 @@ NỘI DUNG GỐC:
 # """
 PROMT_CONTENT_META_TAG = """Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
 
-Nhiệm vụ của bạn: Xử lý nội dung bên dưới và trả về duy nhất 1 object JSON theo cấu trúc:
-
-{
-  "body": "",
-  "meta": "",
-  "tags": ""
-}
+Nhiệm vụ của bạn: Xử lý nội dung bên dưới và trả về DUY NHẤT 1 object JSON theo cấu trúc xác định.
 
 =========================
 YÊU CẦU CHO body (HTML sạch)
 =========================
 
-Giữ nguyên đầy đủ nội dung bài viết.
-
-Chỉ tạo HTML phần body, không tạo <html>, <head>, <body>.
-
-Chuẩn hóa cấu trúc thẻ HTML:
-
-Sử dụng đúng: <h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>.
-
-Làm nổi bật thông tin quan trọng bằng <strong> hoặc <em>.
-
-Xóa toàn bộ ký hiệu * hoặc **.
-
-Không sử dụng <blockquote>.
-
-Giữ nguyên tất cả hình ảnh, video và iframe.
-
-Chuẩn hóa ảnh:
-
-Chuyển mọi data-src, data-original, lazyload, srcset → src chuẩn.
-
-Giữ nguyên alt, title, caption.
-
-Không thêm:
-
-<title>
-
-<meta>
-
-từ khóa SEO
-
-liên kết ngoài
-
-Không trả về markdown, không dùng ```.
+- Giữ nguyên đầy đủ nội dung bài viết.
+- Chỉ tạo HTML phần body, KHÔNG tạo <html>, <head>, <body>.
+- Chuẩn hóa cấu trúc thẻ HTML:
+  <h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>.
+- Làm nổi bật thông tin quan trọng bằng <strong> hoặc <em>.
+- Xóa toàn bộ ký hiệu * hoặc **.
+- KHÔNG sử dụng <blockquote>.
+- Giữ nguyên tất cả hình ảnh, video và iframe.
+- Chuẩn hóa ảnh:
+  + Chuyển mọi data-src, data-original, lazyload, srcset → src chuẩn.
+  + Giữ nguyên alt, title, caption.
+- KHÔNG thêm:
+  <title>, <meta>, từ khóa SEO, liên kết ngoài.
+- KHÔNG trả về markdown trong nội dung body.
 
 =========================
 YÊU CẦU CHO meta (Meta Description)
 =========================
 
-Viết đoạn mô tả 150–160 ký tự.
-
-Nội dung xúc tích, rõ ràng, mô tả chính xác bài viết.
-
-Văn phong báo chí Việt Nam.
-
-Không thêm tiêu đề, nhãn hoặc ký hiệu.
+- Viết đoạn mô tả dài 150–160 ký tự.
+- Nội dung súc tích, chính xác, văn phong báo chí Việt Nam.
+- KHÔNG thêm tiêu đề, nhãn hoặc ký hiệu.
 
 =========================
-YÊU CẦU CHO tags (Tags SEO)
+YÊU CẦU CHO tags (SEO Tags)
 =========================
 
-Tạo danh sách từ khóa SEO liên quan bài viết.
-
-Tất cả chữ thường, không viết tắt.
-
-Ngắn gọn, chỉ là từ khóa.
-
-Phân tách bằng dấu phẩy.
-
-Chỉ trả về 1 dòng duy nhất.
+- Danh sách từ khóa SEO liên quan nội dung bài viết.
+- Chữ thường, không viết tắt.
+- Chỉ là từ khóa, không mô tả.
+- Phân tách bằng dấu phẩy.
+- Trả về đúng 1 dòng.
 
 =========================
-ĐẦU RA BẮT BUỘC
+ĐỊNH DẠNG ĐẦU RA (RẤT QUAN TRỌNG)
 =========================
 
-Chỉ trả về duy nhất object JSON sau:
-
-{
-  "body": "",
-  "meta": "",
-  "tags": ""
-}
-
-
-Không thêm text, không giải thích.
+- Trả về DUY NHẤT 1 object JSON
+- BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown ```json
+- KHÔNG thêm bất kỳ chữ nào ngoài khối Code Block markdown
+- KHÔNG giải thích, KHÔNG bình luận
 
 =========================
-NỘI DUNG GỐC:
-========================="""
+NỘI DUNG GỐC
+=========================
+
+"""
 
 
 PROMPT_CLEAN_HTML = """Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
@@ -270,7 +258,9 @@ Quy tắc:
 - Không dấu chấm, không ký tự lạ.
 - Không viết tắt.
 - Ưu tiên search volume >10.000, nếu không có thì chọn từ liên quan nhất.
-
+- BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown ```json
+- KHÔNG thêm bất kỳ chữ nào ngoài khối Code Block markdown
+- KHÔNG giải thích, KHÔNG bình luận
 ---
 
 📌 **Cuối prompt, đặt nội dung bài viết tại đây:**
