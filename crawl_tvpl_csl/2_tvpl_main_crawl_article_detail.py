@@ -70,7 +70,7 @@ def extract_data(html):
 
     return {
         "title": title,
-        "category": cate,
+        # "category": cate,
         "prompt_content_html": prompt_content_html,
         "prompt_title": prompt_title,
         "prompt_image": prompt_image,
