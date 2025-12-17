@@ -32,15 +32,11 @@ NỘI DUNG GỐC:
 =========================
 
 """
-PROMT_CONTENT_META_TAG = """Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
+PROMT_CONTENT_META_TAG  = """Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
 
 Nhiệm vụ của bạn: Xử lý nội dung bên dưới và trả về duy nhất 1 object JSON theo cấu trúc:
 
-{
-  "body": "",
-  "meta": "",
-  "tags": ""
-}
+{ "body": "", "meta": "", "tags": "" }
 
 =========================
 YÊU CẦU CHO body (HTML sạch)
@@ -52,7 +48,8 @@ Chỉ tạo HTML phần body, không tạo <html>, <head>, <body>.
 
 Chuẩn hóa cấu trúc thẻ HTML:
 
-Sử dụng đúng: <h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>.
+Chỉ sử dụng đúng các thẻ:
+<h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>, <video>, <iframe>, <source>.
 
 Làm nổi bật thông tin quan trọng bằng <strong> hoặc <em>.
 
@@ -60,25 +57,47 @@ Xóa toàn bộ ký hiệu * hoặc **.
 
 Không sử dụng <blockquote>.
 
-Giữ nguyên tất cả hình ảnh, video và iframe.
+=========================
+QUY TẮC XỬ LÝ VIDEO & EMBED (BẮT BUỘC)
+=========================
 
-Chuẩn hóa ảnh:
+Nếu link có đuôi .mp4:
+- BẮT BUỘC sử dụng thẻ <video controls>.
+- Bên trong có <source src=\"URL\" type=\"video/mp4\">.
+
+Nếu link có đuôi .m3u8:
+- Ưu tiên sử dụng thẻ <video>.
+- Cho phép nhúng bằng <video> hoặc <iframe> tùy theo nội dung gốc.
+- Không thay đổi URL stream.
+
+Nếu nội dung là dạng embed sẵn:
+- Giữ nguyên thẻ <iframe>.
+- Không thay đổi src, width, height, allow, allowfullscreen.
+
+Không suy đoán loại media nếu không xác định rõ.
+
+=========================
+CHUẨN HÓA ẢNH
+=========================
 
 Chuyển mọi data-src, data-original, lazyload, srcset → src chuẩn.
 
 Giữ nguyên alt, title, caption.
 
+Không xóa, không thêm ảnh.
+
+=========================
+KHÔNG ĐƯỢC PHÉP
+=========================
+
 Không thêm:
-
 <title>
-
 <meta>
-
-từ khóa SEO
-
+từ khóa SEO trong body
 liên kết ngoài
 
-Không trả về markdown, không dùng ```.
+Không trả về markdown trong body.
+Không dùng ``` trong body.
 
 =========================
 YÊU CẦU CHO meta (Meta Description)
@@ -105,27 +124,26 @@ Ngắn gọn, chỉ là từ khóa.
 Phân tách bằng dấu phẩy.
 
 Chỉ trả về 1 dòng duy nhất.
-- BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown ```json
-- KHÔNG thêm bất kỳ chữ nào ngoài khối Code Block markdown
-- KHÔNG giải thích, KHÔNG bình luận
+
 =========================
 ĐẦU RA BẮT BUỘC
 =========================
 
+- BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown ```json
+- KHÔNG thêm bất kỳ chữ nào ngoài khối Code Block markdown
+- KHÔNG giải thích, KHÔNG bình luận
+
 Chỉ trả về duy nhất object JSON sau:
 
-{
-  "body": "",
-  "meta": "",
-  "tags": ""
-}
-
+{ "body": "", "meta": "", "tags": "" }
 
 Không thêm text, không giải thích.
 
 =========================
 NỘI DUNG GỐC:
-========================="""
+=========================
+"""
+
 
 
 PROMPT_CLEAN_HTML = """Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
@@ -251,6 +269,8 @@ QUY TẮC CHI TIẾT
 [4] XÁC ĐỊNH CATE
 - Dựa hoàn toàn vào nội dung bài viết gốc.
 - Chọn đúng lĩnh vực tin tức phù hợp nhất.
+- Có thể thuộc 2-3 cate.
+- Hiện tại tôi có 4 cate:  Xã hội, Pháp luật, đời sống, du lịch - ẩm thực, daklak, tin nóng, tin nổi bật
 - Ví dụ: Thời sự, Kinh tế, Xã hội, Pháp luật, Giáo dục, Y tế, Giao thông, Công nghệ, Môi trường, Quốc tế, Thể thao, Giải trí, Đời sống, Du lịch.
 
 ========================
