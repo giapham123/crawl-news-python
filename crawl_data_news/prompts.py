@@ -32,116 +32,58 @@ NỘI DUNG GỐC:
 =========================
 
 """
-PROMT_CONTENT_META_TAG  = """Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
+PROMT_CONTENT_META_TAG  = """Nhiệm vụ của bạn: Xử lý nội dung gốc và trả về duy nhất 1 object JSON bọc trong khối code json theo cấu trúc: { "body": "", "meta": "", "tags": "", "cate": "" }
 
-Nhiệm vụ của bạn: Xử lý nội dung bên dưới và trả về duy nhất 1 object JSON theo cấu trúc:
+========================= YÊU CẦU CHO body (HTML sạch)
 
-{ "body": "", "meta": "", "tags": "" }
+Nội dung: Giữ nguyên đầy đủ nội dung bài viết gốc.
 
-=========================
-YÊU CẦU CHO body (HTML sạch)
-=========================
+Thẻ HTML: Chỉ sử dụng: <h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>, <video>, <iframe>, <source>, <img>, <strong>, <em>.
 
-Giữ nguyên đầy đủ nội dung bài viết.
+Hình ảnh (<img>):
 
-Chỉ tạo HTML phần body, không tạo <html>, <head>, <body>.
+BẮT BUỘC sử dụng thẻ <img> để hiển thị hình ảnh.
 
-Chuẩn hóa cấu trúc thẻ HTML:
+Xử lý URL: Lấy link ảnh từ thuộc tính data-src hoặc data-original (nếu có) để đưa vào thuộc tính src chuẩn. Nếu không có, giữ nguyên src gốc.
 
-Chỉ sử dụng đúng các thẻ:
-<h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>, <video>, <iframe>, <source>.
+Tuyệt đối không thay đổi đường dẫn link ảnh, không thêm proxy.
 
-Làm nổi bật thông tin quan trọng bằng <strong> hoặc <em>.
+Giữ nguyên thuộc tính alt, title (nếu có).
+
+Nếu ảnh có chú thích (caption), hãy giữ lại trong thẻ <figcaption> hoặc thẻ <p><em> ngay dưới ảnh.
+
+Video & Embed:
+
+Đuôi .mp4: Dùng <video controls><source src="URL" type="video/mp4"></video>.
+
+Embed sẵn (YouTube, TikTok...): Giữ nguyên <iframe>.
+
+Định dạng:
 
 Xóa toàn bộ ký hiệu * hoặc **.
 
-Không sử dụng <blockquote>.
+Không dùng <blockquote>.
 
-=========================
-QUY TẮC XỬ LÝ VIDEO & EMBED (BẮT BUỘC)
-=========================
+Không trả về Markdown, không bọc code trong body.
 
-Nếu link có đuôi .mp4:
-- BẮT BUỘC sử dụng thẻ <video controls>.
-- Bên trong có <source src=\"URL\" type=\"video/mp4\">.
+========================= YÊU CẦU CHO meta (Meta Description)
 
-Nếu link có đuôi .m3u8:
-- Ưu tiên sử dụng thẻ <video>.
-- Cho phép nhúng bằng <video> hoặc <iframe> tùy theo nội dung gốc.
-- Không thay đổi URL stream.
+Viết đoạn mô tả 150–160 ký tự. Văn phong báo chí Việt Nam, súc tích.
 
-Nếu nội dung là dạng embed sẵn:
-- Giữ nguyên thẻ <iframe>.
-- Không thay đổi src, width, height, allow, allowfullscreen.
+========================= YÊU CẦU CHO tags (Tags SEO)
 
-Không suy đoán loại media nếu không xác định rõ.
+Danh sách từ khóa chữ thường, không viết tắt, cách nhau bằng dấu phẩy. Trả về trên 1 dòng.
 
-=========================
-CHUẨN HÓA ẢNH
-=========================
+========================= YÊU CẦU CHO cate (Chuyên mục & Đánh giá)
 
-Chuyển mọi data-src, data-original, lazyload, srcset → src chuẩn.
+Chọn duy nhất 1 chuyên mục từ danh sách: (Xã hội, Pháp luật, Đời sống, Du lịch - Ẩm thực, Daklak, Tin nóng, Tin nổi bật).
 
-Giữ nguyên alt, title, caption.
+Định dạng: "Tên Chuyên Mục - Loại Tin".
 
-Không xóa, không thêm ảnh.
+========================= QUY TẮC ĐẦU RA (BẮT BUỘC)
 
-=========================
-KHÔNG ĐƯỢC PHÉP
-=========================
-
-Không thêm:
-<title>
-<meta>
-từ khóa SEO trong body
-liên kết ngoài
-
-Không trả về markdown trong body.
-Không dùng ``` trong body.
-
-=========================
-YÊU CẦU CHO meta (Meta Description)
-=========================
-
-Viết đoạn mô tả 150–160 ký tự.
-
-Nội dung xúc tích, rõ ràng, mô tả chính xác bài viết.
-
-Văn phong báo chí Việt Nam.
-
-Không thêm tiêu đề, nhãn hoặc ký hiệu.
-
-=========================
-YÊU CẦU CHO tags (Tags SEO)
-=========================
-
-Tạo danh sách từ khóa SEO liên quan bài viết.
-
-Tất cả chữ thường, không viết tắt.
-
-Ngắn gọn, chỉ là từ khóa.
-
-Phân tách bằng dấu phẩy.
-
-Chỉ trả về 1 dòng duy nhất.
-
-=========================
-ĐẦU RA BẮT BUỘC
-=========================
-
-- BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown ```json
-- KHÔNG thêm bất kỳ chữ nào ngoài khối Code Block markdown
-- KHÔNG giải thích, KHÔNG bình luận
-
-Chỉ trả về duy nhất object JSON sau:
-
-{ "body": "", "meta": "", "tags": "" }
-
-Không thêm text, không giải thích.
-
-=========================
-NỘI DUNG GỐC:
-=========================
+Chỉ trả về duy nhất khối JSON trong Code Block. Không giải thích thêm.
+========================= NỘI DUNG GỐC:
 """
 
 
@@ -220,66 +162,67 @@ NỘI DUNG GỐC:
 
 """
 
-PROMPT_TITLE = """Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
+PROMPT_TITLE = """NỘI DUNG PROMPT MỚI (ĐÃ CẬP NHẬT)
+Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam. Dựa trên NỘI DUNG BÀI VIẾT GỐC, hãy thực hiện chính xác các nhiệm vụ sau.
 
-Dựa trên NỘI DUNG BÀI VIẾT GỐC dưới đây, hãy thực hiện CHÍNH XÁC các nhiệm vụ sau theo đúng thứ tự.
-KHÔNG giải thích. KHÔNG bình luận. KHÔNG trả về thêm bất kỳ chữ nào ngoài kết quả yêu cầu.
+YÊU CẦU ĐẦU RA: Chỉ trả về DUY NHẤT một object JSON trong code block ```json :
 
-========================
-YÊU CẦU ĐẦU RA
-========================
-
-Chỉ trả về DUY NHẤT một object JSON theo đúng cấu trúc sau và bọc trong code block markdown ```json :
+JSON
 
 {
   "title": "Title tối ưu SEO",
   "slug": "Slug chuẩn SEO",
   "focus_keyphrase": "Focus keyphrase tối ưu",
-  "cate": "Danh mục nội dung phù hợp"
+  "cate": "Danh mục duy nhất"
 }
-
-========================
-QUY TẮC CHI TIẾT
-========================
+QUY TẮC CHI TIẾT:
 
 [1] TẠO TITLE TỐI ƯU SEO
-- Phân tích từ khóa dựa trên các công cụ phổ biến: Google Trends, Google Keyword Planner, Ahrefs, Semrush, KeywordTool.
-- Phạm vi: Việt Nam, 12 tháng gần nhất.
-- Ưu tiên từ khóa có search volume > 10.000; nếu không có, chọn từ khóa liên quan nhất và có lượng tìm kiếm cao nhất.
-- Title bắt buộc là câu hỏi và kết thúc bằng dấu ?
-- Không dùng dấu hai chấm :
-- Không viết tắt.
-- Nếu cần thay dấu hai chấm, sử dụng từ nối: và, hay, khi nào, vì sao, như thế nào, ra sao...
-- Văn phong báo chí, trung lập, dễ hiểu.
+
+Hình thức: Bắt buộc là một câu hỏi và kết thúc bằng dấu ?
+
+Cấm sử dụng từ "Vì sao" hoặc "Tại sao" ở đầu hoặc trong câu.
+
+Hãy sử dụng các từ nghi vấn khác như: Như thế nào, Ra sao, Khi nào, Ở đâu, Có gì đặc biệt, Liệu có, Có nên...
+
+Không dùng dấu hai chấm (:). Nếu cần ngắt ý, dùng từ nối (và, hay, khi, cùng...).
+
+Ưu tiên từ khóa có Search Volume cao (>10.000), văn phong báo chí, trung lập.
+
+Không viết tắt.
 
 [2] TẠO SLUG CHUẨN SEO
-- Viết chữ thường.
-- Không chứa /.
-- Không viết tắt.
-- Không ký tự đặc biệt, không dấu tiếng Việt.
-- Các từ nối bằng dấu "-".
-- Dựa trên từ khóa có search volume cao nhất và sát nội dung nhất.
+
+Viết chữ thường, không dấu, không ký tự đặc biệt.
+
+Các từ nối với nhau bằng dấu gạch ngang (-).
+
+Không viết tắt, dựa sát vào từ khóa chính.
 
 [3] TẠO FOCUS KEYPHRASE
-- Là cụm từ khóa chính, chính xác, sát nội dung.
-- Không dấu chấm, không ký tự lạ.
-- Không viết tắt.
-- Ưu tiên search volume > 10.000; nếu không có, chọn cụm từ liên quan nhất.
 
-[4] XÁC ĐỊNH CATE
-- Dựa hoàn toàn vào nội dung bài viết gốc.
-- Chọn đúng lĩnh vực tin tức phù hợp nhất.
-- Có thể thuộc 2-3 cate.
-- Hiện tại tôi có 4 cate:  Xã hội, Pháp luật, đời sống, du lịch - ẩm thực, daklak, tin nóng, tin nổi bật
-- Ví dụ: Thời sự, Kinh tế, Xã hội, Pháp luật, Giáo dục, Y tế, Giao thông, Công nghệ, Môi trường, Quốc tế, Thể thao, Giải trí, Đời sống, Du lịch.
+Cụm từ khóa chính có lượng tìm kiếm cao nhất, sát nội dung bài viết.
 
-========================
-LƯU Ý BẮT BUỘC
-========================
-- BẮT BUỘC bọc JSON trong khối ```json
-- KHÔNG thêm bất kỳ chữ nào ngoài JSON
-- Mỗi key chỉ có 1 giá trị
-- TUÂN THỦ ĐÚNG THỨ TỰ NHIỆM VỤ
+Không chứa dấu chấm hoặc ký tự lạ.
+
+[4] XÁC ĐỊNH CATE (DANH MỤC)
+
+Chỉ chọn DUY NHẤT 01 danh mục phù hợp nhất từ danh sách sau: Xã hội, Pháp luật, Đời sống, Du lịch - Ẩm thực, Daklak, Tin nóng, Tin nổi bật.
+
+Không được trả về nhiều hơn 1 giá trị cho trường này.
+
+LƯU Ý BẮT BUỘC:
+
+KHÔNG giải thích, KHÔNG bình luận thêm.
+
+TUÂN THỦ ĐÚNG CẤU TRÚC JSON.
+
+Các điểm tôi đã sửa đổi cho bạn:
+Tại mục [1]: Thêm lệnh "Cấm sử dụng từ 'Vì sao' hoặc 'Tại sao'" và gợi ý các từ nghi vấn thay thế để tiêu đề tự nhiên hơn.
+
+Tại mục [4]: Sửa thành "Chỉ chọn DUY NHẤT 01 danh mục" để ép hệ thống không đưa ra danh sách dài.
+
+Cấu trúc JSON: Giữ nguyên tính tinh gọn để bạn dễ dàng nạp vào hệ thống.
 
 ========================
 NỘI DUNG BÀI VIẾT GỐC
