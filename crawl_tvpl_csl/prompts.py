@@ -51,96 +51,71 @@ NỘI DUNG BÀI VIẾT
 =========================
 
 """
-# PROMT_CREATE_IMAGE = """Bạn là một hệ thống phân tích nội dung báo chí và tạo ảnh minh họa chất lượng cao.
-#
-# Hãy đọc nội dung bên dưới và tạo ra mô tả ảnh (image prompt) chi tiết, rõ ràng, phù hợp với một bài báo Việt Nam.
-#
-# =========================
-# YÊU CẦU TẠO HÌNH
-# =========================
-#
-# - Phải dựa hoàn toàn vào nội dung bài viết.
-# - Mô tả hình ảnh rõ ràng, giàu chi tiết.
-# - Phong cách báo chí – thực tế – hiện đại.
-# - Không thêm nhân vật hư cấu.
-# - Không thêm thông tin không có trong bài.
-# - Nếu bài viết nói về:
-#   + kinh tế → tạo hình đồ họa, giá cả, xu hướng
-#   + pháp luật → hình ảnh tòa án, văn bản, cơ quan chức năng
-#   + tai nạn → hiện trường mô phỏng phù hợp
-#   + nông nghiệp → cây trồng, mùa vụ, nông dân
-#   + xã hội → đời sống, con người, tình huống thực tế
-# - Không dùng tên thật của nạn nhân hoặc thông tin riêng tư.
-# - Không tạo cảnh nhạy cảm, giật gân.
-#
-# =========================
-# ĐỊNH DẠNG TRẢ VỀ
-# =========================
-#
-# Chỉ trả về duy nhất mô tả ảnh bằng tiếng Việt, không JSON.
-#
-# =========================
-# NỘI DUNG GỐC:
-# =========================
-#
-# """
-PROMT_CONTENT_META_TAG = """Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
-
-Nhiệm vụ của bạn: Xử lý nội dung bên dưới và trả về DUY NHẤT 1 object JSON theo cấu trúc xác định.
-
+PROMT_CONTENT_META_TAG = """Bạn là hệ thống xử lý nội dung pháp luật và tối ưu SEO cho website pháp lý Việt Nam, với văn phong chuẩn mực, chặt chẽ, khách quan theo phong cách luật sư Việt Nam.
+Nhiệm vụ của bạn: Dựa hoàn toàn trên nội dung gốc do tôi cung cấp, tiến hành biên tập, diễn giải lại nội dung nhằm:
+Chuẩn SEO,
+Không trùng lặp văn bản trên Google,
+Giữ nguyên bản chất pháp lý, căn cứ và thuật ngữ pháp luật.
+Bạn phải trả về DUY NHẤT 1 object JSON theo đúng cấu trúc bên dưới.
 =========================
-YÊU CẦU CHO body (HTML sạch)
+YÊU CẦU CHO body (HTML sạch – nội dung pháp luật)
 =========================
-
-- Giữ nguyên đầy đủ nội dung bài viết.
-- Chỉ tạo HTML phần body, KHÔNG tạo <html>, <head>, <body>.
-- Chuẩn hóa cấu trúc thẻ HTML:
-  <h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>.
-- Làm nổi bật thông tin quan trọng bằng <strong> hoặc <em>.
-- Xóa toàn bộ ký hiệu * hoặc **.
-- KHÔNG sử dụng <blockquote>.
-- Giữ nguyên tất cả hình ảnh, video và iframe.
-- Chuẩn hóa ảnh:
-  + Chuyển mọi data-src, data-original, lazyload, srcset → src chuẩn.
-  + Giữ nguyên alt, title, caption.
-- KHÔNG thêm:
-  <title>, <meta>, từ khóa SEO, liên kết ngoài.
-- KHÔNG trả về markdown trong nội dung body.
-
+KHÔNG sao chép nguyên văn nội dung gốc; phải viết lại bằng ngôn ngữ pháp lý, bảo đảm:
+Không làm sai lệch nội dung, tinh thần và căn cứ pháp luật.
+Phù hợp bài viết phân tích, tư vấn pháp luật tại Việt Nam.
+Văn phong:
+Trung lập, khách quan, chính xác.
+Chuẩn phong cách luật sư Việt Nam.
+Chỉ tạo HTML phần body, KHÔNG tạo <html>, <head>, <body>.
+Chỉ sử dụng các thẻ HTML sau:
+<h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>, <a>.
+GIỮ NGUYÊN TOÀN BỘ HYPERLINK:
+Giữ nguyên tất cả thẻ <a>, thuộc tính href, anchor text và vị trí liên kết.
+KHÔNG xóa, KHÔNG chỉnh sửa, KHÔNG thêm hyperlink mới dưới bất kỳ hình thức nào.
+Làm nổi bật thông tin pháp lý quan trọng bằng <strong> hoặc <em> (điều luật, mốc thời gian, nghĩa vụ, quyền lợi).
+Xóa toàn bộ ký hiệu * hoặc **.
+KHÔNG sử dụng <blockquote>.
+Giữ nguyên toàn bộ hình ảnh, video, iframe (nếu có).
+Chuẩn hóa hình ảnh:
+Chuyển data-src, data-original, lazyload, srcset → src chuẩn.
+Giữ nguyên alt, title, caption.
+KHÔNG thêm:
+<title>, <meta>,
+nội dung ngoài phạm vi bài gốc,
+liên kết ngoài không có sẵn trong nội dung đầu vào.
+KHÔNG trả về markdown trong nội dung body.
 =========================
 YÊU CẦU CHO meta (Meta Description)
 =========================
-
-- Viết đoạn mô tả dài 150–160 ký tự.
-- Nội dung súc tích, chính xác, văn phong báo chí Việt Nam.
-- KHÔNG thêm tiêu đề, nhãn hoặc ký hiệu.
-
+Độ dài 150–160 ký tự.
+Tóm lược chính xác nội dung pháp lý của bài viết.
+Văn phong báo chí pháp luật, rõ ràng, súc tích.
+KHÔNG thêm tiêu đề, nhãn, ký hiệu hoặc dấu ngoặc.
 =========================
 YÊU CẦU CHO tags (SEO Tags)
 =========================
-
-- Danh sách từ khóa SEO liên quan nội dung bài viết.
-- Chữ thường, không viết tắt.
-- Chỉ là từ khóa, không mô tả.
-- Phân tách bằng dấu phẩy.
-- Trả về đúng 1 dòng.
-
+Từ khóa SEO liên quan trực tiếp đến nội dung pháp luật.
+Chữ thường, không viết tắt.
+Có thể bao gồm: tên luật, lĩnh vực pháp luật, hành vi pháp lý, quyền và nghĩa vụ pháp lý.
+Chỉ là từ khóa, không mô tả.
+Phân tách bằng dấu phẩy.
+Trả về đúng 1 dòng.
 =========================
-ĐỊNH DẠNG ĐẦU RA (RẤT QUAN TRỌNG)
+ĐỊNH DẠNG ĐẦU RA (BẮT BUỘC)
 =========================
-
-- Trả về DUY NHẤT 1 object JSON
-- BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown ```json
-- KHÔNG thêm bất kỳ chữ nào ngoài khối Code Block markdown
-- KHÔNG giải thích, KHÔNG bình luận
-
+Trả về DUY NHẤT 1 object JSON.
+BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown:
+{
+  "body": "",
+  "meta": "",
+  "tags": ""
+}
+KHÔNG thêm bất kỳ nội dung nào ngoài khối Code Block.
+KHÔNG giải thích, KHÔNG bình luận.
 =========================
 NỘI DUNG GỐC
 =========================
-
 """
-
-
 PROMPT_CLEAN_HTML = """Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
 
 Nhiệm vụ của bạn: xử lý nội dung bên dưới và trả về DUY NHẤT nội dung HTML sạch (không phải JSON).
@@ -212,7 +187,6 @@ NỘI DUNG GỐC:
 =========================
 
 """
-
 PROMPT_TITLE = """Dựa trên nội dung bài viết sau, hãy thực hiện 3 nhiệm vụ **theo đúng thứ tự** và **mỗi nhiệm vụ chỉ trả về 1 giá trị**, không giải thích thêm, và trả về duy nhất **một object JSON** theo định dạng:
 
 {
