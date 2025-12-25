@@ -13,8 +13,15 @@ from selenium.common.exceptions import TimeoutException, WebDriverException
 from common_func import clean_and_parse_json, clean_and_parse_json_html, cleanSpaceEnter
 from config import DOMAIN_SELECTOR_MAP
 from gemini_api import generate_text
-from prompts import (
-    PROMPT_CLEAN_HTML,
+# from prompts import (
+#     PROMPT_CLEAN_HTML,
+#     PROMPT_TITLE,
+#     PROMPT_TAGS_META,
+#     PROMT_CONTENT_META_TAG,
+#     PROMT_CREATE_IMAGE
+# )
+from prompts_en import (
+    # PROMPT_CLEAN_HTML,
     PROMPT_TITLE,
     PROMPT_TAGS_META,
     PROMT_CONTENT_META_TAG,
@@ -187,7 +194,7 @@ if __name__ == "__main__":
             "url": url,
             "title": f"{PROMPT_TITLE}\n{title}",
             "body": f"{PROMT_CONTENT_META_TAG}\n{body_html}",
-            "meta_tag": f"{PROMPT_TAGS_META}\n{body_text}",
+            "ori_html": f"{body_html}",
             "image": f"{PROMT_CREATE_IMAGE}\n{body_text}"
         })
 
@@ -213,9 +220,9 @@ if __name__ == "__main__":
     # =============================
     with open(os.path.join(EXPORT_DIR, "ai_data.csv"), "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter="|", quoting=csv.QUOTE_ALL)
-        writer.writerow(["link", "title", "data", "image", "meta_tag"])
+        writer.writerow(["link", "title", "data", "image", "ori_html"])
         for r in dataCrawled:
-            writer.writerow([r["url"], r["title"], r["body"], r["image"], r["meta_tag"]])
+            writer.writerow([r["url"], r["title"], r["body"], r["image"], r["ori_html"]])
 
     print("\n==============================")
     print(f"✅ SUCCESS: {len(dataCrawled)}")
