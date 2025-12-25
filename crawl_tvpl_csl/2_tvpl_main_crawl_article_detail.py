@@ -5,7 +5,7 @@ import requests
 import shutil
 from datetime import datetime
 from bs4 import BeautifulSoup
-from prompts import (
+from prompts_en import (
     PROMPT_CLEAN_HTML,
     PROMPT_TITLE,
     PROMPT_TAGS_META,
