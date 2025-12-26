@@ -98,5 +98,25 @@ DOMAIN_SELECTOR_MAP = {
     "nhandan.vn" :{
         "title": ".article__title.cms-title ",
         "body": ".article__body.zce-content-body.cms-body"
-    }
+    },
+    "www.saostar.vn" :{
+        "title": ".mb-8.mt-6.art-title",
+        "body": ".art-content",
+        "image":"https://photo-baomoi.bmcdn.me/42bc76d3ab9042ce1b81.png"
+    },
+    "kinhtedothi.vn" :{
+        "title": ".article-title",
+        "body": ".embed-portal.content-ktdt-article",
+        "image":"https://photo-baomoi.bmcdn.me/8ac1a1ae7ced95b3ccfc.png"
+    },
+    "thoibaotaichinhvietnam.vn" :{
+        "title": ".post-title",
+        "body": ".post-content __MASTERCMS_CONTENT",
+        "image":"https://photo-baomoi.bmcdn.me/b306c969142afd74a43b.png"
+    },
+    "znews.vn" :{
+        "title": ".the-article-title",
+        "body": ".the-article-body",
+        "image":"https://photo-baomoi.bmcdn.me/cb04900a3f46d6188f57.png"
+    },
 }
