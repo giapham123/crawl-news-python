@@ -119,4 +119,19 @@ DOMAIN_SELECTOR_MAP = {
         "body": ".the-article-body",
         "image":"https://photo-baomoi.bmcdn.me/cb04900a3f46d6188f57.png"
     },
+    "vietnamdaily.kienthuc.net.vn" :{
+        "title": ".article__title.cms-title ",
+        "body": ".article__body.zce-content-body.cms-body",
+        "image":"https://photo-baomoi.bmcdn.me/0432995c441fad41f40e.png"
+    },
+    "baolamdong.vn" :{
+        "title": ".sc-longform-header-title.block-sc-title",
+        "body": ".b-maincontent",
+        "image":"https://photo-baomoi.bmcdn.me/2c2c9ca797e87eb627f9.png"
+    },
+    "anninhthudo.vn" :{
+        "title": ".article__title.cms-title ",
+        "body": ".article__body.zce-content-body.cms-body",
+        "image":"https://photo-baomoi.bmcdn.me/579c7af3a7b04eee17a1.png"
+    },
 }
