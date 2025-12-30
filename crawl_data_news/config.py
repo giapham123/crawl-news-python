@@ -1,7 +1,7 @@
 DOMAIN_SELECTOR_MAP = {
     "vov.vn": {
         "title": ".article-title.mb-0",                  # selector tiêu đề
-        "body": ".detail.detail--normal"             # selector nội dung
+        "body": ".row.article-content"             # selector nội dung
     },
     "baogialai.com.vn": {
         "title": ".article__title.cms-title",                # selector tiêu đề
@@ -133,5 +133,15 @@ DOMAIN_SELECTOR_MAP = {
         "title": ".article__title.cms-title ",
         "body": ".article__body.zce-content-body.cms-body",
         "image":"https://photo-baomoi.bmcdn.me/579c7af3a7b04eee17a1.png"
+    },
+    "www.nguoiduatin.vn" : {
+        "title": ".title",
+        "body": ".detail-cmain",
+        "image":"https://photo-baomoi.bmcdn.me/532fd9410402ed5cb413.png"
+    },
+    "baovephapluat.vn" : {
+        "title": ".post-title",
+        "body": ".articleBody",
+        "image":"https://photo-baomoi.bmcdn.me/efd5a3ba7ef997a7cee8.png"
     },
 }
