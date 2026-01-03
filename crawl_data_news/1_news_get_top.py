@@ -64,6 +64,19 @@ def get_original_links():
             count += 1
 
     return original_urls
+# ====================================
+# SAVE LINKS TO urls.txt
+# ====================================
+def save_to_file(urls, file_name="urls_top.txt"):
+    try:
+        with open(file_name, "w", encoding="utf-8") as f:
+            for url in urls:
+                f.write(url + "\n")
+        return True
+    except Exception as e:
+        print("Error writing file:", e)
+        return False
+
 
 
 if __name__ == "__main__":
@@ -75,3 +88,7 @@ if __name__ == "__main__":
         print("✅ Found", len(links), "original links:")
         for l in links:
             print(l)
+        if save_to_file(links):
+            print("\n✅ Saved to urls.txt")
+        else:
+            print("\n❌ Failed to save file")
