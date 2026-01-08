@@ -1,10 +1,8 @@
-import re
-import requests
 from playwright.sync_api import sync_playwright
 
 
-def get_original_links():
-    epi_links = []
+def get_images():
+    images = []
 
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -12,83 +10,50 @@ def get_original_links():
 
         page.goto("https://baomoi.com", wait_until="networkidle")
 
-        # ✅ chờ 1 trong 2 section render là OK
-        page.wait_for_selector(
-            ".column.shrink .list.content-list.section-recommend, "
-            ".column.shrink .bm-section.block.section-top-2",
-            timeout=10000
-        )
+        # chờ card render
+        page.wait_for_selector(".column.shrink .h-full", timeout=10000)
 
-        cards = page.query_selector_all(
-            ".column.shrink "
-            ".list.content-list.section-recommend h3 a[href$='.epi'], "
-            ".column.shrink "
-            ".bm-section.block.section-top-2 h3 a[href$='.epi']"
-        )
+        cards = page.query_selector_all(".column.shrink .h-full")
 
-        for a in cards:
-            href = a.get_attribute("href")
-            if href:
-                epi_links.append(href)
+        for card in cards:
+            img_url = None
+
+            # ưu tiên img trong bm-card-content
+            img = card.query_selector(".bm-card-content.ml-\\[15px\\] img")
+
+            # fallback: img bất kỳ trong card
+            if not img:
+                img = card.query_selector("img")
+
+            if img:
+                img_url = img.get_attribute("src") or img.get_attribute("data-src")
+
+            if img_url:
+                images.append(img_url)
 
         browser.close()
 
-    print("Found epi links:", len(epi_links))
+    return images
 
-    # ================================
-    # LẤY ORIGINAL URL
-    # ================================
-    original_urls = []
-    count = 0
 
-    for link in dict.fromkeys(epi_links):  # auto unique
-        if count >= 14:
-            break
-
-        try:
-            res = requests.get(
-                "https://baomoi.com" + link,
-                timeout=10,
-                headers={"User-Agent": "Mozilla/5.0"}
-            )
-        except Exception:
-            continue
-
-        match = re.findall(
-            r'originalUrl":"(https?:\/\/[^"]+)"',
-            res.text
-        )
-
-        if match:
-            original_urls.append(match[-1])
-            count += 1
-
-    return original_urls
-# ====================================
-# SAVE LINKS TO urls.txt
-# ====================================
-def save_to_file(urls, file_name="urls_top.txt"):
-    try:
-        with open(file_name, "w", encoding="utf-8") as f:
-            for url in urls:
-                f.write(url + "\n")
-        return True
-    except Exception as e:
-        print("Error writing file:", e)
-        return False
-
+# =========================
+# SAVE TO FILE
+# =========================
+def save_to_file(urls, file_name="images.txt"):
+    with open(file_name, "w", encoding="utf-8") as f:
+        for url in urls:
+            f.write(url + "\n")
 
 
 if __name__ == "__main__":
-    links = get_original_links()
+    images = get_images()
 
-    if not links:
-        print("❌ No original links found.")
+    if images:
+        print(f"✅ Found {len(images)} images:")
+        for img in images:
+            print(img)
+
+        save_to_file(images)
+        print("\n✅ Saved to images.txt")
     else:
-        print("✅ Found", len(links), "original links:")
-        for l in links:
-            print(l)
-        if save_to_file(links):
-            print("\n✅ Saved to urls.txt")
-        else:
-            print("\n❌ Failed to save file")
+        print("❌ No images found.")

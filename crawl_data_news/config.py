@@ -144,4 +144,8 @@ DOMAIN_SELECTOR_MAP = {
         "body": ".articleBody",
         "image":"https://photo-baomoi.bmcdn.me/efd5a3ba7ef997a7cee8.png"
     },
+    "vtv.vn": {
+        "title": ".title",
+        "body": ".detail-cmain"
+    }
 }

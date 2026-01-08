@@ -4,18 +4,18 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 
 BASE_URL = "https://thuvienphapluat.vn/phap-luat/"
-params = [
-    'doanh-nghiep','lao-dong-tien-luong','bat-dong-san','vi-pham-hanh-chinh',
-    'bao-hiem','quyen-dan-su','thuong-mai','thue-phi-le-phi',
-    'xuat-nhap-khau','thu-tuc-to-tung','cong-nghe-thong-tin','giao-thong-van-tai'
-]
+params = ['doanh-nghiep', 'lao-dong-tien-luong','bat-dong-san','vi-pham-hanh-chinh','bao-hiem','quyen-dan-su'
+          ,'thuong-mai','thue-phi-le-phi','xuat-nhap-khau','thu-tuc-to-tung','cong-nghe-thong-tin','giao-thong-van-tai']
 
 HEADERS = {"User-Agent": "Mozilla/5.0"}
-TODAY = datetime.now().strftime("%d/%m/%Y")
 
+# Today in dd/mm/yyyy format
+TODAY = datetime.now().strftime("%d/%m/%Y")
+# For testing:
+# TODAY = "09/12/2025"
+
+# Output folder
 OUTPUT_FOLDER = "urls_folder"
-GLOBAL_FILE = "all_urls.txt"
-DATE_FILE = "last_date.txt"
 
 
 def ensure_output_folder():
@@ -23,54 +23,17 @@ def ensure_output_folder():
         os.makedirs(OUTPUT_FOLDER)
 
 
-def reset_if_new_day():
+def save_urls_for_param(param, urls):
     ensure_output_folder()
 
-    date_path = os.path.join(OUTPUT_FOLDER, DATE_FILE)
-    all_url_path = os.path.join(OUTPUT_FOLDER, GLOBAL_FILE)
-
-    if os.path.exists(date_path):
-        with open(date_path, "r", encoding="utf-8") as f:
-            last_date = f.read().strip()
-    else:
-        last_date = None
-
-    if last_date != TODAY:
-        print("🔄 New day detected → reset all_urls.txt")
-
-        if os.path.exists(all_url_path):
-            os.remove(all_url_path)
-
-        with open(date_path, "w", encoding="utf-8") as f:
-            f.write(TODAY)
-
-
-def load_all_urls():
-    path = os.path.join(OUTPUT_FOLDER, GLOBAL_FILE)
-
-    if not os.path.exists(path):
-        return set()
-
-    with open(path, "r", encoding="utf-8") as f:
-        return set(line.strip() for line in f if line.strip())
-
-
-def save_to_global(new_urls):
-    path = os.path.join(OUTPUT_FOLDER, GLOBAL_FILE)
-
-    with open(path, "a", encoding="utf-8") as f:
-        for url in new_urls:
-            f.write(url + "\n")
-
-
-def save_new_urls(param, new_urls):
     filename = f"urls-{param}.txt"
-    path = os.path.join(OUTPUT_FOLDER, filename)
+    filepath = os.path.join(OUTPUT_FOLDER, filename)
 
-    # 🔥 always overwrite old file
-    with open(path, "w", encoding="utf-8") as f:
-        for url in new_urls:
+    with open(filepath, "w", encoding="utf-8") as f:
+        for url in urls:
             f.write(url + "\n")
+
+    print(f"Saved {len(urls)} URLs → {filepath}")
 
 
 def crawl_page(url):
@@ -87,6 +50,9 @@ def extract_links(html):
     soup = BeautifulSoup(html, "html.parser")
     valid_links = set()
 
+    # ---------------------------------------------------
+    # 1️⃣ Extract from .col-md-9 → section → article → a
+    # ---------------------------------------------------
     container = soup.find("div", class_="col-md-9")
     if container:
         for section in container.find_all("section"):
@@ -105,6 +71,9 @@ def extract_links(html):
                         href = "https://thuvienphapluat.vn" + href
                     valid_links.add(href)
 
+    # ---------------------------------------------------
+    # 2️⃣ Extract from a.news-card
+    # ---------------------------------------------------
     for card in soup.select("a.news-card"):
         parent = card.parent
         sub_time = parent.select_one(".sub-time")
@@ -127,34 +96,22 @@ def extract_links(html):
 
 
 def crawl_all():
-    crawled_before = load_all_urls()
-    print(f"Already crawled today: {len(crawled_before)} URLs")
-
     for p in params:
         url = BASE_URL + p
         print("\nCrawling:", url)
 
         html = crawl_page(url)
         if not html:
-            save_new_urls(p, [])
             continue
 
         links = extract_links(html)
         print(f" → Found {len(links)} links today")
 
-        new_links = links - crawled_before
-        print(f" → New links: {len(new_links)}")
-
-        # overwrite param file with only new links
-        save_new_urls(p, new_links)
-
-        if new_links:
-            save_to_global(new_links)
-            crawled_before.update(new_links)
+        # Save each param to its own file
+        save_urls_for_param(p, links)
 
 
 if __name__ == "__main__":
     print("Today date filter:", TODAY)
-    reset_if_new_day()
     crawl_all()
     print("\nDONE.")
