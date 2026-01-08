@@ -13,15 +13,8 @@ from selenium.common.exceptions import TimeoutException, WebDriverException
 from common_func import clean_and_parse_json, clean_and_parse_json_html, cleanSpaceEnter
 from config import DOMAIN_SELECTOR_MAP
 from gemini_api import generate_text
-# from prompts import (
-#     PROMPT_CLEAN_HTML,
-#     PROMPT_TITLE,
-#     PROMPT_TAGS_META,
-#     PROMT_CONTENT_META_TAG,
-#     PROMT_CREATE_IMAGE
-# )
+
 from prompts_en import (
-    # PROMPT_CLEAN_HTML,
     PROMPT_TITLE,
     PROMPT_TAGS_META,
     PROMT_CONTENT_META_TAG,
@@ -45,6 +38,15 @@ def prepare_export_folder():
 prepare_export_folder()
 
 # =============================
+# DOMAIN UTILS
+# =============================
+def get_domain_name(url):
+    hostname = urllib.parse.urlparse(url).hostname
+    if hostname:
+        return hostname.replace("www.", "")
+    return ""
+
+# =============================
 # SELECTOR FROM DOMAIN
 # =============================
 def get_selectors(url):
@@ -59,50 +61,27 @@ def wait_for_page_ready(driver, timeout=20):
         WebDriverWait(driver, timeout).until(
             lambda d: d.execute_script("return document.readyState") == "complete"
         )
-        WebDriverWait(driver, timeout).until(
-            lambda d: d.execute_script(
-                "return (window.__pending_ajax_count || 0) === 0;"
-            )
-        )
     except:
         pass
     time.sleep(1)
-
-def inject_ajax_counter(driver):
-    driver.execute_script("""
-        if (!window.__ajax_monitor_installed) {
-            window.__pending_ajax_count = 0;
-            const origFetch = window.fetch;
-            window.fetch = function(...args) {
-                window.__pending_ajax_count++;
-                return origFetch(...args).finally(() => window.__pending_ajax_count--);
-            };
-            const origOpen = XMLHttpRequest.prototype.open;
-            XMLHttpRequest.prototype.open = function(...args) {
-                window.__pending_ajax_count++;
-                this.addEventListener('loadend', () => window.__pending_ajax_count--);
-                origOpen.apply(this, args);
-            };
-            window.__ajax_monitor_installed = true;
-        }
-    """)
 
 # =============================
 # SETUP DRIVER
 # =============================
 def setup_driver():
     options = Options()
-    options.add_argument("--headless=new")
+    options.add_argument("--headless")
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-features=NetworkService")
+    options.add_argument("--disable-features=VizDisplayCompositor")
     options.add_argument("--disable-blink-features=AutomationControlled")
     options.add_argument(
         "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
     )
-    driver = webdriver.Chrome(options=options)
-    inject_ajax_counter(driver)
-    return driver
+
+    return webdriver.Chrome(options=options)
 
 # =============================
 # CRAWLER
@@ -110,7 +89,7 @@ def setup_driver():
 def crawl(driver, url):
     selectors = get_selectors(url)
     if not selectors:
-        return None, None, None, {
+        return None, None, None, None, {
             "stage": "SELECTOR",
             "error_type": "SelectorNotFound",
             "error_message": "No selector mapped for domain"
@@ -124,7 +103,7 @@ def crawl(driver, url):
         driver.get(url)
     except Exception as e:
         driver.execute_script("window.stop();")
-        return None, None, None, {
+        return None, None, None, None, {
             "stage": "PAGE_LOAD",
             "error_type": type(e).__name__,
             "error_message": str(e)
@@ -139,7 +118,7 @@ def crawl(driver, url):
         )
         title = title_el.text.strip() or title_el.get_attribute("innerText").strip()
     except Exception as e:
-        return None, None, None, {
+        return None, None, None, None, {
             "stage": "TITLE_EXTRACT",
             "error_type": type(e).__name__,
             "error_message": str(e)
@@ -155,18 +134,20 @@ def crawl(driver, url):
             body_el.text.strip() or body_el.get_attribute("innerText").strip()
         )
     except Exception as e:
-        return None, None, None, {
+        return None, None, None, None, {
             "stage": "BODY_EXTRACT",
             "error_type": type(e).__name__,
             "error_message": str(e)
         }
 
-    return title, body_html, body_text, None
+    domain = get_domain_name(url)
+
+    return title, body_html, body_text, domain, None
 
 # =============================
 # LOAD URLS
 # =============================
-def load_urls(file_path="urls.txt"):
+def load_urls(file_path="baomoi_data/urls.txt"):
     with open(file_path, encoding="utf-8") as f:
         return [l.strip() for l in f if l.strip()]
 
@@ -174,6 +155,7 @@ def load_urls(file_path="urls.txt"):
 # MAIN
 # =============================
 if __name__ == "__main__":
+
     driver = setup_driver()
 
     success = []
@@ -181,7 +163,7 @@ if __name__ == "__main__":
     dataCrawled = []
 
     for url in load_urls():
-        title, body_html, body_text, error = crawl(driver, url)
+        title, body_html, body_text, domain, error = crawl(driver, url)
 
         if error:
             fail.append({
@@ -189,10 +171,12 @@ if __name__ == "__main__":
                 **error
             })
             continue
+        merged_title = f"Title: {title}\nDomain: {domain}"
 
         dataCrawled.append({
             "url": url,
-            "title": f"{PROMPT_TITLE}\n{title}",
+            "domain": domain,
+            "title": f"{PROMPT_TITLE}\n{merged_title}",
             "body": f"{PROMT_CONTENT_META_TAG}\n{body_html}",
             "ori_html": f"{body_html}",
             "image": f"{PROMT_CREATE_IMAGE}\n{body_text}"
@@ -201,7 +185,7 @@ if __name__ == "__main__":
     driver.quit()
 
     # =============================
-    # EXPORT FAIL (DETAILED)
+    # EXPORT FAIL
     # =============================
     with open(os.path.join(EXPORT_DIR, "fail_results.csv"), "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter="|", quoting=csv.QUOTE_ALL)
@@ -217,12 +201,18 @@ if __name__ == "__main__":
     # =============================
     # EXPORT AI DATA
     # =============================
-    # =============================
     with open(os.path.join(EXPORT_DIR, "ai_data.csv"), "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter="|", quoting=csv.QUOTE_ALL)
-        writer.writerow(["link", "title", "data", "image", "ori_html"])
+        writer.writerow(["link", "title", "data", "image", "ori_html", "domain"])
         for r in dataCrawled:
-            writer.writerow([r["url"], r["title"], r["body"], r["image"], r["ori_html"]])
+            writer.writerow([
+                r["url"],
+                r["title"],
+                r["body"],
+                r["image"],
+                r["ori_html"],
+                r["domain"]
+            ])
 
     print("\n==============================")
     print(f"✅ SUCCESS: {len(dataCrawled)}")

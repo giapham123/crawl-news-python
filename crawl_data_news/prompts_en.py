@@ -170,6 +170,7 @@ JSON
   "slug": "Slug chuẩn SEO",
   "focus_keyphrase": "Focus keyphrase tối ưu",
   "cate": "Danh mục duy nhất"
+  "domain:"domain name"
 }
 QUY TẮC CHI TIẾT:
 
@@ -217,7 +218,8 @@ Các điểm tôi đã sửa đổi cho bạn:
 Tại mục [1]: Thêm lệnh "Cấm sử dụng từ 'Vì sao' hoặc 'Tại sao'" và gợi ý các từ nghi vấn thay thế để tiêu đề tự nhiên hơn.
 
 Tại mục [4]: Sửa thành "Chỉ chọn DUY NHẤT 01 danh mục" để ép hệ thống không đưa ra danh sách dài.
-
+[5] DOMAIN NAME
+giữ nguyên domain name, cái mà tôi Input vô.
 Cấu trúc JSON: Giữ nguyên tính tinh gọn để bạn dễ dàng nạp vào hệ thống.
 
 ========================
