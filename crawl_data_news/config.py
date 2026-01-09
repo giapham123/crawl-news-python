@@ -147,5 +147,15 @@ DOMAIN_SELECTOR_MAP = {
     "vtv.vn": {
         "title": ".title",
         "body": ".detail-cmain"
+    },
+    "baochinhphu.vn": {
+        "title": ".detail-title",
+        "body": ".detail-content.afcbc-body.clearfix",
+        "image": "https://photo-baomoi.bmcdn.me/e4104227a064493a1075.png"
+    },
+    "www.sggp.org.vn": {
+        "title": ".article__title.cms-title",  # selector tiêu đề chung
+        "body": ".article__body.zce-content-body.cms-body",
+        "image": "https://photo-baomoi.bmcdn.me/a60983665e25b77bee34.png"
     }
 }
