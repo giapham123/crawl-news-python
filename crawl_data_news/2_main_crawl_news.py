@@ -20,6 +20,9 @@ from prompts_en import (
     PROMT_CONTENT_META_TAG,
     PROMT_CREATE_IMAGE
 )
+from prompts_merge import (PROMT_MERGE
+)
+
 
 # =============================
 # EXPORT CONFIG
@@ -172,10 +175,11 @@ if __name__ == "__main__":
             })
             continue
         merged_title = f"Title: {title}\nDomain: {domain}"
-
+        merged_title_content = f"Title: {title}\nDomain: {domain}\n{body_html}"
         dataCrawled.append({
             "url": url,
             "domain": domain,
+            "content_title": f"{PROMT_MERGE}\n{merged_title_content}",
             "title": f"{PROMPT_TITLE}\n{merged_title}",
             "body": f"{PROMT_CONTENT_META_TAG}\n{body_html}",
             "ori_html": f"{body_html}",
@@ -203,10 +207,11 @@ if __name__ == "__main__":
     # =============================
     with open(os.path.join(EXPORT_DIR, "ai_data.csv"), "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f, delimiter="|", quoting=csv.QUOTE_ALL)
-        writer.writerow(["link", "title", "data", "image", "ori_html", "domain"])
+        writer.writerow(["link", "content_title","title", "data", "image", "ori_html", "domain"])
         for r in dataCrawled:
             writer.writerow([
                 r["url"],
+                r["content_title"],
                 r["title"],
                 r["body"],
                 r["image"],

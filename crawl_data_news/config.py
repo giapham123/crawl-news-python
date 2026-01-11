@@ -154,8 +154,18 @@ DOMAIN_SELECTOR_MAP = {
         "image": "https://photo-baomoi.bmcdn.me/e4104227a064493a1075.png"
     },
     "www.sggp.org.vn": {
-        "title": ".article__title.cms-title",  # selector tiêu đề chung
+        "title": ".article__title.cms-title",
         "body": ".article__body.zce-content-body.cms-body",
         "image": "https://photo-baomoi.bmcdn.me/a60983665e25b77bee34.png"
+    },
+    "vnexpress.net" :{
+        "title": ".title-detail",
+        "body": ".sidebar-1",
+        "image": "https://s1.vnecdn.net/vnexpress/restruct/i/v9764/v2_2019/pc/graphics/logo.svg"
+    },
+    "tuoitre.vn":{
+        "title": ".detail-title",
+        "body": ".detail-cmain.clearfix",
+        "image": "https://static-tuoitre.tuoitre.vn/thumb_w/90/tuoitre/web_images/tto_star_small_v2.png"
     }
 }
