@@ -1,5 +1,4 @@
-# prompts.py
-PROMT_MERGE = """NỘI DUNG PROMPT MERGED (ĐÃ TỐI ƯU)
+PROMT_MERGE = """NỘI DUNG PROMPT MERGED (ĐÃ TỐI ƯU - CHỐNG MẤT ẢNH & VIDEO)
 
 Bạn là một hệ thống xử lý nội dung báo chí và tối ưu SEO cho website tin tức Việt Nam.
 
@@ -66,33 +65,43 @@ PHẦN B — BODY CONTENT DATA
 
 REQUIREMENTS FOR body:
 
-- Giữ nguyên toàn bộ nội dung bài viết
+- Giữ nguyên TOÀN BỘ nội dung bài viết bao gồm:
+  văn bản, hình ảnh, video, iframe, bảng biểu.
+
+- TUYỆT ĐỐI KHÔNG được loại bỏ bất kỳ thẻ <img>, <video>, <iframe>, <source> nào có trong ORIGINAL CONTENT.
+
+- Chỉ được làm sạch cú pháp HTML, KHÔNG được làm mất media.
+
 - Chỉ cho phép HTML tags:
 
 <h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>, <video>, <iframe>, <source>, <img>, <strong>, <em>, <figcaption>
 
 IMAGES:
 
-- Luôn dùng <img>
-- Nếu có data-src hoặc data-original thì dùng làm src
-- Nếu không có thì giữ nguyên src
-- Không chỉnh sửa URL ảnh
+- Nếu thẻ <img> có data-src hoặc data-original → thay thế vào src
+- Nếu không có → giữ nguyên src
+- Không xoá bất kỳ ảnh nào
+- Không thay đổi URL
 - Giữ alt, title
-- Nếu có caption: đặt ngay dưới ảnh bằng <figcaption> hoặc <p><em>
 
 VIDEO:
 
-.mp4 → 
+- Nếu là link mp4 → convert thành:
 <video controls><source src="URL" type="video/mp4"></video>
 
-Iframe giữ nguyên.
+- Nếu là iframe → giữ nguyên iframe
 
 FORMATTING:
 
-- Xoá toàn bộ * hoặc **
-- Không dùng blockquote
+- Chỉ xoá ký tự *, **
+- Không xoá thẻ media
 - Không markdown
+- Không blockquote
 - Không wrap code
+
+CRITICAL RULE:
+
+Nếu ORIGINAL CONTENT có hình ảnh hoặc video mà body trả về không có, thì kết quả được xem là SAI.
 
 ========================
 IMAGE LINKS EXTRACTION
@@ -139,5 +148,4 @@ OUTPUT RULES
 ========================
 ORIGINAL CONTENT
 ========================
-
 """
