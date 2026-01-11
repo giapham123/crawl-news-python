@@ -74,9 +74,9 @@ def extract_data(html):
     return {
         "title": title,
         "content_title": merged_title_content,
+        "prompt_image": prompt_image,
         "prompt_title": prompt_title,
         "prompt_content_html": prompt_content_html,
-        "prompt_image": prompt_image,
         "content_html": content_html,
         "content_text": content_text,
     }
