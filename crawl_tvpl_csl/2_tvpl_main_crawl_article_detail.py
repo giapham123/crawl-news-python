@@ -12,6 +12,8 @@ from prompts import (
     PROMT_CONTENT_META_TAG,
     PROMT_CREATE_IMAGE
 )
+from prompts_merge import (PROMT_MERGE
+)
 
 # ================= CONFIG =================
 INPUT_FOLDER = "urls_folder"
@@ -67,10 +69,11 @@ def extract_data(html):
     prompt_content_html = f"{PROMT_CONTENT_META_TAG}\n\n{content_html}"
     prompt_title = f"{PROMPT_TITLE}\n\n{title}"
     prompt_image = f"{PROMT_CREATE_IMAGE}\n\n{content_text}"
+    merged_title_content = f"{PROMT_MERGE}\nTitle: {title}\nbody: {content_html}"
 
     return {
         "title": title,
-        # "category": cate,
+        "content_title": merged_title_content,
         "prompt_title": prompt_title,
         "prompt_content_html": prompt_content_html,
         "prompt_image": prompt_image,
