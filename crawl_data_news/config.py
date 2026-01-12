@@ -160,7 +160,7 @@ DOMAIN_SELECTOR_MAP = {
     },
     "vnexpress.net" :{
         "title": ".title-detail",
-        "body": ".sidebar-1",
+        "body": ".section.page-detail.top-detail ",
         "image": "https://s1.vnecdn.net/vnexpress/restruct/i/v9764/v2_2019/pc/graphics/logo.svg"
     },
     "tuoitre.vn":{

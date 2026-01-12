@@ -20,6 +20,9 @@ INPUT_FOLDER = "urls_folder"
 OUTPUT_JSON_FOLDER = "result_json_folder"
 OUTPUT_CSV_FOLDER = "result_csv_folder"
 
+EXCLUDE_FILES = {"all_urls.txt"}
+
+
 HEADERS = {"User-Agent": "Mozilla/5.0"}
 # ==========================================
 
@@ -137,7 +140,12 @@ def main():
     os.makedirs(OUTPUT_CSV_FOLDER, exist_ok=True)
 
     # ===== READ URL FILES =====
-    txt_files = [f for f in os.listdir(INPUT_FOLDER) if f.endswith(".txt")]
+    # txt_files = [f for f in os.listdir(INPUT_FOLDER) if f.endswith(".txt")]
+    txt_files = [
+        f for f in os.listdir(INPUT_FOLDER)
+        if f.endswith(".txt") and f not in EXCLUDE_FILES
+    ]
+
     if not txt_files:
         print("No .txt files found in", INPUT_FOLDER)
         return
