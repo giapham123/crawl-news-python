@@ -167,5 +167,15 @@ DOMAIN_SELECTOR_MAP = {
         "title": ".detail-title",
         "body": ".detail-cmain.clearfix",
         "image": "https://static-tuoitre.tuoitre.vn/thumb_w/90/tuoitre/web_images/tto_star_small_v2.png"
+    },
+    "baovanhoa.vn":{
+        "title": ".detail__title",
+        "body": ".detail__content",
+        "image": "https://photo-baomoi.bmcdn.me/97f138fb5eb5b7ebeea4.png"
+    },
+    "baoxaydung.vn": {
+        "title": ".title.detail-title",
+        "body": ".detail-cmain",
+        "image": "https://photo-baomoi.bmcdn.me/6d9d66a502ebebb5b2fa.png"
     }
 }
