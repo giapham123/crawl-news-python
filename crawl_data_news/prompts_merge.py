@@ -14,12 +14,12 @@ Chỉ trả về DUY NHẤT 1 object JSON trong code block ```json theo đúng c
   "title": "",
   "slug": "",
   "focus_keyphrase": "",
-  "cate": "",
   "domain": "",
   "body": "",
   "meta": "",
   "tags": "",
-  "image_links": []
+  "image_links": [],
+  "cate": ""
 }
 
 ========================
