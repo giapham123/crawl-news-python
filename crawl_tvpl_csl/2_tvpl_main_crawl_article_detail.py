@@ -12,7 +12,7 @@ from prompts import (
     PROMT_CONTENT_META_TAG,
     PROMT_CREATE_IMAGE
 )
-from prompts_merge import (PROMT_MERGE
+from prompts_merge import (PROMT_MERGE,PROMT_MERGE_CONTENT_IMAGE
 )
 
 # ================= CONFIG =================
@@ -73,9 +73,10 @@ def extract_data(html):
     prompt_title = f"{PROMPT_TITLE}\n\n{title}"
     prompt_image = f"{PROMT_CREATE_IMAGE}\n\n{content_text}"
     merged_title_content = f"{PROMT_MERGE}\nTitle: {title}\nbody: {content_html}"
-
+    merged_title_content_image = f"{PROMT_MERGE_CONTENT_IMAGE}\nTitle: {title}\nbody: {content_html}"
     return {
         "title": title,
+        "merged_title_content_image":merged_title_content_image,
         "content_title": merged_title_content,
         "prompt_image": prompt_image,
         "prompt_title": prompt_title,
