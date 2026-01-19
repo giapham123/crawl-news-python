@@ -59,37 +59,56 @@ def get_selectors(url):
 # =============================
 # PAGE READY
 # =============================
-def wait_for_page_ready(driver, timeout=20):
+def wait_for_page_ready(driver, timeout=15):
     try:
         WebDriverWait(driver, timeout).until(
-            lambda d: d.execute_script("return document.readyState") == "complete"
+            lambda d: d.execute_script("return document.readyState") in ["interactive","complete"]
         )
     except:
         pass
-    time.sleep(1)
+
 
 # =============================
 # SETUP DRIVER
 # =============================
 def setup_driver():
     options = Options()
-    options.add_argument("--headless")
+
+    options.add_argument("--headless=new")
     options.add_argument("--disable-gpu")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    options.add_argument("--disable-features=NetworkService")
-    options.add_argument("--disable-features=VizDisplayCompositor")
+    options.add_argument("--disable-infobars")
+    options.add_argument("--disable-extensions")
+    options.add_argument("--disable-notifications")
     options.add_argument("--disable-blink-features=AutomationControlled")
+
+    # speed & stability
+    options.add_argument("--disable-images")
+    options.add_argument("--disable-javascript")
+    options.add_argument("--disable-fonts")
+    options.add_argument("--disable-logging")
+    options.add_argument("--mute-audio")
+
     options.add_argument(
-        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120 Safari/537.36"
+        "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143 Safari/537.36"
     )
 
-    return webdriver.Chrome(options=options)
+    options.page_load_strategy = "eager"
+
+    driver = webdriver.Chrome(options=options)
+
+    driver.set_page_load_timeout(25)
+    driver.set_script_timeout(25)
+
+    return driver
+
 
 # =============================
 # CRAWLER
 # =============================
-def crawl(driver, url):
+def crawl(driver, url, retry=2):
+
     selectors = get_selectors(url)
     if not selectors:
         return None, None, None, None, {
@@ -102,10 +121,16 @@ def crawl(driver, url):
     body_selector = selectors.get("body")
 
     try:
-        driver.set_page_load_timeout(30)
         driver.get(url)
     except Exception as e:
-        driver.execute_script("window.stop();")
+        try:
+            driver.execute_script("window.stop();")
+        except:
+            pass
+
+        if retry > 0:
+            return crawl(driver, url, retry-1)
+
         return None, None, None, None, {
             "stage": "PAGE_LOAD",
             "error_type": type(e).__name__,
@@ -129,7 +154,7 @@ def crawl(driver, url):
 
     # ---------- BODY ----------
     try:
-        body_el = WebDriverWait(driver, 15).until(
+        body_el = WebDriverWait(driver, 12).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, body_selector))
         )
         body_html = body_el.get_attribute("outerHTML")
