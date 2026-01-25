@@ -263,19 +263,26 @@ TAGS
 IMAGE URL
 =========================
 
-Tự động tạo một hình ảnh minh họa báo chí pháp luật phù hợp nội dung bài viết và trả về đường dẫn ảnh công khai trong trường "image_url".
+Automatically generate a realistic, illustrative legal news intro image that visually matches the article title and legal topic, without showing any people, and return a publicly accessible direct image URL in the "image_url" field.
 
-Yêu cầu ảnh:
+Image requirements:
 
-- Phong cách: photojournalism, realistic, professional newspaper illustration
-- Không hoạt hình, không 3D, không fantasy
-- Bối cảnh Việt Nam
-- Nhân vật, hành động bám sát nội dung pháp lý
-- Không chữ trên ảnh
-- Tỉ lệ 16:9
-- Độ nét cao
-
-image_url phải là link ảnh trực tiếp có thể truy cập công khai.
+- Purpose: Intro / cover image for a legal news article
+- Style: realistic illustrative photojournalism, professional newspaper cover style
+- No people, no faces, no human silhouettes
+- No cartoon, no 3D, no fantasy, no abstract art
+- Composition should symbolically and clearly represent the article title and legal subject
+- Use legal-related objects and environments only, such as:
+  - courthouse or government building exteriors
+  - scales of justice, gavel, law books
+  - sealed documents, official files, evidence boxes
+  - customs seals, inspection stamps, warning tapes, storage warehouses without people
+- Serious, neutral, authoritative journalistic tone
+- Real-world setting with natural lighting and realistic textures
+- No text, captions, logos, symbols, or watermarks on the image
+- Aspect ratio: 16:9
+- High resolution, sharp focus
+- The "image_url" must be a direct, publicly accessible image link (not a webpage)
 
 =========================
 OUTPUT RULES
