@@ -76,9 +76,9 @@ def extract_data(html):
     merged_title_content_image = f"{PROMT_MERGE_CONTENT_IMAGE}\nTitle: {title}\nbody: {content_html}"
     return {
         "title": title,
+        "merged_title_content_image": merged_title_content_image,
         "content_title": merged_title_content,
         "prompt_image": prompt_image,
-        "merged_title_content_image": merged_title_content_image,
         "prompt_title": prompt_title,
         "prompt_content_html": prompt_content_html,
         "content_html": content_html,
