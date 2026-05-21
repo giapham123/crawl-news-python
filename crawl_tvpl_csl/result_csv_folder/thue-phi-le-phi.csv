@@ -1,0 +1,1303 @@
+title,merged_title_content_image,content_title,prompt_image,prompt_title,prompt_content_html,content_html,content_text,url
+Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?,"
+Bạn là hệ thống xử lý nội dung pháp luật và tối ưu SEO cho website pháp lý Việt Nam, với văn phong chuẩn mực, chặt chẽ, khách quan theo phong cách luật sư Việt Nam.
+
+Đồng thời bạn là hệ thống tạo hình ảnh minh họa báo chí pháp luật.
+
+Dựa hoàn toàn trên NỘI DUNG GỐC được cung cấp, hãy thực hiện đầy đủ các nhiệm vụ sau và trả về DUY NHẤT 1 object JSON.
+
+=========================
+YÊU CẦU ĐẦU RA
+=========================
+
+Chỉ trả về DUY NHẤT 1 object JSON trong khối ```json theo cấu trúc:
+
+{
+  ""title"": """",
+  ""slug"": """",
+  ""focus_keyphrase"": """",
+  ""body"": """",
+  ""meta"": """",
+  ""tags"": """",
+  ""image_url"": """"
+}
+
+KHÔNG thêm bất kỳ chữ nào ngoài khối JSON.
+
+=========================
+PHẦN A — SEO TITLE DATA
+=========================
+
+🎯 TITLE
+
+- Title là câu hỏi kết thúc bằng ?
+- KHÔNG dùng dấu :
+- KHÔNG viết tắt
+- Ưu tiên keyword search volume >10.000
+- Nếu không có >10.000, chọn từ liên quan nhất
+- Văn phong pháp lý – báo chí
+
+🎯 SLUG
+
+- Chữ thường
+- Không chứa /
+- Không viết tắt
+- Các từ nối bằng ""-""
+- Dựa vào keyword có search volume cao nhất
+
+🎯 FOCUS KEYPHRASE
+
+- Cụm từ khóa chính sát nội dung pháp lý nhất
+- Không ký tự lạ, không dấu chấm
+- Không viết tắt
+- Ưu tiên search volume >10.000
+
+=========================
+PHẦN B — BODY CONTENT (PHÁP LUẬT)
+=========================
+
+KHÔNG sao chép nguyên văn nội dung gốc.
+
+Phải viết lại bằng ngôn ngữ pháp lý, đảm bảo:
+- Không làm sai lệch nội dung pháp luật
+- Giữ nguyên tinh thần, căn cứ, thuật ngữ pháp lý
+- Phù hợp bài viết tư vấn / phân tích pháp luật Việt Nam
+
+Văn phong:
+- Trung lập
+- Khách quan
+- Chính xác
+- Chuẩn phong cách luật sư Việt Nam
+
+HTML:
+
+Chỉ tạo HTML phần body, KHÔNG tạo <html>, <head>, <body>.
+
+Chỉ sử dụng các thẻ:
+<h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>, <a>, <img>, <video>, <iframe>, <source>, <strong>, <em>, <figcaption>
+
+HYPERLINK:
+
+- Giữ nguyên toàn bộ thẻ <a>, href, anchor text, vị trí
+- KHÔNG xoá
+- KHÔNG chỉnh sửa
+- KHÔNG thêm hyperlink mới
+
+MEDIA:
+
+- Giữ nguyên toàn bộ hình ảnh, video, iframe
+- Chuẩn hóa ảnh:
+  data-src, data-original, lazyload, srcset → src
+- Giữ alt, title, caption
+
+VIDEO:
+
+.mp4 → 
+<video controls><source src=""URL"" type=""video/mp4""></video>
+
+FORMATTING:
+
+- Xoá toàn bộ * hoặc **
+- Không blockquote
+- Không markdown
+- Không thêm nội dung ngoài bài gốc
+
+=========================
+META DESCRIPTION
+=========================
+
+- 150–160 ký tự
+- Tóm lược chính xác nội dung pháp lý
+- Văn phong báo chí pháp luật
+- Không ký hiệu, không ngoặc
+
+=========================
+TAGS
+=========================
+
+- Từ khóa pháp luật liên quan trực tiếp
+- Chữ thường
+- Không viết tắt
+- Phân cách bằng dấu phẩy
+- Một dòng
+
+=========================
+IMAGE URL
+=========================
+
+Automatically generate a realistic, illustrative legal news intro image that visually matches the article title and legal topic, without showing any people, and return a publicly accessible direct image URL in the ""image_url"" field.
+
+Image requirements:
+
+- Purpose: Intro / cover image for a legal news article
+- Style: realistic illustrative photojournalism, professional newspaper cover style
+- No people, no faces, no human silhouettes
+- No cartoon, no 3D, no fantasy, no abstract art
+- Composition should symbolically and clearly represent the article title and legal subject
+- Use legal-related objects and environments only, such as:
+  - courthouse or government building exteriors
+  - scales of justice, gavel, law books
+  - sealed documents, official files, evidence boxes
+  - customs seals, inspection stamps, warning tapes, storage warehouses without people
+- Serious, neutral, authoritative journalistic tone
+- Real-world setting with natural lighting and realistic textures
+- No text, captions, logos, symbols, or watermarks on the image
+- Aspect ratio: 16:9
+- High resolution, sharp focus
+- The ""image_url"" must be a direct, publicly accessible image link (not a webpage)
+
+=========================
+OUTPUT RULES
+=========================
+
+- Chỉ trả về 1 JSON
+- Bọc trong ```json
+- Không giải thích
+- Không bình luận
+- Không thêm chữ ngoài JSON
+
+=========================
+NỘI DUNG GỐC
+=========================
+
+
+
+Title: Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?
+body: <header>
+<h1 class=""h3 fw-bold title"" style=""color:black"">Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</h1>
+</header>
+<section class=""news-content"" id=""news-content"">
+<strong class=""d-block mt-3 mb-3 sapo"">
+                                Hướng dẫn chi tiết tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại trên đường link Tracuunnt.gdt.gov.vn
+                            </strong>
+<div class=""accordion muc-luc"" id=""accordionMucLuc"">
+<div class=""accordion-item"">
+<div class=""accordion-header"" id=""headingOneMucLuc"">
+<button aria-controls=""collapseOneMucLuc"" aria-expanded=""true"" class=""accordion-button p-2 pt-3 ps-3 title"" data-bs-target=""#collapseOneMucLuc"" data-bs-toggle=""collapse"" type=""button"">
+<div class=""d-flex justify-content-center align-items-center w-100"">
+<img alt=""Mục lục bài viết"" class=""me-2 img-muc-luc"" height=""13"" src=""https://cdn.thuvienphapluat.vn/images/mluc.png"" width=""15""/>
+                            Nội dung chính
+                        </div>
+</button>
+</div>
+<div aria-labelledby=""headingOneMucLuc"" class=""accordion-collapse collapse show"" data-bs-parent=""#accordionMucLuc"" id=""collapseOneMucLuc"">
+<div class=""accordion-body p-0 ps-3 pb-3"">
+<ul>
+<li>
+<a class=""ps-0"" href=""#tracuunntgdtgovvn-cach-tra-cuu-ma-so-thue-thu-nhap-ca-nhan-nam-2026-bang-dien-thoai-cac-buoc-ra-sao-0""><strong style=""font-size: 12pt;"">Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#chua-dang-ki-ma-so-thue-co-duoc-hoan-thue-tncn-2026-khong-1""><strong style=""font-size: 12pt;"">Chưa đăng kí mã số thuế có được hoàn thuế TNCN 2026 không?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#quan-ly-tuan-thu-trong-quan-ly-thue-tu-172026-ra-sao-2""><strong style=""font-size: 12pt;"">Quản lý tuân thủ trong quản lý thuế từ 1/7/2026 ra sao?</strong></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=""TVPL_QC_VT3-1"" style=""padding:0px"">
+</div>
+<h2 id=""tracuunntgdtgovvn-cach-tra-cuu-ma-so-thue-thu-nhap-ca-nhan-nam-2026-bang-dien-thoai-cac-buoc-ra-sao-0""><strong style=""font-size: 12pt;"">Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</strong></h2><p>Dưới đây hướng dẫn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại như sau:</p><p><strong style=""color: rgb(229, 11, 11);"">Bước 1: </strong>Truy cập địa chỉ: https://tracuunnt.gdt.gov.vn/tcnnt/mstcn.jsp. Chọn mục “Thông tin về người nộp thuế TNCN”.</p><p><strong style=""color: rgb(222, 16, 16);"">Bước 2: </strong>Nhập số căn cước công dân vào ô ""mã số thuế""</p><p>- Mã xác nhận: Là một mã captcha bao gồm 5 ký tự ngay cạnh ô bên phả, mã này thay đổi theo từng phiên giao dịch.</p><p><strong style=""color: rgb(222, 9, 9);"">Bước 3: </strong>Chọn “<strong>Tra cứu</strong>”: thông tin tra cứu sẽ xuất hiện ngay bên dưới, bao gồm:</p><p>- Mã số thuế</p><p>- Tên người nộp thuế</p><p>- Cơ quan thuế: Nơi người nộp thuế tham gia đóng thuế.</p><p>- Trạng thái MST</p><p><em>*Thông tin ""Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?"" mang tính chất tham khảo.</em></p><p><strong>&gt;&gt;<a href=""https://thuvienphapluat.vn/phap-luat/ho-tro-phap-luat/toan-van-nghi-dinh-1442026ndcp-ve-thue-gia-tri-gia-tang-sua-doi-nghi-dinh-1812025-ra-sao-267446.html"" rel=""noopener noreferrer"" target=""_blank""> Nghị định 144/2026/NĐ-CP về Thuế giá trị gia tăng sửa đổi Nghị định 181/2025</a></strong></p><p><strong>&gt;&gt; <a href=""https://thuvienphapluat.vn/phap-luat/ho-tro-phap-luat/toan-van-nghi-dinh-1412026ndcp-chinh-sach-thue-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-sua-doi-nghi-di-266708.html"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 141/2026/NĐ-CP chính sách thuế với hộ kinh doanh, cá nhân kinh doanh sửa đổi Nghị định 68</a></strong></p><p><img alt=""Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?"" src=""https://cdn.thuvienphapluat.vn/uploads/phapluat/2022-2/TTKP/tra-cu-mst-tncn.jpg""/></p><p style=""text-align: center;""><em>Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</em></p><h2 id=""chua-dang-ki-ma-so-thue-co-duoc-hoan-thue-tncn-2026-khong-1""><strong style=""font-size: 12pt;"">Chưa đăng kí mã số thuế có được hoàn thuế TNCN 2026 không?</strong></h2><p>Theo quy định tại khoản 2 Điều 8 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-thue-thu-nhap-ca-nhan-2007-04-2007-QH12-59652.aspx?anchor=dieu_8"" rel=""noopener noreferrer"" target=""_blank"">Luật Thuế thu nhập cá nhân 2007</a> (Còn hiệu lực đến 30/06/2026)<a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-thue-thu-nhap-ca-nhan-2007-04-2007-QH12-59652.aspx?anchor=dieu_8"" rel=""noopener noreferrer"" target=""_blank""> </a>và Điều 28 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-111-2013-TT-BTC-Huong-dan-Luat-thue-thu-nhap-ca-nhan-va-Nghi-dinh-65-2013-ND-CP-205356.aspx?anchor=dieu_28"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 111/2013/TT-BTC</a>, điều kiện được hoàn thuế TNCN 2026, cụ thể bao gồm các trường hợp:</p><blockquote><strong><em>Hoàn thuế</em></strong></blockquote><blockquote><strong><em>1. Việc hoàn thuế thu nhập cá nhân áp dụng đối với những cá nhân đã đăng ký và có mã số thuế tại thời điểm nộp hồ sơ quyết toán thuế.</em></strong></blockquote><blockquote><em>2. Đối với cá nhân đã ủy quyền quyết toán thuế cho tổ chức, cá nhân trả thu nhập thực hiện quyết toán thay thì việc hoàn thuế của cá nhân được thực hiện thông qua tổ chức, cá nhân trả thu nhập. Tổ chức, cá nhân trả thu nhập thực hiện bù trừ số thuế nộp thừa, nộp thiếu của các cá nhân. Sau khi bù trừ, nếu còn số thuế nộp thừa thì được bù trừ vào kỳ sau hoặc hoàn thuế nếu có đề nghị hoàn trả.</em></blockquote><blockquote><em>...</em></blockquote><p>Theo đó, điều kiện được hoàn thuế TNCN 2026, cụ thể như sau:</p><p><strong><em>- Đã nộp số thuế lớn hơn số thuế thực tế phải nộp:</em></strong> Sau khi quyết toán thuế, nếu tổng số tiền thuế TNCN đã nộp trong năm lớn hơn số thuế phải nộp theo quy định, cá nhân được hoàn phần thuế nộp thừa.</p><p><strong><em>- Thu nhập tính thuế dưới mức chịu thuế, nhưng đã phát sinh nghĩa vụ thuế và đã nộp thuế: </em></strong>Trường hợp cá nhân trong năm tài chính chưa đến ngưỡng chịu thuế nhưng đã bị khấu trừ thuế tại nguồn do nhiều lý do (như làm việc ngắn hạn, thu nhập không thường xuyên,…) sẽ được hoàn lại số thuế đã nộp sau khi quyết toán.</p><p><strong><em>- Các trường hợp hoàn thuế theo quyết định của cơ quan nhà nước có thẩm quyền:</em></strong> Bao gồm các trường hợp đặc biệt khác được pháp luật quy định hoặc theo các quyết định riêng của cơ quan thuế hoặc cơ quan Nhà nước.</p><p>- Cá nhân đã đăng ký và có mã số thuế tại thời điểm nộp hồ sơ quyết toán thuế</p><p>- Cá nhân bắt buộc phải có mã số thuế trước thời điểm nộp hồ sơ xin hoàn thuế. Nếu chưa đăng ký và được cấp mã số thuế trước khi hoàn thuế, cơ quan thuế sẽ không giải quyết thủ tục hoàn thuế.</p><p>- Có yêu cầu hoàn thuế và nộp đầy đủ hồ sơ</p><p><strong>Như vậy, </strong><strong style=""color: rgb(255, 0, 0);"">chưa đăng kí mã số thuế trước thời điểm nộp hồ sơ xin hoàn thuế thì không đủ điều kiện được hoàn thuế TNCN.</strong></p><p><strong><em>Lưu ý: </em></strong>Tại khoản 2 Điều 38 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-86-2024-TT-BTC-dang-ky-thue-565309.aspx?anchor=dieu_38"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 86/2024/TT-BTC</a> có quy định mã số thuế do cơ quan thuế cấp cho cá nhân, hộ gia đình, hộ kinh doanh được thực hiện đến hết ngày 30/6/2025. Kể từ ngày 01/7/2025, người nộp thuế, cơ quan quản lý thuế, cơ quan, tổ chức, cá nhân khác có liên quan đến việc sử dụng mã số thuế theo quy định tại Điều 35 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-quan-ly-thue-2019-387595.aspx?anchor=dieu_35"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2019</a> thực hiện sử dụng số định danh cá nhân thay cho mã số thuế.</p><h2 id=""quan-ly-tuan-thu-trong-quan-ly-thue-tu-172026-ra-sao-2""><strong style=""font-size: 12pt;"">Quản lý tuân thủ trong quản lý thuế từ 1/7/2026 ra sao?</strong></h2><p>Căn cứ Điều 34 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Quan-ly-thue-2025-so-108-2025-QH15-675268.aspx?anchor=dieu_34"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2025</a> quy định về quản lý tuân thủ trong quản lý thuế từ 1/7/2026 như sau:</p><p>- Cơ quan thuế thực hiện quản lý tuân thủ để phân bổ nguồn lực hiệu quả, khuyến khích sự tuân thủ tự nguyện và tạo môi trường kinh doanh công bằng, bao gồm:</p><p>+ Xây dựng hệ thống đánh giá và phân loại mức độ tuân thủ pháp luật về thuế của người nộp thuế, đồng thời duy trì hồ sơ điện tử cho từng người nộp thuế, gồm các thông tin về: tần suất vi phạm pháp luật thuế; tính chất và mức độ của hành vi vi phạm; mức độ hợp tác với cơ quan quản lý thuế trong việc thực hiện thủ tục thuế, kiểm tra và chấp hành các quyết định xử lý vi phạm và các thông tin khác liên quan đến nghĩa vụ thuế;</p><p>+ Kết hợp giữa tuyên truyền, hỗ trợ, khuyến khích người nộp thuế tuân thủ tự nguyện với các biện pháp kiểm tra, giám sát dựa trên kết quả đánh giá mức độ tuân thủ, mức độ rủi ro và hành vi tuân thủ của người nộp thuế;</p><p>+ Áp dụng chế độ ưu tiên đối với người nộp thuế tuân thủ tốt pháp luật về thuế, sẵn sàng kết nối, chia sẻ dữ liệu điện tử với cơ quan quản lý thuế, bao gồm dữ liệu về sổ kế toán, hóa đơn, chứng từ và các tài liệu liên quan đến nghĩa vụ thuế thông qua Hệ thống thông tin quản lý thuế theo quy định của Chính phủ.</p><p>Chính phủ quy định chi tiết về điều kiện, phạm vi và hình thức áp dụng chế độ ưu tiên đối với người nộp thuế tuân thủ pháp luật.</p><p>- Cơ quan hải quan tổ chức áp dụng thống nhất quản lý tuân thủ pháp luật đối với người nộp thuế bao gồm: việc xây dựng, quản lý hồ sơ người nộp thuế; xây dựng tiêu chí, chỉ số tiêu chí và tổ chức đánh giá tuân thủ pháp luật của người nộp thuế; hỗ trợ, khuyến khích người nộp thuế nâng cao năng lực tuân thủ; áp dụng các biện pháp kiểm tra, giám sát, kiểm tra sau thông quan và các biện pháp nghiệp vụ khác theo mức độ tuân thủ pháp luật của người nộp thuế theo quy định của pháp luật.</p><p>- Bộ trưởng Bộ Tài chính quy định tiêu chí đánh giá việc tuân thủ pháp luật của người nộp thuế và các hoạt động quản lý tuân thủ trong quản lý thuế.</p><p style=""text-align: left;""><strong>LƯU Ý: </strong><a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Quan-ly-thue-2025-so-108-2025-QH15-675268.aspx?anchor=dieu_52"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2025</a> có hiệu lực thi hành từ ngày 1/7/2026, trừ quy định tại khoản 2 Điều 52 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Quan-ly-thue-2025-so-108-2025-QH15-675268.aspx?anchor=dieu_52"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2025</a>.</p>
+</section>
+<div class=""TVPL_QC_VT3_5"" style=""padding:0px"">
+</div>","
+Bạn là hệ thống xử lý nội dung pháp luật và tối ưu SEO cho website pháp lý Việt Nam, với văn phong chuẩn mực, chặt chẽ, khách quan theo phong cách luật sư Việt Nam.
+
+Dựa hoàn toàn trên NỘI DUNG GỐC được cung cấp, hãy thực hiện đầy đủ các nhiệm vụ sau và trả về DUY NHẤT 1 object JSON.
+
+=========================
+YÊU CẦU ĐẦU RA
+=========================
+
+Chỉ trả về DUY NHẤT 1 object JSON trong khối Code Block markdown ```json theo cấu trúc:
+
+{
+  ""title"": """",
+  ""slug"": """",
+  ""focus_keyphrase"": """",
+  ""body"": """",
+  ""meta"": """",
+  ""tags"": """"
+}
+
+KHÔNG thêm bất kỳ chữ nào ngoài khối JSON.
+
+=========================
+PHẦN A — SEO TITLE DATA
+=========================
+
+🎯 TITLE
+
+- Title là câu hỏi kết thúc bằng ?
+- KHÔNG dùng dấu :
+- KHÔNG viết tắt
+- Ưu tiên keyword search volume >10.000
+- Nếu không có >10.000, chọn từ liên quan nhất
+- Văn phong pháp lý – báo chí
+
+🎯 SLUG
+
+- Chữ thường
+- Không chứa /
+- Không viết tắt
+- Các từ nối bằng ""-""
+- Dựa vào keyword có search volume cao nhất
+
+🎯 FOCUS KEYPHRASE
+
+- Cụm từ khóa chính sát nội dung pháp lý nhất
+- Không ký tự lạ, không dấu chấm
+- Không viết tắt
+- Ưu tiên search volume >10.000
+
+=========================
+PHẦN B — BODY CONTENT (PHÁP LUẬT)
+=========================
+
+KHÔNG sao chép nguyên văn nội dung gốc.
+
+Phải viết lại bằng ngôn ngữ pháp lý, đảm bảo:
+- Không làm sai lệch nội dung pháp luật
+- Giữ nguyên tinh thần, căn cứ, thuật ngữ pháp lý
+- Phù hợp bài viết tư vấn / phân tích pháp luật Việt Nam
+
+Văn phong:
+- Trung lập
+- Khách quan
+- Chính xác
+- Chuẩn phong cách luật sư Việt Nam
+
+HTML:
+
+Chỉ tạo HTML phần body, KHÔNG tạo <html>, <head>, <body>.
+
+Chỉ sử dụng các thẻ:
+<h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>, <a>, <img>, <video>, <iframe>, <source>, <strong>, <em>, <figcaption>
+
+HYPERLINK:
+
+- Giữ nguyên toàn bộ thẻ <a>, href, anchor text, vị trí
+- KHÔNG xoá
+- KHÔNG chỉnh sửa
+- KHÔNG thêm hyperlink mới
+
+MEDIA:
+
+- Giữ nguyên toàn bộ hình ảnh, video, iframe
+- Chuẩn hóa ảnh:
+  data-src, data-original, lazyload, srcset → src
+- Giữ alt, title, caption
+
+VIDEO:
+
+.mp4 → 
+<video controls><source src=""URL"" type=""video/mp4""></video>
+
+FORMATTING:
+
+- Xoá toàn bộ * hoặc **
+- Không blockquote
+- Không markdown
+- Không thêm nội dung ngoài bài gốc
+
+=========================
+META DESCRIPTION
+=========================
+
+- 150–160 ký tự
+- Tóm lược chính xác nội dung pháp lý
+- Văn phong báo chí pháp luật
+- Không ký hiệu, không ngoặc
+
+=========================
+TAGS
+=========================
+
+- Từ khóa pháp luật liên quan trực tiếp
+- Chữ thường
+- Không viết tắt
+- Phân cách bằng dấu phẩy
+- Một dòng
+
+=========================
+OUTPUT RULES
+=========================
+
+- Chỉ trả về 1 JSON
+- Bọc trong ```json
+- Không giải thích
+- Không bình luận
+- Không thêm chữ ngoài JSON
+
+=========================
+NỘI DUNG GỐC
+=========================
+
+
+
+Title: Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?
+body: <header>
+<h1 class=""h3 fw-bold title"" style=""color:black"">Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</h1>
+</header>
+<section class=""news-content"" id=""news-content"">
+<strong class=""d-block mt-3 mb-3 sapo"">
+                                Hướng dẫn chi tiết tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại trên đường link Tracuunnt.gdt.gov.vn
+                            </strong>
+<div class=""accordion muc-luc"" id=""accordionMucLuc"">
+<div class=""accordion-item"">
+<div class=""accordion-header"" id=""headingOneMucLuc"">
+<button aria-controls=""collapseOneMucLuc"" aria-expanded=""true"" class=""accordion-button p-2 pt-3 ps-3 title"" data-bs-target=""#collapseOneMucLuc"" data-bs-toggle=""collapse"" type=""button"">
+<div class=""d-flex justify-content-center align-items-center w-100"">
+<img alt=""Mục lục bài viết"" class=""me-2 img-muc-luc"" height=""13"" src=""https://cdn.thuvienphapluat.vn/images/mluc.png"" width=""15""/>
+                            Nội dung chính
+                        </div>
+</button>
+</div>
+<div aria-labelledby=""headingOneMucLuc"" class=""accordion-collapse collapse show"" data-bs-parent=""#accordionMucLuc"" id=""collapseOneMucLuc"">
+<div class=""accordion-body p-0 ps-3 pb-3"">
+<ul>
+<li>
+<a class=""ps-0"" href=""#tracuunntgdtgovvn-cach-tra-cuu-ma-so-thue-thu-nhap-ca-nhan-nam-2026-bang-dien-thoai-cac-buoc-ra-sao-0""><strong style=""font-size: 12pt;"">Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#chua-dang-ki-ma-so-thue-co-duoc-hoan-thue-tncn-2026-khong-1""><strong style=""font-size: 12pt;"">Chưa đăng kí mã số thuế có được hoàn thuế TNCN 2026 không?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#quan-ly-tuan-thu-trong-quan-ly-thue-tu-172026-ra-sao-2""><strong style=""font-size: 12pt;"">Quản lý tuân thủ trong quản lý thuế từ 1/7/2026 ra sao?</strong></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=""TVPL_QC_VT3-1"" style=""padding:0px"">
+</div>
+<h2 id=""tracuunntgdtgovvn-cach-tra-cuu-ma-so-thue-thu-nhap-ca-nhan-nam-2026-bang-dien-thoai-cac-buoc-ra-sao-0""><strong style=""font-size: 12pt;"">Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</strong></h2><p>Dưới đây hướng dẫn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại như sau:</p><p><strong style=""color: rgb(229, 11, 11);"">Bước 1: </strong>Truy cập địa chỉ: https://tracuunnt.gdt.gov.vn/tcnnt/mstcn.jsp. Chọn mục “Thông tin về người nộp thuế TNCN”.</p><p><strong style=""color: rgb(222, 16, 16);"">Bước 2: </strong>Nhập số căn cước công dân vào ô ""mã số thuế""</p><p>- Mã xác nhận: Là một mã captcha bao gồm 5 ký tự ngay cạnh ô bên phả, mã này thay đổi theo từng phiên giao dịch.</p><p><strong style=""color: rgb(222, 9, 9);"">Bước 3: </strong>Chọn “<strong>Tra cứu</strong>”: thông tin tra cứu sẽ xuất hiện ngay bên dưới, bao gồm:</p><p>- Mã số thuế</p><p>- Tên người nộp thuế</p><p>- Cơ quan thuế: Nơi người nộp thuế tham gia đóng thuế.</p><p>- Trạng thái MST</p><p><em>*Thông tin ""Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?"" mang tính chất tham khảo.</em></p><p><strong>&gt;&gt;<a href=""https://thuvienphapluat.vn/phap-luat/ho-tro-phap-luat/toan-van-nghi-dinh-1442026ndcp-ve-thue-gia-tri-gia-tang-sua-doi-nghi-dinh-1812025-ra-sao-267446.html"" rel=""noopener noreferrer"" target=""_blank""> Nghị định 144/2026/NĐ-CP về Thuế giá trị gia tăng sửa đổi Nghị định 181/2025</a></strong></p><p><strong>&gt;&gt; <a href=""https://thuvienphapluat.vn/phap-luat/ho-tro-phap-luat/toan-van-nghi-dinh-1412026ndcp-chinh-sach-thue-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-sua-doi-nghi-di-266708.html"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 141/2026/NĐ-CP chính sách thuế với hộ kinh doanh, cá nhân kinh doanh sửa đổi Nghị định 68</a></strong></p><p><img alt=""Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?"" src=""https://cdn.thuvienphapluat.vn/uploads/phapluat/2022-2/TTKP/tra-cu-mst-tncn.jpg""/></p><p style=""text-align: center;""><em>Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</em></p><h2 id=""chua-dang-ki-ma-so-thue-co-duoc-hoan-thue-tncn-2026-khong-1""><strong style=""font-size: 12pt;"">Chưa đăng kí mã số thuế có được hoàn thuế TNCN 2026 không?</strong></h2><p>Theo quy định tại khoản 2 Điều 8 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-thue-thu-nhap-ca-nhan-2007-04-2007-QH12-59652.aspx?anchor=dieu_8"" rel=""noopener noreferrer"" target=""_blank"">Luật Thuế thu nhập cá nhân 2007</a> (Còn hiệu lực đến 30/06/2026)<a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-thue-thu-nhap-ca-nhan-2007-04-2007-QH12-59652.aspx?anchor=dieu_8"" rel=""noopener noreferrer"" target=""_blank""> </a>và Điều 28 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-111-2013-TT-BTC-Huong-dan-Luat-thue-thu-nhap-ca-nhan-va-Nghi-dinh-65-2013-ND-CP-205356.aspx?anchor=dieu_28"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 111/2013/TT-BTC</a>, điều kiện được hoàn thuế TNCN 2026, cụ thể bao gồm các trường hợp:</p><blockquote><strong><em>Hoàn thuế</em></strong></blockquote><blockquote><strong><em>1. Việc hoàn thuế thu nhập cá nhân áp dụng đối với những cá nhân đã đăng ký và có mã số thuế tại thời điểm nộp hồ sơ quyết toán thuế.</em></strong></blockquote><blockquote><em>2. Đối với cá nhân đã ủy quyền quyết toán thuế cho tổ chức, cá nhân trả thu nhập thực hiện quyết toán thay thì việc hoàn thuế của cá nhân được thực hiện thông qua tổ chức, cá nhân trả thu nhập. Tổ chức, cá nhân trả thu nhập thực hiện bù trừ số thuế nộp thừa, nộp thiếu của các cá nhân. Sau khi bù trừ, nếu còn số thuế nộp thừa thì được bù trừ vào kỳ sau hoặc hoàn thuế nếu có đề nghị hoàn trả.</em></blockquote><blockquote><em>...</em></blockquote><p>Theo đó, điều kiện được hoàn thuế TNCN 2026, cụ thể như sau:</p><p><strong><em>- Đã nộp số thuế lớn hơn số thuế thực tế phải nộp:</em></strong> Sau khi quyết toán thuế, nếu tổng số tiền thuế TNCN đã nộp trong năm lớn hơn số thuế phải nộp theo quy định, cá nhân được hoàn phần thuế nộp thừa.</p><p><strong><em>- Thu nhập tính thuế dưới mức chịu thuế, nhưng đã phát sinh nghĩa vụ thuế và đã nộp thuế: </em></strong>Trường hợp cá nhân trong năm tài chính chưa đến ngưỡng chịu thuế nhưng đã bị khấu trừ thuế tại nguồn do nhiều lý do (như làm việc ngắn hạn, thu nhập không thường xuyên,…) sẽ được hoàn lại số thuế đã nộp sau khi quyết toán.</p><p><strong><em>- Các trường hợp hoàn thuế theo quyết định của cơ quan nhà nước có thẩm quyền:</em></strong> Bao gồm các trường hợp đặc biệt khác được pháp luật quy định hoặc theo các quyết định riêng của cơ quan thuế hoặc cơ quan Nhà nước.</p><p>- Cá nhân đã đăng ký và có mã số thuế tại thời điểm nộp hồ sơ quyết toán thuế</p><p>- Cá nhân bắt buộc phải có mã số thuế trước thời điểm nộp hồ sơ xin hoàn thuế. Nếu chưa đăng ký và được cấp mã số thuế trước khi hoàn thuế, cơ quan thuế sẽ không giải quyết thủ tục hoàn thuế.</p><p>- Có yêu cầu hoàn thuế và nộp đầy đủ hồ sơ</p><p><strong>Như vậy, </strong><strong style=""color: rgb(255, 0, 0);"">chưa đăng kí mã số thuế trước thời điểm nộp hồ sơ xin hoàn thuế thì không đủ điều kiện được hoàn thuế TNCN.</strong></p><p><strong><em>Lưu ý: </em></strong>Tại khoản 2 Điều 38 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-86-2024-TT-BTC-dang-ky-thue-565309.aspx?anchor=dieu_38"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 86/2024/TT-BTC</a> có quy định mã số thuế do cơ quan thuế cấp cho cá nhân, hộ gia đình, hộ kinh doanh được thực hiện đến hết ngày 30/6/2025. Kể từ ngày 01/7/2025, người nộp thuế, cơ quan quản lý thuế, cơ quan, tổ chức, cá nhân khác có liên quan đến việc sử dụng mã số thuế theo quy định tại Điều 35 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-quan-ly-thue-2019-387595.aspx?anchor=dieu_35"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2019</a> thực hiện sử dụng số định danh cá nhân thay cho mã số thuế.</p><h2 id=""quan-ly-tuan-thu-trong-quan-ly-thue-tu-172026-ra-sao-2""><strong style=""font-size: 12pt;"">Quản lý tuân thủ trong quản lý thuế từ 1/7/2026 ra sao?</strong></h2><p>Căn cứ Điều 34 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Quan-ly-thue-2025-so-108-2025-QH15-675268.aspx?anchor=dieu_34"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2025</a> quy định về quản lý tuân thủ trong quản lý thuế từ 1/7/2026 như sau:</p><p>- Cơ quan thuế thực hiện quản lý tuân thủ để phân bổ nguồn lực hiệu quả, khuyến khích sự tuân thủ tự nguyện và tạo môi trường kinh doanh công bằng, bao gồm:</p><p>+ Xây dựng hệ thống đánh giá và phân loại mức độ tuân thủ pháp luật về thuế của người nộp thuế, đồng thời duy trì hồ sơ điện tử cho từng người nộp thuế, gồm các thông tin về: tần suất vi phạm pháp luật thuế; tính chất và mức độ của hành vi vi phạm; mức độ hợp tác với cơ quan quản lý thuế trong việc thực hiện thủ tục thuế, kiểm tra và chấp hành các quyết định xử lý vi phạm và các thông tin khác liên quan đến nghĩa vụ thuế;</p><p>+ Kết hợp giữa tuyên truyền, hỗ trợ, khuyến khích người nộp thuế tuân thủ tự nguyện với các biện pháp kiểm tra, giám sát dựa trên kết quả đánh giá mức độ tuân thủ, mức độ rủi ro và hành vi tuân thủ của người nộp thuế;</p><p>+ Áp dụng chế độ ưu tiên đối với người nộp thuế tuân thủ tốt pháp luật về thuế, sẵn sàng kết nối, chia sẻ dữ liệu điện tử với cơ quan quản lý thuế, bao gồm dữ liệu về sổ kế toán, hóa đơn, chứng từ và các tài liệu liên quan đến nghĩa vụ thuế thông qua Hệ thống thông tin quản lý thuế theo quy định của Chính phủ.</p><p>Chính phủ quy định chi tiết về điều kiện, phạm vi và hình thức áp dụng chế độ ưu tiên đối với người nộp thuế tuân thủ pháp luật.</p><p>- Cơ quan hải quan tổ chức áp dụng thống nhất quản lý tuân thủ pháp luật đối với người nộp thuế bao gồm: việc xây dựng, quản lý hồ sơ người nộp thuế; xây dựng tiêu chí, chỉ số tiêu chí và tổ chức đánh giá tuân thủ pháp luật của người nộp thuế; hỗ trợ, khuyến khích người nộp thuế nâng cao năng lực tuân thủ; áp dụng các biện pháp kiểm tra, giám sát, kiểm tra sau thông quan và các biện pháp nghiệp vụ khác theo mức độ tuân thủ pháp luật của người nộp thuế theo quy định của pháp luật.</p><p>- Bộ trưởng Bộ Tài chính quy định tiêu chí đánh giá việc tuân thủ pháp luật của người nộp thuế và các hoạt động quản lý tuân thủ trong quản lý thuế.</p><p style=""text-align: left;""><strong>LƯU Ý: </strong><a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Quan-ly-thue-2025-so-108-2025-QH15-675268.aspx?anchor=dieu_52"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2025</a> có hiệu lực thi hành từ ngày 1/7/2026, trừ quy định tại khoản 2 Điều 52 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Quan-ly-thue-2025-so-108-2025-QH15-675268.aspx?anchor=dieu_52"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2025</a>.</p>
+</section>
+<div class=""TVPL_QC_VT3_5"" style=""padding:0px"">
+</div>"," Bạn là hệ thống tạo hình ảnh minh họa chuyên nghiệp cho báo chí pháp luật Việt Nam.
+
+Hãy đọc kỹ NỘI DUNG BÀI VIẾT bên dưới và tạo ra MỘT hình ảnh minh họa duy nhất.
+
+=========================
+YÊU CẦU BẮT BUỘC
+
+Hình ảnh phải dựa 100% nội dung bài viết.
+
+Không suy diễn, không thêm chi tiết.
+
+Không nhân vật hư cấu, không thông tin riêng tư.
+
+Trung lập, đúng bản chất pháp luật.
+
+=========================
+TỈ LỆ HÌNH ẢNH
+
+Hình ảnh bắt buộc có tỉ lệ: chiều rộng 16 phần, chiều cao 9 phần (16:9), bố cục ngang, không được tạo ảnh vuông hoặc ảnh dọc.
+
+=========================
+PHONG CÁCH
+
+Báo chí – pháp luật – nghiêm túc
+
+Ảnh thật, không tranh vẽ, không 3D
+
+Ánh sáng tự nhiên
+
+Màu sắc trung tính, chân thực
+
+=========================
+BỐ CỤC PHÁP LUẬT
+
+Trụ sở cơ quan pháp luật
+
+Hồ sơ, văn bản, bàn làm việc
+
+Phòng xử án trống
+
+Cảnh làm việc hành chính
+
+Không tập trung vào gương mặt.
+
+=========================
+CHỮ TRÊN ẢNH (NẾU CÓ)
+
+Font Unicode tiếng Việt chuẩn
+
+Không lỗi dấu
+
+Font trung tính: Roboto, Inter, Open Sans
+
+Chữ nhỏ, không giật gân
+
+=========================
+CẤM
+
+Không logo, watermark
+
+Không tranh vẽ, hoạt hình, 3D
+
+Không sân khấu hóa
+
+=========================
+ĐẦU RA
+
+Chỉ tạo MỘT hình ảnh duy nhất, tỉ lệ 16:9, không mô tả, không giải thích.
+
+=========================
+NỘI DUNG BÀI VIẾT
+=========================
+
+
+
+Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao? Hướng dẫn chi tiết tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại trên đường link Tracuunnt.gdt.gov.vn Nội dung chính Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao? Chưa đăng kí mã số thuế có được hoàn thuế TNCN 2026 không? Quản lý tuân thủ trong quản lý thuế từ 1/7/2026 ra sao? Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao? Dưới đây hướng dẫn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại như sau: Bước 1: Truy cập địa chỉ: https://tracuunnt.gdt.gov.vn/tcnnt/mstcn.jsp. Chọn mục “Thông tin về người nộp thuế TNCN”. Bước 2: Nhập số căn cước công dân vào ô ""mã số thuế"" - Mã xác nhận: Là một mã captcha bao gồm 5 ký tự ngay cạnh ô bên phả, mã này thay đổi theo từng phiên giao dịch. Bước 3: Chọn “ Tra cứu ”: thông tin tra cứu sẽ xuất hiện ngay bên dưới, bao gồm: - Mã số thuế - Tên người nộp thuế - Cơ quan thuế: Nơi người nộp thuế tham gia đóng thuế. - Trạng thái MST *Thông tin ""Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?"" mang tính chất tham khảo. >> Nghị định 144/2026/NĐ-CP về Thuế giá trị gia tăng sửa đổi Nghị định 181/2025 >> Nghị định 141/2026/NĐ-CP chính sách thuế với hộ kinh doanh, cá nhân kinh doanh sửa đổi Nghị định 68 Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao? Chưa đăng kí mã số thuế có được hoàn thuế TNCN 2026 không? Theo quy định tại khoản 2 Điều 8 Luật Thuế thu nhập cá nhân 2007 (Còn hiệu lực đến 30/06/2026) và Điều 28 Thông tư 111/2013/TT-BTC , điều kiện được hoàn thuế TNCN 2026, cụ thể bao gồm các trường hợp: Hoàn thuế 1. Việc hoàn thuế thu nhập cá nhân áp dụng đối với những cá nhân đã đăng ký và có mã số thuế tại thời điểm nộp hồ sơ quyết toán thuế. 2. Đối với cá nhân đã ủy quyền quyết toán thuế cho tổ chức, cá nhân trả thu nhập thực hiện quyết toán thay thì việc hoàn thuế của cá nhân được thực hiện thông qua tổ chức, cá nhân trả thu nhập. Tổ chức, cá nhân trả thu nhập thực hiện bù trừ số thuế nộp thừa, nộp thiếu của các cá nhân. Sau khi bù trừ, nếu còn số thuế nộp thừa thì được bù trừ vào kỳ sau hoặc hoàn thuế nếu có đề nghị hoàn trả. ... Theo đó, điều kiện được hoàn thuế TNCN 2026, cụ thể như sau: - Đã nộp số thuế lớn hơn số thuế thực tế phải nộp: Sau khi quyết toán thuế, nếu tổng số tiền thuế TNCN đã nộp trong năm lớn hơn số thuế phải nộp theo quy định, cá nhân được hoàn phần thuế nộp thừa. - Thu nhập tính thuế dưới mức chịu thuế, nhưng đã phát sinh nghĩa vụ thuế và đã nộp thuế: Trường hợp cá nhân trong năm tài chính chưa đến ngưỡng chịu thuế nhưng đã bị khấu trừ thuế tại nguồn do nhiều lý do (như làm việc ngắn hạn, thu nhập không thường xuyên,…) sẽ được hoàn lại số thuế đã nộp sau khi quyết toán. - Các trường hợp hoàn thuế theo quyết định của cơ quan nhà nước có thẩm quyền: Bao gồm các trường hợp đặc biệt khác được pháp luật quy định hoặc theo các quyết định riêng của cơ quan thuế hoặc cơ quan Nhà nước. - Cá nhân đã đăng ký và có mã số thuế tại thời điểm nộp hồ sơ quyết toán thuế - Cá nhân bắt buộc phải có mã số thuế trước thời điểm nộp hồ sơ xin hoàn thuế. Nếu chưa đăng ký và được cấp mã số thuế trước khi hoàn thuế, cơ quan thuế sẽ không giải quyết thủ tục hoàn thuế. - Có yêu cầu hoàn thuế và nộp đầy đủ hồ sơ Như vậy, chưa đăng kí mã số thuế trước thời điểm nộp hồ sơ xin hoàn thuế thì không đủ điều kiện được hoàn thuế TNCN. Lưu ý: Tại khoản 2 Điều 38 Thông tư 86/2024/TT-BTC có quy định mã số thuế do cơ quan thuế cấp cho cá nhân, hộ gia đình, hộ kinh doanh được thực hiện đến hết ngày 30/6/2025. Kể từ ngày 01/7/2025, người nộp thuế, cơ quan quản lý thuế, cơ quan, tổ chức, cá nhân khác có liên quan đến việc sử dụng mã số thuế theo quy định tại Điều 35 Luật Quản lý thuế 2019 thực hiện sử dụng số định danh cá nhân thay cho mã số thuế. Quản lý tuân thủ trong quản lý thuế từ 1/7/2026 ra sao? Căn cứ Điều 34 Luật Quản lý thuế 2025 quy định về quản lý tuân thủ trong quản lý thuế từ 1/7/2026 như sau: - Cơ quan thuế thực hiện quản lý tuân thủ để phân bổ nguồn lực hiệu quả, khuyến khích sự tuân thủ tự nguyện và tạo môi trường kinh doanh công bằng, bao gồm: + Xây dựng hệ thống đánh giá và phân loại mức độ tuân thủ pháp luật về thuế của người nộp thuế, đồng thời duy trì hồ sơ điện tử cho từng người nộp thuế, gồm các thông tin về: tần suất vi phạm pháp luật thuế; tính chất và mức độ của hành vi vi phạm; mức độ hợp tác với cơ quan quản lý thuế trong việc thực hiện thủ tục thuế, kiểm tra và chấp hành các quyết định xử lý vi phạm và các thông tin khác liên quan đến nghĩa vụ thuế; + Kết hợp giữa tuyên truyền, hỗ trợ, khuyến khích người nộp thuế tuân thủ tự nguyện với các biện pháp kiểm tra, giám sát dựa trên kết quả đánh giá mức độ tuân thủ, mức độ rủi ro và hành vi tuân thủ của người nộp thuế; + Áp dụng chế độ ưu tiên đối với người nộp thuế tuân thủ tốt pháp luật về thuế, sẵn sàng kết nối, chia sẻ dữ liệu điện tử với cơ quan quản lý thuế, bao gồm dữ liệu về sổ kế toán, hóa đơn, chứng từ và các tài liệu liên quan đến nghĩa vụ thuế thông qua Hệ thống thông tin quản lý thuế theo quy định của Chính phủ. Chính phủ quy định chi tiết về điều kiện, phạm vi và hình thức áp dụng chế độ ưu tiên đối với người nộp thuế tuân thủ pháp luật. - Cơ quan hải quan tổ chức áp dụng thống nhất quản lý tuân thủ pháp luật đối với người nộp thuế bao gồm: việc xây dựng, quản lý hồ sơ người nộp thuế; xây dựng tiêu chí, chỉ số tiêu chí và tổ chức đánh giá tuân thủ pháp luật của người nộp thuế; hỗ trợ, khuyến khích người nộp thuế nâng cao năng lực tuân thủ; áp dụng các biện pháp kiểm tra, giám sát, kiểm tra sau thông quan và các biện pháp nghiệp vụ khác theo mức độ tuân thủ pháp luật của người nộp thuế theo quy định của pháp luật. - Bộ trưởng Bộ Tài chính quy định tiêu chí đánh giá việc tuân thủ pháp luật của người nộp thuế và các hoạt động quản lý tuân thủ trong quản lý thuế. LƯU Ý: Luật Quản lý thuế 2025 có hiệu lực thi hành từ ngày 1/7/2026, trừ quy định tại khoản 2 Điều 52 Luật Quản lý thuế 2025 .","Dựa trên nội dung bài viết sau, hãy thực hiện 3 nhiệm vụ **theo đúng thứ tự** và **mỗi nhiệm vụ chỉ trả về 1 giá trị**, không giải thích thêm, và trả về duy nhất **một object JSON** theo định dạng:
+
+{
+  ""title"": ""Title tối ưu SEO"",
+  ""slug"": ""Slug chuẩn SEO"",
+  ""focus_keyphrase"": ""Focus keyphrase tối ưu""
+}
+
+---
+
+🎯 **[1] TẠO TITLE TỐI ƯU SEO**
+
+Sử dụng tất cả công cụ phân tích từ khóa có thể truy cập (Google Trends, Google Keyword Planner, KeywordTool.io, Ahrefs, Semrush, Google Analytics nếu có) để chọn **title tối ưu** cho bài viết trong lĩnh vực pháp lý / luật Việt Nam, phạm vi tìm kiếm Việt Nam, 12 tháng gần nhất.
+
+Quy tắc:
+- Ưu tiên từ khóa có search volume >10.000, nếu không có thì vẫn lấy dưới 10.000.
+- Title là **câu hỏi kết thúc bằng ?**
+- KHÔNG sử dụng dấu hai chấm “:”.
+- KHÔNG viết tắt.
+- Nếu cần thay dấu hai chấm → dùng từ nối.
+
+---
+
+🎯 **[2] TẠO SLUG CHUẨN SEO**
+
+Sử dụng dữ liệu từ khóa như trên để chọn **slug chuẩn SEO** cho bài viết.
+
+Quy tắc:
+- Chữ thường.
+- Không chứa /
+- Không viết tắt.
+- Các từ nối bằng dấu ""-"".
+- Dựa vào từ khóa có search volume cao nhất phù hợp nội dung.
+
+---
+
+🎯 **[3] TẠO FOCUS KEYPHRASE**
+
+Sử dụng các công cụ phân tích từ khóa tương tự để chọn **focus keyphrase tối ưu** cho bài viết.
+
+Quy tắc:
+- Dùng cụm từ chính xác, sát nội dung nhất.
+- Không dấu chấm, không ký tự lạ.
+- Không viết tắt.
+- Ưu tiên search volume >10.000, nếu không có thì chọn từ liên quan nhất.
+- BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown ```json
+- KHÔNG thêm bất kỳ chữ nào ngoài khối Code Block markdown
+- KHÔNG giải thích, KHÔNG bình luận
+---
+
+📌 **Cuối prompt, đặt nội dung bài viết tại đây:**
+
+
+Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?","Bạn là hệ thống xử lý nội dung pháp luật và tối ưu SEO cho website pháp lý Việt Nam, với văn phong chuẩn mực, chặt chẽ, khách quan theo phong cách luật sư Việt Nam.
+Nhiệm vụ của bạn: Dựa hoàn toàn trên nội dung gốc do tôi cung cấp, tiến hành biên tập, diễn giải lại nội dung nhằm:
+Chuẩn SEO,
+Không trùng lặp văn bản trên Google,
+Giữ nguyên bản chất pháp lý, căn cứ và thuật ngữ pháp luật.
+Bạn phải trả về DUY NHẤT 1 object JSON theo đúng cấu trúc bên dưới.
+=========================
+YÊU CẦU CHO body (HTML sạch – nội dung pháp luật)
+=========================
+KHÔNG sao chép nguyên văn nội dung gốc; phải viết lại bằng ngôn ngữ pháp lý, bảo đảm:
+Không làm sai lệch nội dung, tinh thần và căn cứ pháp luật.
+Phù hợp bài viết phân tích, tư vấn pháp luật tại Việt Nam.
+Văn phong:
+Trung lập, khách quan, chính xác.
+Chuẩn phong cách luật sư Việt Nam.
+Chỉ tạo HTML phần body, KHÔNG tạo <html>, <head>, <body>.
+Chỉ sử dụng các thẻ HTML sau:
+<h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>, <a>.
+GIỮ NGUYÊN TOÀN BỘ HYPERLINK:
+Giữ nguyên tất cả thẻ <a>, thuộc tính href, anchor text và vị trí liên kết.
+KHÔNG xóa, KHÔNG chỉnh sửa, KHÔNG thêm hyperlink mới dưới bất kỳ hình thức nào.
+Làm nổi bật thông tin pháp lý quan trọng bằng <strong> hoặc <em> (điều luật, mốc thời gian, nghĩa vụ, quyền lợi).
+Xóa toàn bộ ký hiệu * hoặc **.
+KHÔNG sử dụng <blockquote>.
+Giữ nguyên toàn bộ hình ảnh, video, iframe (nếu có).
+Chuẩn hóa hình ảnh:
+Chuyển data-src, data-original, lazyload, srcset → src chuẩn.
+Giữ nguyên alt, title, caption.
+KHÔNG thêm:
+<title>, <meta>,
+nội dung ngoài phạm vi bài gốc,
+liên kết ngoài không có sẵn trong nội dung đầu vào.
+KHÔNG trả về markdown trong nội dung body.
+=========================
+YÊU CẦU CHO meta (Meta Description)
+=========================
+Độ dài 150–160 ký tự.
+Tóm lược chính xác nội dung pháp lý của bài viết.
+Văn phong báo chí pháp luật, rõ ràng, súc tích.
+KHÔNG thêm tiêu đề, nhãn, ký hiệu hoặc dấu ngoặc.
+=========================
+YÊU CẦU CHO tags (SEO Tags)
+=========================
+Từ khóa SEO liên quan trực tiếp đến nội dung pháp luật.
+Chữ thường, không viết tắt.
+Có thể bao gồm: tên luật, lĩnh vực pháp luật, hành vi pháp lý, quyền và nghĩa vụ pháp lý.
+Chỉ là từ khóa, không mô tả.
+Phân tách bằng dấu phẩy.
+Trả về đúng 1 dòng.
+=========================
+ĐỊNH DẠNG ĐẦU RA (BẮT BUỘC)
+=========================
+Trả về DUY NHẤT 1 object JSON.
+BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown:
+{
+  ""body"": """",
+  ""meta"": """",
+  ""tags"": """"
+}
+KHÔNG thêm bất kỳ nội dung nào ngoài khối Code Block.
+KHÔNG giải thích, KHÔNG bình luận.
+=========================
+NỘI DUNG GỐC
+=========================
+
+
+<header>
+<h1 class=""h3 fw-bold title"" style=""color:black"">Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</h1>
+</header>
+<section class=""news-content"" id=""news-content"">
+<strong class=""d-block mt-3 mb-3 sapo"">
+                                Hướng dẫn chi tiết tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại trên đường link Tracuunnt.gdt.gov.vn
+                            </strong>
+<div class=""accordion muc-luc"" id=""accordionMucLuc"">
+<div class=""accordion-item"">
+<div class=""accordion-header"" id=""headingOneMucLuc"">
+<button aria-controls=""collapseOneMucLuc"" aria-expanded=""true"" class=""accordion-button p-2 pt-3 ps-3 title"" data-bs-target=""#collapseOneMucLuc"" data-bs-toggle=""collapse"" type=""button"">
+<div class=""d-flex justify-content-center align-items-center w-100"">
+<img alt=""Mục lục bài viết"" class=""me-2 img-muc-luc"" height=""13"" src=""https://cdn.thuvienphapluat.vn/images/mluc.png"" width=""15""/>
+                            Nội dung chính
+                        </div>
+</button>
+</div>
+<div aria-labelledby=""headingOneMucLuc"" class=""accordion-collapse collapse show"" data-bs-parent=""#accordionMucLuc"" id=""collapseOneMucLuc"">
+<div class=""accordion-body p-0 ps-3 pb-3"">
+<ul>
+<li>
+<a class=""ps-0"" href=""#tracuunntgdtgovvn-cach-tra-cuu-ma-so-thue-thu-nhap-ca-nhan-nam-2026-bang-dien-thoai-cac-buoc-ra-sao-0""><strong style=""font-size: 12pt;"">Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#chua-dang-ki-ma-so-thue-co-duoc-hoan-thue-tncn-2026-khong-1""><strong style=""font-size: 12pt;"">Chưa đăng kí mã số thuế có được hoàn thuế TNCN 2026 không?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#quan-ly-tuan-thu-trong-quan-ly-thue-tu-172026-ra-sao-2""><strong style=""font-size: 12pt;"">Quản lý tuân thủ trong quản lý thuế từ 1/7/2026 ra sao?</strong></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=""TVPL_QC_VT3-1"" style=""padding:0px"">
+</div>
+<h2 id=""tracuunntgdtgovvn-cach-tra-cuu-ma-so-thue-thu-nhap-ca-nhan-nam-2026-bang-dien-thoai-cac-buoc-ra-sao-0""><strong style=""font-size: 12pt;"">Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</strong></h2><p>Dưới đây hướng dẫn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại như sau:</p><p><strong style=""color: rgb(229, 11, 11);"">Bước 1: </strong>Truy cập địa chỉ: https://tracuunnt.gdt.gov.vn/tcnnt/mstcn.jsp. Chọn mục “Thông tin về người nộp thuế TNCN”.</p><p><strong style=""color: rgb(222, 16, 16);"">Bước 2: </strong>Nhập số căn cước công dân vào ô ""mã số thuế""</p><p>- Mã xác nhận: Là một mã captcha bao gồm 5 ký tự ngay cạnh ô bên phả, mã này thay đổi theo từng phiên giao dịch.</p><p><strong style=""color: rgb(222, 9, 9);"">Bước 3: </strong>Chọn “<strong>Tra cứu</strong>”: thông tin tra cứu sẽ xuất hiện ngay bên dưới, bao gồm:</p><p>- Mã số thuế</p><p>- Tên người nộp thuế</p><p>- Cơ quan thuế: Nơi người nộp thuế tham gia đóng thuế.</p><p>- Trạng thái MST</p><p><em>*Thông tin ""Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?"" mang tính chất tham khảo.</em></p><p><strong>&gt;&gt;<a href=""https://thuvienphapluat.vn/phap-luat/ho-tro-phap-luat/toan-van-nghi-dinh-1442026ndcp-ve-thue-gia-tri-gia-tang-sua-doi-nghi-dinh-1812025-ra-sao-267446.html"" rel=""noopener noreferrer"" target=""_blank""> Nghị định 144/2026/NĐ-CP về Thuế giá trị gia tăng sửa đổi Nghị định 181/2025</a></strong></p><p><strong>&gt;&gt; <a href=""https://thuvienphapluat.vn/phap-luat/ho-tro-phap-luat/toan-van-nghi-dinh-1412026ndcp-chinh-sach-thue-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-sua-doi-nghi-di-266708.html"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 141/2026/NĐ-CP chính sách thuế với hộ kinh doanh, cá nhân kinh doanh sửa đổi Nghị định 68</a></strong></p><p><img alt=""Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?"" src=""https://cdn.thuvienphapluat.vn/uploads/phapluat/2022-2/TTKP/tra-cu-mst-tncn.jpg""/></p><p style=""text-align: center;""><em>Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</em></p><h2 id=""chua-dang-ki-ma-so-thue-co-duoc-hoan-thue-tncn-2026-khong-1""><strong style=""font-size: 12pt;"">Chưa đăng kí mã số thuế có được hoàn thuế TNCN 2026 không?</strong></h2><p>Theo quy định tại khoản 2 Điều 8 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-thue-thu-nhap-ca-nhan-2007-04-2007-QH12-59652.aspx?anchor=dieu_8"" rel=""noopener noreferrer"" target=""_blank"">Luật Thuế thu nhập cá nhân 2007</a> (Còn hiệu lực đến 30/06/2026)<a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-thue-thu-nhap-ca-nhan-2007-04-2007-QH12-59652.aspx?anchor=dieu_8"" rel=""noopener noreferrer"" target=""_blank""> </a>và Điều 28 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-111-2013-TT-BTC-Huong-dan-Luat-thue-thu-nhap-ca-nhan-va-Nghi-dinh-65-2013-ND-CP-205356.aspx?anchor=dieu_28"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 111/2013/TT-BTC</a>, điều kiện được hoàn thuế TNCN 2026, cụ thể bao gồm các trường hợp:</p><blockquote><strong><em>Hoàn thuế</em></strong></blockquote><blockquote><strong><em>1. Việc hoàn thuế thu nhập cá nhân áp dụng đối với những cá nhân đã đăng ký và có mã số thuế tại thời điểm nộp hồ sơ quyết toán thuế.</em></strong></blockquote><blockquote><em>2. Đối với cá nhân đã ủy quyền quyết toán thuế cho tổ chức, cá nhân trả thu nhập thực hiện quyết toán thay thì việc hoàn thuế của cá nhân được thực hiện thông qua tổ chức, cá nhân trả thu nhập. Tổ chức, cá nhân trả thu nhập thực hiện bù trừ số thuế nộp thừa, nộp thiếu của các cá nhân. Sau khi bù trừ, nếu còn số thuế nộp thừa thì được bù trừ vào kỳ sau hoặc hoàn thuế nếu có đề nghị hoàn trả.</em></blockquote><blockquote><em>...</em></blockquote><p>Theo đó, điều kiện được hoàn thuế TNCN 2026, cụ thể như sau:</p><p><strong><em>- Đã nộp số thuế lớn hơn số thuế thực tế phải nộp:</em></strong> Sau khi quyết toán thuế, nếu tổng số tiền thuế TNCN đã nộp trong năm lớn hơn số thuế phải nộp theo quy định, cá nhân được hoàn phần thuế nộp thừa.</p><p><strong><em>- Thu nhập tính thuế dưới mức chịu thuế, nhưng đã phát sinh nghĩa vụ thuế và đã nộp thuế: </em></strong>Trường hợp cá nhân trong năm tài chính chưa đến ngưỡng chịu thuế nhưng đã bị khấu trừ thuế tại nguồn do nhiều lý do (như làm việc ngắn hạn, thu nhập không thường xuyên,…) sẽ được hoàn lại số thuế đã nộp sau khi quyết toán.</p><p><strong><em>- Các trường hợp hoàn thuế theo quyết định của cơ quan nhà nước có thẩm quyền:</em></strong> Bao gồm các trường hợp đặc biệt khác được pháp luật quy định hoặc theo các quyết định riêng của cơ quan thuế hoặc cơ quan Nhà nước.</p><p>- Cá nhân đã đăng ký và có mã số thuế tại thời điểm nộp hồ sơ quyết toán thuế</p><p>- Cá nhân bắt buộc phải có mã số thuế trước thời điểm nộp hồ sơ xin hoàn thuế. Nếu chưa đăng ký và được cấp mã số thuế trước khi hoàn thuế, cơ quan thuế sẽ không giải quyết thủ tục hoàn thuế.</p><p>- Có yêu cầu hoàn thuế và nộp đầy đủ hồ sơ</p><p><strong>Như vậy, </strong><strong style=""color: rgb(255, 0, 0);"">chưa đăng kí mã số thuế trước thời điểm nộp hồ sơ xin hoàn thuế thì không đủ điều kiện được hoàn thuế TNCN.</strong></p><p><strong><em>Lưu ý: </em></strong>Tại khoản 2 Điều 38 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-86-2024-TT-BTC-dang-ky-thue-565309.aspx?anchor=dieu_38"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 86/2024/TT-BTC</a> có quy định mã số thuế do cơ quan thuế cấp cho cá nhân, hộ gia đình, hộ kinh doanh được thực hiện đến hết ngày 30/6/2025. Kể từ ngày 01/7/2025, người nộp thuế, cơ quan quản lý thuế, cơ quan, tổ chức, cá nhân khác có liên quan đến việc sử dụng mã số thuế theo quy định tại Điều 35 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-quan-ly-thue-2019-387595.aspx?anchor=dieu_35"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2019</a> thực hiện sử dụng số định danh cá nhân thay cho mã số thuế.</p><h2 id=""quan-ly-tuan-thu-trong-quan-ly-thue-tu-172026-ra-sao-2""><strong style=""font-size: 12pt;"">Quản lý tuân thủ trong quản lý thuế từ 1/7/2026 ra sao?</strong></h2><p>Căn cứ Điều 34 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Quan-ly-thue-2025-so-108-2025-QH15-675268.aspx?anchor=dieu_34"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2025</a> quy định về quản lý tuân thủ trong quản lý thuế từ 1/7/2026 như sau:</p><p>- Cơ quan thuế thực hiện quản lý tuân thủ để phân bổ nguồn lực hiệu quả, khuyến khích sự tuân thủ tự nguyện và tạo môi trường kinh doanh công bằng, bao gồm:</p><p>+ Xây dựng hệ thống đánh giá và phân loại mức độ tuân thủ pháp luật về thuế của người nộp thuế, đồng thời duy trì hồ sơ điện tử cho từng người nộp thuế, gồm các thông tin về: tần suất vi phạm pháp luật thuế; tính chất và mức độ của hành vi vi phạm; mức độ hợp tác với cơ quan quản lý thuế trong việc thực hiện thủ tục thuế, kiểm tra và chấp hành các quyết định xử lý vi phạm và các thông tin khác liên quan đến nghĩa vụ thuế;</p><p>+ Kết hợp giữa tuyên truyền, hỗ trợ, khuyến khích người nộp thuế tuân thủ tự nguyện với các biện pháp kiểm tra, giám sát dựa trên kết quả đánh giá mức độ tuân thủ, mức độ rủi ro và hành vi tuân thủ của người nộp thuế;</p><p>+ Áp dụng chế độ ưu tiên đối với người nộp thuế tuân thủ tốt pháp luật về thuế, sẵn sàng kết nối, chia sẻ dữ liệu điện tử với cơ quan quản lý thuế, bao gồm dữ liệu về sổ kế toán, hóa đơn, chứng từ và các tài liệu liên quan đến nghĩa vụ thuế thông qua Hệ thống thông tin quản lý thuế theo quy định của Chính phủ.</p><p>Chính phủ quy định chi tiết về điều kiện, phạm vi và hình thức áp dụng chế độ ưu tiên đối với người nộp thuế tuân thủ pháp luật.</p><p>- Cơ quan hải quan tổ chức áp dụng thống nhất quản lý tuân thủ pháp luật đối với người nộp thuế bao gồm: việc xây dựng, quản lý hồ sơ người nộp thuế; xây dựng tiêu chí, chỉ số tiêu chí và tổ chức đánh giá tuân thủ pháp luật của người nộp thuế; hỗ trợ, khuyến khích người nộp thuế nâng cao năng lực tuân thủ; áp dụng các biện pháp kiểm tra, giám sát, kiểm tra sau thông quan và các biện pháp nghiệp vụ khác theo mức độ tuân thủ pháp luật của người nộp thuế theo quy định của pháp luật.</p><p>- Bộ trưởng Bộ Tài chính quy định tiêu chí đánh giá việc tuân thủ pháp luật của người nộp thuế và các hoạt động quản lý tuân thủ trong quản lý thuế.</p><p style=""text-align: left;""><strong>LƯU Ý: </strong><a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Quan-ly-thue-2025-so-108-2025-QH15-675268.aspx?anchor=dieu_52"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2025</a> có hiệu lực thi hành từ ngày 1/7/2026, trừ quy định tại khoản 2 Điều 52 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Quan-ly-thue-2025-so-108-2025-QH15-675268.aspx?anchor=dieu_52"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2025</a>.</p>
+</section>
+<div class=""TVPL_QC_VT3_5"" style=""padding:0px"">
+</div>","<header>
+<h1 class=""h3 fw-bold title"" style=""color:black"">Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</h1>
+</header>
+<section class=""news-content"" id=""news-content"">
+<strong class=""d-block mt-3 mb-3 sapo"">
+                                Hướng dẫn chi tiết tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại trên đường link Tracuunnt.gdt.gov.vn
+                            </strong>
+<div class=""accordion muc-luc"" id=""accordionMucLuc"">
+<div class=""accordion-item"">
+<div class=""accordion-header"" id=""headingOneMucLuc"">
+<button aria-controls=""collapseOneMucLuc"" aria-expanded=""true"" class=""accordion-button p-2 pt-3 ps-3 title"" data-bs-target=""#collapseOneMucLuc"" data-bs-toggle=""collapse"" type=""button"">
+<div class=""d-flex justify-content-center align-items-center w-100"">
+<img alt=""Mục lục bài viết"" class=""me-2 img-muc-luc"" height=""13"" src=""https://cdn.thuvienphapluat.vn/images/mluc.png"" width=""15""/>
+                            Nội dung chính
+                        </div>
+</button>
+</div>
+<div aria-labelledby=""headingOneMucLuc"" class=""accordion-collapse collapse show"" data-bs-parent=""#accordionMucLuc"" id=""collapseOneMucLuc"">
+<div class=""accordion-body p-0 ps-3 pb-3"">
+<ul>
+<li>
+<a class=""ps-0"" href=""#tracuunntgdtgovvn-cach-tra-cuu-ma-so-thue-thu-nhap-ca-nhan-nam-2026-bang-dien-thoai-cac-buoc-ra-sao-0""><strong style=""font-size: 12pt;"">Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#chua-dang-ki-ma-so-thue-co-duoc-hoan-thue-tncn-2026-khong-1""><strong style=""font-size: 12pt;"">Chưa đăng kí mã số thuế có được hoàn thuế TNCN 2026 không?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#quan-ly-tuan-thu-trong-quan-ly-thue-tu-172026-ra-sao-2""><strong style=""font-size: 12pt;"">Quản lý tuân thủ trong quản lý thuế từ 1/7/2026 ra sao?</strong></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=""TVPL_QC_VT3-1"" style=""padding:0px"">
+</div>
+<h2 id=""tracuunntgdtgovvn-cach-tra-cuu-ma-so-thue-thu-nhap-ca-nhan-nam-2026-bang-dien-thoai-cac-buoc-ra-sao-0""><strong style=""font-size: 12pt;"">Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</strong></h2><p>Dưới đây hướng dẫn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại như sau:</p><p><strong style=""color: rgb(229, 11, 11);"">Bước 1: </strong>Truy cập địa chỉ: https://tracuunnt.gdt.gov.vn/tcnnt/mstcn.jsp. Chọn mục “Thông tin về người nộp thuế TNCN”.</p><p><strong style=""color: rgb(222, 16, 16);"">Bước 2: </strong>Nhập số căn cước công dân vào ô ""mã số thuế""</p><p>- Mã xác nhận: Là một mã captcha bao gồm 5 ký tự ngay cạnh ô bên phả, mã này thay đổi theo từng phiên giao dịch.</p><p><strong style=""color: rgb(222, 9, 9);"">Bước 3: </strong>Chọn “<strong>Tra cứu</strong>”: thông tin tra cứu sẽ xuất hiện ngay bên dưới, bao gồm:</p><p>- Mã số thuế</p><p>- Tên người nộp thuế</p><p>- Cơ quan thuế: Nơi người nộp thuế tham gia đóng thuế.</p><p>- Trạng thái MST</p><p><em>*Thông tin ""Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?"" mang tính chất tham khảo.</em></p><p><strong>&gt;&gt;<a href=""https://thuvienphapluat.vn/phap-luat/ho-tro-phap-luat/toan-van-nghi-dinh-1442026ndcp-ve-thue-gia-tri-gia-tang-sua-doi-nghi-dinh-1812025-ra-sao-267446.html"" rel=""noopener noreferrer"" target=""_blank""> Nghị định 144/2026/NĐ-CP về Thuế giá trị gia tăng sửa đổi Nghị định 181/2025</a></strong></p><p><strong>&gt;&gt; <a href=""https://thuvienphapluat.vn/phap-luat/ho-tro-phap-luat/toan-van-nghi-dinh-1412026ndcp-chinh-sach-thue-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-sua-doi-nghi-di-266708.html"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 141/2026/NĐ-CP chính sách thuế với hộ kinh doanh, cá nhân kinh doanh sửa đổi Nghị định 68</a></strong></p><p><img alt=""Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?"" src=""https://cdn.thuvienphapluat.vn/uploads/phapluat/2022-2/TTKP/tra-cu-mst-tncn.jpg""/></p><p style=""text-align: center;""><em>Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?</em></p><h2 id=""chua-dang-ki-ma-so-thue-co-duoc-hoan-thue-tncn-2026-khong-1""><strong style=""font-size: 12pt;"">Chưa đăng kí mã số thuế có được hoàn thuế TNCN 2026 không?</strong></h2><p>Theo quy định tại khoản 2 Điều 8 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-thue-thu-nhap-ca-nhan-2007-04-2007-QH12-59652.aspx?anchor=dieu_8"" rel=""noopener noreferrer"" target=""_blank"">Luật Thuế thu nhập cá nhân 2007</a> (Còn hiệu lực đến 30/06/2026)<a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-thue-thu-nhap-ca-nhan-2007-04-2007-QH12-59652.aspx?anchor=dieu_8"" rel=""noopener noreferrer"" target=""_blank""> </a>và Điều 28 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-111-2013-TT-BTC-Huong-dan-Luat-thue-thu-nhap-ca-nhan-va-Nghi-dinh-65-2013-ND-CP-205356.aspx?anchor=dieu_28"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 111/2013/TT-BTC</a>, điều kiện được hoàn thuế TNCN 2026, cụ thể bao gồm các trường hợp:</p><blockquote><strong><em>Hoàn thuế</em></strong></blockquote><blockquote><strong><em>1. Việc hoàn thuế thu nhập cá nhân áp dụng đối với những cá nhân đã đăng ký và có mã số thuế tại thời điểm nộp hồ sơ quyết toán thuế.</em></strong></blockquote><blockquote><em>2. Đối với cá nhân đã ủy quyền quyết toán thuế cho tổ chức, cá nhân trả thu nhập thực hiện quyết toán thay thì việc hoàn thuế của cá nhân được thực hiện thông qua tổ chức, cá nhân trả thu nhập. Tổ chức, cá nhân trả thu nhập thực hiện bù trừ số thuế nộp thừa, nộp thiếu của các cá nhân. Sau khi bù trừ, nếu còn số thuế nộp thừa thì được bù trừ vào kỳ sau hoặc hoàn thuế nếu có đề nghị hoàn trả.</em></blockquote><blockquote><em>...</em></blockquote><p>Theo đó, điều kiện được hoàn thuế TNCN 2026, cụ thể như sau:</p><p><strong><em>- Đã nộp số thuế lớn hơn số thuế thực tế phải nộp:</em></strong> Sau khi quyết toán thuế, nếu tổng số tiền thuế TNCN đã nộp trong năm lớn hơn số thuế phải nộp theo quy định, cá nhân được hoàn phần thuế nộp thừa.</p><p><strong><em>- Thu nhập tính thuế dưới mức chịu thuế, nhưng đã phát sinh nghĩa vụ thuế và đã nộp thuế: </em></strong>Trường hợp cá nhân trong năm tài chính chưa đến ngưỡng chịu thuế nhưng đã bị khấu trừ thuế tại nguồn do nhiều lý do (như làm việc ngắn hạn, thu nhập không thường xuyên,…) sẽ được hoàn lại số thuế đã nộp sau khi quyết toán.</p><p><strong><em>- Các trường hợp hoàn thuế theo quyết định của cơ quan nhà nước có thẩm quyền:</em></strong> Bao gồm các trường hợp đặc biệt khác được pháp luật quy định hoặc theo các quyết định riêng của cơ quan thuế hoặc cơ quan Nhà nước.</p><p>- Cá nhân đã đăng ký và có mã số thuế tại thời điểm nộp hồ sơ quyết toán thuế</p><p>- Cá nhân bắt buộc phải có mã số thuế trước thời điểm nộp hồ sơ xin hoàn thuế. Nếu chưa đăng ký và được cấp mã số thuế trước khi hoàn thuế, cơ quan thuế sẽ không giải quyết thủ tục hoàn thuế.</p><p>- Có yêu cầu hoàn thuế và nộp đầy đủ hồ sơ</p><p><strong>Như vậy, </strong><strong style=""color: rgb(255, 0, 0);"">chưa đăng kí mã số thuế trước thời điểm nộp hồ sơ xin hoàn thuế thì không đủ điều kiện được hoàn thuế TNCN.</strong></p><p><strong><em>Lưu ý: </em></strong>Tại khoản 2 Điều 38 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Thong-tu-86-2024-TT-BTC-dang-ky-thue-565309.aspx?anchor=dieu_38"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 86/2024/TT-BTC</a> có quy định mã số thuế do cơ quan thuế cấp cho cá nhân, hộ gia đình, hộ kinh doanh được thực hiện đến hết ngày 30/6/2025. Kể từ ngày 01/7/2025, người nộp thuế, cơ quan quản lý thuế, cơ quan, tổ chức, cá nhân khác có liên quan đến việc sử dụng mã số thuế theo quy định tại Điều 35 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-quan-ly-thue-2019-387595.aspx?anchor=dieu_35"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2019</a> thực hiện sử dụng số định danh cá nhân thay cho mã số thuế.</p><h2 id=""quan-ly-tuan-thu-trong-quan-ly-thue-tu-172026-ra-sao-2""><strong style=""font-size: 12pt;"">Quản lý tuân thủ trong quản lý thuế từ 1/7/2026 ra sao?</strong></h2><p>Căn cứ Điều 34 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Quan-ly-thue-2025-so-108-2025-QH15-675268.aspx?anchor=dieu_34"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2025</a> quy định về quản lý tuân thủ trong quản lý thuế từ 1/7/2026 như sau:</p><p>- Cơ quan thuế thực hiện quản lý tuân thủ để phân bổ nguồn lực hiệu quả, khuyến khích sự tuân thủ tự nguyện và tạo môi trường kinh doanh công bằng, bao gồm:</p><p>+ Xây dựng hệ thống đánh giá và phân loại mức độ tuân thủ pháp luật về thuế của người nộp thuế, đồng thời duy trì hồ sơ điện tử cho từng người nộp thuế, gồm các thông tin về: tần suất vi phạm pháp luật thuế; tính chất và mức độ của hành vi vi phạm; mức độ hợp tác với cơ quan quản lý thuế trong việc thực hiện thủ tục thuế, kiểm tra và chấp hành các quyết định xử lý vi phạm và các thông tin khác liên quan đến nghĩa vụ thuế;</p><p>+ Kết hợp giữa tuyên truyền, hỗ trợ, khuyến khích người nộp thuế tuân thủ tự nguyện với các biện pháp kiểm tra, giám sát dựa trên kết quả đánh giá mức độ tuân thủ, mức độ rủi ro và hành vi tuân thủ của người nộp thuế;</p><p>+ Áp dụng chế độ ưu tiên đối với người nộp thuế tuân thủ tốt pháp luật về thuế, sẵn sàng kết nối, chia sẻ dữ liệu điện tử với cơ quan quản lý thuế, bao gồm dữ liệu về sổ kế toán, hóa đơn, chứng từ và các tài liệu liên quan đến nghĩa vụ thuế thông qua Hệ thống thông tin quản lý thuế theo quy định của Chính phủ.</p><p>Chính phủ quy định chi tiết về điều kiện, phạm vi và hình thức áp dụng chế độ ưu tiên đối với người nộp thuế tuân thủ pháp luật.</p><p>- Cơ quan hải quan tổ chức áp dụng thống nhất quản lý tuân thủ pháp luật đối với người nộp thuế bao gồm: việc xây dựng, quản lý hồ sơ người nộp thuế; xây dựng tiêu chí, chỉ số tiêu chí và tổ chức đánh giá tuân thủ pháp luật của người nộp thuế; hỗ trợ, khuyến khích người nộp thuế nâng cao năng lực tuân thủ; áp dụng các biện pháp kiểm tra, giám sát, kiểm tra sau thông quan và các biện pháp nghiệp vụ khác theo mức độ tuân thủ pháp luật của người nộp thuế theo quy định của pháp luật.</p><p>- Bộ trưởng Bộ Tài chính quy định tiêu chí đánh giá việc tuân thủ pháp luật của người nộp thuế và các hoạt động quản lý tuân thủ trong quản lý thuế.</p><p style=""text-align: left;""><strong>LƯU Ý: </strong><a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Quan-ly-thue-2025-so-108-2025-QH15-675268.aspx?anchor=dieu_52"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2025</a> có hiệu lực thi hành từ ngày 1/7/2026, trừ quy định tại khoản 2 Điều 52 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Quan-ly-thue-2025-so-108-2025-QH15-675268.aspx?anchor=dieu_52"" rel=""noopener noreferrer"" target=""_blank"">Luật Quản lý thuế 2025</a>.</p>
+</section>
+<div class=""TVPL_QC_VT3_5"" style=""padding:0px"">
+</div>","Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao? Hướng dẫn chi tiết tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại trên đường link Tracuunnt.gdt.gov.vn Nội dung chính Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao? Chưa đăng kí mã số thuế có được hoàn thuế TNCN 2026 không? Quản lý tuân thủ trong quản lý thuế từ 1/7/2026 ra sao? Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao? Dưới đây hướng dẫn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại như sau: Bước 1: Truy cập địa chỉ: https://tracuunnt.gdt.gov.vn/tcnnt/mstcn.jsp. Chọn mục “Thông tin về người nộp thuế TNCN”. Bước 2: Nhập số căn cước công dân vào ô ""mã số thuế"" - Mã xác nhận: Là một mã captcha bao gồm 5 ký tự ngay cạnh ô bên phả, mã này thay đổi theo từng phiên giao dịch. Bước 3: Chọn “ Tra cứu ”: thông tin tra cứu sẽ xuất hiện ngay bên dưới, bao gồm: - Mã số thuế - Tên người nộp thuế - Cơ quan thuế: Nơi người nộp thuế tham gia đóng thuế. - Trạng thái MST *Thông tin ""Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao?"" mang tính chất tham khảo. >> Nghị định 144/2026/NĐ-CP về Thuế giá trị gia tăng sửa đổi Nghị định 181/2025 >> Nghị định 141/2026/NĐ-CP chính sách thuế với hộ kinh doanh, cá nhân kinh doanh sửa đổi Nghị định 68 Tracuunnt.gdt.gov.vn cách tra cứu mã số thuế thu nhập cá nhân năm 2026 bằng điện thoại các bước ra sao? Chưa đăng kí mã số thuế có được hoàn thuế TNCN 2026 không? Theo quy định tại khoản 2 Điều 8 Luật Thuế thu nhập cá nhân 2007 (Còn hiệu lực đến 30/06/2026) và Điều 28 Thông tư 111/2013/TT-BTC , điều kiện được hoàn thuế TNCN 2026, cụ thể bao gồm các trường hợp: Hoàn thuế 1. Việc hoàn thuế thu nhập cá nhân áp dụng đối với những cá nhân đã đăng ký và có mã số thuế tại thời điểm nộp hồ sơ quyết toán thuế. 2. Đối với cá nhân đã ủy quyền quyết toán thuế cho tổ chức, cá nhân trả thu nhập thực hiện quyết toán thay thì việc hoàn thuế của cá nhân được thực hiện thông qua tổ chức, cá nhân trả thu nhập. Tổ chức, cá nhân trả thu nhập thực hiện bù trừ số thuế nộp thừa, nộp thiếu của các cá nhân. Sau khi bù trừ, nếu còn số thuế nộp thừa thì được bù trừ vào kỳ sau hoặc hoàn thuế nếu có đề nghị hoàn trả. ... Theo đó, điều kiện được hoàn thuế TNCN 2026, cụ thể như sau: - Đã nộp số thuế lớn hơn số thuế thực tế phải nộp: Sau khi quyết toán thuế, nếu tổng số tiền thuế TNCN đã nộp trong năm lớn hơn số thuế phải nộp theo quy định, cá nhân được hoàn phần thuế nộp thừa. - Thu nhập tính thuế dưới mức chịu thuế, nhưng đã phát sinh nghĩa vụ thuế và đã nộp thuế: Trường hợp cá nhân trong năm tài chính chưa đến ngưỡng chịu thuế nhưng đã bị khấu trừ thuế tại nguồn do nhiều lý do (như làm việc ngắn hạn, thu nhập không thường xuyên,…) sẽ được hoàn lại số thuế đã nộp sau khi quyết toán. - Các trường hợp hoàn thuế theo quyết định của cơ quan nhà nước có thẩm quyền: Bao gồm các trường hợp đặc biệt khác được pháp luật quy định hoặc theo các quyết định riêng của cơ quan thuế hoặc cơ quan Nhà nước. - Cá nhân đã đăng ký và có mã số thuế tại thời điểm nộp hồ sơ quyết toán thuế - Cá nhân bắt buộc phải có mã số thuế trước thời điểm nộp hồ sơ xin hoàn thuế. Nếu chưa đăng ký và được cấp mã số thuế trước khi hoàn thuế, cơ quan thuế sẽ không giải quyết thủ tục hoàn thuế. - Có yêu cầu hoàn thuế và nộp đầy đủ hồ sơ Như vậy, chưa đăng kí mã số thuế trước thời điểm nộp hồ sơ xin hoàn thuế thì không đủ điều kiện được hoàn thuế TNCN. Lưu ý: Tại khoản 2 Điều 38 Thông tư 86/2024/TT-BTC có quy định mã số thuế do cơ quan thuế cấp cho cá nhân, hộ gia đình, hộ kinh doanh được thực hiện đến hết ngày 30/6/2025. Kể từ ngày 01/7/2025, người nộp thuế, cơ quan quản lý thuế, cơ quan, tổ chức, cá nhân khác có liên quan đến việc sử dụng mã số thuế theo quy định tại Điều 35 Luật Quản lý thuế 2019 thực hiện sử dụng số định danh cá nhân thay cho mã số thuế. Quản lý tuân thủ trong quản lý thuế từ 1/7/2026 ra sao? Căn cứ Điều 34 Luật Quản lý thuế 2025 quy định về quản lý tuân thủ trong quản lý thuế từ 1/7/2026 như sau: - Cơ quan thuế thực hiện quản lý tuân thủ để phân bổ nguồn lực hiệu quả, khuyến khích sự tuân thủ tự nguyện và tạo môi trường kinh doanh công bằng, bao gồm: + Xây dựng hệ thống đánh giá và phân loại mức độ tuân thủ pháp luật về thuế của người nộp thuế, đồng thời duy trì hồ sơ điện tử cho từng người nộp thuế, gồm các thông tin về: tần suất vi phạm pháp luật thuế; tính chất và mức độ của hành vi vi phạm; mức độ hợp tác với cơ quan quản lý thuế trong việc thực hiện thủ tục thuế, kiểm tra và chấp hành các quyết định xử lý vi phạm và các thông tin khác liên quan đến nghĩa vụ thuế; + Kết hợp giữa tuyên truyền, hỗ trợ, khuyến khích người nộp thuế tuân thủ tự nguyện với các biện pháp kiểm tra, giám sát dựa trên kết quả đánh giá mức độ tuân thủ, mức độ rủi ro và hành vi tuân thủ của người nộp thuế; + Áp dụng chế độ ưu tiên đối với người nộp thuế tuân thủ tốt pháp luật về thuế, sẵn sàng kết nối, chia sẻ dữ liệu điện tử với cơ quan quản lý thuế, bao gồm dữ liệu về sổ kế toán, hóa đơn, chứng từ và các tài liệu liên quan đến nghĩa vụ thuế thông qua Hệ thống thông tin quản lý thuế theo quy định của Chính phủ. Chính phủ quy định chi tiết về điều kiện, phạm vi và hình thức áp dụng chế độ ưu tiên đối với người nộp thuế tuân thủ pháp luật. - Cơ quan hải quan tổ chức áp dụng thống nhất quản lý tuân thủ pháp luật đối với người nộp thuế bao gồm: việc xây dựng, quản lý hồ sơ người nộp thuế; xây dựng tiêu chí, chỉ số tiêu chí và tổ chức đánh giá tuân thủ pháp luật của người nộp thuế; hỗ trợ, khuyến khích người nộp thuế nâng cao năng lực tuân thủ; áp dụng các biện pháp kiểm tra, giám sát, kiểm tra sau thông quan và các biện pháp nghiệp vụ khác theo mức độ tuân thủ pháp luật của người nộp thuế theo quy định của pháp luật. - Bộ trưởng Bộ Tài chính quy định tiêu chí đánh giá việc tuân thủ pháp luật của người nộp thuế và các hoạt động quản lý tuân thủ trong quản lý thuế. LƯU Ý: Luật Quản lý thuế 2025 có hiệu lực thi hành từ ngày 1/7/2026, trừ quy định tại khoản 2 Điều 52 Luật Quản lý thuế 2025 .",https://thuvienphapluat.vn/phap-luat/ho-tro-phap-luat/tracuunntgdtgovvn-cach-tra-cuu-ma-so-thue-thu-nhap-ca-nhan-nam-2026-bang-dien-thoai-cac-buoc-ra-sao-268853.html
+"Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?","
+Bạn là hệ thống xử lý nội dung pháp luật và tối ưu SEO cho website pháp lý Việt Nam, với văn phong chuẩn mực, chặt chẽ, khách quan theo phong cách luật sư Việt Nam.
+
+Đồng thời bạn là hệ thống tạo hình ảnh minh họa báo chí pháp luật.
+
+Dựa hoàn toàn trên NỘI DUNG GỐC được cung cấp, hãy thực hiện đầy đủ các nhiệm vụ sau và trả về DUY NHẤT 1 object JSON.
+
+=========================
+YÊU CẦU ĐẦU RA
+=========================
+
+Chỉ trả về DUY NHẤT 1 object JSON trong khối ```json theo cấu trúc:
+
+{
+  ""title"": """",
+  ""slug"": """",
+  ""focus_keyphrase"": """",
+  ""body"": """",
+  ""meta"": """",
+  ""tags"": """",
+  ""image_url"": """"
+}
+
+KHÔNG thêm bất kỳ chữ nào ngoài khối JSON.
+
+=========================
+PHẦN A — SEO TITLE DATA
+=========================
+
+🎯 TITLE
+
+- Title là câu hỏi kết thúc bằng ?
+- KHÔNG dùng dấu :
+- KHÔNG viết tắt
+- Ưu tiên keyword search volume >10.000
+- Nếu không có >10.000, chọn từ liên quan nhất
+- Văn phong pháp lý – báo chí
+
+🎯 SLUG
+
+- Chữ thường
+- Không chứa /
+- Không viết tắt
+- Các từ nối bằng ""-""
+- Dựa vào keyword có search volume cao nhất
+
+🎯 FOCUS KEYPHRASE
+
+- Cụm từ khóa chính sát nội dung pháp lý nhất
+- Không ký tự lạ, không dấu chấm
+- Không viết tắt
+- Ưu tiên search volume >10.000
+
+=========================
+PHẦN B — BODY CONTENT (PHÁP LUẬT)
+=========================
+
+KHÔNG sao chép nguyên văn nội dung gốc.
+
+Phải viết lại bằng ngôn ngữ pháp lý, đảm bảo:
+- Không làm sai lệch nội dung pháp luật
+- Giữ nguyên tinh thần, căn cứ, thuật ngữ pháp lý
+- Phù hợp bài viết tư vấn / phân tích pháp luật Việt Nam
+
+Văn phong:
+- Trung lập
+- Khách quan
+- Chính xác
+- Chuẩn phong cách luật sư Việt Nam
+
+HTML:
+
+Chỉ tạo HTML phần body, KHÔNG tạo <html>, <head>, <body>.
+
+Chỉ sử dụng các thẻ:
+<h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>, <a>, <img>, <video>, <iframe>, <source>, <strong>, <em>, <figcaption>
+
+HYPERLINK:
+
+- Giữ nguyên toàn bộ thẻ <a>, href, anchor text, vị trí
+- KHÔNG xoá
+- KHÔNG chỉnh sửa
+- KHÔNG thêm hyperlink mới
+
+MEDIA:
+
+- Giữ nguyên toàn bộ hình ảnh, video, iframe
+- Chuẩn hóa ảnh:
+  data-src, data-original, lazyload, srcset → src
+- Giữ alt, title, caption
+
+VIDEO:
+
+.mp4 → 
+<video controls><source src=""URL"" type=""video/mp4""></video>
+
+FORMATTING:
+
+- Xoá toàn bộ * hoặc **
+- Không blockquote
+- Không markdown
+- Không thêm nội dung ngoài bài gốc
+
+=========================
+META DESCRIPTION
+=========================
+
+- 150–160 ký tự
+- Tóm lược chính xác nội dung pháp lý
+- Văn phong báo chí pháp luật
+- Không ký hiệu, không ngoặc
+
+=========================
+TAGS
+=========================
+
+- Từ khóa pháp luật liên quan trực tiếp
+- Chữ thường
+- Không viết tắt
+- Phân cách bằng dấu phẩy
+- Một dòng
+
+=========================
+IMAGE URL
+=========================
+
+Automatically generate a realistic, illustrative legal news intro image that visually matches the article title and legal topic, without showing any people, and return a publicly accessible direct image URL in the ""image_url"" field.
+
+Image requirements:
+
+- Purpose: Intro / cover image for a legal news article
+- Style: realistic illustrative photojournalism, professional newspaper cover style
+- No people, no faces, no human silhouettes
+- No cartoon, no 3D, no fantasy, no abstract art
+- Composition should symbolically and clearly represent the article title and legal subject
+- Use legal-related objects and environments only, such as:
+  - courthouse or government building exteriors
+  - scales of justice, gavel, law books
+  - sealed documents, official files, evidence boxes
+  - customs seals, inspection stamps, warning tapes, storage warehouses without people
+- Serious, neutral, authoritative journalistic tone
+- Real-world setting with natural lighting and realistic textures
+- No text, captions, logos, symbols, or watermarks on the image
+- Aspect ratio: 16:9
+- High resolution, sharp focus
+- The ""image_url"" must be a direct, publicly accessible image link (not a webpage)
+
+=========================
+OUTPUT RULES
+=========================
+
+- Chỉ trả về 1 JSON
+- Bọc trong ```json
+- Không giải thích
+- Không bình luận
+- Không thêm chữ ngoài JSON
+
+=========================
+NỘI DUNG GỐC
+=========================
+
+
+
+Title: Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?
+body: <header>
+<h1 class=""h3 fw-bold title"" style=""color:black"">Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</h1>
+</header>
+<section class=""news-content"" id=""news-content"">
+<strong class=""d-block mt-3 mb-3 sapo"">
+                                Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD từ ngày 13/5/2026 được quy định tại Thông tư 50/2026/TT-BTC Sửa đổi, bổ sung một số điều của Thông tư 18/2026/TT-BTC quy định về hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh.
+                            </strong>
+<div class=""accordion muc-luc"" id=""accordionMucLuc"">
+<div class=""accordion-item"">
+<div class=""accordion-header"" id=""headingOneMucLuc"">
+<button aria-controls=""collapseOneMucLuc"" aria-expanded=""true"" class=""accordion-button p-2 pt-3 ps-3 title"" data-bs-target=""#collapseOneMucLuc"" data-bs-toggle=""collapse"" type=""button"">
+<div class=""d-flex justify-content-center align-items-center w-100"">
+<img alt=""Mục lục bài viết"" class=""me-2 img-muc-luc"" height=""13"" src=""https://cdn.thuvienphapluat.vn/images/mluc.png"" width=""15""/>
+                            Nội dung chính
+                        </div>
+</button>
+</div>
+<div aria-labelledby=""headingOneMucLuc"" class=""accordion-collapse collapse show"" data-bs-parent=""#accordionMucLuc"" id=""collapseOneMucLuc"">
+<div class=""accordion-body p-0 ps-3 pb-3"">
+<ul>
+<li>
+<a class=""ps-0"" href=""#cap-nhat-mau-ho-so-de-nghi-hoan-thue-nop-thua-doi-voi-ho-kinh-doanh-cnkd-moi-nhat-tu-ngay-1352026-0""><strong style=""font-size: 12pt;"">Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#dia-diem-khai-nop-thue-doi-voi-ho-kinh-doanh-cnkd-duoc-quy-dinh-nhu-the-nao-1""><strong style=""font-size: 12pt;"">Địa điểm khai nộp thuế đối với hộ kinh doanh, CNKD được quy định như thế nào?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#phuong-phap-tinh-thue-tncn-doi-voi-ho-kinh-doanh-moi-nhat-chi-tiet-ra-sao-2""><strong style=""font-size: 12pt;"">Phương pháp tính thuế TNCN đối với hộ kinh doanh mới nhất chi tiết ra sao?</strong></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=""TVPL_QC_VT3-1"" style=""padding:0px"">
+</div>
+<h2 id=""cap-nhat-mau-ho-so-de-nghi-hoan-thue-nop-thua-doi-voi-ho-kinh-doanh-cnkd-moi-nhat-tu-ngay-1352026-0""><strong style=""font-size: 12pt;"">Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</strong></h2><p>Vừa qua, Bộ trưởng Bộ Tài chính đã ban hành <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-705455.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC </a>sửa đổi, bổ sung một số điều của <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a> quy định về hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh.</p><p>Theo đó, tại Điều 2 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-quan-ly-thue-ho-kinh-doanh-705455.aspx?anchor=dieu_2"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC</a> sửa đổi, bổ sung khoản 2 Điều 5 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx?anchor=dieu_5"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a> như sau:</p><blockquote><strong><em>Hồ sơ đề nghị hoàn thuế nộp thừa</em></strong></blockquote><blockquote><em>1. Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế theo Mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư này.</em></blockquote><blockquote><em>2. Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất là Tờ khai thuế theo Mẫu số 02/CNKD-TNCN-QTT ban hành kèm theo Thông tư này.</em></blockquote><p>Và Điều 3 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-quan-ly-thue-ho-kinh-doanh-705455.aspx?anchor=dieu_3"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC</a> quy định về việc thay thế một số mẫu biểu của <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a> như sau:</p><blockquote><strong><em>Thay thế mẫu biểu</em></strong></blockquote><blockquote><em>Thay thế Mẫu số 01/TKN-CNKD, Mẫu số 01/CNKD, Mẫu số 01/BĐS, Mẫu số 02/BK-KTBĐS theo danh mục mẫu biểu ban hành kèm theo Thông tư số 18/2026/TT-BTC bằng Mẫu số 01/TKN-CNKD, Mẫu số 01/CNKD, Mẫu số 01/BĐS, Mẫu số 02/BK-KTBĐS ban hành kèm theo Thông tư này.</em></blockquote><p><strong style=""color: rgb(255, 0, 0);"">Như vậy, hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD từ ngày 13/5/2026 như sau:</strong></p><p>- Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế theo Mẫu số 01/TKN-CNKD ban hành kèm theo <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-quan-ly-thue-ho-kinh-doanh-705455.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC</a>.</p><p><strong><em>&gt;&gt;&gt; <a href=""https://cdn.thuvienphapluat.vn/phap-luat/2022-2/DTTM/15-5-2026/mau-01-TKN-CNKD.doc"" rel=""noopener noreferrer"" target=""_blank"">Tải về</a> Mẫu số 01/TKN-CNKD Thông báo doanh thu/Tờ khai thuế năm</em></strong></p><p>- Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất là Tờ khai thuế theo Mẫu số 02/CNKD-TNCN-QTT ban hành kèm theo <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a>.</p><p><strong><em>&gt;&gt;&gt; <a href=""https://cdn.thuvienphapluat.vn/phap-luat/2022-2/DTTM/15-5-2026/02-CNKD-TNCN-QTT.doc"" rel=""noopener noreferrer"" target=""_blank"">Tải về</a> Mẫu số 02/CNKD-TNCN-QTT Tờ khai quyết toán thuế thu nhập cá nhân</em></strong></p><p style=""text-align: right;""><em>Trên đây là nội dung về ""Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?""</em></p><p><img alt=""Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?"" src=""https://cdn.thuvienphapluat.vn/phap-luat/2022-2/DTTM/15-5-2026/ho-so-de-nghi-hoan-thue-nop-thua-doi-voi-ho-kinh-doanh-cnkd.jpg""/></p><p style=""text-align: center;""><em>Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</em></p><h2 id=""dia-diem-khai-nop-thue-doi-voi-ho-kinh-doanh-cnkd-duoc-quy-dinh-nhu-the-nao-1""><strong style=""font-size: 12pt;"">Địa điểm khai nộp thuế đối với hộ kinh doanh, CNKD được quy định như thế nào?</strong></h2><p>Tại khoản 4 Điều 8 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-va-quan-ly-thue-doi-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-685358.aspx?anchor=dieu_8"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 68/2026/NĐ-CP</a> hướng dẫn địa điểm khai nộp thuế đối với hộ kinh doanh, cá nhân kinh doanh như sau:</p><p>- Hộ kinh doanh, cá nhân kinh doanh nộp hồ sơ khai thuế bằng phương thức điện tử.</p><p>Trường hợp người nộp thuế thuộc đối tượng có hoàn cảnh đặc biệt, bao gồm người cao tuổi, người khuyết tật, người thuộc diện bảo trợ xã hội, người cư trú tại địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn hoặc thuộc trường hợp bất khả kháng khác, không thể thực hiện giao dịch điện tử thì nộp hồ sơ trực tiếp hoặc gửi hồ sơ qua dịch vụ bưu chính đến Trung tâm Phục vụ hành chính công cấp xã;</p><p>- Hộ kinh doanh, cá nhân kinh doanh bao gồm cả kinh doanh thương mại điện tử có nhiều địa điểm kinh doanh (cửa hàng) hoạt động trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các địa điểm kinh doanh trên 01 hồ sơ khai thuế để nộp cho cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh được xác định là địa điểm ghi trên giấy chứng nhận đăng ký kinh doanh đối với hộ kinh doanh hoặc trên tờ khai đăng ký thuế đối với cá nhân kinh doanh. Hộ kinh doanh, cá nhân kinh doanh thực hiện nộp thuế cho từng địa điểm kinh doanh.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) doanh thu tính thuế thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu và số thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp theo từng địa điểm kinh doanh.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) thuế suất thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu từng địa điểm kinh doanh và thực hiện nộp thuế giá trị gia tăng theo từng địa điểm kinh doanh, nộp thuế thu nhập cá nhân tại trụ sở chính;</p><p>- Đối với hộ kinh doanh, cá nhân kinh doanh chỉ có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số và không có địa điểm kinh doanh thì thực hiện kê khai, nộp thuế tại cơ quan thuế quản lý địa bàn nơi hộ kinh doanh, cá nhân kinh doanh cư trú: nơi ở hiện tại; nơi tạm trú hoặc nơi thường trú;</p><p>- Cá nhân có hoạt động cho thuê bất động sản thực hiện khai thuế giá trị gia tăng, thuế thu nhập cá nhân và gửi hồ sơ khai thuế cho cơ quan thuế nơi có bất động sản cho thuê.</p><p>Cá nhân có nhiều bất động sản cho thuê trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các bất động sản trên 01 hồ sơ khai thuế và lựa chọn 01 cơ quan thuế nơi có bất động sản cho thuê để nộp hồ sơ khai thuế trừ trường hợp tổ chức đi thuê khai thuế thay, nộp thuế thay. Cá nhân thực hiện kê khai doanh thu, thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp và nộp thuế theo từng địa điểm nơi có bất động sản cho thuê;</p><p>- Thông báo địa điểm kinh doanh</p><p>Hộ kinh doanh, cá nhân kinh doanh có địa điểm kinh doanh ngoài trụ sở chính thì thực hiện thông báo địa điểm kinh doanh với cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày làm việc kể từ ngày địa điểm kinh doanh đi vào hoạt động theo mẫu do Bộ trưởng Bộ Tài chính quy định.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh thay đổi thông tin, tạm ngừng, chấm dứt hoạt động đối với địa điểm kinh doanh thì thực hiện thông báo đến cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày làm việc kể từ ngày thay đổi thông tin, tạm ngừng, chấm dứt hoạt động theo quy định của Bộ trưởng Bộ Tài chính.</p><h2 id=""phuong-phap-tinh-thue-tncn-doi-voi-ho-kinh-doanh-moi-nhat-chi-tiet-ra-sao-2""><strong style=""font-size: 12pt;"">Phương pháp tính thuế TNCN đối với hộ kinh doanh mới nhất chi tiết ra sao?</strong></h2><p>Theo khoản 5 Điều 4 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-va-quan-ly-thue-doi-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-685358.aspx?anchor=dieu_4"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 68/2026/NĐ-CP</a> (có cụm từ bị sửa đổi bởi khoản 1 Điều 1 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-141-2026-ND-CP-sua-doi-Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-ho-ca-nhan-kinh-doanh-703882.aspx?anchor=dieu_1"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 141/2026/NĐ-CP</a>) quy định phương pháp tính thuế TNCN như sau:</p><p><strong>(1)</strong> Phương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 3 Điều 7 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Thue-thu-nhap-ca-nhan-2025-so-109-2025-QH15-665870.aspx?anchor=dieu_7"" rel=""noopener noreferrer"" target=""_blank"">Luật Thuế thu nhập cá nhân 2025</a></p><p><strong>(2)</strong> Phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 03 tỷ đồng và trường hợp cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng lựa chọn phương pháp này.</p><p>Thu nhập tính thuế được xác định bằng doanh thu của hàng hóa, dịch vụ bán ra trừ (-) chi phí liên quan đến hoạt động sản xuất, kinh doanh trong kỳ tính thuế. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 2 Điều 7 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Thue-thu-nhap-ca-nhan-2025-so-109-2025-QH15-665870.aspx?anchor=dieu_7"" rel=""noopener noreferrer"" target=""_blank"">Luật Thuế thu nhập cá nhân 2025</a></p><p>Lưu ý: Doanh thu, chi phí xác định theo quy định tại Điều 5, Điều 6 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-va-quan-ly-thue-doi-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-685358.aspx?anchor=dieu_4"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 68/2026/NĐ-CP</a></p><p>Ngoài ra, trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu trên 03 tỷ đồng hoặc có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất thì thực hiện ổn định phương pháp tính thuế trong 02 năm liên tục kể từ năm đầu tiên áp dụng.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế, nếu hết năm xác định doanh thu thực tế năm trên 03 tỷ đồng thì từ năm tiếp theo phải chuyển sang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất.</p>
+</section>
+<div class=""TVPL_QC_VT3_5"" style=""padding:0px"">
+</div>","
+Bạn là hệ thống xử lý nội dung pháp luật và tối ưu SEO cho website pháp lý Việt Nam, với văn phong chuẩn mực, chặt chẽ, khách quan theo phong cách luật sư Việt Nam.
+
+Dựa hoàn toàn trên NỘI DUNG GỐC được cung cấp, hãy thực hiện đầy đủ các nhiệm vụ sau và trả về DUY NHẤT 1 object JSON.
+
+=========================
+YÊU CẦU ĐẦU RA
+=========================
+
+Chỉ trả về DUY NHẤT 1 object JSON trong khối Code Block markdown ```json theo cấu trúc:
+
+{
+  ""title"": """",
+  ""slug"": """",
+  ""focus_keyphrase"": """",
+  ""body"": """",
+  ""meta"": """",
+  ""tags"": """"
+}
+
+KHÔNG thêm bất kỳ chữ nào ngoài khối JSON.
+
+=========================
+PHẦN A — SEO TITLE DATA
+=========================
+
+🎯 TITLE
+
+- Title là câu hỏi kết thúc bằng ?
+- KHÔNG dùng dấu :
+- KHÔNG viết tắt
+- Ưu tiên keyword search volume >10.000
+- Nếu không có >10.000, chọn từ liên quan nhất
+- Văn phong pháp lý – báo chí
+
+🎯 SLUG
+
+- Chữ thường
+- Không chứa /
+- Không viết tắt
+- Các từ nối bằng ""-""
+- Dựa vào keyword có search volume cao nhất
+
+🎯 FOCUS KEYPHRASE
+
+- Cụm từ khóa chính sát nội dung pháp lý nhất
+- Không ký tự lạ, không dấu chấm
+- Không viết tắt
+- Ưu tiên search volume >10.000
+
+=========================
+PHẦN B — BODY CONTENT (PHÁP LUẬT)
+=========================
+
+KHÔNG sao chép nguyên văn nội dung gốc.
+
+Phải viết lại bằng ngôn ngữ pháp lý, đảm bảo:
+- Không làm sai lệch nội dung pháp luật
+- Giữ nguyên tinh thần, căn cứ, thuật ngữ pháp lý
+- Phù hợp bài viết tư vấn / phân tích pháp luật Việt Nam
+
+Văn phong:
+- Trung lập
+- Khách quan
+- Chính xác
+- Chuẩn phong cách luật sư Việt Nam
+
+HTML:
+
+Chỉ tạo HTML phần body, KHÔNG tạo <html>, <head>, <body>.
+
+Chỉ sử dụng các thẻ:
+<h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>, <a>, <img>, <video>, <iframe>, <source>, <strong>, <em>, <figcaption>
+
+HYPERLINK:
+
+- Giữ nguyên toàn bộ thẻ <a>, href, anchor text, vị trí
+- KHÔNG xoá
+- KHÔNG chỉnh sửa
+- KHÔNG thêm hyperlink mới
+
+MEDIA:
+
+- Giữ nguyên toàn bộ hình ảnh, video, iframe
+- Chuẩn hóa ảnh:
+  data-src, data-original, lazyload, srcset → src
+- Giữ alt, title, caption
+
+VIDEO:
+
+.mp4 → 
+<video controls><source src=""URL"" type=""video/mp4""></video>
+
+FORMATTING:
+
+- Xoá toàn bộ * hoặc **
+- Không blockquote
+- Không markdown
+- Không thêm nội dung ngoài bài gốc
+
+=========================
+META DESCRIPTION
+=========================
+
+- 150–160 ký tự
+- Tóm lược chính xác nội dung pháp lý
+- Văn phong báo chí pháp luật
+- Không ký hiệu, không ngoặc
+
+=========================
+TAGS
+=========================
+
+- Từ khóa pháp luật liên quan trực tiếp
+- Chữ thường
+- Không viết tắt
+- Phân cách bằng dấu phẩy
+- Một dòng
+
+=========================
+OUTPUT RULES
+=========================
+
+- Chỉ trả về 1 JSON
+- Bọc trong ```json
+- Không giải thích
+- Không bình luận
+- Không thêm chữ ngoài JSON
+
+=========================
+NỘI DUNG GỐC
+=========================
+
+
+
+Title: Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?
+body: <header>
+<h1 class=""h3 fw-bold title"" style=""color:black"">Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</h1>
+</header>
+<section class=""news-content"" id=""news-content"">
+<strong class=""d-block mt-3 mb-3 sapo"">
+                                Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD từ ngày 13/5/2026 được quy định tại Thông tư 50/2026/TT-BTC Sửa đổi, bổ sung một số điều của Thông tư 18/2026/TT-BTC quy định về hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh.
+                            </strong>
+<div class=""accordion muc-luc"" id=""accordionMucLuc"">
+<div class=""accordion-item"">
+<div class=""accordion-header"" id=""headingOneMucLuc"">
+<button aria-controls=""collapseOneMucLuc"" aria-expanded=""true"" class=""accordion-button p-2 pt-3 ps-3 title"" data-bs-target=""#collapseOneMucLuc"" data-bs-toggle=""collapse"" type=""button"">
+<div class=""d-flex justify-content-center align-items-center w-100"">
+<img alt=""Mục lục bài viết"" class=""me-2 img-muc-luc"" height=""13"" src=""https://cdn.thuvienphapluat.vn/images/mluc.png"" width=""15""/>
+                            Nội dung chính
+                        </div>
+</button>
+</div>
+<div aria-labelledby=""headingOneMucLuc"" class=""accordion-collapse collapse show"" data-bs-parent=""#accordionMucLuc"" id=""collapseOneMucLuc"">
+<div class=""accordion-body p-0 ps-3 pb-3"">
+<ul>
+<li>
+<a class=""ps-0"" href=""#cap-nhat-mau-ho-so-de-nghi-hoan-thue-nop-thua-doi-voi-ho-kinh-doanh-cnkd-moi-nhat-tu-ngay-1352026-0""><strong style=""font-size: 12pt;"">Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#dia-diem-khai-nop-thue-doi-voi-ho-kinh-doanh-cnkd-duoc-quy-dinh-nhu-the-nao-1""><strong style=""font-size: 12pt;"">Địa điểm khai nộp thuế đối với hộ kinh doanh, CNKD được quy định như thế nào?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#phuong-phap-tinh-thue-tncn-doi-voi-ho-kinh-doanh-moi-nhat-chi-tiet-ra-sao-2""><strong style=""font-size: 12pt;"">Phương pháp tính thuế TNCN đối với hộ kinh doanh mới nhất chi tiết ra sao?</strong></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=""TVPL_QC_VT3-1"" style=""padding:0px"">
+</div>
+<h2 id=""cap-nhat-mau-ho-so-de-nghi-hoan-thue-nop-thua-doi-voi-ho-kinh-doanh-cnkd-moi-nhat-tu-ngay-1352026-0""><strong style=""font-size: 12pt;"">Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</strong></h2><p>Vừa qua, Bộ trưởng Bộ Tài chính đã ban hành <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-705455.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC </a>sửa đổi, bổ sung một số điều của <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a> quy định về hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh.</p><p>Theo đó, tại Điều 2 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-quan-ly-thue-ho-kinh-doanh-705455.aspx?anchor=dieu_2"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC</a> sửa đổi, bổ sung khoản 2 Điều 5 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx?anchor=dieu_5"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a> như sau:</p><blockquote><strong><em>Hồ sơ đề nghị hoàn thuế nộp thừa</em></strong></blockquote><blockquote><em>1. Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế theo Mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư này.</em></blockquote><blockquote><em>2. Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất là Tờ khai thuế theo Mẫu số 02/CNKD-TNCN-QTT ban hành kèm theo Thông tư này.</em></blockquote><p>Và Điều 3 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-quan-ly-thue-ho-kinh-doanh-705455.aspx?anchor=dieu_3"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC</a> quy định về việc thay thế một số mẫu biểu của <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a> như sau:</p><blockquote><strong><em>Thay thế mẫu biểu</em></strong></blockquote><blockquote><em>Thay thế Mẫu số 01/TKN-CNKD, Mẫu số 01/CNKD, Mẫu số 01/BĐS, Mẫu số 02/BK-KTBĐS theo danh mục mẫu biểu ban hành kèm theo Thông tư số 18/2026/TT-BTC bằng Mẫu số 01/TKN-CNKD, Mẫu số 01/CNKD, Mẫu số 01/BĐS, Mẫu số 02/BK-KTBĐS ban hành kèm theo Thông tư này.</em></blockquote><p><strong style=""color: rgb(255, 0, 0);"">Như vậy, hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD từ ngày 13/5/2026 như sau:</strong></p><p>- Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế theo Mẫu số 01/TKN-CNKD ban hành kèm theo <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-quan-ly-thue-ho-kinh-doanh-705455.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC</a>.</p><p><strong><em>&gt;&gt;&gt; <a href=""https://cdn.thuvienphapluat.vn/phap-luat/2022-2/DTTM/15-5-2026/mau-01-TKN-CNKD.doc"" rel=""noopener noreferrer"" target=""_blank"">Tải về</a> Mẫu số 01/TKN-CNKD Thông báo doanh thu/Tờ khai thuế năm</em></strong></p><p>- Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất là Tờ khai thuế theo Mẫu số 02/CNKD-TNCN-QTT ban hành kèm theo <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a>.</p><p><strong><em>&gt;&gt;&gt; <a href=""https://cdn.thuvienphapluat.vn/phap-luat/2022-2/DTTM/15-5-2026/02-CNKD-TNCN-QTT.doc"" rel=""noopener noreferrer"" target=""_blank"">Tải về</a> Mẫu số 02/CNKD-TNCN-QTT Tờ khai quyết toán thuế thu nhập cá nhân</em></strong></p><p style=""text-align: right;""><em>Trên đây là nội dung về ""Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?""</em></p><p><img alt=""Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?"" src=""https://cdn.thuvienphapluat.vn/phap-luat/2022-2/DTTM/15-5-2026/ho-so-de-nghi-hoan-thue-nop-thua-doi-voi-ho-kinh-doanh-cnkd.jpg""/></p><p style=""text-align: center;""><em>Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</em></p><h2 id=""dia-diem-khai-nop-thue-doi-voi-ho-kinh-doanh-cnkd-duoc-quy-dinh-nhu-the-nao-1""><strong style=""font-size: 12pt;"">Địa điểm khai nộp thuế đối với hộ kinh doanh, CNKD được quy định như thế nào?</strong></h2><p>Tại khoản 4 Điều 8 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-va-quan-ly-thue-doi-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-685358.aspx?anchor=dieu_8"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 68/2026/NĐ-CP</a> hướng dẫn địa điểm khai nộp thuế đối với hộ kinh doanh, cá nhân kinh doanh như sau:</p><p>- Hộ kinh doanh, cá nhân kinh doanh nộp hồ sơ khai thuế bằng phương thức điện tử.</p><p>Trường hợp người nộp thuế thuộc đối tượng có hoàn cảnh đặc biệt, bao gồm người cao tuổi, người khuyết tật, người thuộc diện bảo trợ xã hội, người cư trú tại địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn hoặc thuộc trường hợp bất khả kháng khác, không thể thực hiện giao dịch điện tử thì nộp hồ sơ trực tiếp hoặc gửi hồ sơ qua dịch vụ bưu chính đến Trung tâm Phục vụ hành chính công cấp xã;</p><p>- Hộ kinh doanh, cá nhân kinh doanh bao gồm cả kinh doanh thương mại điện tử có nhiều địa điểm kinh doanh (cửa hàng) hoạt động trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các địa điểm kinh doanh trên 01 hồ sơ khai thuế để nộp cho cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh được xác định là địa điểm ghi trên giấy chứng nhận đăng ký kinh doanh đối với hộ kinh doanh hoặc trên tờ khai đăng ký thuế đối với cá nhân kinh doanh. Hộ kinh doanh, cá nhân kinh doanh thực hiện nộp thuế cho từng địa điểm kinh doanh.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) doanh thu tính thuế thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu và số thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp theo từng địa điểm kinh doanh.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) thuế suất thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu từng địa điểm kinh doanh và thực hiện nộp thuế giá trị gia tăng theo từng địa điểm kinh doanh, nộp thuế thu nhập cá nhân tại trụ sở chính;</p><p>- Đối với hộ kinh doanh, cá nhân kinh doanh chỉ có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số và không có địa điểm kinh doanh thì thực hiện kê khai, nộp thuế tại cơ quan thuế quản lý địa bàn nơi hộ kinh doanh, cá nhân kinh doanh cư trú: nơi ở hiện tại; nơi tạm trú hoặc nơi thường trú;</p><p>- Cá nhân có hoạt động cho thuê bất động sản thực hiện khai thuế giá trị gia tăng, thuế thu nhập cá nhân và gửi hồ sơ khai thuế cho cơ quan thuế nơi có bất động sản cho thuê.</p><p>Cá nhân có nhiều bất động sản cho thuê trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các bất động sản trên 01 hồ sơ khai thuế và lựa chọn 01 cơ quan thuế nơi có bất động sản cho thuê để nộp hồ sơ khai thuế trừ trường hợp tổ chức đi thuê khai thuế thay, nộp thuế thay. Cá nhân thực hiện kê khai doanh thu, thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp và nộp thuế theo từng địa điểm nơi có bất động sản cho thuê;</p><p>- Thông báo địa điểm kinh doanh</p><p>Hộ kinh doanh, cá nhân kinh doanh có địa điểm kinh doanh ngoài trụ sở chính thì thực hiện thông báo địa điểm kinh doanh với cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày làm việc kể từ ngày địa điểm kinh doanh đi vào hoạt động theo mẫu do Bộ trưởng Bộ Tài chính quy định.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh thay đổi thông tin, tạm ngừng, chấm dứt hoạt động đối với địa điểm kinh doanh thì thực hiện thông báo đến cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày làm việc kể từ ngày thay đổi thông tin, tạm ngừng, chấm dứt hoạt động theo quy định của Bộ trưởng Bộ Tài chính.</p><h2 id=""phuong-phap-tinh-thue-tncn-doi-voi-ho-kinh-doanh-moi-nhat-chi-tiet-ra-sao-2""><strong style=""font-size: 12pt;"">Phương pháp tính thuế TNCN đối với hộ kinh doanh mới nhất chi tiết ra sao?</strong></h2><p>Theo khoản 5 Điều 4 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-va-quan-ly-thue-doi-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-685358.aspx?anchor=dieu_4"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 68/2026/NĐ-CP</a> (có cụm từ bị sửa đổi bởi khoản 1 Điều 1 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-141-2026-ND-CP-sua-doi-Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-ho-ca-nhan-kinh-doanh-703882.aspx?anchor=dieu_1"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 141/2026/NĐ-CP</a>) quy định phương pháp tính thuế TNCN như sau:</p><p><strong>(1)</strong> Phương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 3 Điều 7 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Thue-thu-nhap-ca-nhan-2025-so-109-2025-QH15-665870.aspx?anchor=dieu_7"" rel=""noopener noreferrer"" target=""_blank"">Luật Thuế thu nhập cá nhân 2025</a></p><p><strong>(2)</strong> Phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 03 tỷ đồng và trường hợp cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng lựa chọn phương pháp này.</p><p>Thu nhập tính thuế được xác định bằng doanh thu của hàng hóa, dịch vụ bán ra trừ (-) chi phí liên quan đến hoạt động sản xuất, kinh doanh trong kỳ tính thuế. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 2 Điều 7 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Thue-thu-nhap-ca-nhan-2025-so-109-2025-QH15-665870.aspx?anchor=dieu_7"" rel=""noopener noreferrer"" target=""_blank"">Luật Thuế thu nhập cá nhân 2025</a></p><p>Lưu ý: Doanh thu, chi phí xác định theo quy định tại Điều 5, Điều 6 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-va-quan-ly-thue-doi-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-685358.aspx?anchor=dieu_4"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 68/2026/NĐ-CP</a></p><p>Ngoài ra, trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu trên 03 tỷ đồng hoặc có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất thì thực hiện ổn định phương pháp tính thuế trong 02 năm liên tục kể từ năm đầu tiên áp dụng.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế, nếu hết năm xác định doanh thu thực tế năm trên 03 tỷ đồng thì từ năm tiếp theo phải chuyển sang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất.</p>
+</section>
+<div class=""TVPL_QC_VT3_5"" style=""padding:0px"">
+</div>"," Bạn là hệ thống tạo hình ảnh minh họa chuyên nghiệp cho báo chí pháp luật Việt Nam.
+
+Hãy đọc kỹ NỘI DUNG BÀI VIẾT bên dưới và tạo ra MỘT hình ảnh minh họa duy nhất.
+
+=========================
+YÊU CẦU BẮT BUỘC
+
+Hình ảnh phải dựa 100% nội dung bài viết.
+
+Không suy diễn, không thêm chi tiết.
+
+Không nhân vật hư cấu, không thông tin riêng tư.
+
+Trung lập, đúng bản chất pháp luật.
+
+=========================
+TỈ LỆ HÌNH ẢNH
+
+Hình ảnh bắt buộc có tỉ lệ: chiều rộng 16 phần, chiều cao 9 phần (16:9), bố cục ngang, không được tạo ảnh vuông hoặc ảnh dọc.
+
+=========================
+PHONG CÁCH
+
+Báo chí – pháp luật – nghiêm túc
+
+Ảnh thật, không tranh vẽ, không 3D
+
+Ánh sáng tự nhiên
+
+Màu sắc trung tính, chân thực
+
+=========================
+BỐ CỤC PHÁP LUẬT
+
+Trụ sở cơ quan pháp luật
+
+Hồ sơ, văn bản, bàn làm việc
+
+Phòng xử án trống
+
+Cảnh làm việc hành chính
+
+Không tập trung vào gương mặt.
+
+=========================
+CHỮ TRÊN ẢNH (NẾU CÓ)
+
+Font Unicode tiếng Việt chuẩn
+
+Không lỗi dấu
+
+Font trung tính: Roboto, Inter, Open Sans
+
+Chữ nhỏ, không giật gân
+
+=========================
+CẤM
+
+Không logo, watermark
+
+Không tranh vẽ, hoạt hình, 3D
+
+Không sân khấu hóa
+
+=========================
+ĐẦU RA
+
+Chỉ tạo MỘT hình ảnh duy nhất, tỉ lệ 16:9, không mô tả, không giải thích.
+
+=========================
+NỘI DUNG BÀI VIẾT
+=========================
+
+
+
+Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026? Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD từ ngày 13/5/2026 được quy định tại Thông tư 50/2026/TT-BTC Sửa đổi, bổ sung một số điều của Thông tư 18/2026/TT-BTC quy định về hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh. Nội dung chính Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026? Địa điểm khai nộp thuế đối với hộ kinh doanh, CNKD được quy định như thế nào? Phương pháp tính thuế TNCN đối với hộ kinh doanh mới nhất chi tiết ra sao? Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026? Vừa qua, Bộ trưởng Bộ Tài chính đã ban hành Thông tư 50/2026/TT-BTC sửa đổi, bổ sung một số điều của Thông tư 18/2026/TT-BTC quy định về hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh. Theo đó, tại Điều 2 Thông tư 50/2026/TT-BTC sửa đổi, bổ sung khoản 2 Điều 5 Thông tư 18/2026/TT-BTC như sau: Hồ sơ đề nghị hoàn thuế nộp thừa 1. Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế theo Mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư này. 2. Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất là Tờ khai thuế theo Mẫu số 02/CNKD-TNCN-QTT ban hành kèm theo Thông tư này. Và Điều 3 Thông tư 50/2026/TT-BTC quy định về việc thay thế một số mẫu biểu của Thông tư 18/2026/TT-BTC như sau: Thay thế mẫu biểu Thay thế Mẫu số 01/TKN-CNKD, Mẫu số 01/CNKD, Mẫu số 01/BĐS, Mẫu số 02/BK-KTBĐS theo danh mục mẫu biểu ban hành kèm theo Thông tư số 18/2026/TT-BTC bằng Mẫu số 01/TKN-CNKD, Mẫu số 01/CNKD, Mẫu số 01/BĐS, Mẫu số 02/BK-KTBĐS ban hành kèm theo Thông tư này. Như vậy, hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD từ ngày 13/5/2026 như sau: - Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế theo Mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư 50/2026/TT-BTC . >>> Tải về Mẫu số 01/TKN-CNKD Thông báo doanh thu/Tờ khai thuế năm - Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất là Tờ khai thuế theo Mẫu số 02/CNKD-TNCN-QTT ban hành kèm theo Thông tư 18/2026/TT-BTC . >>> Tải về Mẫu số 02/CNKD-TNCN-QTT Tờ khai quyết toán thuế thu nhập cá nhân Trên đây là nội dung về ""Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?"" Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026? Địa điểm khai nộp thuế đối với hộ kinh doanh, CNKD được quy định như thế nào? Tại khoản 4 Điều 8 Nghị định 68/2026/NĐ-CP hướng dẫn địa điểm khai nộp thuế đối với hộ kinh doanh, cá nhân kinh doanh như sau: - Hộ kinh doanh, cá nhân kinh doanh nộp hồ sơ khai thuế bằng phương thức điện tử. Trường hợp người nộp thuế thuộc đối tượng có hoàn cảnh đặc biệt, bao gồm người cao tuổi, người khuyết tật, người thuộc diện bảo trợ xã hội, người cư trú tại địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn hoặc thuộc trường hợp bất khả kháng khác, không thể thực hiện giao dịch điện tử thì nộp hồ sơ trực tiếp hoặc gửi hồ sơ qua dịch vụ bưu chính đến Trung tâm Phục vụ hành chính công cấp xã; - Hộ kinh doanh, cá nhân kinh doanh bao gồm cả kinh doanh thương mại điện tử có nhiều địa điểm kinh doanh (cửa hàng) hoạt động trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các địa điểm kinh doanh trên 01 hồ sơ khai thuế để nộp cho cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh được xác định là địa điểm ghi trên giấy chứng nhận đăng ký kinh doanh đối với hộ kinh doanh hoặc trên tờ khai đăng ký thuế đối với cá nhân kinh doanh. Hộ kinh doanh, cá nhân kinh doanh thực hiện nộp thuế cho từng địa điểm kinh doanh. Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) doanh thu tính thuế thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu và số thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp theo từng địa điểm kinh doanh. Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) thuế suất thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu từng địa điểm kinh doanh và thực hiện nộp thuế giá trị gia tăng theo từng địa điểm kinh doanh, nộp thuế thu nhập cá nhân tại trụ sở chính; - Đối với hộ kinh doanh, cá nhân kinh doanh chỉ có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số và không có địa điểm kinh doanh thì thực hiện kê khai, nộp thuế tại cơ quan thuế quản lý địa bàn nơi hộ kinh doanh, cá nhân kinh doanh cư trú: nơi ở hiện tại; nơi tạm trú hoặc nơi thường trú; - Cá nhân có hoạt động cho thuê bất động sản thực hiện khai thuế giá trị gia tăng, thuế thu nhập cá nhân và gửi hồ sơ khai thuế cho cơ quan thuế nơi có bất động sản cho thuê. Cá nhân có nhiều bất động sản cho thuê trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các bất động sản trên 01 hồ sơ khai thuế và lựa chọn 01 cơ quan thuế nơi có bất động sản cho thuê để nộp hồ sơ khai thuế trừ trường hợp tổ chức đi thuê khai thuế thay, nộp thuế thay. Cá nhân thực hiện kê khai doanh thu, thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp và nộp thuế theo từng địa điểm nơi có bất động sản cho thuê; - Thông báo địa điểm kinh doanh Hộ kinh doanh, cá nhân kinh doanh có địa điểm kinh doanh ngoài trụ sở chính thì thực hiện thông báo địa điểm kinh doanh với cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày làm việc kể từ ngày địa điểm kinh doanh đi vào hoạt động theo mẫu do Bộ trưởng Bộ Tài chính quy định. Trường hợp hộ kinh doanh, cá nhân kinh doanh thay đổi thông tin, tạm ngừng, chấm dứt hoạt động đối với địa điểm kinh doanh thì thực hiện thông báo đến cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày làm việc kể từ ngày thay đổi thông tin, tạm ngừng, chấm dứt hoạt động theo quy định của Bộ trưởng Bộ Tài chính. Phương pháp tính thuế TNCN đối với hộ kinh doanh mới nhất chi tiết ra sao? Theo khoản 5 Điều 4 Nghị định 68/2026/NĐ-CP (có cụm từ bị sửa đổi bởi khoản 1 Điều 1 Nghị định 141/2026/NĐ-CP ) quy định phương pháp tính thuế TNCN như sau: (1) Phương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 3 Điều 7 Luật Thuế thu nhập cá nhân 2025 (2) Phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 03 tỷ đồng và trường hợp cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng lựa chọn phương pháp này. Thu nhập tính thuế được xác định bằng doanh thu của hàng hóa, dịch vụ bán ra trừ (-) chi phí liên quan đến hoạt động sản xuất, kinh doanh trong kỳ tính thuế. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 2 Điều 7 Luật Thuế thu nhập cá nhân 2025 Lưu ý: Doanh thu, chi phí xác định theo quy định tại Điều 5, Điều 6 Nghị định 68/2026/NĐ-CP Ngoài ra, trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu trên 03 tỷ đồng hoặc có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất thì thực hiện ổn định phương pháp tính thuế trong 02 năm liên tục kể từ năm đầu tiên áp dụng. Trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế, nếu hết năm xác định doanh thu thực tế năm trên 03 tỷ đồng thì từ năm tiếp theo phải chuyển sang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất.","Dựa trên nội dung bài viết sau, hãy thực hiện 3 nhiệm vụ **theo đúng thứ tự** và **mỗi nhiệm vụ chỉ trả về 1 giá trị**, không giải thích thêm, và trả về duy nhất **một object JSON** theo định dạng:
+
+{
+  ""title"": ""Title tối ưu SEO"",
+  ""slug"": ""Slug chuẩn SEO"",
+  ""focus_keyphrase"": ""Focus keyphrase tối ưu""
+}
+
+---
+
+🎯 **[1] TẠO TITLE TỐI ƯU SEO**
+
+Sử dụng tất cả công cụ phân tích từ khóa có thể truy cập (Google Trends, Google Keyword Planner, KeywordTool.io, Ahrefs, Semrush, Google Analytics nếu có) để chọn **title tối ưu** cho bài viết trong lĩnh vực pháp lý / luật Việt Nam, phạm vi tìm kiếm Việt Nam, 12 tháng gần nhất.
+
+Quy tắc:
+- Ưu tiên từ khóa có search volume >10.000, nếu không có thì vẫn lấy dưới 10.000.
+- Title là **câu hỏi kết thúc bằng ?**
+- KHÔNG sử dụng dấu hai chấm “:”.
+- KHÔNG viết tắt.
+- Nếu cần thay dấu hai chấm → dùng từ nối.
+
+---
+
+🎯 **[2] TẠO SLUG CHUẨN SEO**
+
+Sử dụng dữ liệu từ khóa như trên để chọn **slug chuẩn SEO** cho bài viết.
+
+Quy tắc:
+- Chữ thường.
+- Không chứa /
+- Không viết tắt.
+- Các từ nối bằng dấu ""-"".
+- Dựa vào từ khóa có search volume cao nhất phù hợp nội dung.
+
+---
+
+🎯 **[3] TẠO FOCUS KEYPHRASE**
+
+Sử dụng các công cụ phân tích từ khóa tương tự để chọn **focus keyphrase tối ưu** cho bài viết.
+
+Quy tắc:
+- Dùng cụm từ chính xác, sát nội dung nhất.
+- Không dấu chấm, không ký tự lạ.
+- Không viết tắt.
+- Ưu tiên search volume >10.000, nếu không có thì chọn từ liên quan nhất.
+- BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown ```json
+- KHÔNG thêm bất kỳ chữ nào ngoài khối Code Block markdown
+- KHÔNG giải thích, KHÔNG bình luận
+---
+
+📌 **Cuối prompt, đặt nội dung bài viết tại đây:**
+
+
+Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?","Bạn là hệ thống xử lý nội dung pháp luật và tối ưu SEO cho website pháp lý Việt Nam, với văn phong chuẩn mực, chặt chẽ, khách quan theo phong cách luật sư Việt Nam.
+Nhiệm vụ của bạn: Dựa hoàn toàn trên nội dung gốc do tôi cung cấp, tiến hành biên tập, diễn giải lại nội dung nhằm:
+Chuẩn SEO,
+Không trùng lặp văn bản trên Google,
+Giữ nguyên bản chất pháp lý, căn cứ và thuật ngữ pháp luật.
+Bạn phải trả về DUY NHẤT 1 object JSON theo đúng cấu trúc bên dưới.
+=========================
+YÊU CẦU CHO body (HTML sạch – nội dung pháp luật)
+=========================
+KHÔNG sao chép nguyên văn nội dung gốc; phải viết lại bằng ngôn ngữ pháp lý, bảo đảm:
+Không làm sai lệch nội dung, tinh thần và căn cứ pháp luật.
+Phù hợp bài viết phân tích, tư vấn pháp luật tại Việt Nam.
+Văn phong:
+Trung lập, khách quan, chính xác.
+Chuẩn phong cách luật sư Việt Nam.
+Chỉ tạo HTML phần body, KHÔNG tạo <html>, <head>, <body>.
+Chỉ sử dụng các thẻ HTML sau:
+<h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>, <a>.
+GIỮ NGUYÊN TOÀN BỘ HYPERLINK:
+Giữ nguyên tất cả thẻ <a>, thuộc tính href, anchor text và vị trí liên kết.
+KHÔNG xóa, KHÔNG chỉnh sửa, KHÔNG thêm hyperlink mới dưới bất kỳ hình thức nào.
+Làm nổi bật thông tin pháp lý quan trọng bằng <strong> hoặc <em> (điều luật, mốc thời gian, nghĩa vụ, quyền lợi).
+Xóa toàn bộ ký hiệu * hoặc **.
+KHÔNG sử dụng <blockquote>.
+Giữ nguyên toàn bộ hình ảnh, video, iframe (nếu có).
+Chuẩn hóa hình ảnh:
+Chuyển data-src, data-original, lazyload, srcset → src chuẩn.
+Giữ nguyên alt, title, caption.
+KHÔNG thêm:
+<title>, <meta>,
+nội dung ngoài phạm vi bài gốc,
+liên kết ngoài không có sẵn trong nội dung đầu vào.
+KHÔNG trả về markdown trong nội dung body.
+=========================
+YÊU CẦU CHO meta (Meta Description)
+=========================
+Độ dài 150–160 ký tự.
+Tóm lược chính xác nội dung pháp lý của bài viết.
+Văn phong báo chí pháp luật, rõ ràng, súc tích.
+KHÔNG thêm tiêu đề, nhãn, ký hiệu hoặc dấu ngoặc.
+=========================
+YÊU CẦU CHO tags (SEO Tags)
+=========================
+Từ khóa SEO liên quan trực tiếp đến nội dung pháp luật.
+Chữ thường, không viết tắt.
+Có thể bao gồm: tên luật, lĩnh vực pháp luật, hành vi pháp lý, quyền và nghĩa vụ pháp lý.
+Chỉ là từ khóa, không mô tả.
+Phân tách bằng dấu phẩy.
+Trả về đúng 1 dòng.
+=========================
+ĐỊNH DẠNG ĐẦU RA (BẮT BUỘC)
+=========================
+Trả về DUY NHẤT 1 object JSON.
+BẮT BUỘC bọc toàn bộ JSON trong khối Code Block markdown:
+{
+  ""body"": """",
+  ""meta"": """",
+  ""tags"": """"
+}
+KHÔNG thêm bất kỳ nội dung nào ngoài khối Code Block.
+KHÔNG giải thích, KHÔNG bình luận.
+=========================
+NỘI DUNG GỐC
+=========================
+
+
+<header>
+<h1 class=""h3 fw-bold title"" style=""color:black"">Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</h1>
+</header>
+<section class=""news-content"" id=""news-content"">
+<strong class=""d-block mt-3 mb-3 sapo"">
+                                Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD từ ngày 13/5/2026 được quy định tại Thông tư 50/2026/TT-BTC Sửa đổi, bổ sung một số điều của Thông tư 18/2026/TT-BTC quy định về hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh.
+                            </strong>
+<div class=""accordion muc-luc"" id=""accordionMucLuc"">
+<div class=""accordion-item"">
+<div class=""accordion-header"" id=""headingOneMucLuc"">
+<button aria-controls=""collapseOneMucLuc"" aria-expanded=""true"" class=""accordion-button p-2 pt-3 ps-3 title"" data-bs-target=""#collapseOneMucLuc"" data-bs-toggle=""collapse"" type=""button"">
+<div class=""d-flex justify-content-center align-items-center w-100"">
+<img alt=""Mục lục bài viết"" class=""me-2 img-muc-luc"" height=""13"" src=""https://cdn.thuvienphapluat.vn/images/mluc.png"" width=""15""/>
+                            Nội dung chính
+                        </div>
+</button>
+</div>
+<div aria-labelledby=""headingOneMucLuc"" class=""accordion-collapse collapse show"" data-bs-parent=""#accordionMucLuc"" id=""collapseOneMucLuc"">
+<div class=""accordion-body p-0 ps-3 pb-3"">
+<ul>
+<li>
+<a class=""ps-0"" href=""#cap-nhat-mau-ho-so-de-nghi-hoan-thue-nop-thua-doi-voi-ho-kinh-doanh-cnkd-moi-nhat-tu-ngay-1352026-0""><strong style=""font-size: 12pt;"">Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#dia-diem-khai-nop-thue-doi-voi-ho-kinh-doanh-cnkd-duoc-quy-dinh-nhu-the-nao-1""><strong style=""font-size: 12pt;"">Địa điểm khai nộp thuế đối với hộ kinh doanh, CNKD được quy định như thế nào?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#phuong-phap-tinh-thue-tncn-doi-voi-ho-kinh-doanh-moi-nhat-chi-tiet-ra-sao-2""><strong style=""font-size: 12pt;"">Phương pháp tính thuế TNCN đối với hộ kinh doanh mới nhất chi tiết ra sao?</strong></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=""TVPL_QC_VT3-1"" style=""padding:0px"">
+</div>
+<h2 id=""cap-nhat-mau-ho-so-de-nghi-hoan-thue-nop-thua-doi-voi-ho-kinh-doanh-cnkd-moi-nhat-tu-ngay-1352026-0""><strong style=""font-size: 12pt;"">Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</strong></h2><p>Vừa qua, Bộ trưởng Bộ Tài chính đã ban hành <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-705455.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC </a>sửa đổi, bổ sung một số điều của <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a> quy định về hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh.</p><p>Theo đó, tại Điều 2 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-quan-ly-thue-ho-kinh-doanh-705455.aspx?anchor=dieu_2"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC</a> sửa đổi, bổ sung khoản 2 Điều 5 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx?anchor=dieu_5"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a> như sau:</p><blockquote><strong><em>Hồ sơ đề nghị hoàn thuế nộp thừa</em></strong></blockquote><blockquote><em>1. Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế theo Mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư này.</em></blockquote><blockquote><em>2. Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất là Tờ khai thuế theo Mẫu số 02/CNKD-TNCN-QTT ban hành kèm theo Thông tư này.</em></blockquote><p>Và Điều 3 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-quan-ly-thue-ho-kinh-doanh-705455.aspx?anchor=dieu_3"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC</a> quy định về việc thay thế một số mẫu biểu của <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a> như sau:</p><blockquote><strong><em>Thay thế mẫu biểu</em></strong></blockquote><blockquote><em>Thay thế Mẫu số 01/TKN-CNKD, Mẫu số 01/CNKD, Mẫu số 01/BĐS, Mẫu số 02/BK-KTBĐS theo danh mục mẫu biểu ban hành kèm theo Thông tư số 18/2026/TT-BTC bằng Mẫu số 01/TKN-CNKD, Mẫu số 01/CNKD, Mẫu số 01/BĐS, Mẫu số 02/BK-KTBĐS ban hành kèm theo Thông tư này.</em></blockquote><p><strong style=""color: rgb(255, 0, 0);"">Như vậy, hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD từ ngày 13/5/2026 như sau:</strong></p><p>- Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế theo Mẫu số 01/TKN-CNKD ban hành kèm theo <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-quan-ly-thue-ho-kinh-doanh-705455.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC</a>.</p><p><strong><em>&gt;&gt;&gt; <a href=""https://cdn.thuvienphapluat.vn/phap-luat/2022-2/DTTM/15-5-2026/mau-01-TKN-CNKD.doc"" rel=""noopener noreferrer"" target=""_blank"">Tải về</a> Mẫu số 01/TKN-CNKD Thông báo doanh thu/Tờ khai thuế năm</em></strong></p><p>- Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất là Tờ khai thuế theo Mẫu số 02/CNKD-TNCN-QTT ban hành kèm theo <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a>.</p><p><strong><em>&gt;&gt;&gt; <a href=""https://cdn.thuvienphapluat.vn/phap-luat/2022-2/DTTM/15-5-2026/02-CNKD-TNCN-QTT.doc"" rel=""noopener noreferrer"" target=""_blank"">Tải về</a> Mẫu số 02/CNKD-TNCN-QTT Tờ khai quyết toán thuế thu nhập cá nhân</em></strong></p><p style=""text-align: right;""><em>Trên đây là nội dung về ""Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?""</em></p><p><img alt=""Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?"" src=""https://cdn.thuvienphapluat.vn/phap-luat/2022-2/DTTM/15-5-2026/ho-so-de-nghi-hoan-thue-nop-thua-doi-voi-ho-kinh-doanh-cnkd.jpg""/></p><p style=""text-align: center;""><em>Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</em></p><h2 id=""dia-diem-khai-nop-thue-doi-voi-ho-kinh-doanh-cnkd-duoc-quy-dinh-nhu-the-nao-1""><strong style=""font-size: 12pt;"">Địa điểm khai nộp thuế đối với hộ kinh doanh, CNKD được quy định như thế nào?</strong></h2><p>Tại khoản 4 Điều 8 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-va-quan-ly-thue-doi-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-685358.aspx?anchor=dieu_8"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 68/2026/NĐ-CP</a> hướng dẫn địa điểm khai nộp thuế đối với hộ kinh doanh, cá nhân kinh doanh như sau:</p><p>- Hộ kinh doanh, cá nhân kinh doanh nộp hồ sơ khai thuế bằng phương thức điện tử.</p><p>Trường hợp người nộp thuế thuộc đối tượng có hoàn cảnh đặc biệt, bao gồm người cao tuổi, người khuyết tật, người thuộc diện bảo trợ xã hội, người cư trú tại địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn hoặc thuộc trường hợp bất khả kháng khác, không thể thực hiện giao dịch điện tử thì nộp hồ sơ trực tiếp hoặc gửi hồ sơ qua dịch vụ bưu chính đến Trung tâm Phục vụ hành chính công cấp xã;</p><p>- Hộ kinh doanh, cá nhân kinh doanh bao gồm cả kinh doanh thương mại điện tử có nhiều địa điểm kinh doanh (cửa hàng) hoạt động trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các địa điểm kinh doanh trên 01 hồ sơ khai thuế để nộp cho cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh được xác định là địa điểm ghi trên giấy chứng nhận đăng ký kinh doanh đối với hộ kinh doanh hoặc trên tờ khai đăng ký thuế đối với cá nhân kinh doanh. Hộ kinh doanh, cá nhân kinh doanh thực hiện nộp thuế cho từng địa điểm kinh doanh.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) doanh thu tính thuế thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu và số thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp theo từng địa điểm kinh doanh.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) thuế suất thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu từng địa điểm kinh doanh và thực hiện nộp thuế giá trị gia tăng theo từng địa điểm kinh doanh, nộp thuế thu nhập cá nhân tại trụ sở chính;</p><p>- Đối với hộ kinh doanh, cá nhân kinh doanh chỉ có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số và không có địa điểm kinh doanh thì thực hiện kê khai, nộp thuế tại cơ quan thuế quản lý địa bàn nơi hộ kinh doanh, cá nhân kinh doanh cư trú: nơi ở hiện tại; nơi tạm trú hoặc nơi thường trú;</p><p>- Cá nhân có hoạt động cho thuê bất động sản thực hiện khai thuế giá trị gia tăng, thuế thu nhập cá nhân và gửi hồ sơ khai thuế cho cơ quan thuế nơi có bất động sản cho thuê.</p><p>Cá nhân có nhiều bất động sản cho thuê trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các bất động sản trên 01 hồ sơ khai thuế và lựa chọn 01 cơ quan thuế nơi có bất động sản cho thuê để nộp hồ sơ khai thuế trừ trường hợp tổ chức đi thuê khai thuế thay, nộp thuế thay. Cá nhân thực hiện kê khai doanh thu, thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp và nộp thuế theo từng địa điểm nơi có bất động sản cho thuê;</p><p>- Thông báo địa điểm kinh doanh</p><p>Hộ kinh doanh, cá nhân kinh doanh có địa điểm kinh doanh ngoài trụ sở chính thì thực hiện thông báo địa điểm kinh doanh với cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày làm việc kể từ ngày địa điểm kinh doanh đi vào hoạt động theo mẫu do Bộ trưởng Bộ Tài chính quy định.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh thay đổi thông tin, tạm ngừng, chấm dứt hoạt động đối với địa điểm kinh doanh thì thực hiện thông báo đến cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày làm việc kể từ ngày thay đổi thông tin, tạm ngừng, chấm dứt hoạt động theo quy định của Bộ trưởng Bộ Tài chính.</p><h2 id=""phuong-phap-tinh-thue-tncn-doi-voi-ho-kinh-doanh-moi-nhat-chi-tiet-ra-sao-2""><strong style=""font-size: 12pt;"">Phương pháp tính thuế TNCN đối với hộ kinh doanh mới nhất chi tiết ra sao?</strong></h2><p>Theo khoản 5 Điều 4 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-va-quan-ly-thue-doi-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-685358.aspx?anchor=dieu_4"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 68/2026/NĐ-CP</a> (có cụm từ bị sửa đổi bởi khoản 1 Điều 1 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-141-2026-ND-CP-sua-doi-Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-ho-ca-nhan-kinh-doanh-703882.aspx?anchor=dieu_1"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 141/2026/NĐ-CP</a>) quy định phương pháp tính thuế TNCN như sau:</p><p><strong>(1)</strong> Phương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 3 Điều 7 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Thue-thu-nhap-ca-nhan-2025-so-109-2025-QH15-665870.aspx?anchor=dieu_7"" rel=""noopener noreferrer"" target=""_blank"">Luật Thuế thu nhập cá nhân 2025</a></p><p><strong>(2)</strong> Phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 03 tỷ đồng và trường hợp cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng lựa chọn phương pháp này.</p><p>Thu nhập tính thuế được xác định bằng doanh thu của hàng hóa, dịch vụ bán ra trừ (-) chi phí liên quan đến hoạt động sản xuất, kinh doanh trong kỳ tính thuế. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 2 Điều 7 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Thue-thu-nhap-ca-nhan-2025-so-109-2025-QH15-665870.aspx?anchor=dieu_7"" rel=""noopener noreferrer"" target=""_blank"">Luật Thuế thu nhập cá nhân 2025</a></p><p>Lưu ý: Doanh thu, chi phí xác định theo quy định tại Điều 5, Điều 6 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-va-quan-ly-thue-doi-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-685358.aspx?anchor=dieu_4"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 68/2026/NĐ-CP</a></p><p>Ngoài ra, trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu trên 03 tỷ đồng hoặc có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất thì thực hiện ổn định phương pháp tính thuế trong 02 năm liên tục kể từ năm đầu tiên áp dụng.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế, nếu hết năm xác định doanh thu thực tế năm trên 03 tỷ đồng thì từ năm tiếp theo phải chuyển sang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất.</p>
+</section>
+<div class=""TVPL_QC_VT3_5"" style=""padding:0px"">
+</div>","<header>
+<h1 class=""h3 fw-bold title"" style=""color:black"">Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</h1>
+</header>
+<section class=""news-content"" id=""news-content"">
+<strong class=""d-block mt-3 mb-3 sapo"">
+                                Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD từ ngày 13/5/2026 được quy định tại Thông tư 50/2026/TT-BTC Sửa đổi, bổ sung một số điều của Thông tư 18/2026/TT-BTC quy định về hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh.
+                            </strong>
+<div class=""accordion muc-luc"" id=""accordionMucLuc"">
+<div class=""accordion-item"">
+<div class=""accordion-header"" id=""headingOneMucLuc"">
+<button aria-controls=""collapseOneMucLuc"" aria-expanded=""true"" class=""accordion-button p-2 pt-3 ps-3 title"" data-bs-target=""#collapseOneMucLuc"" data-bs-toggle=""collapse"" type=""button"">
+<div class=""d-flex justify-content-center align-items-center w-100"">
+<img alt=""Mục lục bài viết"" class=""me-2 img-muc-luc"" height=""13"" src=""https://cdn.thuvienphapluat.vn/images/mluc.png"" width=""15""/>
+                            Nội dung chính
+                        </div>
+</button>
+</div>
+<div aria-labelledby=""headingOneMucLuc"" class=""accordion-collapse collapse show"" data-bs-parent=""#accordionMucLuc"" id=""collapseOneMucLuc"">
+<div class=""accordion-body p-0 ps-3 pb-3"">
+<ul>
+<li>
+<a class=""ps-0"" href=""#cap-nhat-mau-ho-so-de-nghi-hoan-thue-nop-thua-doi-voi-ho-kinh-doanh-cnkd-moi-nhat-tu-ngay-1352026-0""><strong style=""font-size: 12pt;"">Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#dia-diem-khai-nop-thue-doi-voi-ho-kinh-doanh-cnkd-duoc-quy-dinh-nhu-the-nao-1""><strong style=""font-size: 12pt;"">Địa điểm khai nộp thuế đối với hộ kinh doanh, CNKD được quy định như thế nào?</strong></a>
+</li>
+<li>
+<a class=""ps-0"" href=""#phuong-phap-tinh-thue-tncn-doi-voi-ho-kinh-doanh-moi-nhat-chi-tiet-ra-sao-2""><strong style=""font-size: 12pt;"">Phương pháp tính thuế TNCN đối với hộ kinh doanh mới nhất chi tiết ra sao?</strong></a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class=""TVPL_QC_VT3-1"" style=""padding:0px"">
+</div>
+<h2 id=""cap-nhat-mau-ho-so-de-nghi-hoan-thue-nop-thua-doi-voi-ho-kinh-doanh-cnkd-moi-nhat-tu-ngay-1352026-0""><strong style=""font-size: 12pt;"">Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</strong></h2><p>Vừa qua, Bộ trưởng Bộ Tài chính đã ban hành <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-705455.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC </a>sửa đổi, bổ sung một số điều của <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a> quy định về hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh.</p><p>Theo đó, tại Điều 2 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-quan-ly-thue-ho-kinh-doanh-705455.aspx?anchor=dieu_2"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC</a> sửa đổi, bổ sung khoản 2 Điều 5 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx?anchor=dieu_5"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a> như sau:</p><blockquote><strong><em>Hồ sơ đề nghị hoàn thuế nộp thừa</em></strong></blockquote><blockquote><em>1. Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế theo Mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư này.</em></blockquote><blockquote><em>2. Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất là Tờ khai thuế theo Mẫu số 02/CNKD-TNCN-QTT ban hành kèm theo Thông tư này.</em></blockquote><p>Và Điều 3 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-quan-ly-thue-ho-kinh-doanh-705455.aspx?anchor=dieu_3"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC</a> quy định về việc thay thế một số mẫu biểu của <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a> như sau:</p><blockquote><strong><em>Thay thế mẫu biểu</em></strong></blockquote><blockquote><em>Thay thế Mẫu số 01/TKN-CNKD, Mẫu số 01/CNKD, Mẫu số 01/BĐS, Mẫu số 02/BK-KTBĐS theo danh mục mẫu biểu ban hành kèm theo Thông tư số 18/2026/TT-BTC bằng Mẫu số 01/TKN-CNKD, Mẫu số 01/CNKD, Mẫu số 01/BĐS, Mẫu số 02/BK-KTBĐS ban hành kèm theo Thông tư này.</em></blockquote><p><strong style=""color: rgb(255, 0, 0);"">Như vậy, hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD từ ngày 13/5/2026 như sau:</strong></p><p>- Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế theo Mẫu số 01/TKN-CNKD ban hành kèm theo <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-50-2026-TT-BTC-sua-doi-Thong-tu-18-2026-TT-BTC-quan-ly-thue-ho-kinh-doanh-705455.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 50/2026/TT-BTC</a>.</p><p><strong><em>&gt;&gt;&gt; <a href=""https://cdn.thuvienphapluat.vn/phap-luat/2022-2/DTTM/15-5-2026/mau-01-TKN-CNKD.doc"" rel=""noopener noreferrer"" target=""_blank"">Tải về</a> Mẫu số 01/TKN-CNKD Thông báo doanh thu/Tờ khai thuế năm</em></strong></p><p>- Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất là Tờ khai thuế theo Mẫu số 02/CNKD-TNCN-QTT ban hành kèm theo <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Thong-tu-18-2026-TT-BTC-ho-so-thu-tuc-quan-ly-thue-ho-kinh-doanh-ca-nhan-kinh-doanh-684668.aspx"" rel=""noopener noreferrer"" target=""_blank"">Thông tư 18/2026/TT-BTC</a>.</p><p><strong><em>&gt;&gt;&gt; <a href=""https://cdn.thuvienphapluat.vn/phap-luat/2022-2/DTTM/15-5-2026/02-CNKD-TNCN-QTT.doc"" rel=""noopener noreferrer"" target=""_blank"">Tải về</a> Mẫu số 02/CNKD-TNCN-QTT Tờ khai quyết toán thuế thu nhập cá nhân</em></strong></p><p style=""text-align: right;""><em>Trên đây là nội dung về ""Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?""</em></p><p><img alt=""Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?"" src=""https://cdn.thuvienphapluat.vn/phap-luat/2022-2/DTTM/15-5-2026/ho-so-de-nghi-hoan-thue-nop-thua-doi-voi-ho-kinh-doanh-cnkd.jpg""/></p><p style=""text-align: center;""><em>Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?</em></p><h2 id=""dia-diem-khai-nop-thue-doi-voi-ho-kinh-doanh-cnkd-duoc-quy-dinh-nhu-the-nao-1""><strong style=""font-size: 12pt;"">Địa điểm khai nộp thuế đối với hộ kinh doanh, CNKD được quy định như thế nào?</strong></h2><p>Tại khoản 4 Điều 8 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-va-quan-ly-thue-doi-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-685358.aspx?anchor=dieu_8"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 68/2026/NĐ-CP</a> hướng dẫn địa điểm khai nộp thuế đối với hộ kinh doanh, cá nhân kinh doanh như sau:</p><p>- Hộ kinh doanh, cá nhân kinh doanh nộp hồ sơ khai thuế bằng phương thức điện tử.</p><p>Trường hợp người nộp thuế thuộc đối tượng có hoàn cảnh đặc biệt, bao gồm người cao tuổi, người khuyết tật, người thuộc diện bảo trợ xã hội, người cư trú tại địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn hoặc thuộc trường hợp bất khả kháng khác, không thể thực hiện giao dịch điện tử thì nộp hồ sơ trực tiếp hoặc gửi hồ sơ qua dịch vụ bưu chính đến Trung tâm Phục vụ hành chính công cấp xã;</p><p>- Hộ kinh doanh, cá nhân kinh doanh bao gồm cả kinh doanh thương mại điện tử có nhiều địa điểm kinh doanh (cửa hàng) hoạt động trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các địa điểm kinh doanh trên 01 hồ sơ khai thuế để nộp cho cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh được xác định là địa điểm ghi trên giấy chứng nhận đăng ký kinh doanh đối với hộ kinh doanh hoặc trên tờ khai đăng ký thuế đối với cá nhân kinh doanh. Hộ kinh doanh, cá nhân kinh doanh thực hiện nộp thuế cho từng địa điểm kinh doanh.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) doanh thu tính thuế thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu và số thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp theo từng địa điểm kinh doanh.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) thuế suất thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu từng địa điểm kinh doanh và thực hiện nộp thuế giá trị gia tăng theo từng địa điểm kinh doanh, nộp thuế thu nhập cá nhân tại trụ sở chính;</p><p>- Đối với hộ kinh doanh, cá nhân kinh doanh chỉ có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số và không có địa điểm kinh doanh thì thực hiện kê khai, nộp thuế tại cơ quan thuế quản lý địa bàn nơi hộ kinh doanh, cá nhân kinh doanh cư trú: nơi ở hiện tại; nơi tạm trú hoặc nơi thường trú;</p><p>- Cá nhân có hoạt động cho thuê bất động sản thực hiện khai thuế giá trị gia tăng, thuế thu nhập cá nhân và gửi hồ sơ khai thuế cho cơ quan thuế nơi có bất động sản cho thuê.</p><p>Cá nhân có nhiều bất động sản cho thuê trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các bất động sản trên 01 hồ sơ khai thuế và lựa chọn 01 cơ quan thuế nơi có bất động sản cho thuê để nộp hồ sơ khai thuế trừ trường hợp tổ chức đi thuê khai thuế thay, nộp thuế thay. Cá nhân thực hiện kê khai doanh thu, thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp và nộp thuế theo từng địa điểm nơi có bất động sản cho thuê;</p><p>- Thông báo địa điểm kinh doanh</p><p>Hộ kinh doanh, cá nhân kinh doanh có địa điểm kinh doanh ngoài trụ sở chính thì thực hiện thông báo địa điểm kinh doanh với cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày làm việc kể từ ngày địa điểm kinh doanh đi vào hoạt động theo mẫu do Bộ trưởng Bộ Tài chính quy định.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh thay đổi thông tin, tạm ngừng, chấm dứt hoạt động đối với địa điểm kinh doanh thì thực hiện thông báo đến cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày làm việc kể từ ngày thay đổi thông tin, tạm ngừng, chấm dứt hoạt động theo quy định của Bộ trưởng Bộ Tài chính.</p><h2 id=""phuong-phap-tinh-thue-tncn-doi-voi-ho-kinh-doanh-moi-nhat-chi-tiet-ra-sao-2""><strong style=""font-size: 12pt;"">Phương pháp tính thuế TNCN đối với hộ kinh doanh mới nhất chi tiết ra sao?</strong></h2><p>Theo khoản 5 Điều 4 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-va-quan-ly-thue-doi-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-685358.aspx?anchor=dieu_4"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 68/2026/NĐ-CP</a> (có cụm từ bị sửa đổi bởi khoản 1 Điều 1 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-141-2026-ND-CP-sua-doi-Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-ho-ca-nhan-kinh-doanh-703882.aspx?anchor=dieu_1"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 141/2026/NĐ-CP</a>) quy định phương pháp tính thuế TNCN như sau:</p><p><strong>(1)</strong> Phương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 3 Điều 7 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Thue-thu-nhap-ca-nhan-2025-so-109-2025-QH15-665870.aspx?anchor=dieu_7"" rel=""noopener noreferrer"" target=""_blank"">Luật Thuế thu nhập cá nhân 2025</a></p><p><strong>(2)</strong> Phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 03 tỷ đồng và trường hợp cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng lựa chọn phương pháp này.</p><p>Thu nhập tính thuế được xác định bằng doanh thu của hàng hóa, dịch vụ bán ra trừ (-) chi phí liên quan đến hoạt động sản xuất, kinh doanh trong kỳ tính thuế. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 2 Điều 7 <a href=""https://thuvienphapluat.vn/van-ban/Thue-Phi-Le-Phi/Luat-Thue-thu-nhap-ca-nhan-2025-so-109-2025-QH15-665870.aspx?anchor=dieu_7"" rel=""noopener noreferrer"" target=""_blank"">Luật Thuế thu nhập cá nhân 2025</a></p><p>Lưu ý: Doanh thu, chi phí xác định theo quy định tại Điều 5, Điều 6 <a href=""https://thuvienphapluat.vn/van-ban/Doanh-nghiep/Nghi-dinh-68-2026-ND-CP-chinh-sach-thue-va-quan-ly-thue-doi-voi-ho-kinh-doanh-ca-nhan-kinh-doanh-685358.aspx?anchor=dieu_4"" rel=""noopener noreferrer"" target=""_blank"">Nghị định 68/2026/NĐ-CP</a></p><p>Ngoài ra, trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu trên 03 tỷ đồng hoặc có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất thì thực hiện ổn định phương pháp tính thuế trong 02 năm liên tục kể từ năm đầu tiên áp dụng.</p><p>Trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế, nếu hết năm xác định doanh thu thực tế năm trên 03 tỷ đồng thì từ năm tiếp theo phải chuyển sang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất.</p>
+</section>
+<div class=""TVPL_QC_VT3_5"" style=""padding:0px"">
+</div>","Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026? Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD từ ngày 13/5/2026 được quy định tại Thông tư 50/2026/TT-BTC Sửa đổi, bổ sung một số điều của Thông tư 18/2026/TT-BTC quy định về hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh. Nội dung chính Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026? Địa điểm khai nộp thuế đối với hộ kinh doanh, CNKD được quy định như thế nào? Phương pháp tính thuế TNCN đối với hộ kinh doanh mới nhất chi tiết ra sao? Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026? Vừa qua, Bộ trưởng Bộ Tài chính đã ban hành Thông tư 50/2026/TT-BTC sửa đổi, bổ sung một số điều của Thông tư 18/2026/TT-BTC quy định về hồ sơ, thủ tục quản lý thuế đối với hộ kinh doanh, cá nhân kinh doanh. Theo đó, tại Điều 2 Thông tư 50/2026/TT-BTC sửa đổi, bổ sung khoản 2 Điều 5 Thông tư 18/2026/TT-BTC như sau: Hồ sơ đề nghị hoàn thuế nộp thừa 1. Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế theo Mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư này. 2. Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất là Tờ khai thuế theo Mẫu số 02/CNKD-TNCN-QTT ban hành kèm theo Thông tư này. Và Điều 3 Thông tư 50/2026/TT-BTC quy định về việc thay thế một số mẫu biểu của Thông tư 18/2026/TT-BTC như sau: Thay thế mẫu biểu Thay thế Mẫu số 01/TKN-CNKD, Mẫu số 01/CNKD, Mẫu số 01/BĐS, Mẫu số 02/BK-KTBĐS theo danh mục mẫu biểu ban hành kèm theo Thông tư số 18/2026/TT-BTC bằng Mẫu số 01/TKN-CNKD, Mẫu số 01/CNKD, Mẫu số 01/BĐS, Mẫu số 02/BK-KTBĐS ban hành kèm theo Thông tư này. Như vậy, hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD từ ngày 13/5/2026 như sau: - Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) với doanh thu tính thuế là Tờ khai thuế theo Mẫu số 01/TKN-CNKD ban hành kèm theo Thông tư 50/2026/TT-BTC . >>> Tải về Mẫu số 01/TKN-CNKD Thông báo doanh thu/Tờ khai thuế năm - Hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) với thuế suất là Tờ khai thuế theo Mẫu số 02/CNKD-TNCN-QTT ban hành kèm theo Thông tư 18/2026/TT-BTC . >>> Tải về Mẫu số 02/CNKD-TNCN-QTT Tờ khai quyết toán thuế thu nhập cá nhân Trên đây là nội dung về ""Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026?"" Cập nhật mẫu hồ sơ đề nghị hoàn thuế nộp thừa đối với hộ kinh doanh, CNKD mới nhất từ ngày 13/5/2026? Địa điểm khai nộp thuế đối với hộ kinh doanh, CNKD được quy định như thế nào? Tại khoản 4 Điều 8 Nghị định 68/2026/NĐ-CP hướng dẫn địa điểm khai nộp thuế đối với hộ kinh doanh, cá nhân kinh doanh như sau: - Hộ kinh doanh, cá nhân kinh doanh nộp hồ sơ khai thuế bằng phương thức điện tử. Trường hợp người nộp thuế thuộc đối tượng có hoàn cảnh đặc biệt, bao gồm người cao tuổi, người khuyết tật, người thuộc diện bảo trợ xã hội, người cư trú tại địa bàn có điều kiện kinh tế - xã hội đặc biệt khó khăn hoặc thuộc trường hợp bất khả kháng khác, không thể thực hiện giao dịch điện tử thì nộp hồ sơ trực tiếp hoặc gửi hồ sơ qua dịch vụ bưu chính đến Trung tâm Phục vụ hành chính công cấp xã; - Hộ kinh doanh, cá nhân kinh doanh bao gồm cả kinh doanh thương mại điện tử có nhiều địa điểm kinh doanh (cửa hàng) hoạt động trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các địa điểm kinh doanh trên 01 hồ sơ khai thuế để nộp cho cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh được xác định là địa điểm ghi trên giấy chứng nhận đăng ký kinh doanh đối với hộ kinh doanh hoặc trên tờ khai đăng ký thuế đối với cá nhân kinh doanh. Hộ kinh doanh, cá nhân kinh doanh thực hiện nộp thuế cho từng địa điểm kinh doanh. Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thuế suất nhân (x) doanh thu tính thuế thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu và số thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp theo từng địa điểm kinh doanh. Trường hợp hộ kinh doanh, cá nhân kinh doanh nộp thuế thu nhập cá nhân theo phương pháp thu nhập tính thuế nhân (x) thuế suất thì hộ kinh doanh, cá nhân kinh doanh kê khai doanh thu từng địa điểm kinh doanh và thực hiện nộp thuế giá trị gia tăng theo từng địa điểm kinh doanh, nộp thuế thu nhập cá nhân tại trụ sở chính; - Đối với hộ kinh doanh, cá nhân kinh doanh chỉ có hoạt động kinh doanh trên nền tảng thương mại điện tử, nền tảng số và không có địa điểm kinh doanh thì thực hiện kê khai, nộp thuế tại cơ quan thuế quản lý địa bàn nơi hộ kinh doanh, cá nhân kinh doanh cư trú: nơi ở hiện tại; nơi tạm trú hoặc nơi thường trú; - Cá nhân có hoạt động cho thuê bất động sản thực hiện khai thuế giá trị gia tăng, thuế thu nhập cá nhân và gửi hồ sơ khai thuế cho cơ quan thuế nơi có bất động sản cho thuê. Cá nhân có nhiều bất động sản cho thuê trên cùng địa bàn một tỉnh, thành phố hoặc khác tỉnh, thành phố, thực hiện khai thuế tổng hợp chung cho các bất động sản trên 01 hồ sơ khai thuế và lựa chọn 01 cơ quan thuế nơi có bất động sản cho thuê để nộp hồ sơ khai thuế trừ trường hợp tổ chức đi thuê khai thuế thay, nộp thuế thay. Cá nhân thực hiện kê khai doanh thu, thuế giá trị gia tăng, thuế thu nhập cá nhân phải nộp và nộp thuế theo từng địa điểm nơi có bất động sản cho thuê; - Thông báo địa điểm kinh doanh Hộ kinh doanh, cá nhân kinh doanh có địa điểm kinh doanh ngoài trụ sở chính thì thực hiện thông báo địa điểm kinh doanh với cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày làm việc kể từ ngày địa điểm kinh doanh đi vào hoạt động theo mẫu do Bộ trưởng Bộ Tài chính quy định. Trường hợp hộ kinh doanh, cá nhân kinh doanh thay đổi thông tin, tạm ngừng, chấm dứt hoạt động đối với địa điểm kinh doanh thì thực hiện thông báo đến cơ quan thuế quản lý trực tiếp trụ sở của hộ kinh doanh, cá nhân kinh doanh trong thời hạn 10 ngày làm việc kể từ ngày thay đổi thông tin, tạm ngừng, chấm dứt hoạt động theo quy định của Bộ trưởng Bộ Tài chính. Phương pháp tính thuế TNCN đối với hộ kinh doanh mới nhất chi tiết ra sao? Theo khoản 5 Điều 4 Nghị định 68/2026/NĐ-CP (có cụm từ bị sửa đổi bởi khoản 1 Điều 1 Nghị định 141/2026/NĐ-CP ) quy định phương pháp tính thuế TNCN như sau: (1) Phương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 3 Điều 7 Luật Thuế thu nhập cá nhân 2025 (2) Phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất áp dụng đối với cá nhân kinh doanh có doanh thu năm trên 03 tỷ đồng và trường hợp cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng lựa chọn phương pháp này. Thu nhập tính thuế được xác định bằng doanh thu của hàng hóa, dịch vụ bán ra trừ (-) chi phí liên quan đến hoạt động sản xuất, kinh doanh trong kỳ tính thuế. Thuế suất thuế thu nhập cá nhân áp dụng theo quy định tại khoản 2 Điều 7 Luật Thuế thu nhập cá nhân 2025 Lưu ý: Doanh thu, chi phí xác định theo quy định tại Điều 5, Điều 6 Nghị định 68/2026/NĐ-CP Ngoài ra, trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu trên 03 tỷ đồng hoặc có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất thì thực hiện ổn định phương pháp tính thuế trong 02 năm liên tục kể từ năm đầu tiên áp dụng. Trường hợp hộ kinh doanh, cá nhân kinh doanh có doanh thu năm trên 01 tỷ đồng đến 03 tỷ đồng đang áp dụng phương pháp tính thuế thu nhập cá nhân theo thuế suất nhân (x) doanh thu tính thuế, nếu hết năm xác định doanh thu thực tế năm trên 03 tỷ đồng thì từ năm tiếp theo phải chuyển sang áp dụng phương pháp tính thuế thu nhập cá nhân theo thu nhập tính thuế nhân (x) thuế suất.",https://thuvienphapluat.vn/phap-luat/ho-tro-phap-luat/cap-nhat-mau-ho-so-de-nghi-hoan-thue-nop-thua-doi-voi-ho-kinh-doanh-cnkd-moi-nhat-tu-ngay-1352026-268890.html

@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GP Farm Q&A</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="chat-panel" aria-label="GP Farm Q&A">
+        <header class="chat-header">
+          <div>
+            <p class="eyebrow">GP Farm</p>
+            <h1>Hỏi đáp sản phẩm</h1>
+          </div>
+          <button id="clear-chat" class="icon-button" type="button" title="Xóa hội thoại" aria-label="Xóa hội thoại">
+            ↺
+          </button>
+        </header>
+
+        <div id="messages" class="messages" aria-live="polite"></div>
+
+        <form id="ask-form" class="composer">
+          <label class="sr-only" for="question">Câu hỏi</label>
+          <textarea
+            id="question"
+            name="question"
+            rows="2"
+            placeholder="Nhập câu hỏi về giá, tồn kho, sản phẩm hoặc gợi ý quà tặng..."
+            autocomplete="off"
+          ></textarea>
+          <button id="send-button" type="submit" aria-label="Gửi câu hỏi">➤</button>
+        </form>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

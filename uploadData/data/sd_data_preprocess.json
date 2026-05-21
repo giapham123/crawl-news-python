@@ -1,0 +1,908 @@
+[
+  {
+    "sheet_id": "dd_cancel_appid_de558570",
+    "topic": "Cancel app ID/Hủy App",
+    "flows": [
+      {
+        "point_id": "06b18b83-0873-4e87-91df-389d6a31cc78",
+        "situation": "1. Chatbot phản hồi chính",
+        "answer": "Anh/chị vui lòng cung cấp MSNV/email của mình và phòng ban mình đang làm việc."
+      },
+      {
+        "point_id": "4b954a37-9513-45f8-bf1a-f5b89037df0d",
+        "situation": "1.1. Nhân viên cung cấp đúng MSNV/email",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp do vấn đề liên quan đến hủy hợp đồng cần Service Desk kiểm tra trong giai đoạn này."
+      },
+      {
+        "point_id": "1d99ac8d-d879-438a-916b-f8fef681a7d3",
+        "situation": "1.2. Nhân viên cung cấp sai  MSNV và email dưới 3 lần",
+        "answer": "Cảm ơn Anh/Chị cung cấp thông tin, thông tin chưa chính xác, Anh/Chị vui lòng kiểm tra thông tin lại  lần nữa để nhận được sự hỗ trợ tiếp."
+      },
+      {
+        "point_id": "24da74fb-55dd-45d7-b24d-9d174fcfdc58",
+        "situation": "1.3.Nhân viên cung cấp sai MSNV/email từ lần 3",
+        "answer": "Rất tiếc, thông tin Anh/Chị cung cấp bên Servie Desk(SD) kiểm tra không chính xác nên xin phép được kết thúc hỗ trợ. Phiền Anh/chị liên hệ lại sau để được hỗ trợ giúp ."
+      },
+      {
+        "point_id": "d03864de-2e23-43a0-9c74-5342cdfa5ed0",
+        "situation": "1.4 Nhân viên phản hồi thiếu thông tin dưới 3 lần",
+        "answer": "Nội dung phản hồi của Anh/Chị chưa đầy đủ, vui lòng cung cấp thêm giúp em {thông tin còn thiếu} ạ."
+      },
+      {
+        "point_id": "34903067-c5d8-45b3-a088-b35d03be9c41",
+        "situation": "1.5 Nhân viên phản hồi thiếu thông tin từ  lần 3",
+        "answer": "Rất tiếc, thông tin Anh/Chị cung cấp không đầy đủ nên xin phép được kết thúc hỗ trợ. Phiền Anh/chị liên hệ lại sau để được hỗ trợ giúp ."
+      },
+      {
+        "point_id": "fbfbb2cf-4eb6-41bf-928c-3fa07d1e8f2d",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question":[
+      "Tôi muốn hủy hồ sơ",
+      "Hỗ trợ hủy hồ sơ treo",
+      "Hủy hồ sơ cũ",
+      "Làm thế nào để hủy app với ID hoặc mã hồ sơ?",
+      "Anh/Chị có thể kiểm tra lại ID hoặc mã hồ sơ không?",
+      "Tôi đã nhập sai ID hồ sơ, làm sao để sửa lại?",
+      "Anh/Chị vui lòng kiểm tra lại MSNV và email được không?",
+      "Tôi có thể hủy app ID không?",
+      "Làm thế nào để hủy app ID?"
+    ]
+  },
+  {
+    "sheet_id": "dd_chuyen_buoc_hs_18576fcd",
+    "topic": "Hồ sơ chuyển bước chậm/đứng bước",
+    "flows": [
+      {
+        "point_id": "4d9350ed-e4a3-44ec-95e5-99a037e3be08",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị vui lòng cung cấp MSNV/email của mình và phòng ban mình đang làm việc."
+      },
+      {
+        "point_id": "ae94e817-ecf9-410e-b986-38fbc564973d",
+        "situation": "1.1.Nhân viên cung cấp đúng MSNV/email",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp do vấn đề liên quan đến hủy hợp đồng cần Service Desk kiểm tra trong giai đoạn này."
+      },
+      {
+        "point_id": "42b0355f-ea26-4110-9296-0e3362e96110",
+        "situation": "1.2. Nhân viên cung cấp sai  MSNV và email dưới 3 lần",
+        "answer": "Cảm ơn Anh/Chị cung cấp thông tin, thông tin chưa chính xác, Anh/Chị vui lòng kiểm tra thông tin lại  lần nữa để nhận được sự hỗ trợ tiếp"
+      },
+      {
+        "point_id": "ca6fe0f9-3b59-4f0d-9c95-38927a1f8820",
+        "situation": "1.3. Nhân viên cung cấp sai MSNV/email  từ 3 lần",
+        "answer": "Rất tiếc, thông tin Anh/Chị cung cấp bên Servie Desk(SD) kiểm tra không chính xác nên xin phép được kết thúc hỗ trợ. Phiền Anh/chị liên hệ lại sau để được hỗ trợ giúp ."
+      },
+      {
+        "point_id": "5ec25575-fdeb-471f-a10d-c0ca31462f94",
+        "situation": "1.4 Nhân viên phản hồi thiếu thông tin dưới 3 lần",
+        "answer": "Nội dung phản hồi của Anh/Chị chưa đầy đủ, vui lòng cung cấp thêm giúp em { thông tin còn thiếu} ạ."
+      },
+      {
+        "point_id": "d2241b9f-5d33-443d-8772-b17d5393f91d",
+        "situation": "1.5 Nhân viên phản hồi thiếu thông tin từ  lần 3",
+        "answer": "Rất tiếc, thông tin Anh/Chị cung cấp không đầy đủ nên xin phép được kết thúc hỗ trợ. Phiền Anh/chị liên hệ lại sau để được hỗ trợ giúp ."
+      },
+      
+      {
+        "point_id": "36ba5bc5-b547-4784-89bd-6bfc6ee21ed7",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Hồ sơ đứng bước phải làm sao",
+      "HS chuyển bước chậm?",
+      "Hồ sơ không giải ngân được phải làm sao?",
+      "HS bị lỗi không thể upload",
+      "Anh/Chị có thể kiểm tra lại MSNV và email không?",
+      "Anh/chị có thể cung cấp lại MSNV chính xác được không?",
+      "Anh/Chị có thể cung cấp thêm chi tiết về hồ sơ chuyển bước chậm không?",
+      "Tại sao hồ sơ chuyển bước của tôi bị chậm?"
+    ]
+  },
+  {
+    "sheet_id": "khong_dang_nhap_duoc_he_thong_78a35ea5",
+    "topic": "Không đăng nhập được hệ thống ABC",
+    "flows": [
+      {
+        "point_id": "73b3891e-7524-403a-8c40-8c4173a8b94b",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị vui lòng cung cấp MSNV or địa chỉ email?"
+      },
+      {
+        "point_id": "2c26e7ed-747b-41f7-b464-0bf27b89cbf2",
+        "situation": "1.1.Nhân viên cung cấp đúng MSNV/email\nEmail đúng định dạng và có đuôi là @mafc.com.vn",
+        "answer": "Anh chị đã được phân quyền/tạo tài khoản vào hệ thống này chưa?"
+      },
+      {
+        "point_id": "0209d0e1-08bb-4eb1-8515-a65536c06be1",
+        "situation": "1.1.1.Nhân viên nhân viên trả lời đã được phân quyền và được tạo tài khoản vào hệ thống",
+        "answer": "Cảm ơn Anh/Chị. Địa chỉ email Anh/Chị cung cấp hợp lệ. Xin Anh/Chị cung cấp thêm thông tin hệ thống mình đang sử dụng để đăng nhập tuy nhiên chưa login vào được? (link)"
+      },
+      {
+        "point_id": "0a624dd1-7dbe-46bb-9516-52387afbabba",
+        "situation": "1.1.1_1.Nhân viên cung cấp được thông tin hệ thống đang sử dụng và chưa login vào được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "215a466b-6a28-4e8b-a06f-27eb8510ad60",
+        "situation": "1.1.2 Nhân viên  trả lời chưa được phân quyền và được tạo tài khoản vào hệ thống",
+        "answer": "Anh/chị vui lòng kiểm tra lại thông tin về hệ thống nếu cần request phân quyền vào hệ thống, dùng đúng tài khoản được cấp riêng cho hệ thống đó nếu có. Trường hợp anh/chị xác định hệ thống không cần phân quyền, hệ thống sẽ chuyển tiếp cho bộ phận hỗ trợ trực tiếp"
+      },
+      {
+        "point_id": "d7f83935-1582-43a3-b5c1-b6db81e3ac2b",
+        "situation": "1.1.2_1 Nhân viên phản hồi đã kiểm tra và đúng hết thông tin",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "5c4378aa-3847-4bee-bbde-e83fe7f8abda",
+        "situation": "1.2. Nhân viên cung cấp sai MSNV/email\n",
+        "answer": "Thông tin anh/chị cung cấp chưa chính xác. Vui lòng kiểm tra lại."
+      },
+      {
+        "point_id": "1941061a-0ad5-499e-aafc-b0c4dfa0dd9a",
+        "situation": "1.3 Nhân viên cung cấp sai MSNV/email quá 2 lần",
+        "answer": "Xin lỗi anh chị thông tin anh chị cung cấp chưa chính xác. Cuộc trò chuyện xin được kết thúc tại đây"
+      },
+      {
+        "point_id": "cab4e5f5-8ceb-4433-af6a-907d1fbc7c80",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Anh/chị có thể cho biết MSNV được không?",
+      "Anh/chị đã nhận được thông báo tạo tài khoản chưa?",
+      "Anh/Chị đang sử dụng thiết bị nào để đăng nhập hệ thống ABC?",
+      "Anh/Chị đang sử dụng phiên bản hệ thống ABC nào?",
+      "Tôi đã được tạo tài khoản vào hệ thống ABC chưa?",
+      "Anh/Chị đã thử đặt lại mật khẩu chưa?",
+      "Anh/chị đã nhập đúng mã số nhân viên chưa?",
+      "Tôi có thể kiểm tra lại MSNV/email của anh chị được không?",
+      "Anh/Chị đã thử đăng nhập lại sau khi tắt ứng dụng chưa?"
+    ]
+  },
+  {
+    "sheet_id": "cai_dat_phan_mem_62a7e45f",
+    "topic": "Yêu cầu cài đặt phần mềm",
+    "flows": [
+      {
+        "point_id": "2efa5c85-ef21-4938-89de-0a504a3689d0",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị muốn cài đặt phần mềm cơ bản(*) hay các phần mềm khác\n(*) Bao gồm office,winrar ,pdf ,team, mail và các phần mềm thuộc công ty (LMS, F1..)"
+      },
+      {
+        "point_id": "62fc2677-8794-4762-81e1-c2f16c57559f",
+        "situation": "1.1.Phần mềm khác",
+        "answer": "Cảm ơn Anh/Chị. Địa chỉ email Anh/Chị cung cấp hợp lệ.\n Xin Anh/Chị cung cấp thêm thông tin :\n -Phần mềm này anh/chị đã xin cấp quyền cài đặt ở groupware chưa. Nếu approved anh/chị gửi mail cài đặt cho SD đính kèm request đã được approved\n\n* {{Câu hỏi ngẫu nhiên: phần mềm anh/chị cài có bản quyền hay không?…......}}"
+      },
+      {
+        "point_id": "0a91346f-680a-4db6-bb68-3f3b90192a48",
+        "situation": "1.1.1.Chưa request quyền cài đặt groupware",
+        "answer": "Anh/chị vui lòng gửi request cài đặt ứng dụng trên groupware"
+      },
+      {
+        "point_id": "735b412e-a64a-47dc-86f2-18316f5efd4f",
+        "situation": "1.2. Phần mềm cơ bản",
+        "answer": "Anh chị vui lòng gửi thông tin cài đặt ứng dụng app hoặc phần mềm qua mail ServiceDesk (it.servicedesk@mafc.com.vn) để được hỗ trợ."
+      },
+      {
+        "point_id": "619a2613-efb8-441c-a438-f2ad6d57b820",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Anh/chị muốn cài đặt phần mềm cơ bản hay phần mềm khác?",
+      "Phần mềm anh/chị muốn cài có bản quyền không?",
+      "Làm sao để gửi request cài đặt phần mềm trên groupware?",
+      "Làm thế nào để cài đặt phần mềm cơ bản?",
+      "Phần mềm cần cài đặt là gì ạ?"
+    ]
+  },
+  {
+    "sheet_id": "khong_ket_noi_duoc_vpn_baa70e59",
+    "topic": "Không kết nối được VPN",
+    "flows": [
+      {
+        "point_id": "bc6b64c4-e76f-4fad-ac89-140f3e1b91f9",
+        "situation": "1. Chatbot phản hồi chính",
+        "answer": "Anh/chị có từng dùng VPN trước đó hoặc đã thực hiện đăng ký không."
+      },
+      {
+        "point_id": "e80e66a7-e633-40bb-9798-e873add086ab",
+        "situation": "1.1. Nhân viên phản hồi Có dùng hoặc đã đăng ký",
+        "answer": "Anh/chị kiểm tra lại các thông tin sau:\n- Password đã được thay đổi trong 3 tháng gần đây chưa (Password sẽ hết hạn sau 3 tháng không đăng nhập được)\n- Bản VPN của anh/chị có bị hết hạn không (tháng và năm sẽ hiện trên tên của config VPN), mặc định các tháng 3-6-9-12 sẽ phải cài mới\n- Nếu VPN anh/chị yêu cầu Authenticator anh/chị có nhập đúng password+mã authenticator chưa?\n- Không dùng wifi của công ty/mạng công ty để đăng nhập"
+      },
+      {
+        "point_id": "13f24ade-a3f5-4cca-8346-4ea6f2dcf1a1",
+        "situation": "1.1.1.Trả lời có hết các câu hỏi thêm",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "f235ae6b-ff53-4164-a0cf-e4769334cac6",
+        "situation": "1.1.2 Trả lời khác có (bất cứ cái gì ngoài xác nhận đã thực hiện 4 mục trên)",
+        "answer": "Anh/chị nếu không đúng các yêu cầu trên có thể chỉnh sửa như sau:\n- Gửi mail reset pass về ITSD nếu password đã quá 3 tháng\n- Trường hợp ngày tháng hiện trên VPN lúc connect đã cũ hoặc không thể bấm connect, gửi mail cài mới về ITSD để thực hiện cài đặt lại VPN mới\n- Anh/chị đọc lại guide line lúc đăng ký VPN nếu gặp vấn đề về authenticator\nNếu đã thực hiện đầy đủ nhưng không connect được nếu cần anh/chị sẽ được kết nối chat trực tiếp"
+      },
+      {
+        "point_id": "f45c8a39-8966-4c61-a1d1-23ff21863d67",
+        "situation": "1.1.2_1 User cần kết nối trực tiếp",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "05445a10-2d89-4872-b748-3311d5548351",
+        "situation": "1.2 Nhân viên phải hồi Không",
+        "answer": "Anh/chị vui lòng gửi request đăng ký sử dụng VPN để sử dụng"
+      },
+      {
+        "point_id": "e548c152-90ce-42d6-9670-afe05106b245",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Anh/chị đã từng sử dụng VPN này trước đây chưa?",
+      "Anh/chị đã thay đổi mật khẩu trong 3 tháng gần đây chưa?",
+      "Anh/Chị đang sử dụng thiết bị và hệ điều hành nào?",
+      "Anh/chị đã gửi mail reset pass về ITSD chưa?",
+      "Anh/Chị đã thử khởi động lại VPN chưa?",
+      "Anh/chị đã đăng ký sử dụng VPN chưa?",
+      "Anh/Chị đã thử khởi động lại VPN chưa?"
+    ]
+  },
+  {
+    "sheet_id": "may_in_khong_ket_noi_5ffaca56",
+    "topic": "Máy in không kết nối",
+    "flows": [
+      {
+        "point_id": "751d833c-486d-414b-8c82-7767df4b749b",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị trước đó có dùng máy in hoặc đã được kỹ thuật cài đặt sử dụng máy in anh/chị đang in chưa"
+      },
+      {
+        "point_id": "6cd41867-7bca-474b-8891-e439d490b38f",
+        "situation": "1.1.Có từng dùng",
+        "answer": "Anh/chị kiểm tra lại các thông tin sau:\n- Kiểm tra lại anh/chị đã dùng đúng tên máy in để in chưa\n- Anh/chị kiểm tra máy in còn giấy không, trường hợp còn giấy anh/chị bấm nút giữa trên máy in \n- Kiểm tra lại cài đặt kích giấy đã đúng A4 chưa"
+      },
+      {
+        "point_id": "2cf1a5e9-2285-4e93-b96d-0cbe908f18ce",
+        "situation": "1.1.1.Đúng tên không có file truyền qua máy in, đã thử các cách nhưng vẫn không in được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "ee114f10-d6e9-4dd3-b2de-b7409ceb58cc",
+        "situation": "1.2. Đã cài đặt nhưng chưa từng dùng",
+        "answer": "Anh/chị kiểm tra lại các thông tin sau:\n- Kiểm tra lại anh/chị đã dùng đúng tên máy in để in chưa\n\nFile in của anh/chị máy in có nhận được không, nếu có anh/chị kiểm tra thêm:\n- Anh/chị kiểm tra máy in còn giấy không, trường hợp còn giấy anh/chị bấm nút giữa trên máy in \n- Kiểm tra lại cài đặt kích giấy đã đúng A4 chưa"
+      },
+      {
+        "point_id": "cfcbd6f4-443c-4399-bfdc-98c38495f6ac",
+        "situation": "1.2.1 Đúng tên không có file truyền qua máy in, đã thử các cách nhưng vẫn không in được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "0d0d0eaa-575a-4642-b592-4b4b318123ef",
+        "situation": "1.3. Chưa được cài đặt máy in ở đây",
+        "answer": "Anh/chị vui lòng gửi mail về SD để hỗ trợ cài đặt máy in"
+      },
+      {
+        "point_id": "65a3fdb7-f9e1-41e6-a18e-debf460f8e38",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Anh/chị đã từng sử dụng máy in này trước đây chưa?",
+      "Anh/chị đã chọn đúng tên máy in để in chưa?",
+      "Anh/Chị đã kiểm tra kết nối mạng giữa máy tính và máy in chưa?",
+      "Anh/chị đã chọn đúng tên máy in khi in chưa?",
+      "Anh/Chị đã kiểm tra kết nối mạng giữa máy tính và máy in chưa?",
+      "Máy in đã được cài đặt ở đây chưa?",
+      "Máy in của tôi không kết nối được, bạn giúp tôi xử lý được không?"
+    ]
+  },
+  {
+    "sheet_id": "may_tinh_khong_khoi_dong_2ce72aee",
+    "topic": "Máy tính không khởi động",
+    "flows": [
+      {
+        "point_id": "39163100-fb42-4369-86a9-f92b991b1aa0",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị kiểm tra nguồn điện, dây cắm, Pin laptop hoặc màn hình đã bật chưa?"
+      },
+      {
+        "point_id": "3a0e781c-6f4d-4870-a497-77b0f9b0d977",
+        "situation": "1.1.Câu trả lời \"đã kiểm tra\".",
+        "answer": "Anh chị vui lòng cung cấp thêm phòng và địa chỉ đang làm việc (91, H2, one Hub. H3)"
+      },
+      {
+        "point_id": "86c0f33b-90d2-437b-9166-98bff88c97b9",
+        "situation": "1.1.1.Nhận được câu trả lời 1 trong số (91, H2, one Hub. H3)",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "31b20b5f-effb-4204-93f9-38ffb1c03870",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Anh/chị đã kiểm tra nguồn điện chưa?",
+      "Anh chị đã kiểm tra nguồn điện chưa?",
+      "Anh/Chị đã thử khởi động lại máy tính chưa?",
+      "Máy tính của Anh/Chị có dấu hiệu gì khi bật không?"
+    ]
+  },
+  {
+    "sheet_id": "ung_dung_bi_treo_ebccbc7a",
+    "topic": "Ứng dụng bị treo / không phản hồi",
+    "flows": [
+      {
+        "point_id": "9e9b9b1d-d4ca-4da1-a7f0-d583e82258b7",
+        "situation": "1. Chatbot phản hồi chính",
+        "answer": "Anh/chị tắt ứng dụng qua Task Manager(*), kiểm tra cập nhật phiên bản hoặc khởi động  lại máy tính \n(*) Chuột phải vào thanh taskbar chọn task manager, click chọn ứng dụng treo sau đó chọn end process"
+      },
+      {
+        "point_id": "84ac4500-3e2a-4d0e-8b41-4b7d61d06c0a",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Làm sao để tắt ứng dụng bị treo bằng Task Manager?",
+      "Chatbot có bị treo khi tôi gửi câu hỏi không?"
+    ]
+  },
+  {
+    "sheet_id": "internet_cham_wificable_202f96b7",
+    "topic": "Internet chậm (Wifi/Cable)",
+    "flows": [
+      {
+        "point_id": "f01c5023-1da5-4b4d-9379-c6d2dc05e42e",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị thử kiểm tra router, tắt VPN nếu đang sử dụng"
+      },
+      {
+        "point_id": "f30961e5-097a-4649-a634-3429c2dcbb77",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Anh/chị đã kiểm tra lại router chưa?",
+      "Internet của tôi đang rất chậm, bạn có thể giúp không?"
+    ]
+  },
+  {
+    "sheet_id": "man_hinh_khong_len_5b44b2d6",
+    "topic": "Màn hình không lên",
+    "flows": [
+      {
+        "point_id": "f01134de-c7f6-4dd0-a2b1-4c09cbdcc78e",
+        "situation": "Chatbot phản hồi chính",
+        "answer": "Anh/chị thử khởi động lại máy tính, kiểm tra dây nguồn hoặc nhấn nút nguồn màn hình"
+      },
+      {
+        "point_id": "2dd521d1-eb5b-4a38-8b3f-f3ddaf0c9133",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Màn hình có đèn nguồn sáng không?",
+      "Màn hình của Anh/Chị có đèn nguồn sáng không?"
+    ]
+  },
+  {
+    "sheet_id": "phan_mem_khong_mo_khong_khoi_cc5a5bf6",
+    "topic": "Phần mềm không mở, không khởi động",
+    "flows": [
+      {
+        "point_id": "53cf9cd6-fd1b-428b-93e1-a5ea1a4a5ed4",
+        "situation": "1. Chatbot phản hồi chính",
+        "answer": "Trước đây khi sử dụng, ứng dụng có khởi động bình thường trên máy của Anh/Chị không?"
+      },
+      {
+        "point_id": "630f4b4f-8019-4663-929c-d6ea8f702a73",
+        "situation": "1.1.Nhân viên phản hồi Có",
+        "answer": "Anh/Chị vui lòng thử khởi động lại máy tính và mở lại ứng dụng để kiểm tra tình trạng xem ứng dụng có lên hay chưa?"
+      },
+      {
+        "point_id": "aecfee25-65ef-4e55-8ed3-b955f24ae68e",
+        "situation": "1.1.1.Nhân viên phản hồi ứng dụng đã lên bình thường hoặc có",
+        "answer": "Cảm ơn anh chị đã thực hiện theo hướng dẫn! xin kết thúc cuộc trò chuyện tại đây"
+      },
+      {
+        "point_id": "379c6b05-3dac-4bd8-9092-341357cf97a9",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Anh/Chị đã thử khởi động lại máy chưa?",
+      "Anh/Chị đã thử khởi động lại máy tính chưa?",
+      "Ứng dụng đã hoạt động bình thường chưa ạ?",
+      "Phần mềm có báo lỗi khi khởi động không?"
+    ]
+  },
+  {
+    "sheet_id": "loi_ma_loi_phan_mem_1a41f1c2",
+    "topic": "Lỗi mã lỗi phần mềm",
+    "flows": [
+      {
+        "point_id": "30bd8710-9bd8-4498-afaf-eee3b26f02d0",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị thử khởi động lại máy tính, sau đó tiếp tục sử dụng báo lại khi vẫn bị hoặc bị thường xuyên \nTrước đây máy anh/chị có sử dụng ứng dụng này bình thường không"
+      },
+      {
+        "point_id": "7c8624c8-f188-40ad-ae0c-59864ed673a7",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Anh/chị đã thử khởi động lại máy tính chưa?",
+      "Tại sao chatbot không trả lời được câu hỏi của tôi?"
+    ]
+  },
+  {
+    "sheet_id": "chuot_ban_phim_khong_hoat_dong_158b4c61",
+    "topic": "Chuột/bàn phím không hoạt động",
+    "flows": [
+      {
+        "point_id": "02acfdfd-cd9f-4eb5-975e-efb7586f05df",
+        "situation": "1. Chatbot phản hồi chính",
+        "answer": "Anh/chị kiểm tra chuột/bàn phím có sáng đèn không ? Nếu là chuột/Phím không dây thử thay pin\nAnh/ Chị thử cắm thiết bị sang máy khác nếu thiết bị hoạt động, cắm thử thiết bị ở cổng khác ở máy cá nhân"
+      },
+      {
+        "point_id": "157844aa-ed5c-4d0c-b45d-4c9608894e9e",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Chuột hoặc bàn phím có sáng đèn không?",
+      "Chuột hoặc bàn phím của Anh/Chị có kết nối đúng không?"
+    ]
+  },
+  {
+    "sheet_id": "khong_ket_noi_wi_fi_1abe1c32",
+    "topic": "Không kết nối Wi-Fi",
+    "flows": [
+      {
+        "point_id": "2a3d9e3b-c8a4-4507-ad19-87344c671692",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị kiểm tra mật khẩu Wi-Fi, router, hoặc thử quên mạng và kết nối lại"
+      },
+      {
+        "point_id": "bf238bd4-e6b7-4c6d-8d43-ec645860a0ba",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Làm sao để kiểm tra mật khẩu Wi-Fi?",
+      "Tôi đã kết nối Wi-Fi nhưng không vào được mạng, có cách nào khắc phục không?"
+    ]
+  },
+  {
+    "sheet_id": "email_nghi_phishing_6c0076c8",
+    "topic": "Email nghi phishing",
+    "flows": [
+      {
+        "point_id": "f128ab96-0718-4440-b7d1-cc65b971c413",
+        "situation": "1. Chatbot phản hồi chính",
+        "answer": "Anh/chị kiểm tra địa chỉ gửi, nội dung bất thường, file đính kèm lạ. Tuyệt đối không nhấn vào link đáng ngờ."
+      },
+      {
+        "point_id": "e21e90ee-e812-4c0f-8bb3-b54994f1a240",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Làm sao để nhận biết email nghi phishing?",
+      "Email này có dấu hiệu nào nghi ngờ không?"
+    ]
+  },
+  {
+    "sheet_id": "cach_doi_mat_khau_an_toan_1f32a5c9",
+    "topic": "Cách đổi mật khẩu an toàn",
+    "flows": [
+      {
+        "point_id": "8f99cee9-e1e8-4202-af81-4e13bd300d68",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị nên đặt mật khẩu mạnh gồm chữ hoa, chữ thường, số và ký tự đặc biệt,\ncác kí tự không được liền kề nhau quá 2 (123,asd,...)đồng thời không dùng lại mật khẩu cũ"
+      },
+      {
+        "point_id": "79de46e2-baca-47cd-a044-074e4e5248be",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Làm thế nào để đặt mật khẩu mạnh?",
+      "Làm thế nào để đổi mật khẩu an toàn?"
+    ]
+  },
+  {
+    "sheet_id": "nghi_ngo_may_bi_virus_4be62f0f",
+    "topic": "Nghi ngờ máy bị virus",
+    "flows": [
+      {
+        "point_id": "d2b92671-a60a-41f4-979a-7c2386cdcf4e",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị nên chạy phần mềm antivirus của công ty, cập nhật bản vá và quét toàn bộ hệ thống."
+      },
+      {
+        "point_id": "9e706a13-7cea-44c2-8631-dacf16d2c53d",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Làm sao để chạy phần mềm antivirus của công ty?",
+      "Máy tính của Anh/Chị có biểu hiện gì bất thường không?"
+    ]
+  },
+  {
+    "sheet_id": "chinh_sach_su_dung_phan_mem_cua_d635d145",
+    "topic": "Chính sách sử dụng phần mềm của công ty",
+    "flows": [
+      {
+        "point_id": "a46b03ef-39ba-4e81-9b5b-493669d990d8",
+        "situation": "1. Chatbot phản hồi chính",
+        "answer": "Công ty có chính sách duyệt phần mềm theo danh sách cho phép. Tôi có thể cung cấp hướng dẫn chi tiết nếu anh/chị cần."
+      },
+      {
+        "point_id": "1a5bfd14-a80e-41ec-8e29-b136e17bbd36",
+        "situation": "1.1. Nhân viên trả lời là ` cần `",
+        "answer": "Các phần mềm được công ty cho phép sử dụng:\n + Word, Excel, PowerPoint, Python và các phần mềm thuộc Adobe"
+      },
+      {
+        "point_id": "86838570-639d-43e1-8eff-2d5903e3088e",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Công ty có chính sách duyệt phần mềm như thế nào?",
+      "Nhân viên có cần sử dụng phần mềm được công ty cho phép không?",
+      "Chính sách sử dụng phần mềm của công ty là gì?"
+    ]
+  },
+  {
+    "sheet_id": "quy_trinh_yeu_cau_ho_tro_it_e0337c1a",
+    "topic": "Quy trình yêu cầu hỗ trợ IT",
+    "flows": [
+      {
+        "point_id": "83c6ac73-3987-4396-845d-ea53b1cf60a9",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị có thể gửi yêu cầu qua email Service Desk hoặc hệ thống yêu cầu Groupware sau đó đính kèm vào email cho Service Desk."
+      },
+      {
+        "point_id": "0cad9dee-0e5d-4dfa-a596-99a807b5f047",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Làm thế nào để gửi yêu cầu hỗ trợ IT?",
+      "Chatbot không trả lời được, tôi phải làm gì tiếp theo?"
+    ]
+  },
+  {
+    "sheet_id": "quy_trinh_nang_cap_may_tinh_2579752f",
+    "topic": "Quy trình nâng cấp máy tính",
+    "flows": [
+      {
+        "point_id": "cf1954c1-3cec-4cc7-a6e7-5af5427f63a2",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị cần gửi yêu cầu đến Asset  theo quy trình phê duyệt tài sản. Tôi có thể cung cấp hướng dẫn nếu cần"
+      },
+      {
+        "point_id": "7140b0b7-5116-4029-8b28-2a5ce3742f0e",
+        "situation": "1.1.Nhân viên trả lời là ` cần `",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "778edadf-6234-4179-9d12-a7c79d9c80e0",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Làm thế nào để gửi yêu cầu đến bộ phận Asset?",
+      "Anh/Chị cần nâng cấp máy tính những linh kiện nào?",
+      "Quý khách gặp lỗi gì khi nâng cấp máy tính?"
+    ]
+  },
+  {
+    "sheet_id": "huong_dan_su_dung_phan_mem_05546cc4",
+    "topic": "Hướng dẫn sử dụng phần mềm",
+    "flows": [
+      {
+        "point_id": "a931f681-f10d-4160-a440-5ed324119543",
+        "situation": "1. Chatbot phản hồi chính",
+        "answer": "Tôi có thể cung cấp hướng dẫn chi tiết nếu anh/chị cần hoặc link tải tài liệu cho anh/chị (nếu có)."
+      },
+      {
+        "point_id": "30cb9353-b7ec-4e7d-baf7-11f8d5733f21",
+        "situation": "1.1. Nhân viên trả lời là ` cần `",
+        "answer": "Nếu có: gửi Link cho dùng\nKhông có: Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "f54793be-625d-4818-aebb-0bdabea6b5f8",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Làm thế nào để sử dụng phần mềm này?",
+      "Anh/Chị có cần hướng dẫn sử dụng phần mềm không?",
+      "Tại sao chatbot không trả lời được câu hỏi của tôi?"
+    ]
+  },
+  {
+    "sheet_id": "huong_dan_cau_hinh_may_theo_chu_d299877d",
+    "topic": "Hướng dẫn cấu hình máy theo chuẩn công ty",
+    "flows": [
+      {
+        "point_id": "a08299d6-0b11-4811-bf8d-c18acdf34cb7",
+        "situation": "1. Chatbot phản hồi chính",
+        "answer": "Tôi có thể cung cấp checklist hoặc hướng dẫn thêm."
+      },
+      {
+        "point_id": "224195b7-9a86-4d30-b762-ff27ea08ef4e",
+        "situation": "1.1. Nhân viên trả lời là ` cung cấp cho tôi `",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "aadfeb4d-404b-4ec1-b648-f57da6cc14b2",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Làm thế nào để cấu hình máy theo chuẩn công ty?",
+      "Anh/Chị cần hỗ trợ cấu hình máy theo chuẩn công ty như thế nào?",
+      "Làm thế nào để cấu hình máy theo chuẩn công ty?"
+    ]
+  },
+  {
+    "sheet_id": "tai_lieu_huong_dan_cai_dat_phan_55faa2d4",
+    "topic": "Tài liệu hướng dẫn cài đặt phần mềm",
+    "flows": [
+      {
+        "point_id": "0af2aa69-82dd-4afb-8d8b-69b7c44993f4",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị cần có yêu cầu đã được phê duyệt đính kèm email . Anh/chị cho tôi biết phần mềm nào?"
+      },
+      {
+        "point_id": "496bf708-cc15-4cf0-a493-8e809939982c",
+        "situation": "1.1.Nhân viên trả lời chưa được phê duyệt",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "6c7bfb04-9369-42ec-8f0c-f3d92220d25a",
+        "situation": "1.2. Nhân viên trả lời đã được phê duyệt kèm tên phần mềm",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp.  Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "f24b7612-63ee-47a5-a462-a10f2d52ff17",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Phần mềm anh/chị muốn cài đặt là gì?",
+      "Yêu cầu của tôi đã được phê duyệt chưa?",
+      "Phần mềm Anh/Chị cần hỗ trợ tên là gì?",
+      "Làm thế nào để cài đặt phần mềm?"
+    ]
+  },
+  {
+    "sheet_id": "lich_bao_tri_he_thong_8a353fb2",
+    "topic": "Lịch bảo trì hệ thống",
+    "flows": [
+      {
+        "point_id": "169a7c46-2234-4f01-8a77-086455586710",
+        "situation": "1. Chatbot phản hồi chính",
+        "answer": "Tôi có thể cung cấp lịch bảo trì mới nhất nếu có"
+      },
+      {
+        "point_id": "82c3c8d3-a3c1-475e-a19a-a82737b240e4",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Lịch bảo trì hệ thống khi nào?",
+      "Khi nào hệ thống sẽ được bảo trì?"
+    ]
+  },
+  {
+    "sheet_id": "ke_hoach_nang_cap_phan_mem_1fe825e7",
+    "topic": "Kế hoạch nâng cấp phần mềm",
+    "flows": [
+      {
+        "point_id": "3624efbb-4d1e-4055-84a1-28009ea51093",
+        "situation": "1. Chatbot phản hồi chính",
+        "answer": "Tôi có thể cung cấp thông tin về các bản cập nhật dự kiến trong tháng nếu có"
+      },
+      {
+        "point_id": "4aacbffa-a3f3-481e-b1d4-5dfd7e0a7ddf",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Kế hoạch nâng cấp phần mềm trong tháng này là gì?",
+      "Anh/Chị gặp lỗi gì khi sử dụng chatbot?"
+    ]
+  },
+  {
+    "sheet_id": "quen_mat_khau_94895da5",
+    "topic": "Quên mật khẩu tài khoản",
+    "flows": [
+      {
+        "point_id": "e0cfc919-c8f6-4ad1-a857-bbe46cfed84c",
+        "situation": "1. Chatbot phản hồi chính",
+        "answer": "Anh chị vui lòng cung cấp MSNV or email đăng nhập?"
+      },
+      {
+        "point_id": "0f31185c-d39a-476f-b073-b26bee21abda",
+        "situation": "1.1. Nhân viên cung cấp đúng MSNV/email\nEmail đúng format và có đuôi là@mafc.com.vn",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Anh/chị xin vui lòng gửi mail quên mật khẩu kèm hình ảnh và tên hệ thống về SD đồng thời CC HOD. Xin kết thúc trò chuyện tại đây"
+      },
+      {
+        "point_id": "03b8a611-4e1e-475a-901f-de1254598ad6",
+        "situation": "1.2. Nhân viên cung cấp sai MSNV/email",
+        "answer": "Anh/chị xin vui lòng gửi mail quên mật khẩu kèm hình ảnh và tên hệ thống về SD đồng thời CC HOD. Em xin kết thúc trò chuyện tại đây"
+      },
+      {
+        "point_id": "46be521c-8bd7-4f1e-b704-4dd27bbbbd69",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Anh chị quên mật khẩu rồi phải không?",
+      "Anh/chị có thể cung cấp MSNV hoặc email không?",
+      "Làm sao để gửi mail quên mật khẩu đúng cách?",
+      "Tôi quên mật khẩu, làm sao lấy lại?"
+    ]
+  },
+  {
+    "sheet_id": "tai_khoan_bi_khoa_dang_nhap_0aec817e",
+    "topic": "Tài khoản bị khóa",
+    "flows": [
+      {
+        "point_id": "faaaef5c-e9d6-4681-80c1-2781c4120df2",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị kiểm tra máy tính có để caplock đè phím khi nhập không ,đã đổi mật khẩu gần đây hay không?"
+      },
+      {
+        "point_id": "403a5b19-b568-4dd8-9ebd-2b4d0dda11fb",
+        "situation": "1.1. Nhân viên phản hồi đã đổi mật khẩu gần đây",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "b05595fd-0637-4a1b-89f4-e59a2ab69032",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Anh/chị có để caplock khi nhập mật khẩu không?",
+      "Anh/Chị có thể xác nhận thời gian đổi mật khẩu gần nhất không?",
+      "Tài khoản của tôi bị khóa, làm sao để mở lại?"
+    ]
+  },
+  {
+    "sheet_id": "thay_doi_mat_khau_email_he_thon_a4c677d6",
+    "topic": "Thay đổi mật khẩu email/hệ thống",
+    "flows": [
+      {
+        "point_id": "caaa9b6e-c18f-45d8-a53e-8640a479baf9",
+        "situation": "1. Chatbot phản hồi chính",
+        "answer": "Anh/chị muốn đổi mật khẩu cho email hay hệ thống nội bộ,nếu không truy cập được, tôi sẽ chuyển yêu cầu cho IT hỗ trợ đặt lại mật khẩu"
+      },
+      {
+        "point_id": "3479ceee-2ef2-4b19-b294-56e49ec74219",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Anh/chị muốn đổi mật khẩu email hay hệ thống nội bộ?",
+      "Làm thế nào để thay đổi mật khẩu email?"
+    ]
+  },
+  {
+    "sheet_id": "yeu_cau_nang_cap_may_tinh_ram_70700a42",
+    "topic": "Yêu cầu nâng cấp máy tính-bộ nhớ",
+    "flows": [
+      {
+        "point_id": "4b49a18c-11ba-4a46-a796-9b004115eaa8",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị vui lòng cung cấp MSNV/email?"
+      },
+      {
+        "point_id": "11d2486d-1244-4530-be5a-25d161a704f3",
+        "situation": "1.1.Nhân viên cung cấp đúng MSNV/email\nEmail đúng format và có đuôi là .@mafc.com.vn",
+        "answer": "Máy tính Anh/chị sử dụng bao nhiêu GB RAM?  4GB,8GB,16GB"
+      },
+      {
+        "point_id": "27ef87ec-f6fe-4cbf-913b-e1b6e71fe3f7",
+        "situation": "1.1.1.Nhận được câu trả lời số GB RAM",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "98d3d15d-0fa8-4406-86c1-b4cdb2501c6e",
+        "situation": "1.2. Nhân viên cung cấp sai MSNV/email",
+        "answer": "Xin lỗi anh chị thông tin anh chị cung cấp chưa chính xác. Cuộc trò chuyện xin được kết thúc tại đây"
+      },
+      {
+        "point_id": "a30fe24c-3d0a-4d06-a129-85511a13783a",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Anh/chị có thể cho biết mã số nhân viên hoặc email được không?",
+      "Anh/chị vui lòng cung cấp MSNV hoặc email công ty?",
+      "Anh/Chị cần nâng cấp bao nhiêu GB RAM?",
+      "Anh/chị vui lòng cung cấp đúng mã số nhân viên hoặc email được không?",
+      "Anh/Chị muốn nâng cấp dung lượng bộ nhớ bao nhiêu GB?"
+    ]
+  },
+  {
+    "sheet_id": "yeu_cau_cap_thiet_bi_moi_5e710d91",
+    "topic": "Yêu cầu cấp thiết bị mới",
+    "flows": [
+      {
+        "point_id": "736ebfcd-29f7-4fae-b67c-567036c74be2",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị cần cấp thiết bị gì? (Laptop, màn hình, chuột, tai nghe…)?Yêu cầu cấp laptop đã được phê duyệt chưa"
+      },
+      {
+        "point_id": "93c3ae4a-b1e8-4ece-ae5e-8f2b07da9fa0",
+        "situation": "1.1.Nhân viên phản hồi cần Laptop, màn hình, chuột, tai nghe…",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      },
+      {
+        "point_id": "19ca1726-814a-41c7-8251-0d4019066a48",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Anh/chị cần cấp thiết bị gì?",
+      "Anh/Chị cần loại thiết bị nào cụ thể?",
+      "Anh/Chị cần cấp thiết bị mới loại nào?"
+    ]
+  },
+  {
+    "sheet_id": "khong_dang_nhap_duoc_khi_doi_mk_c4fba9af",
+    "topic": "Không truy cập được tài khoản sau đổi mật khẩu",
+    "flows": [
+      {
+        "point_id": "66667ae2-da33-423a-85e2-c2541ebe72dd",
+        "situation": "1.Chatbot phản hồi chính",
+        "answer": "Anh/chị đổi mật khẩu khi nào?Có thể hệ thống chưa đồng bộ?Anh/chị thử đăng xuất hoàn toàn và chờ 10–15 phút.?"
+      },
+      {
+        "point_id": "0a7a67d1-e8b7-4db3-8a50-c0fbd5c24288",
+        "situation": "2. Chatbot không trả lời được",
+        "answer": "Cám ơn thông tin Anh/Chị cung cấp. Nội dung yêu cầu của Anh/Chị đã được chuyển cho nhân viên hỗ trợ trực tiếp…"
+      }
+    ],
+    "question": [
+      "Anh/chị đổi mật khẩu khi nào?",
+      "Anh/Chị đã thử đăng nhập lại sau khi đổi mật khẩu chưa?"
+    ]
+  }
+]
