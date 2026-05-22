@@ -19,6 +19,7 @@ except ImportError:  # pragma: no cover - handled at runtime with offline fallba
 
 
 CONTEXT_PATH = Path(__file__).with_name("context.md")
+ENV_PATH = Path(__file__).resolve().parent.parent / ".env"
 DEFAULT_BASE_URL = "http://localhost:20128/v1"
 DEFAULT_MODEL = "cx/gpt-5.3-codex-none"
 
@@ -193,20 +194,22 @@ class GPFarmQA:
         use_llm: bool = True,
     ) -> None:
         if load_dotenv:
-            load_dotenv()
+            load_dotenv(ENV_PATH)
 
         self.context_path = context_path
         self.context = _load_context(context_path)
         self.products = _parse_products(self.context)
         self.model = model or os.getenv("OPENAI_MODEL", DEFAULT_MODEL)
         self.base_url = base_url or os.getenv("OPENAI_BASE_URL", DEFAULT_BASE_URL)
-        self.api_key = api_key or os.getenv("OPENAI_API_KEY", "***REMOVED_OPENAI_KEY***")
+        self.api_key = api_key or os.getenv("OPENAI_API_KEY")
         self.use_llm = use_llm
         self.client = self._build_client()
 
     def _build_client(self):
         if not self.use_llm or OpenAI is None:
             return None
+        if not self.api_key:
+            raise ValueError("OPENAI_API_KEY is required. Add it to .env or export it before starting the app.")
         return OpenAI(api_key=self.api_key, base_url=self.base_url)
 
     def classify(self, query: str) -> IntentResult:

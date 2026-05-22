@@ -1,12 +1,23 @@
+import os
+from pathlib import Path
+
 from openai import OpenAI
+
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    load_dotenv = None
+
+if load_dotenv:
+    load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 # Keep one persistent client connection
 client = OpenAI(
-    api_key="***REMOVED_OPENAI_KEY***",
-    base_url="http://localhost:20128/v1"
+    api_key=os.getenv("OPENAI_API_KEY"),
+    base_url=os.getenv("OPENAI_BASE_URL", "http://localhost:20128/v1")
 )
 
-MODEL_NAME = "cx/gpt-5.3-codex-none"
+MODEL_NAME = os.getenv("OPENAI_MODEL", "cx/gpt-5.3-codex-none")
 
 print("AI Chat Started")
 print("Type 'exit' to quit\n")

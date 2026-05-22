@@ -49,11 +49,12 @@ class GPFarmWebHandler(BaseHTTPRequestHandler):
             return
 
         try:
-            routed = self.assistant.classify(question)
+            intent = self.assistant._classify_offline(question)
+            routed_query = question
             if self.stream_answers:
-                self._send_streamed_answer(routed.intent, routed.query, history)
+                self._send_streamed_answer(intent, routed_query, history)
                 return
-            answer = self.assistant.answer_with_intent(routed.intent, routed.query, history=history)
+            answer = self.assistant.answer_with_intent(intent, routed_query, history=history)
         except Exception as exc:
             self._send_json({"error": f"Could not answer right now: {exc}"}, status=HTTPStatus.INTERNAL_SERVER_ERROR)
             return
