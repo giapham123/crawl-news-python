@@ -235,6 +235,164 @@ NỘI DUNG GỐC:
 
 """
 
+PROMT_MERGE_CONTENT_IMAGE = """
+You are a system that processes legal content and optimizes SEO for Vietnamese legal websites, writing in a precise, neutral, and authoritative style consistent with Vietnamese legal journalism.
+
+Based entirely on the PROVIDED SOURCE CONTENT, complete all tasks below and return ONLY ONE JSON object.
+
+=========================
+OUTPUT REQUIREMENTS
+=========================
+
+Return ONLY ONE JSON object wrapped in a ```json code block with this structure:
+
+{
+  "title": "",
+  "slug": "",
+  "focus_keyphrase": "",
+  "body": "",
+  "meta": "",
+  "tags": "",
+  "image_url": ""
+}
+
+DO NOT add any text outside the JSON block.
+
+=========================
+PART A — SEO TITLE DATA
+=========================
+
+🎯 TITLE
+
+- Title must be a question ending with ?
+- NO colon (:)
+- NO abbreviations
+- Prioritize keywords with search volume >10,000
+- If none >10,000, choose the most relevant keyword
+- Legal journalism writing style
+
+🎯 SLUG
+
+- Lowercase only
+- No forward slash /
+- No abbreviations
+- Words joined by "-"
+- Based on the highest search volume keyword
+
+🎯 FOCUS KEYPHRASE
+
+- Main keyword phrase closest to the legal content
+- No special characters, no periods
+- No abbreviations
+- Prioritize search volume >10,000
+
+=========================
+PART B — BODY CONTENT (LEGAL)
+=========================
+
+DO NOT copy the original content verbatim.
+
+Rewrite in legal language, ensuring:
+- No distortion of legal content
+- Preserve the spirit, legal basis, and legal terminology
+- Suitable for Vietnamese legal advisory / analytical articles
+
+Writing style:
+- Neutral
+- Objective
+- Accurate
+- Standard Vietnamese lawyer style
+
+HTML:
+
+Generate HTML body content only. DO NOT create <html>, <head>, or <body> tags.
+
+Only use these tags:
+<h1>, <h2>, <h3>, <p>, <ul>, <ol>, <li>, <table>, <a>, <img>, <video>, <iframe>, <source>, <strong>, <em>, <figcaption>
+
+HYPERLINKS:
+
+- Preserve all <a> tags, href, anchor text, and position
+- DO NOT remove
+- DO NOT edit
+- DO NOT add new hyperlinks
+
+MEDIA:
+
+- Preserve all images, videos, iframes
+- Normalize images:
+  data-src, data-original, lazyload, srcset → src
+- Keep alt, title, caption
+
+VIDEO:
+
+.mp4 →
+<video controls><source src="URL" type="video/mp4"></video>
+
+FORMATTING:
+
+- Remove all * or **
+- No blockquote
+- No markdown
+- Do not add content beyond the original article
+
+=========================
+META DESCRIPTION
+=========================
+
+- 150–160 characters
+- Accurately summarizes the legal content
+- Legal journalism writing style
+- No symbols, no brackets
+
+=========================
+TAGS
+=========================
+
+- Keywords directly related to the legal topic
+- Lowercase only
+- No abbreviations
+- Separated by commas
+- One single line
+
+=========================
+IMAGE URL
+=========================
+
+Using the article title, build a Google Images search URL and return it in the "image_url" field.
+
+Steps:
+1. Take the title you generated in the "title" field
+2. Replace every space with "+"
+3. Return the URL in this exact format (do not change any parameter):
+   https://www.google.com/search?q=TITLE_URL_ENCODED&tbm=isch&tbs=itp:photo&safe=active
+
+Example:
+- title → "What is the penalty for breaching a labor contract?"
+- image_url → https://www.google.com/search?q=What+is+the+penalty+for+breaching+a+labor+contract?&tbm=isch&tbs=itp:photo&safe=active
+
+Rules:
+- ONLY replace spaces with "+", do not change Vietnamese characters or punctuation
+- DO NOT shorten or paraphrase the title
+- DO NOT return a direct .jpg/.png link — return the Google Images search URL only
+
+=========================
+OUTPUT RULES
+=========================
+
+- Return only 1 JSON
+- Wrap in ```json
+- No explanation
+- No comments
+- No text outside the JSON
+
+=========================
+SOURCE CONTENT
+=========================
+
+
+"""
+
 PROMPT_TITLE = """Dựa trên nội dung bài viết sau, hãy thực hiện 3 nhiệm vụ **theo đúng thứ tự** và **mỗi nhiệm vụ chỉ trả về 1 giá trị**, không giải thích thêm, và trả về duy nhất **một object JSON** theo định dạng:
 
 {
