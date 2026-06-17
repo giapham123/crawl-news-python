@@ -263,26 +263,22 @@ TAGS
 IMAGE URL
 =========================
 
-Automatically generate a realistic, illustrative legal news intro image that visually matches the article title and legal topic, without showing any people, and return a publicly accessible direct image URL in the "image_url" field.
+Dùng tiêu đề bài viết để tạo URL tìm kiếm Google Images và trả về trong trường "image_url".
 
-Image requirements:
+Các bước:
+1. Lấy tiêu đề đã tạo ở trường "title"
+2. Thay mỗi dấu cách bằng "+"
+3. Trả về URL theo đúng định dạng sau (không thay đổi bất kỳ tham số nào):
+   https://www.google.com/search?q=TITLE_URL_ENCODED&tbm=isch&tbs=itp:photo&safe=active
 
-- Purpose: Intro / cover image for a legal news article
-- Style: realistic illustrative photojournalism, professional newspaper cover style
-- No people, no faces, no human silhouettes
-- No cartoon, no 3D, no fantasy, no abstract art
-- Composition should symbolically and clearly represent the article title and legal subject
-- Use legal-related objects and environments only, such as:
-  - courthouse or government building exteriors
-  - scales of justice, gavel, law books
-  - sealed documents, official files, evidence boxes
-  - customs seals, inspection stamps, warning tapes, storage warehouses without people
-- Serious, neutral, authoritative journalistic tone
-- Real-world setting with natural lighting and realistic textures
-- No text, captions, logos, symbols, or watermarks on the image
-- Aspect ratio: 16:9
-- High resolution, sharp focus
-- The "image_url" must be a direct, publicly accessible image link (not a webpage)
+Ví dụ:
+- title → "Mức phạt vi phạm hợp đồng lao động là bao nhiêu?"
+- image_url → https://www.google.com/search?q=Mức+phạt+vi+phạm+hợp+đồng+lao+động+là+bao+nhiêu?&tbm=isch&tbs=itp:photo&safe=active
+
+Quy tắc:
+- CHỈ thay dấu cách bằng "+", không thay đổi ký tự tiếng Việt hay dấu câu
+- KHÔNG rút gọn hoặc diễn đạt lại tiêu đề
+- KHÔNG trả về link ảnh trực tiếp (.jpg/.png) — chỉ trả về URL tìm kiếm Google Images
 
 =========================
 OUTPUT RULES
