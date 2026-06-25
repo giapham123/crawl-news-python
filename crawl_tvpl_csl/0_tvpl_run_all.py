@@ -1,10 +1,13 @@
 import os
+import re
 import json
 import csv
-import requests
+import time
+import random
 import shutil
 from bs4 import BeautifulSoup
 from datetime import datetime
+from curl_cffi import requests as cf_requests
 from prompts import (
     PROMPT_CLEAN_HTML,
     PROMPT_TITLE,
@@ -15,16 +18,10 @@ from prompts import (
 from prompts_merge import (PROMT_MERGE, PROMT_MERGE_CONTENT_IMAGE)
 
 # ================= SHARED CONFIG =================
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-    "Accept-Language": "vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
-    "Referer": "https://thuvienphapluat.vn/",
-    "Connection": "keep-alive",
-}
+# Rotate between Chrome versions to avoid fingerprint pattern
+IMPERSONATE_PROFILES = ["chrome124", "chrome123", "chrome120", "chrome110"]
 
-SESSION = requests.Session()
-SESSION.headers.update(HEADERS)
+SESSION = cf_requests.Session(impersonate=random.choice(IMPERSONATE_PROFILES))
 
 # ================= STEP 1 CONFIG =================
 BASE_URL = "https://thuvienphapluat.vn/phap-luat/"
@@ -49,24 +46,71 @@ EXCLUDE_FILES = {"all_urls.txt"}
 # ==================================================
 
 
+def build_headers(referer=None):
+    """Minimal extra headers — curl_cffi already handles UA + TLS fingerprint."""
+    return {
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+        "Accept-Language": "vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Referer": referer or "https://thuvienphapluat.vn/",
+        "Upgrade-Insecure-Requests": "1",
+        "Cache-Control": "max-age=0",
+    }
+
+
 def warm_up_session():
-    try:
-        print("[INFO] Warming up session...")
-        SESSION.get("https://thuvienphapluat.vn/", timeout=15)
-        print("[INFO] Session ready ✅")
-    except Exception as e:
-        print(f"[WARN] Warm-up failed (continuing anyway): {e}")
+    """Visit homepage and listing page to build cookies before real crawling."""
+    steps = [
+        ("https://thuvienphapluat.vn/", None),
+        ("https://thuvienphapluat.vn/phap-luat/", "https://thuvienphapluat.vn/"),
+    ]
+    print("[INFO] Warming up session...")
+    for url, referer in steps:
+        try:
+            SESSION.get(url, headers=build_headers(referer=referer), timeout=20)
+            print(f"[INFO]   Visited {url}")
+            time.sleep(random.uniform(1.5, 3.0))
+        except Exception as e:
+            print(f"[WARN]   Warm-up step failed (continuing anyway): {e}")
+    print("[INFO] Session ready\n")
 
 
-def crawl_page(url):
-    try:
-        res = SESSION.get(url, timeout=15)
-        res.raise_for_status()
-        res.encoding = "utf-8"
-        return res.text
-    except Exception as e:
-        print(f"[ERROR] Cannot fetch: {url} → {e}")
-        return None
+def crawl_page(url, referer=None, retries=3):
+    """
+    Fetch a page using curl_cffi (bypasses Cloudflare TLS fingerprinting).
+    Retries with exponential backoff on 403 or errors.
+    """
+    for attempt in range(1, retries + 1):
+        try:
+            impersonate = random.choice(IMPERSONATE_PROFILES)
+            res = SESSION.get(
+                url,
+                headers=build_headers(referer=referer),
+                impersonate=impersonate,
+                timeout=20,
+            )
+
+            if res.status_code == 403:
+                wait = 5 * attempt  # 5s -> 10s -> 15s
+                print(f"[WARN] 403 on attempt {attempt}/{retries} (profile={impersonate}) — waiting {wait}s...")
+                time.sleep(wait)
+                continue
+
+            if res.status_code == 429:
+                wait = 15 * attempt  # rate-limited — back off harder
+                print(f"[WARN] 429 Rate Limited on attempt {attempt}/{retries} — waiting {wait}s...")
+                time.sleep(wait)
+                continue
+
+            res.raise_for_status()
+            return res.text
+
+        except Exception as e:
+            print(f"[ERROR] Attempt {attempt}/{retries} failed for {url}: {e}")
+            if attempt < retries:
+                time.sleep(5 * attempt)
+
+    print(f"[ERROR] Giving up on {url} after {retries} attempts.")
+    return None
 
 
 # ================= STEP 1: CRAWL LINKS =================
@@ -89,7 +133,7 @@ def reset_if_new_day():
         last_date = None
 
     if last_date != TODAY:
-        print("🔄 New day detected → reset all_urls.txt")
+        print("New day detected -> reset all_urls.txt")
         if os.path.exists(all_url_path):
             os.remove(all_url_path)
         with open(date_path, "w", encoding="utf-8") as f:
@@ -160,26 +204,29 @@ def step1_crawl_links():
     crawled_before = load_all_urls()
     print(f"Already crawled today: {len(crawled_before)} URLs")
 
-    for p in PARAMS:
+    for i, p in enumerate(PARAMS, 1):
         url = BASE_URL + p
-        print(f"\nCrawling: {url}")
+        print(f"\n[{i}/{len(PARAMS)}] Crawling: {url}")
 
-        html = crawl_page(url)
+        html = crawl_page(url, referer="https://thuvienphapluat.vn/phap-luat/")
         if not html:
             save_new_urls(p, [])
-            continue
+        else:
+            links = extract_links(html)
+            print(f"  -> Found {len(links)} links today")
 
-        links = extract_links(html)
-        print(f"  → Found {len(links)} links today")
+            new_links = links - crawled_before
+            print(f"  -> New links: {len(new_links)}")
 
-        new_links = links - crawled_before
-        print(f"  → New links: {len(new_links)}")
+            save_new_urls(p, new_links)
 
-        save_new_urls(p, new_links)
+            if new_links:
+                save_to_global(new_links)
+                crawled_before.update(new_links)
 
-        if new_links:
-            save_to_global(new_links)
-            crawled_before.update(new_links)
+        delay = random.uniform(2.0, 5.0)
+        print(f"  Sleeping {delay:.1f}s...")
+        time.sleep(delay)
 
     print("\nSTEP 1 DONE.")
 
@@ -195,6 +242,42 @@ def load_urls_from_file(file_path):
         return [line.strip() for line in f if line.strip()]
 
 
+# Caption marker for placeholder images, e.g. "(Hình từ Internet)",
+# "(Hình ảnh Internet)", "(Hình ảnh từ Internet)" — case-insensitive.
+INTERNET_IMAGE_RE = re.compile(r"hình.*internet", re.IGNORECASE | re.DOTALL)
+
+
+def remove_internet_images(content_el):
+    """Drop placeholder images whose <em> caption mentions 'Hình ... Internet'.
+
+    The article markup is typically:
+        <p><img ... /></p>
+        <p style="text-align: center;"><em>... (Hình từ Internet)</em></p>
+    We remove both the image and its caption.
+    """
+    if content_el is None:
+        return
+
+    for em in content_el.find_all("em"):
+        text = em.get_text(" ", strip=True)
+        if not text or not INTERNET_IMAGE_RE.search(text):
+            continue
+
+        caption = em.find_parent("p") or em
+
+        # The image usually sits in the <p> right before the caption.
+        img = None
+        prev_p = caption.find_previous_sibling("p")
+        if prev_p is not None:
+            img = prev_p.find("img")
+        if img is None:
+            img = em.find_previous("img")
+
+        if img is not None:
+            (img.find_parent("p") or img).decompose()
+        caption.decompose()
+
+
 def extract_data(html):
     soup = BeautifulSoup(html, "html.parser")
 
@@ -206,22 +289,30 @@ def extract_data(html):
     title = title_el.get_text(strip=True) if title_el else ""
 
     content_el = soup.select_one("section#news-content")
+    remove_internet_images(content_el)
     content_html = content_el.decode_contents().strip() if content_el else ""
     content_text = content_el.get_text(" ", strip=True) if content_el else ""
 
+    # Category from breadcrumb: <ol class="tvpl-bc"> -> last link (skip "Trang chủ")
     cate = ""
-    cate_el = soup.select_one("a.badge[href*='/chu-de/']")
-    if cate_el:
-        cate = cate_el.get_text(strip=True)
+    bc_links = soup.select("ol.tvpl-bc a.tvpl-bc-link")
+    cate_links = [a for a in bc_links if a.get("href", "").rstrip("/") != "/phap-luat"]
+    if cate_links:
+        cate = cate_links[-1].get_text(strip=True)
+    if not cate:
+        cate_el = soup.select_one("a.badge[href*='/chu-de/']")
+        if cate_el:
+            cate = cate_el.get_text(strip=True)
 
     prompt_content_html = f"{PROMT_CONTENT_META_TAG}\n\n{content_html}"
     prompt_title = f"{PROMPT_TITLE}\n\n{title}"
     prompt_image = f"{PROMT_CREATE_IMAGE}\n\n{content_text}"
     merged_title_content = f"{PROMT_MERGE}\nTitle: {title}\nbody: {content_html}"
-    merged_title_content_image = f"{PROMT_MERGE_CONTENT_IMAGE}\nTitle: {title}\nbody: {content_html}"
+    merged_title_content_image = f"{PROMT_MERGE_CONTENT_IMAGE}\nCate: {cate}\nTitle: {title}\nbody: {content_html}"
 
     return {
         "title": title,
+        "cate": cate,
         "merged_title_content_image": merged_title_content_image,
         "content_title": merged_title_content,
         "prompt_image": prompt_image,
@@ -240,13 +331,18 @@ def crawl_file(file_path):
     results = []
     for idx, url in enumerate(urls, 1):
         print(f"  [{idx}/{len(urls)}] Crawling: {url}")
-        html = crawl_page(url)
+        html = crawl_page(url, referer="https://thuvienphapluat.vn/phap-luat/")
         if not html:
             continue
 
         data = extract_data(html)
         data["url"] = url
         results.append(data)
+
+        if idx < len(urls):
+            delay = random.uniform(2.0, 5.0)
+            print(f"  Sleeping {delay:.1f}s...")
+            time.sleep(delay)
 
     return results
 
@@ -255,6 +351,7 @@ def clear_folder(folder_path):
     if not os.path.exists(folder_path):
         os.makedirs(folder_path)
         return
+
 
     for file in os.listdir(folder_path):
         file_path = os.path.join(folder_path, file)
@@ -314,10 +411,14 @@ def step2_crawl_article_details():
 
         with open(json_file, "w", encoding="utf-8") as f:
             json.dump(results, f, ensure_ascii=False, indent=2)
-        print(f"  Saved JSON → {json_file}")
+        print(f"  Saved JSON -> {json_file}")
 
         save_to_csv(results, csv_file)
-        print(f"  Saved CSV → {csv_file}")
+        print(f"  Saved CSV -> {csv_file}")
+
+        delay = random.uniform(3.0, 6.0)
+        print(f"\n[INFO] Sleeping {delay:.1f}s before next file...")
+        time.sleep(delay)
 
     print("\nSTEP 2 DONE.")
 
@@ -328,4 +429,4 @@ if __name__ == "__main__":
     warm_up_session()
     step1_crawl_links()
     step2_crawl_article_details()
-    print("\n✅ ALL DONE.")
+    print("\nALL DONE.")

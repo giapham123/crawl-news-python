@@ -1,6 +1,8 @@
 import os
 import json
 import csv
+import time
+import random
 import requests
 import shutil
 from datetime import datetime
@@ -21,26 +23,51 @@ OUTPUT_CSV_FOLDER = "result_csv_folder"
 
 EXCLUDE_FILES = {"all_urls.txt"}
 
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-    "Accept-Language": "vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
-    "Referer": "https://thuvienphapluat.vn/",
-    "Connection": "keep-alive",
-}
+USER_AGENTS = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:126.0) Gecko/20100101 Firefox/126.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 14_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Safari/605.1.15",
+]
 
 SESSION = requests.Session()
-SESSION.headers.update(HEADERS)
 # ==========================================
 
 
+def build_headers(referer=None):
+    """Build fresh headers per request with a random UA to avoid fingerprinting."""
+    return {
+        "User-Agent": random.choice(USER_AGENTS),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+        "Accept-Language": "vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Referer": referer or "https://thuvienphapluat.vn/",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1",
+        "Sec-Fetch-Dest": "document",
+        "Sec-Fetch-Mode": "navigate",
+        "Sec-Fetch-Site": "same-origin",
+        "Sec-Fetch-User": "?1",
+        "Cache-Control": "max-age=0",
+    }
+
+
 def warm_up_session():
-    try:
-        print("[INFO] Warming up session...")
-        SESSION.get("https://thuvienphapluat.vn/", timeout=15)
-        print("[INFO] Session ready ✅")
-    except Exception as e:
-        print(f"[WARN] Warm-up failed (continuing anyway): {e}")
+    """Visit homepage and listing page to build cookies before real crawling."""
+    steps = [
+        ("https://thuvienphapluat.vn/", None),
+        ("https://thuvienphapluat.vn/phap-luat/", "https://thuvienphapluat.vn/"),
+    ]
+    print("[INFO] Warming up session...")
+    for url, referer in steps:
+        try:
+            SESSION.get(url, headers=build_headers(referer=referer), timeout=15)
+            print(f"[INFO]   ✅ Visited {url}")
+            time.sleep(random.uniform(1.5, 3.0))
+        except Exception as e:
+            print(f"[WARN]   Warm-up step failed (continuing anyway): {e}")
+    print("[INFO] Session ready 🔑\n")
 
 
 def load_urls_from_file(file_path):
@@ -52,15 +79,33 @@ def load_urls_from_file(file_path):
         return [line.strip() for line in f if line.strip()]
 
 
-def crawl_page(url):
-    try:
-        res = SESSION.get(url, timeout=15)
-        res.raise_for_status()
-        res.encoding = "utf-8"  # force UTF-8 to avoid garbled text
-        return res.text
-    except Exception as e:
-        print(f"[ERROR] Cannot fetch: {url} → {e}")
-        return None
+def crawl_page(url, referer=None, retries=3):
+    """Fetch a page with retries and exponential backoff on 403/errors."""
+    for attempt in range(1, retries + 1):
+        try:
+            headers = build_headers(referer=referer)
+            res = SESSION.get(url, headers=headers, timeout=20)
+
+            if res.status_code == 403:
+                print(f"[WARN] 403 Forbidden on attempt {attempt}/{retries} for {url} — backing off...")
+                time.sleep(5 * attempt)  # 5s → 10s → 15s
+                continue
+
+            res.raise_for_status()
+            res.encoding = "utf-8"
+            return res.text
+
+        except requests.exceptions.HTTPError as e:
+            print(f"[ERROR] HTTP error attempt {attempt}/{retries}: {e}")
+            if attempt < retries:
+                time.sleep(5 * attempt)
+        except Exception as e:
+            print(f"[ERROR] Fetch error attempt {attempt}/{retries}: {e}")
+            if attempt < retries:
+                time.sleep(3)
+
+    print(f"[ERROR] Giving up on {url} after {retries} attempts.")
+    return None
 
 
 def extract_data(html):
@@ -112,13 +157,20 @@ def crawl_file(file_path):
     results = []
     for idx, url in enumerate(urls, 1):
         print(f"  [{idx}/{len(urls)}] Crawling: {url}")
-        html = crawl_page(url)
+        # Use the listing page as referer — mimics clicking from the index
+        html = crawl_page(url, referer="https://thuvienphapluat.vn/phap-luat/")
         if not html:
             continue
 
         data = extract_data(html)
         data["url"] = url
         results.append(data)
+
+        # Random delay between article fetches to avoid rate-limiting
+        if idx < len(urls):
+            delay = random.uniform(2.0, 5.0)
+            print(f"  ⏳ Sleeping {delay:.1f}s...")
+            time.sleep(delay)
 
     return results
 
@@ -194,6 +246,11 @@ def main():
         # Save CSV
         save_to_csv(results, csv_file)
         print(f"  Saved CSV → {csv_file}")
+
+        # Pause between processing different category files
+        delay = random.uniform(3.0, 6.0)
+        print(f"\n[INFO] Sleeping {delay:.1f}s before next file...")
+        time.sleep(delay)
 
 
 if __name__ == "__main__":
