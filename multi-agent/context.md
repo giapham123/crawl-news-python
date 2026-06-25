@@ -11,10 +11,11 @@ A two-agent pipeline built with **LangGraph** that:
 ## LLM Client Configuration
 
 ```python
+import os
 from openai import OpenAI
 
 client = OpenAI(
-    api_key="***REMOVED_OPENAI_KEY***",
+    api_key=os.environ["OPENAI_API_KEY"],
     base_url="http://localhost:20128/v1"
 )
 ```
